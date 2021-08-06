@@ -1,0 +1,81 @@
+---
+permalink: aix/task_starting_the_volume_or_lun_clone_split_start.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, start, volume, clone, lun, split 
+summary: ボリュームクローンまたは LUN クローンスプリット処理を開始できます。 
+---
+= ボリュームクローンまたは LUN クローンスプリットを開始しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリュームクローンまたは LUN クローンスプリット処理を開始できます。
+
+.手順
+. 次のコマンドを入力して、ボリュームクローンまたは LUN クローンスプリットを開始します。
++
+`*# SnapDrive クローン・スプリット・スタート [-lun]_long_lun_name_[_long_lun_name_...] | [{-dg | -vg | -fs|-hostvol|-lvol ｝ _file_spec_[_file_spec_...] [-force-][-nofry] [-dump|-dumpall] *
+
++
+ストレージのステータスが「 Not available 」と表示される場合は、次のオプションを使用できます。
+
++
+** force オプションを使用すると、クローン・スプリット処理を強制的に開始し、処理が開始されたことを示す確認メッセージを受け取ることができます。
+** 確認メッセージを受信せずにクローンスプリットの開始操作を開始するには、 -noprompt オプションと -force オプションを使用します。
+
+
++
+
+NOTE: 進行中のクローンスプリット処理を停止したあとすぐに別のクローンスプリット処理を開始すると、処理が失敗することがあります。この問題は、クローン・スプリット処理の開始から停止までの遅延が、ストレージ・システムに停止処理と同期させるのに十分でなかった場合に発生することがあります。
+
+
+
+次の例は、ボリュームクローンをスプリットする方法を示しています。
+
+[listing]
+----
+# snapdrive clone split start -fs /mnt/my_mnt4_0 /mnt/my_mnt3_0
+Resource    Container  Required Available Storage
+                       Space(MB)Space(MB) Status
+--------------------------------------------------
+/mnt/my_mnt4_0 f3050-220 3295   66033 AVAILABLE
+             -111:aggr0
+/mnt/my_mnt3_0 f3050-220  293   37707 AVAILABLE
+             -112:aggr1
+
+Job ID: B265Dbv8gh
+Clone-Split for "/mnt/my_mnt4_0" is started
+Clone-Split for "/mnt/my_mnt3_0" is started
+----
+次に '--force_' オプションを使用してクローンをスプリットする例を示します
+
+[listing]
+----
+# snapdrive clone split start -fs /mnt/my_mnt5 /mnt/my_mnt6 -force
+Resource    Container Required  Available Storage
+                      Space(MB) Space(MB) Status
+----------------------------------------------------
+/mnt/my_mnt5 f3050-220 1198   20033   AVAILABLE
+             -111:aggr0
+/mnt/my_mnt6 f3050-220  3294  2196  NOT AVAILABLE
+             -112:aggr1
+Not enough space available for Clone-Split.  Do you want to continue (y/n)?y
+Clone-Split for "/mnt/my_mnt5" is started
+Clone-Split for "/mnt/my_mnt6" is started
+----
+次に '--noprompt_ オプションを使用してクローンを直接開始する例を示しますこの例では ' 確認メッセージは表示されません
+
+[listing]
+----
+# snapdrive clone split start -fs /mnt/my_mnt5 /mnt/my_mnt6 -force -noprompt
+Resource    Container  Required  Available Storage
+                       Space(MB) Space(MB) Status
+-----------------------------------------------------
+/mnt/my_mnt5 f3050-220  1198     20033   AVAILABLE
+             -111:aggr0
+/mnt/my_mnt6 f3050-220  3294     2196  NOT AVAILABLE
+             -112:aggr1
+Clone-Split for "/mnt/my_mnt5" is started
+Clone-Split for "/mnt/my_mnt6" is started
+----

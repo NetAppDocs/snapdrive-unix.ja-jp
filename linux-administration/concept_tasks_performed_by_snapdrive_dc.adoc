@@ -1,0 +1,36 @@
+---
+permalink: linux-administration/concept_tasks_performed_by_snapdrive_dc.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, diagnostic, copy, log, file, data, utility 
+summary: データ収集ユーティリティは、ネットアップの診断ユーティリティを実行し、 SnapDrive for UNIX のログファイルをコピーして、分析に使用する圧縮ファイルを作成します。 
+---
+= SnapDrive DC によって実行されるタスク
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データ収集ユーティリティは、ネットアップの診断ユーティリティを実行し、 SnapDrive for UNIX のログファイルをコピーして、分析に使用する圧縮ファイルを作成します。
+
+'napdrive.dc' ユーティリティは ' 次のタスクを実行します
+
+* ホストおよびホストに接続されているストレージ・システムに関する情報を収集するために 'host_info' および 'filer_info' ユーティリティを実行し ' この情報を圧縮ファイルに保存します「 host_info 」ユーティリティおよび「 filer_info 」ユーティリティは、 SnapDrive for UNIX インストール・パッケージとともに提供されます。
++
+たとえば、 Linux の場合は、「 linux_info 」ユーティリティです。
+
+* /tmp/NetApp/ntap_snapDrive_name というディレクトリを作成します。ツールによって次のファイルのコピーがディレクトリに配置されます。
++
+** SnapDrive version コマンドを実行した場合に表示される UNIX 版の SnapDrive
+** 'napdrive.conf' ファイル
+** 監査ログファイル
+** トレースログファイル
+** リカバリログファイル
+** host_info ユーティリティで作成されるファイル
+
+
+* ディレクトリの内容を圧縮したファイルを作成し、このファイルをネットアップテクニカルサポートに送信することを示すメッセージを表示します。
+
+
+* 関連情報 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["『 Linux Unified Host Utilities 7.1 Installation Guide 』"]

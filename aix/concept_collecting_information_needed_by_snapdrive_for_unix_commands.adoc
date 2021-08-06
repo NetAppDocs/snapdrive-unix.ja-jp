@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_collecting_information_needed_by_snapdrive_for_unix_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, collect, information, commands, required 
+summary: この章では、 SnapDrive for UNIX コマンド、フォーマット、オプション、キーワード、および例について説明します。 
+---
+= SnapDrive for UNIX コマンドで必要な情報を収集する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+この章では、 SnapDrive for UNIX コマンド、フォーマット、オプション、キーワード、および例について説明します。

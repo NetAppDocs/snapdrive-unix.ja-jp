@@ -1,0 +1,18 @@
+---
+permalink: solaris/concept_how_snapdrive_for_unix_works_on_host_clustered_unix_systems.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, unix, host, cluster 
+summary: SnapDrive for UNIX では、ストレージのプロビジョニングと、クラスタ全体のストレージを管理するための Snapshot 管理オプションをサポートしています。ホストクラスタ全体の共有ストレージには、 Solaris ホストの SFRAC 環境でディスクグループとファイルシステムが含まれます。ホストクラスタ内の任意のノードからすべての処理を実行できます。 
+---
+= ホストの clustered UNIX システムでの SnapDrive for UNIX の動作
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、ストレージのプロビジョニングと、クラスタ全体のストレージを管理するための Snapshot 管理オプションをサポートしています。ホストクラスタ全体の共有ストレージには、 Solaris ホストの SFRAC 環境でディスクグループとファイルシステムが含まれます。ホストクラスタ内の任意のノードからすべての処理を実行できます。
+
+SnapDrive for UNIX の操作は ' マスターノードから Solaris ホスト上で実行できますホストクラスタセットアップでは、コマンドはホストクラスタのマスターノードでローカルに実行する必要があります。そのためには、 root ユーザの「 rsh 」または「 root ユーザの「 ssh access-without -password prompt 」が、ホストクラスタ内のすべてのノードに対して設定されている必要があります。
+
+
+NOTE: SFRAC 環境で SnapDrive for UNIX を使用している場合、デフォルトのログインシェルはすべてのユーザに対して bash になります。

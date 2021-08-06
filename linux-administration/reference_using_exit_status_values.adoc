@@ -1,0 +1,17 @@
+---
+permalink: linux-administration/reference_using_exit_status_values.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, exit, status, command, scripts 
+summary: 終了ステータスの値は、 SnapDrive for UNIX コマンドの成功または失敗を判別するスクリプトで使用されます。 
+---
+= 終了ステータス値を使用する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+終了ステータスの値は、 SnapDrive for UNIX コマンドの成功または失敗を判別するスクリプトで使用されます。
+
+* 値が 0 の場合は、コマンドが正常に完了したことを示します。
+* 0 以外の値は、コマンドが完了していないこと、および原因に関する情報とエラー状態の重大度を示します。
+

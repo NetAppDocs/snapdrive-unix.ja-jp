@@ -1,0 +1,17 @@
+---
+permalink: solaris/concept_types_of_flexclone_volumes.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, flexclone, volume 
+summary: FlexClone ボリュームは、 SnapDrive for UNIX での使用方法に応じて、一時的またはすべての用途に分類できます。 
+---
+= FlexClone ボリュームのタイプ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FlexClone ボリュームは、 SnapDrive for UNIX での使用方法に応じて、一時的またはすべての用途に分類できます。
+
+* * 制限付きまたは一時的な FlexClone ボリューム * ：この FlexClone ボリューム（「 snap connect 」時に作成）は、主にデータの検証に使用されます。SnapDrive for UNIX を使用したプロビジョニングおよび Snapshot 処理（「 snap disconnect 」を除く）は、この FlexClone ボリュームでは実行できません。
+* * 無制限または多目的 FlexClone ボリューム * ：この FlexClone ボリューム（「 snap connect 」時に作成）は、通常のフレキシブルボリュームと同様に、プロビジョニングと Snapshot 処理のバックエンドとしても使用できます。この FlexClone ボリュームでは、通常の SnapDrive 処理をすべて実行できます。
+

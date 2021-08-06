@@ -1,0 +1,29 @@
+---
+permalink: linux-administration/task_deleting_igroup.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, igroup 
+summary: ストレージシステムに対して設定されている igroup は削除できますが、これは不要です。 
+---
+= igroup を削除する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージシステムに対して設定されている igroup は削除できますが、これは不要です。
+
+.手順
+. ホストで次のコマンドを入力します。
++
+'*lun SnapDrive igroup delete_filer_name_*'
+
++
+[listing]
+----
+snapdrive igroup delete toaster
+Deleted igroup configuration for appliance: toaster
+----
++
+ストレージ・システム toaster 用に設定されている igroup `ig` は、正常に削除されました。
+
+

@@ -1,0 +1,26 @@
+---
+permalink: aix/concept_considerations_for_supporting_vfiler_unit.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, vfiler, unit, support, issues 
+summary: SnapDrive for UNIX は、 FlexVol ボリューム上に作成された vFiler ユニット上での SnapDrive 処理をサポートします。ただし、ファイバチャネル \ （ FC \ ）を使用している場合、 SnapDrive for UNIX では vFiler ユニットはサポートされません。 
+---
+= vFiler ユニットでサポートの問題が発生しました
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX は、 FlexVol ボリューム上に作成された vFiler ユニット上での SnapDrive 処理をサポートします。ただし、ファイバチャネル（ FC ）を使用している場合、 SnapDrive for UNIX では vFiler ユニットはサポートされません。
+
+SnapDrive for UNIX でサポートされる vFiler ユニットに関する考慮事項を次に示します。
+
+* SnapDrive 処理は、 qtree 上に作成された vFiler ユニット上ではサポートされません。
++
+vFiler ユニットがストレージボリューム全体を所有している場合は、これらの処理が可能です。
+
+* vFiler ユニットをサポートするように SnapDrive を設定する場合は、 vFiler0 のインターフェイスに対して管理パスとデータパスが設定されていないことを確認する必要があります。
+
+
+* 関連情報 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1511536["『 Data ONTAP 8.2 MultiStore Management Guide for 7-Mode 』"]

@@ -1,0 +1,19 @@
+---
+permalink: solaris/concept_guidelines_forrenaming_snapshotcopies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rename, snapshot, copy 
+summary: Snapshot コピーの名前を変更するときは、 2 つの Snapshot コピーの名前が同じにならないようにしてください。 
+---
+= Snapshot コピーの名前変更に関するガイドライン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot コピーの名前を変更するときは、 2 つの Snapshot コピーの名前が同じにならないようにしてください。
+
+SnapDrive snap rename コマンドを使用する場合は、次の注意事項に従ってください。
+
+* Snapshot コピーの名前を別のストレージシステムボリュームに変更しようとすると、エラーメッセージが表示されます。
+* Snapshot コピーの新しい名前がすでに存在する場合は、エラーメッセージが表示されます。「 -force 」オプションを使用すると、 SnapDrive for UNIX でエラー・メッセージを生成せずに名前を変更できます。
+

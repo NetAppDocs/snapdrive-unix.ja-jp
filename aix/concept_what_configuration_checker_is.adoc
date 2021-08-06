@@ -1,0 +1,21 @@
+---
+permalink: aix/concept_what_configuration_checker_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, checker, tool 
+summary: SnapDrive 設定チェッカーツールを使用すると、 SnapDrive for UNIX でサポートされる構成を特定して確認できます。 
+---
+= 構成チェックとは
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive 設定チェッカーツールを使用すると、 SnapDrive for UNIX でサポートされる構成を特定して確認できます。
+
+構成チェックツールは、 NAS 環境と SAN 環境の両方でユーザ設定を検証することで、複数のサポート設定の問題に対応します。
+
+SnapDrive の設定チェックツールでは、 SnapDrive for UNIX で次の設定チェックがサポートされます。
+
+* デフォルトの場所にある「 napdrive.conf 」ファイルに指定されている構成をチェックします。
+* CLI を使用して指定された設定をチェックします。
+

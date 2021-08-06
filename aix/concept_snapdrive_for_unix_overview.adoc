@@ -1,0 +1,22 @@
+---
+permalink: aix/concept_snapdrive_for_unix_overview.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, overview, data, management 
+summary: SnapDrive for UNIX は、ストレージのプロビジョニングを簡易化し、ファイルシステムと整合性のある Snapshot コピーを作成することで、データ管理を簡易化し、アプリケーションデータの可用性と信頼性を高めます。 
+---
+= SnapDrive for UNIX の概要
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX は、ストレージのプロビジョニングを簡易化し、ファイルシステムと整合性のある Snapshot コピーを作成することで、データ管理を簡易化し、アプリケーションデータの可用性と信頼性を高めます。
+
+SnapDrive for UNIX を使用すると、データのバックアップが簡易化されるため、削除や変更を行った場合でもデータをリカバリできます。SnapDrive for UNIX は、 Snapshot テクノロジを使用して、 UNIX ホストに接続されている共有または非共有のストレージシステム上にデータのイメージを作成します。Snapshot コピーをリストアすると、ストレージシステム上の現在のデータが Snapshot コピー内のデータで置き換えられます。
+
+SnapDrive for UNIX には、ホスト側でアプリケーションから認識可能なファイル、ボリュームマネージャ、ストレージシステム側の論理ユニット番号（ LUN ）など、ストレージ階層全体を管理できるストレージ機能が用意されています。
+
+SnapDrive for UNIX では、ロールベースアクセス制御をサポートしています。ストレージ管理者は、 RBAC を使用して、ユーザが実行するロールとタスクに基づいてユーザのストレージシステムへのアクセスを制限します。
+
+
+NOTE: RBAC を使用するには、 Operations Manager コンソール 3.7 以降を使用する必要があります。

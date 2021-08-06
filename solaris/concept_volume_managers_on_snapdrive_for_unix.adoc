@@ -1,0 +1,43 @@
+---
+permalink: solaris/concept_volume_managers_on_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, manager, unix 
+summary: Solaris プラットフォームでは、 VxVM または Solaris Volume Manager\ （ SVM\ ）を使用できます。SVM は Solaris OS にバンドルされています。 
+---
+= SnapDrive for UNIX のボリューム・マネージャ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Solaris プラットフォームでは、 VxVM または Solaris Volume Manager （ SVM ）を使用できます。SVM は Solaris OS にバンドルされています。
+
+次の表に、ホストプラットフォーム上のボリュームマネージャを示します。
+
+|===
+| ホスト | ボリュームマネージャ | ボリュームまたはディスクグループ | 論理ボリュームの場所 | マルチパスデバイスの場所 
+
+
+ a| 
+Solaris の場合
+ a| 
+VxVM
+ a| 
+ディスク・グループ（「 dg 」
+ a| 
+/dev/vx/dsk/dg /lvol
+ a| 
+/dev/vx/dmp/15t0d2`
+
+
+
+ a| 
+SVM
+ a| 
+ディスク・グループ（「 dg 」
+ a| 
+「 /dev/md/fs1_Sdg/dsk/vol0 fs1_SdDg 」はディスクグループで、 vol0 は論理ボリューム名です
+ a| 
+/dev/rdsk/c4t60A98000686F65 36526B302777653350s2
+
+|===

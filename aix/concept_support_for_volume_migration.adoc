@@ -1,0 +1,21 @@
+---
+permalink: aix/concept_support_for_volume_migration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, support, volume, migration 
+summary: SnapDrive for UNIX では、ボリューム移行がサポートされます。ボリューム移行を使用すると、容量利用率やパフォーマンスの向上、およびサービスレベル契約を満たすために、同じコントローラ内のアグリゲート間でボリュームを無停止で移動できます。SAN 環境では、システムを停止せずに、 FlexVol ボリュームとボリューム内の LUN をアグリゲート間で移動できます。 
+---
+= ボリューム移行のサポート
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、ボリューム移行がサポートされます。ボリューム移行を使用すると、容量利用率やパフォーマンスの向上、およびサービスレベル契約を満たすために、同じコントローラ内のアグリゲート間でボリュームを無停止で移動できます。SAN 環境では、システムを停止せずに、 FlexVol ボリュームとボリューム内の LUN をアグリゲート間で移動できます。
+
+SnapDrive の処理を実行するには 'napdrive.conf ファイルで '_volmove-cutover-retry_' 変数と '_volmove-cutover-sleep_' 変数を設定する必要があります
+
+* 関連情報 *
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["ONTAP 9 論理ストレージ管理ガイド"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1368525["『 Data ONTAP 8.2 SAN Administration Guide for 7-Mode 』を参照してください"]

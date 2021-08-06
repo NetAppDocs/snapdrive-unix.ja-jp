@@ -1,0 +1,22 @@
+---
+permalink: aix/concept_connecting_multiple_storage_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, multiple, storage, entities 
+summary: 複数のストレージエンティティを含む Snapshot コピーを接続することができます。 
+---
+= 複数のストレージエンティティを接続する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+複数のストレージエンティティを含む Snapshot コピーを接続することができます。
+
+複数のデスティネーションストレージシステムに存在するストレージエンティティを含む Snapshot コピーを接続するには、次の要件を満たす必要があります。
+
+* コマンドプロンプトで指定するストレージエンティティは、単一のストレージシステムまたは HA ペア上に存在する必要があります。
+* ソースストレージシステムのボリューム名は、デスティネーションストレージシステムのボリューム名と一致している必要があります。
+* snapdrive.conf ファイルの `_snapmirror-dest-mmultiple -fileervolumes-enabled_` 変数を 'on `" に設定する必要があります
+
+
+1 つのストレージシステムまたは HA ペア上のストレージエンティティを 1 つのコマンドで接続できます。

@@ -1,0 +1,29 @@
+---
+permalink: linux-administration/concept_unable_to_create_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, create, command 
+summary: SnapDrive snap create コマンドによる Snapshot コピーの作成に影響する条件は、次のとおりです。 
+---
+= Snapshot コピーを作成できません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive snap create コマンドのスナップショット・コピー作成機能に影響する条件は ' いくつかあります
+
+* SnapDrive snap create コマンドは ' 次のタスクを実行できる必要があります
++
+** すべてのディスクグループを照会して LUN のリストを表示します。
+** SCSI コマンドを使用してすべての LUN を照会
+
+
+* Snapshot コピーを作成する前に、ディスクグループ内の LUN がオンラインであり、ディスクグループにマッピングされている必要があります。オフラインまたはマッピング解除された LUN があると作成処理は失敗します。
++
+Snapshot コピーを作成する前に、すべての LUN がオンラインで、ホストにマッピングされていることを確認してください。
+
+* アクセス権限では、ホストがそのストレージシステム上の情報の Snapshot コピーを作成することはできません。
++
+また、 LVM のエントリでも機能するため、 LVM のエントリを操作するための十分な権限を持つホストにログオンする必要があります。
+
+

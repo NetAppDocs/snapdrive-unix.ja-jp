@@ -1,0 +1,84 @@
+---
+permalink: linux-administration/concept_volume_based_snaprestore_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snaprestore, volume, command 
+summary: このセクションでは、ボリュームベースの SnapRestore を使用するためのコマンドとオプションについて説明します。 
+---
+= volume-based SnapRestore コマンドの略
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このセクションでは、ボリュームベースの SnapRestore を使用するためのコマンドとオプションについて説明します。
+
+ボリューム・ベースの SnapRestore を選択するために 'snap restore CLI に -vbsr オプションが追加されました次のコマンド構文を使用して、ボリュームベースの SnapRestore を使用してリストアを実行します。
+
+[listing]
+----
+snapdrive snap restore {-lun | -dg | -vg | -hostvol |
+-lvol | -fs |-file} file_spec [file_spec ...] [{-lun | -dg |
+-vg | -hostvol | -lvol | -fs -file} file_spec [file_spec ...]
+...] -snapname snap_name [-force [-noprompt]][{-reserve |
+-noreserve}]
+[-vbsr [execute | preview]]
+----
+引数に -vbsr が指定されていない場合、デフォルトの出力は「 preview 」オプションの出力になります。「 -verbose 」オプションを使用すると、ユーザが上書きできるすべての必須チェックの詳細な出力が可能になります。「 -verbose 」オプションを指定しない場合のデフォルトの出力には、失敗したチェックの結果が表示されます。
+
+ボリューム・ベースの SnapRestore の実行中に確認メッセージが表示されないようにするには 'snap restore -vbsr execute' コマンドで -noprompt` オプションと -force オプションを使用します次の表に、 SnapDrive for UNIX の動作をオプションによって示します。
+
+|===
+| S.N. | -vbsr を実行します | [-force] | -noprompt | 結果 
+
+
+ a| 
+1.
+ a| 
+いいえ
+ a| 
+該当なし
+ a| 
+該当なし
+ a| 
+プレビューモードがデフォルトモードです。すべてのチェックが実行され、各チェックのレポートが生成されます。
+
+
+
+ a| 
+2.
+ a| 
+はい。
+ a| 
+いいえ
+ a| 
+いいえ
+ a| 
+すべてのチェックが実行されます。ユーザが上書き可能な必須チェックが失敗した場合、 SnapDrive for UNIX にエラーメッセージが表示されます。
+
+
+
+ a| 
+3.
+ a| 
+はい。
+ a| 
+はい。
+ a| 
+いいえ
+ a| 
+すべてのチェックが実行されます。必須チェックのいずれかが失敗すると、 SnapDrive for UNIX にエラーメッセージが表示されます。ユーザがオーバーライドできるチェックが失敗すると、 SnapDrive for UNIX のプロンプトが表示されます。
+
+
+
+ a| 
+4.
+ a| 
+はい。
+ a| 
+はい。
+ a| 
+はい。
+ a| 
+すべてのチェックが実行されます。必須チェックのいずれかが失敗すると、 SnapDrive for UNIX にエラーメッセージが表示されます。ユーザがオーバーライドできるチェックが失敗した場合、 SnapDrive for UNIX はプロンプトを表示しません。
+
+|===

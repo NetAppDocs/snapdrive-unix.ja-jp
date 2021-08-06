@@ -1,0 +1,35 @@
+---
+permalink: linux-administration/task_capturing_a_consistency_group_snapshot.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, consistency, group, snapshot, copy, configuration 
+summary: SnapDrive for UNIX を設定して、整合グループの Snapshot コピーを作成できます。 
+---
+= 整合グループの Snapshot コピーを作成する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を設定して、整合グループの Snapshot コピーを作成できます。
+
+.手順
+. ホストで次のコマンドを入力します。 +
++
+`* SnapDrive snap create -fs/mnt/test-snapname_-f -nopromp.*`
+
++
+`_snapshotname_` は、整合グループ Snapshot コピーに指定された名前です。
+
+
+
+
+
+== 例
+
+次に、このコマンドの例を示します。
+
+[listing]
+----
+snapdrive snap create -fs /mnt/test -snapname snap_123 -f -noprompt
+----
+整合グループの Snapshot コピーが作成されました。

@@ -1,0 +1,13 @@
+---
+permalink: linux-installation-cmode/concept_verifying_supported_configurations_using_configuration_checker_tool.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, verfiy, host, configuration, checker, tool 
+summary: SnapDrive for UNIX を使用する前に、設定チェッカーツールを使用して、必要なすべてのコンポーネントと正しいバージョンが Linux ホストで使用可能であることを確認できます。 
+---
+= 設定チェッカーツールを使用した Linux ホスト構成の確認
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を使用する前に、設定チェッカーツールを使用して、必要なすべてのコンポーネントと正しいバージョンが Linux ホストで使用可能であることを確認できます。

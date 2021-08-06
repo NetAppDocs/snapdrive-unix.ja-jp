@@ -1,0 +1,42 @@
+---
+permalink: linux-administration/concept_error_message_locations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, error, message, location 
+summary: SnapDrive for UNIX では、コマンド出力および各種ログファイルとしてのエラーメッセージに関する情報が提供されます。 
+---
+= エラーメッセージの場所
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、コマンド出力および各種ログファイルとしてのエラーメッセージに関する情報が提供されます。
+
+SnapDrive for UNIX は、次の場所にエラー・メッセージに関する情報を提供します。
+
+* コマンドの出力に表示されます
++
+SnapDrive for UNIX コマンドの標準エラー出力へのすべてのメッセージを表示します。
+
+* システムログ
++
+SnapDrive for UNIX では 'syslog(3) メカニズムを使用して 'Fatal エラーと Admin エラーの重大度レベルを持つすべてのエラーがシステム・ログに記録されます
+
+* 監査ログファイル
++
+監査ログには、 SnapDrive for UNIX コマンドごとに次の情報が記録されます。
+
++
+** 発行者
+** 発行日
+** 終了ステータス
++
+これは、システムで実際に何が起こったかを判断するのに非常に役立ちます。
+
+
+
+* トレースログファイル
++
+トレースログには、発生したエラーに関する詳細情報が記録されます。ネットアップテクニカルサポートは、問題の診断時にこのログを使用します。
+
+

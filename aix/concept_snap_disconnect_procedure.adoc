@@ -1,0 +1,35 @@
+---
+permalink: aix/concept_snap_disconnect_procedure.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, procedure 
+summary: このセクションでは、スナップ切断のための手順について説明します。 
+---
+= 手順のスナップ切断
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このセクションでは、スナップ切断のための手順について説明します。
+
+次の手順は、 snap disconnect 手順を示しています。
+
+.手順
+. SnapDrive for UNIX は 'snap disconnect CLI からホストファイル仕様を取得し ' ストレージ・システム・ボリュームを検出します
+. ホストファイルの仕様を削除して LUN のマッピングを解除したあと、 SnapDrive for UNIX は、現在のボリュームが SnapDrive で作成されたクローンであるかどうかを確認します。
+. FlexClone が SnapDrive によって作成されると、 SnapDrive for UNIX は以下をチェックします。
++
+.. クローンボリュームにマッピングされた LUN があります
+.. クローンボリュームに新しい LUN があります
+.. 新しい Snapshot コピーがあります
+
+
+
+
+すべての条件が満たされている場合、 SnapDrive for UNIX はクローンボリュームを削除します。無制限の FlexClone の場合、 RBAC が設定されている場合、 SnapDrive for UNIX は手順 1 と手順 2 のチェックを実行しません。
+
+Data ONTAP 7.2 より前のバージョンのストレージシステムでは、制限された FlexClone ボリュームは SnapDrive for UNIX で削除されません。削除するには、ストレージ・システム・コマンドを使用する必要があります。ただし、適切な RBAC 機能がユーザに提供されると、無制限の FlexClone ボリュームは削除されます。
+
+* 関連情報 *
+
+xref:concept_role_based_access_control_in_snapdrive_for_unix.adoc[SnapDrive for UNIX でのロールベースアクセス制御]

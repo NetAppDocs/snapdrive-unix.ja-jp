@@ -1,0 +1,15 @@
+---
+permalink: aix/concept_access_control_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, access, control 
+summary: SnapDrive for UNIX では、ホストの接続先の各ストレージ・システムに対する各ホストのアクセス・レベルを制御できます。 
+---
+= SnapDrive for UNIX でのアクセス制御
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、ホストの接続先の各ストレージ・システムに対する各ホストのアクセス・レベルを制御できます。
+
+SnapDrive for UNIX のアクセスレベルは、特定のストレージシステムをターゲットとしてホストが実行できる操作を示します。show 処理と list 処理を除き、アクセス制御権限は Snapshot とストレージのすべての処理に影響する可能性があります。

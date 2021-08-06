@@ -1,0 +1,33 @@
+---
+permalink: aix/concept_snapshot_copiesthat_span_storagesystems_orvolumes.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, storage, volume 
+summary: SnapDrive for UNIX を使用すると、同一または異なるストレージ・システム上の複数のストレージ・システム・ボリュームにある Snapshot コピーを作成できます。 
+---
+= 複数のストレージシステムまたはボリュームにまたがる Snapshot コピー
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を使用すると、同一または異なるストレージ・システム上の複数のストレージ・システム・ボリュームにある Snapshot コピーを作成できます。
+
+SnapDrive for UNIX を使用すると、複数のストレージ・システム・ボリュームまたは複数のストレージ・システムにまたがる Snapshot コピーを作成できます。これらのボリュームは、同じストレージシステムに存在することも別のストレージシステムに存在することもできます。SnapDrive snap create コマンド SnapDrive を使用すると ' 要求したエンティティを構成するすべてのボリュームのスナップショット・コピーが作成されますが 'UNIX の SnapDrive では 'lun snap create コマンドで指定したエンティティのみがリストアされます
+
+SnapDrive snap create コマンドを使用して、複数のボリュームにまたがる Snapshot コピーを作成する場合、コマンドプロンプトでボリュームに名前を付ける必要はありません。SnapDrive for UNIX は ' 指定した 'file_dspec' 引数からこの情報を取得します
+
+* 入力した `file_tspec' がディスク・グループ ' またはディスク・グループ上にあるファイル・システムまたはホスト・ボリュームを要求すると 'UNIX 用 SnapDrive は ' 指定したディスク・グループ ' ボリューム ' またはファイル・システムのすべてのストレージ・システム・ボリュームを含む Snapshot コピーを自動的に作成します
+* 入力した「 host_spec 」が LUN を要求すると、 SnapDrive for UNIX は、その LUN を含むストレージシステムボリュームの Snapshot コピーを作成します。
+* 入力した「 filespec 」が、 LUN 上に直接存在するファイルシステムを要求すると、 SnapDrive for UNIX は、指定した LUN とファイルシステムを含むストレージシステムボリュームの Snapshot コピーを作成します。
+* 入力し SnapDrive た `file_tspec' が NFS ディレクトリを要求すると 'NFS for UNIX は 'NFS ディレクトリ・ツリーを含むボリュームのスナップショット・コピーを作成します
+
+
+複数のストレージ・システムおよびストレージ・システム・ボリュームからのエンティティに基づいて構築された 'file-spec 引数の使用に加えて ' 各値が単一のストレージ・システムまたはストレージ・システム・ボリュームに基づいている 'filespec 引数の組み合わせも使用できますたとえば、ストレージシステムストレージシステム 2 とストレージシステム 3 にディスクグループ dg1 がまたがっていて、 DG2 がストレージシステム 2 にあり、 dg3 がストレージシステム 3 にあるとします。この場合、次のいずれかのコマンドラインが正しいことになります。
+
+SnapDrive snap create -dg dg1 - snapdg1
+
+SnapDrive snap create -dg DG2 dg3-snapdg23`
+
+SnapDrive snap create -dg dg1 DG2 dg3 - snapdg123 `
+
+ストレージシステムとボリュームにまたがる Snapshot コピーを作成する場合、 SnapDrive for UNIX によって各ストレージシステムボリュームに短い名前で Snapshot コピーが作成されることに注意してください。別々のストレージシステム上にあるボリュームも含め、完全パス名は名前に含まれません。そのため、あとで Snapshot コピーの名前を変更した場合は、各ストレージシステムおよびボリュームに移動し、その名前も変更する必要があります。

@@ -1,0 +1,40 @@
+---
+permalink: solaris/task_adding_host_entries_for_new_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, add, host, lun, entry 
+summary: SnapDrive for UNIX を使用して、特定の数の新しい LUN を作成できます。SnapDrive for UNIX には、この目的のための固有のコマンドが用意されています 
+---
+= 新しい LUN のホストエントリを追加しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を使用して、特定の数の新しい LUN を作成できます。SnapDrive for UNIX には、この目的のための固有のコマンドが用意されています
+
+特定の数の新しい LUN を作成する準備ができていることを確認します。これらの LUN は、ホストにマッピングされているストレージシステムに存在します。
+
+.手順
+. SnapDrive config prepare LUN-count [-deviceType shared]`
++
+`-count は、ホストを準備する新しい LUN の数です。`-deviceType' 共有オプションは 'SFRAC を使用する Solaris プラットフォームでサポートされます
+
++
+`-deviceType' は 'UNIX のオペレーションの SnapDrive に使用されるデバイスのタイプです「 -deviceType shared 」と指定すると、ホストクラスタ内のすべてのノードで SnapDrive config prepare LUN' コマンドが実行されます。
+
++
+
+NOTE: SFRAC 環境では、このコマンドはホストクラスタ内のすべてのノードで実行されます。
+
++
+Solaris の場合 ' このコマンドは ' エントリのない新しい LUN の可能性ごとに ' 必要に応じてファイル '/kernel/drv/sd.conf にエントリを追加しますまた、ストレージシステムのマッピング先の SCSI ターゲットごとにエントリが生成されます。Solaris 8 では '`d.conf' エントリを追加した後でホストを再起動する必要がありますこのコマンドは、リブートが必要になるたびに警告を表示します。
+
++
+[NOTE]
+====
+パーシスタント・バインディングのために '/kernel/drv/lpfc.conf ファイルを手動で編集した場合は 'FC-bind-wwpn のエントリがのあとになっていることを確認します
+
+#begin:lputil-managed Persistent Binding.`
+
+====
+

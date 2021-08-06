@@ -1,0 +1,27 @@
+---
+permalink: solaris/concept_managing_volume_migration_using_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, migration 
+summary: ボリューム移行中に SnapDrive 処理を実行できます。 
+---
+= SnapDrive for UNIX でのボリューム移行
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリューム移行中に SnapDrive 処理を実行できます。
+
+ボリューム移行は、次の 3 つのフェーズで構成されます。
+
+* セットアップ（ Setup ）
+* 移動
+* カットオーバー
+
+
+SnapDrive for UNIX の運用は、セットアップや移動の各段階で円滑に機能します。
+
+カットオーバーフェーズ中に SnapDrive コマンドを実行すると、 SnapDrive for UNIX では、「 snapdrive.conf 」ファイルの変数「 _volmove-cutover-retry_ 」および「 _volmove-cutover-retry-sleep_ 」に定義されている処理を再試行できます。
+
+
+NOTE: ボリューム移行中に SnapDrive for UNIX の処理が失敗した場合は、ボリューム移行処理の完了後に SnapDrive for UNIX の処理を実行する必要があります。

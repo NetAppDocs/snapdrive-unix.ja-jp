@@ -1,0 +1,13 @@
+---
+permalink: solaris/concept_snapdrive_for_unix_configuration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration 
+summary: SnapDrive for UNIX の設定オプションを確認し、 SnapDrive for UNIX の使用方法を理解しておく必要があります。 
+---
+= SnapDrive for UNIX 構成
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX の設定オプションを確認し、 SnapDrive for UNIX の使用方法を理解しておく必要があります。

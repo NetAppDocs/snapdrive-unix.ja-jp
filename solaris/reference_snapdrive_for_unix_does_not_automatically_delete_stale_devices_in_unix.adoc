@@ -1,0 +1,19 @@
+---
+permalink: solaris/reference_snapdrive_for_unix_does_not_automatically_delete_stale_devices_in_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, stale, devices 
+summary: SnapDrive for UNIX の処理が設定の問題で失敗した場合、 Fibre Channel over Ethernet \ （ FCoE \ ）環境で古いデバイスが使用されることがあります。これらの古いデバイスは自動的には削除されないため、回避策を把握しておく必要があります。 
+---
+= SnapDrive for UNIX では、 UNIX の古いデバイスは自動的には削除されません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX の処理が設定の問題で失敗した場合、 Fibre Channel over Ethernet （ FCoE ）環境で古いデバイスが使用されることがあります。これらの古いデバイスは自動的には削除されないため、回避策を把握しておく必要があります。
+
+
+
+== 回避策
+
+ベンダーが提供するネイティブの再スキャンスクリプトを実行して古いエントリをすべて削除するか、「 re scan-scsibus.sh --r 」コマンドを使用して再スキャンスクリプトを実行します。これは、「 G3 」パッケージに含まれています。

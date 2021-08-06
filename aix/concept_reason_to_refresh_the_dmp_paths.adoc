@@ -1,0 +1,35 @@
+---
+permalink: aix/concept_reason_to_refresh_the_dmp_paths.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, dmp, path, refresh 
+summary: FC 構成および DMP 構成のホストでは、 SnapDrive storage delete-lun コマンドがハングすることがあります。 
+---
+= DMP パスを更新する理由
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FC および DMP 構成のホストでは、 SnapDrive storage delete -lun' コマンドがハングすることがあります。
+
+コマンドは、次のコンポーネントの不適切なインストールまたは設定が原因でハングする可能性があります。
+
+* NTAPasl
+* Veritas スタック（ストレージ基盤）
+* マルチパスライセンス
+
+
+FC パスを有効化、無効化、または追加した後は、 DMP パス情報を適切に更新する必要があります。DMP パスを更新するには、次に示す順番に次のコマンドを実行します。
+
+|===
+| * プラットフォーム * | * コマンド * 
+
+
+ a| 
+AIX の場合
+ a| 
+* 「 cfgmg 」
+* vxdisk スキャンディスク
+
+
+|===

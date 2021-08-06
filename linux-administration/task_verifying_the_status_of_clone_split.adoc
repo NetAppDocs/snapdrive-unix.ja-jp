@@ -1,0 +1,96 @@
+---
+permalink: linux-administration/task_verifying_the_status_of_clone_split.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, status, clone, split, specification 
+summary: ジョブ ID またはファイル仕様を使用して、クローンスプリットのステータスを照会できます。SnapDrive for UNIX は、クローン・スプリットの現在のステータスを、実行中、失敗、または完了として示します。 
+---
+= ボリュームクローンまたは LUN クローンスプリットのステータスを表示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ジョブ ID またはファイル仕様を使用して、クローンスプリットのステータスを照会できます。SnapDrive for UNIX は、クローン・スプリットの現在のステータスを、実行中、失敗、または完了として示します。
+
+.手順
+. ジョブ ID またはファイル仕様を使用してクローンスプリットのステータスを照会するには、次のコマンドを入力します。
++
+`* SnapDrive クローンスプリットステータス [-lun]_long_lun_name_[_long_lun_name_name..._][{-dg|-vg|-fs|-hostvol|-lvol ｝ _file_spec_[_file_spec..._]] [-job_<jobid>_][-all ]*```````
+
+
+
+次の例は、ジョブ ID を使用したクローンスプリットのステータスを表示します。
+
+[listing]
+----
+# snapdrive clone split status -job SVE2oxKXzH
+Clone-Split-Status for /fs1-1_3 is 1% Complete
+Clone-Split-Status for /fs1_0 is 73% Complete
+Clone-Split-Status for /fs1_1 is 73% Complete
+Clone-Split-Status for /fs1_2 is 74% Complete
+Clone-Split-Status for /fs1_3 is 1% Complete
+----
+[NOTE]
+====
+クローンスプリットの進捗状況は、次のいずれかの方法で確認できます。
+
+* を使用してクローンを検証できます
++
+`* SnapDrive storage show -fs/mnt/my_mnt*``
+
++
+または
+
++
+'*lun SnapDrive storage show -lun_long_lun_pathname_*
+
++
+コマンドいずれの場合も、スプリットが完了していない場合、クローンタイプは FlexClone クローンまたは LUN クローンとして表示されます。
+
+* クローン・スプリットの進行状況は、ストレージ・システムにログインし、ストレージ・システムの CLI で次のコマンドを使用することにより確認できます。
++
+'*vol clone split status_vol_name *
+
++
+'*lun clone split status_lun_name_*
+
+
+
+====
+次の例は、ファイル仕様を使用したクローンスプリットステータスのクエリを示しています。
+
+[listing]
+----
+# snapdrive clone split status -fs /mnt/my_mnt3 -fs /mnt/my_mnt4
+Clone-Split-Status for /mnt/my_mnt3 is 14% Complete
+Clone-Split-Status for /mnt/my_mnt4 is 17% Complete
+----
+次の例は、実行中のクローンスプリットステータスのクエリを示しています。
+
+[listing]
+----
+# snapdrive clone split status -all
+Job ID: SVE2oxKXzH:
+Clone-Split-Status for /fs1-1_3 is 100% Complete
+Clone-Split-Status for /fs1_0 is 100% Complete
+Clone-Split-Status for /fs1_1 is 100% Complete
+Clone-Split-Status for /fs1_2 is 100% Complete
+Clone-Split-Status for /fs1_3 is 100% Complete
+----
+* ジョブがジョブセットから削除され、ファイル仕様を使用してクローンスプリットのステータスを照会すると、 SnapDrive for UNIX のエラーメッセージがと表示されます
++
+' 現在 ' 指定されたリソースに対して ' スプリットは実行されていません
+
+* ジョブセットからジョブが削除され、ジョブ ID を使用してクローンスプリットのステータスを照会すると、 SnapDrive for UNIX のエラーメッセージがと表示されます
++
+ジョブ ID が無効です
+
+* すべてのファイル仕様がジョブから削除され、ジョブ ID を使用してクローンスプリットのステータスを照会すると、 SnapDrive for UNIX はの形式で表示されます
++
+ジョブ ID が無効です
+
++
+ジョブはジョブセットから削除されるためです。
+
+* ストレージシステムのスペース不足が原因でファイル仕様が 1 つでも失敗した場合でも、ジョブは残りのファイル仕様に合わせて引き続きスプリットされます。つまり、ジョブはジョブキューから削除されず、ジョブの全体的な結果を照会するまで、ジョブステータスは保持されます。
+

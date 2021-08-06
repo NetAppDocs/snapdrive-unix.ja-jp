@@ -1,0 +1,15 @@
+---
+permalink: linux-administration/concept_support_for_partitioned_or_non_partitioned_devices_in_rhel_and_suse.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, suse, server, sles, partitioning, scheme, rhel, red, enterprise 
+summary: RHEL の SnapDrive for UNIX では、ホストストレージエンティティをプロビジョニングするためにディスクをパーティショニングします。ただし、 SnapDrive for UNIX では、 SLES 11 上のパーティショニングデバイスと非パーティショニングデバイスの両方、および SLES 10 上の非パーティショニングデバイスのみに対して、 SnapDrive 操作のプロビジョニングと管理を行うことができます。 
+---
+= Red Hat Enterprise Linux （ RHEL ）および SUSE Linux Enterprise Server （ SLES ）のストレージパーティショニングスキーム
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+RHEL の SnapDrive for UNIX では、ホストストレージエンティティをプロビジョニングするためにディスクをパーティショニングします。ただし、 SnapDrive for UNIX では、 SLES 11 上のパーティショニングデバイスと非パーティショニングデバイスの両方、および SLES 10 上の非パーティショニングデバイスのみに対して、 SnapDrive 操作のプロビジョニングと管理を行うことができます。
+
+Linux 2.2 および 2.4 カーネルバージョンでは、ファイルシステムの作成に raw ディスクを使用できませんでした。これは、これまですべての Microsoft x86 システムアーキテクチャが Windows オペレーティングシステムを使用しており、常にハードディスクをパーティション分割していたためです。最初のカーネルは Windows オペレーティングシステム上で動作するように書かれていたので、カーネルはハードディスク上のパーティションを予測するような方法で書かれていました。raw デバイス上にファイルシステムを作成するために、常にさらにパーティションが作成されました。ディスクグループの LUN や raw LUN の場合、パーティショニングは実行されません。このため、パーティション分割方式に関する変更は、 raw デバイス上のファイルシステムの場合にのみ、動作に制限されます。

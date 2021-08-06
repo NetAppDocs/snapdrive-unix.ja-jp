@@ -1,0 +1,77 @@
+---
+permalink: aix/task_installing_snapdrive_for_unix_on_an_aix_host.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, aix, host, unix 
+summary: システム管理インターフェイスツール（ SMIT ）を使用して、 AIX ホストに SnapDrive for UNIX をインストールできます。 
+---
+= AIX ホストに SnapDrive for UNIX をインストールしています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+System Management Interface Tool （ SMIT ；システム管理インターフェイスツール）を使用して、 AIX ホストに SnapDrive for UNIX をインストールできます。
+
+root ユーザとしてログインする必要があります。
+
+
+IMPORTANT: SnapDrive for UNIX がインストールされているディレクトリは削除しないでください。ディレクトリを削除すると、デーモンの開始と停止で問題が発生する可能性があります。
+
+.手順
+. ネットアップサポートサイトからソフトウェアをダウンロードします。
+. 解凍した「 NetApp.snaps_aix_5_2.z 」ファイルを配置したディレクトリに移動します。
+. 次のコマンドを実行して SMIT を開始します
++
+「 * smit * 」
+
+. 「 * Software Installation and Maintenance * （ソフトウェアのインストールとメンテナンス）」オプションを選択します。
+. 次の画面で、 [ ソフトウェアのインストールと更新 * ] メニューオプションを選択します。
+. Install Software （ソフトウェアのインストール）画面で、次のいずれかの方法でソフトウェアの場所を指定します。
++
+** ソフトウェアの場所のパスを手動で入力します。
+** F4 キーを押してオプションのリストを表示します。
+
+
++
+F4 メソッドを使用する場合は、次の手順を実行します。
+
++
+.. F4 キーを押します。
+.. インストールするソフトウェアを確認するプロンプトで、次のように入力します。
++
+「 * NetApp.snapdrive * 」というようになります。
+
+.. 続行するかキャンセルするかを確認するプロンプトが表示されたら、 Enter キーを押してインストールを完了します。
+
+
+. 「 lslpp-l netapp .snapdrive 」コマンドを使用して、ソフトウェアパッケージのインストールを確認します。
+. システムに SnapDrive for UNIX を設定してセットアップを完了します。
++
+この情報のほとんどはデフォルトで設定されますが、次の情報を指定する必要があります。
+
++
+.. ストレージシステムのログイン情報
+.. AutoSupport 設定
+.. FC プロトコルを使用するか iSCSI プロトコルを使用するかに基づいて、 SnapDrive for UNIX の次のオプションに正しい設定値を設定します。
++
+*** 「デフォルト転送」
++
+プロトコルに応じて 'FCP または iSCSI を選択します
+
+*** 「マルチパスタイプ」
++
+FC の場合は、次のいずれかの値に設定します。
+
++
+**** 「 NativeMPIO 」
+**** 「 D MP 」
+
+
+
+
+
+
++
+iSCSI の場合、これを「 NativeMPIO 」または「 D MP 」に設定します。
+
+

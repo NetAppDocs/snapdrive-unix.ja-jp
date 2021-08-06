@@ -1,0 +1,32 @@
+---
+permalink: aix/concept_considerations_forstorage_operations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, considerations, storage, operations 
+summary: ストレージコマンドに関するいくつかの考慮事項に留意する必要があります。 
+---
+= ストレージの処理に関する考慮事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージコマンドに関するいくつかの考慮事項に留意する必要があります。
+
+* 複数のストレージ・システム・ボリュームまたは複数のストレージ・システムにまたがるボリューム・グループは、サポートが制限されます。SnapDrive storage create コマンドを使用して ' 複数のストレージ・システムにまたがるボリューム・グループを作成することはできません
++
+この場合、 SnapDrive for UNIX では次のキー・コマンドがサポートされます。
+
++
+** SnapDrive snap create
+** SnapDrive スナップ・リストア
+** SnapDrive スナップ接続
+** SnapDrive スナップ切断
+
+
+* SnapDrive storage resize コマンドは ' ホストに直接マッピングされた LUN や ' ホストに含まれているファイル・システムでは機能しません
+* SnapDrive for UNIX には、作成するホストボリュームのフォーマットを制御するオプションはありません。SnapDrive for UNIX では、接続されたホストボリュームのみが作成されます。他のアプリケーションを使用して作成された、その他の形式（ストライピングされたボリュームなど）のホストボリュームでは正常に動作します。
+* ディスクグループの一部をリストアすることはできません。SnapDrive for UNIX では、ディスクグループ全体のみがバックアップおよびリストアされます。
+
+
+
+NOTE: SnapDrive では '-mntopts' コマンドを使用して Linux 以外のオペレーティング・システムから Linux オペレーティング・システムに実行される 操作は 'Red Hat Enterprise Linux 6 より前のすべてのバージョンで失敗します

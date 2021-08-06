@@ -1,0 +1,25 @@
+---
+permalink: aix/concept_commands_appear_blocked_commands_appear_blocked.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, blocked 
+summary: SnapDrive for UNIX コマンドは 10 分以上ブロックされているように見えるため、実行できません。コマンドが完了するまで待つ必要があります。 
+---
+= コマンドはブロックされたように表示
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX コマンドは 10 分以上ブロックされているように見えるため、実行できません。コマンドが完了するまで待つ必要があります。
+
+この現象は、 VxVM/DMP がボリューム設定デーモンの管理に時間が必要な場合に発生することがあります。この動作のトリガーには、次のものがあります。
+
+* パニックから回復したストレージシステム
+* オフラインからオンラインに移行したストレージシステムターゲットアダプタ
+
+
+
+
+== 回避策
+
+コマンドが完了するまで待ちます。Veritas 構成デーモンを実行し、デバイスの現在の状態を検出するには数分かかります。

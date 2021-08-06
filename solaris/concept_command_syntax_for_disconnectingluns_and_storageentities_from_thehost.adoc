@@ -1,0 +1,15 @@
+---
+permalink: solaris/concept_command_syntax_for_disconnectingluns_and_storageentities_from_thehost.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, syntax, lun, storage, host, disconnect 
+summary: SnapDrive storage disconnect コマンドを使用して、ストレージエンティティを含む LUN のマッピングを削除するには、次の構文を使用します。 
+---
+= ホストから LUN とストレージエンティティを切断するコマンドの構文
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive storage disconnect コマンドを使用して、ストレージエンティティを含む LUN のマッピングを削除するには、次の構文を使用します。
+
+`* SnapDrive storage disconnect ｛ -dg | -fs | -hostvol ｝ _file_spec_[_file_spec..._][ ｛ -dg | -fs | -hostvol ｝ _file_spec_[_file_spec...] ..._][-fstype_type_][-vmtype_type_]*`

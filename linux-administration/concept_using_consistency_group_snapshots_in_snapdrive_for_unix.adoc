@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/concept_using_consistency_group_snapshots_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, consistency, group, vserver, node, cluster, entity 
+summary: 整合グループ Snapshot は、複数の SVM またはクラスタのノードにまたがる一連のボリュームの Snapshot コピーであり、単一のエンティティとして管理されます。 
+---
+= SnapDrive for UNIX の整合グループ Snapshot コピー
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+整合グループ Snapshot は、複数の SVM またはクラスタのノードにまたがる一連のボリュームの Snapshot コピーであり、単一のエンティティとして管理されます。
+
+SnapDrive for UNIX は、クラスタの複数の SVM またはノードにまたがるすべてのボリュームで、 crash-consistent Snapshot コピーをキャプチャします。Snapshot コピーのキャプチャ期間を設定することもできます。
+
+SnapDrive for UNIX は、デフォルトで整合グループの Snapshot コピーをキャプチャします。この機能を無効にして、ベストエフォートモードで Snapshot コピーをキャプチャすることができます。
+
+
+NOTE: Data ONTAP for UNIX 5.2 では、 clustered Data ONTAP の整合グループ Snapshot コピーは SnapDrive 8.2 以降のバージョンでのみサポートされます。

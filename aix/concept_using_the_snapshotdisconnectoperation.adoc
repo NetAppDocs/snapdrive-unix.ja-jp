@@ -1,0 +1,31 @@
+---
+permalink: aix/concept_using_the_snapshotdisconnectoperation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, disconnect, operation 
+summary: SnapDrive snap disconnect コマンドを使用して、複数のストレージシステムまたはストレージシステムボリューム上にある Snapshot コピーを切断します。 
+---
+= Snapshot 切断処理を使用する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive snap disconnect コマンドを使用して、複数のストレージシステムまたはストレージシステムボリューム上にある Snapshot コピーを切断します。
+
+SnapDrive のマッピングを削除するには、 lun snap disconnect コマンドを使用します。また、ストレージエンティティと基盤となる LUN のマッピングや、 Snapshot コピー内の NFS ディレクトリのマッピングを削除するには、 lun snap disconnect ` コマンドを使用します。
+
+このコマンドを使用すると、複数のストレージシステムボリュームまたは複数のストレージシステムにまたがる Snapshot コピーを切断できます。ストレージエンティティとボリュームは、同じストレージシステム上に存在することも、別々のストレージシステム上に存在することも可能です。
+
+このコマンドを使用すると、次のいずれかを切断できます。
+
+* LUN
+* LUN 上に直接作成されるファイルシステム
+* LUN 上に作成されたディスクグループ、ホストボリューム、およびファイルシステム
+* NFS ディレクトリツリー
+* LUN 上に作成された共有ディスクグループ、ホストボリューム、およびファイルシステム
+
+
+切断処理によって接続されている Snapshot コピーが変更されることはありません。ただし、デフォルトでは、対応する接続処理で作成された一時的な LUN またはクローンは削除されません。
+
+
+NOTE: LUN 、 LUN 上のファイルシステム、および LVM エンティティの場合、このコマンドは SnapDrive storage delete ` と同じです。

@@ -1,0 +1,25 @@
+---
+permalink: solaris/concept_supported_fc_iscsi_or_nfs_configurations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, fc, iscsi, nfs, configuration 
+summary: SnapDrive for UNIX は、ホストクラスタおよび HA ペアのトポロジをサポートします。FC 構成または iSCSI 構成では、 FC Host Utilities または iSCSI Host Utilities でサポートされているのと同じホストクラスタおよび HA ペア構成がサポートされます。 
+---
+= サポートされる FC 、 iSCSI または NFS 構成
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX は、ホストクラスタおよび HA ペアのトポロジをサポートします。FC 構成または iSCSI 構成では、 FC Host Utilities または iSCSI Host Utilities でサポートされているのと同じホストクラスタおよび HA ペア構成がサポートされます。
+
+SnapDrive for UNIX では、次のホストクラスタおよび HA ペアトポロジがサポートされます。
+
+* 単一のホストを単一のストレージシステムに接続するスタンドアロン構成
+* ストレージシステムの HA ペアのフェイルオーバーを実行するトポロジ
+* ネットアップでサポートされているホストクラスタを含むトポロジ
+
+
+使用するホストおよびストレージシステムの推奨構成の詳細については、 Solaris Host Utilities のマニュアルを参照してください。
+
+
+NOTE: ユーティリティのマニュアルに記載されていない SnapDrive for UNIX 構成が必要な場合は、テクニカルサポートにお問い合わせください。

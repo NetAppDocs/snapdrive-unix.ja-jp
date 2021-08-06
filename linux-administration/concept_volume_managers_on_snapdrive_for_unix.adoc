@@ -1,0 +1,58 @@
+---
+permalink: linux-administration/concept_volume_managers_on_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, manager, native, lvm2 
+summary: Linux では、ボリュームマネージャはネイティブ LVM2 です。 
+---
+= SnapDrive for UNIX のボリューム・マネージャ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Linux では、ボリュームマネージャはネイティブ LVM2 です。
+
+次の表に、ホストプラットフォーム上のボリュームマネージャを示します。
+
+|===
+| ホスト | ボリュームマネージャ | ボリュームまたはディスクグループ | 論理ボリュームの場所 | マルチパスデバイスの場所 
+
+
+ a| 
+RHEL 4 および RHEL 5
+ a| 
+ネイティブ LVM2
+ a| 
+ボリューム・グループ `_vg_
+ a| 
+/dev/mapper/dgname-lvolName`
+ a| 
+/dev/mpath/dev/mapper/dev/dm
+
+
+
+ a| 
+RHEL 6
+ a| 
+ネイティブ LVM2
+ a| 
+ボリューム・グループ vg`
+ a| 
+/dev/mapper/dgname-lvolName`
+ a| 
+/dev/mapper/dev/dm
+
+
+
+ a| 
+SLES 10 および SLES 11
+ a| 
+ネイティブ LVM2
+ a| 
+ボリューム・グループ vg`
+ a| 
+/dev/mapper/dgname-volName
+ a| 
+/dev/mapper/dev/dm
+
+|===

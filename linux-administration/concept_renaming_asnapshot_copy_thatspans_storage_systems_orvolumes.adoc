@@ -1,0 +1,17 @@
+---
+permalink: linux-administration/concept_renaming_asnapshot_copy_thatspans_storage_systems_orvolumes.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rename, copy, snapshot, storage, volume 
+summary: 複数のストレージシステムまたはストレージシステムボリュームをまたぐ Snapshot コピーの場合、関連するすべての Snapshot コピーの名前を変更します。 
+---
+= ストレージシステムまたはボリュームにまたがる Snapshot コピーの名前変更
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+複数のストレージシステムまたはストレージシステムボリュームをまたぐ Snapshot コピーの場合、関連するすべての Snapshot コピーの名前を変更します。
+
+このコマンドを使用して、複数のストレージシステムまたは複数のストレージシステムボリュームにある Snapshot コピーの名前を変更することもできます。
+
+これらのいずれかの Snapshot コピーの名前を変更する場合は、関連するすべての Snapshot コピーの名前も同じ名前に変更する必要があります。これは、 SnapDrive for UNIX が複数のストレージ・システムまたはボリュームにまたがる場合でも、 Snapshot コピーの作成時に短縮名を使用するためです。rename コマンドは現在の Snapshot コピーの名前を変更しますが、他の場所にある関連する Snapshot コピーの名前は変更しません。

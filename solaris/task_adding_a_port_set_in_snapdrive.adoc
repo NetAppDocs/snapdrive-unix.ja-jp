@@ -1,0 +1,40 @@
+---
+permalink: solaris/task_adding_a_port_set_in_snapdrive.html 
+sidebar: sidebar 
+keywords: port, set, add, snap, snapdrive 
+summary: ストレージシステムにポートセットを追加して SVM と通信できます。これは 1 回限りのアクティビティであり、ストレージシステムを使用する前に行う必要があります。 
+---
+= SnapDrive にポートセットを追加する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージシステムにポートセットを追加して SVM と通信できます。これは 1 回限りのアクティビティであり、ストレージシステムを使用する前に行う必要があります。
+
+
+NOTE: SnapDrive 5.2 for UNIX にアップグレードする場合、以前のバージョンの SnapDrive for UNIX igroup がストレージ管理者によって手動でポートセットに関連付けられていることを確認します。
+
+次の例では、ストレージ管理者が IP アドレスではなく SVM 名を使用して、 SVM 名が DNS サーバに登録されていることを確認しています。
+
+.手順
+. ホストで次のコマンドを入力します。
++
+`*SnapDrive portset add_portset_name filername_[_filername..._]*`
+
++
+`_portset_name_` は、ポートセットの名前です。
+
++
+`_filername_` は SVM の名前です。
+
++
+[listing]
+----
+snapdrive portset add ps2 vs91
+Added portset configuration for appliance: vs91
+----
++
+ポートセット PS2 が SnapDrive に正常に追加されました。
+
+

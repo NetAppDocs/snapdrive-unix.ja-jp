@@ -1,0 +1,33 @@
+---
+permalink: aix/concept_multiple_operations_manager_servers.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, multiple, operations, manager, console, server 
+summary: SnapDrive for UNIX は、複数の Operations Manager コンソールサーバをサポートしています。この機能は、ストレージシステムのグループが複数の Operations Manager コンソールサーバで管理されている場合に必要です。SnapDrive for UNIX は、 Operations Manager コンソールサーバが SnapDrive for UNIX で設定されているのと同じ順序で、 Operations Manager コンソールサーバにアクセスします。SnapDrive config list コマンドを実行して、設定順序を取得できます。 
+---
+= 複数の Operations Manager コンソールサーバ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX は、複数の Operations Manager コンソールサーバをサポートしています。この機能は、ストレージシステムのグループが複数の Operations Manager コンソールサーバで管理されている場合に必要です。SnapDrive for UNIX は、 Operations Manager コンソールサーバが SnapDrive for UNIX で設定されているのと同じ順序で、 Operations Manager コンソールサーバにアクセスします。SnapDrive config list コマンドを実行して、設定順序を取得できます。
+
+次に、複数の Operations Manager コンソールサーバの出力例を示します。
+
+[listing]
+----
+# snapdrive config list
+username    appliance name     appliance type
+---------------------------------------------
+root        storage_array1     StorageSystem
+root        storage_array2     StorageSystem
+sd-admin    ops_mngr_server1   DFM
+sd-admin    ops_mngr_server2   DFM
+----
+上記の例では、 storage_array1 は ops_mngr_server1 、 storage_array2 は ops_mngr_servers2 によって管理されています。この例では、 SnapDrive for UNIX contacts ops_mngr_server1 が最初に接続されています。ops_mngr_server1 がアクセスを判別できない場合は 'UNIX の SnapDrive は ops_mngr_server2 と通信します
+
+SnapDrive for UNIX は、次の条件下でのみ 2 番目の Operations Manager コンソールにアクセスします。
+
+* 最初の Operations Manager コンソールがアクセス権を判断できない場合。この状況は、最初の Operations Manager コンソールでストレージシステムが管理されていない場合に発生することがあります。
+* 最初の Operations Manager コンソールが停止したとき。
+

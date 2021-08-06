@@ -1,0 +1,22 @@
+---
+permalink: solaris/task_checking_the_status_of_the_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, check, daemon, status, command 
+summary: デーモンのステータスをチェックして、デーモンが実行されているかどうかを確認できます。デーモンがすでに実行されている場合は、 SnapDrive for UNIX 構成ファイルが更新されるまで、デーモンを再起動する必要はありません。 
+---
+= デーモンのステータスを確認しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+デーモンのステータスをチェックして、デーモンが実行されているかどうかを確認できます。デーモンがすでに実行されている場合は、 SnapDrive for UNIX 構成ファイルが更新されるまで、デーモンを再起動する必要はありません。
+
+root ユーザとしてログインする必要があります。
+
+.手順
+. デーモンのステータスを確認します。
++
+「 * snapdrived status * 」を入力します
+
+

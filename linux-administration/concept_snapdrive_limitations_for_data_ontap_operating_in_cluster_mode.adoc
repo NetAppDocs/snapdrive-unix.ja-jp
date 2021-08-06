@@ -1,0 +1,26 @@
+---
+permalink: linux-administration/concept_snapdrive_limitations_for_data_ontap_operating_in_cluster_mode.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, clustered, ontap, limitations, operations 
+summary: SnapDrive の一部の機能や処理は、 clustered Data ONTAP ではサポートされません。 
+---
+= clustered Data ONTAP での SnapDrive の制限事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive の一部の機能や処理は、 clustered Data ONTAP ではサポートされません。
+
+* ストレージプロビジョニング処理と Snapshot 管理処理は、 SVM のルートボリュームではサポートされていません。
+* Data ONTAP 7-Mode にまたがるファイル仕様または LUN と、 clustered Data ONTAP で実行されるストレージシステムに対する処理はサポートされていません。
+* マウントポイント内にあるシンボリックリンクはサポートされていません。
+* SVM ボリュームを含むアグリゲートは、 SVM を設定して SnapDrive の処理を実行するために、 SVM のアグリゲートリストに割り当てられている必要があります。
+* SnapDrive for UNIX は、 clustered Data ONTAP でサポートされていないため、 SVM の移行をサポートしていません。
+* スナップ接続操作に -readonly オプションを指定すると ' ホスト上の .snapshot ディレクトリのみがマウントされ ' クローン・ボリュームは作成されません
++
+clustered Data ONTAP では、エクスポートポリシーはボリュームレベルでのみ定義され、ディレクトリレベルでは定義されません。したがって '.snapshot ディレクトリは ' セカンダリ・ホスト（親ボリュームのエクスポート権限がないホスト）にエクスポートできません
+
+* SnapVault for UNIX では、ボリュームで SnapMirror 処理または SnapRestore 処理を実行している場合に、ベースの Snapshot コピーの前に作成された Snapshot コピーからのボリュームベースの SnapDrive （ VBSR ）処理はサポートされません。
+* SnapVault for UNIX では、ボリュームが SnapVault （ XDP ）関係にある場合、 SnapDrive 更新前に作成された Snapshot コピーの「 napdelete 」処理はサポートされません。
+

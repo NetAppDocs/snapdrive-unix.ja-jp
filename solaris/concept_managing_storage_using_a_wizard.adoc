@@ -1,0 +1,30 @@
+---
+permalink: solaris/concept_managing_storage_using_a_wizard.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, wizard 
+summary: SnapDrive for UNIX ウィザードを使用すると、対話型の効率的な方法でストレージを作成できます。このウィザードでは、画面の指示に従ってストレージを作成できます。 
+---
+= ウィザードを使用したストレージ管理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX ウィザードを使用すると、対話型の効率的な方法でストレージを作成できます。このウィザードでは、画面の指示に従ってストレージを作成できます。
+
+SnapDrive ストレージ・ウィザードの create コマンドを使用すると ' ウィザードを起動できます
+
+次のストレージ管理処理を実行できます。
+
+* LUN を作成する
+* ディスクグループを作成し、 LUN を自動的にセットアップする
+* ディスクグループを作成し、 LUN を指定する。
+* ホストボリュームを作成し、 LUN を自動的に設定する
+* ホストボリュームを作成し、 LUN を指定
+* LUN にファイルシステムを作成し、 LUN を自動的に設定する
+* LUN 上にファイルシステムを作成し、 LUN を指定する。
+* LUN 上にファイルシステムを作成し、 Logical Volume Manager （ LVM ；論理ボリュームマネージャ）とディスクグループを指定して LUN を自動的にセットアップする
+* LUN 上にファイルシステムを作成し、 LVM とディスクグループを指定して LUN を指定します
+* LUN 上にファイルシステムを作成し、 LVM とホストボリュームを指定して LUN を自動的にセットアップします
+* LUN 上にファイルシステムを作成し、 LVM とホストボリュームを指定して LUN を指定します
+

@@ -1,0 +1,66 @@
+---
+permalink: aix/task_configuring_sd_admin_using_cli.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, admin, command, line, interface 
+summary: ストレージシステム管理者は、コマンドラインインターフェイスを使用して SD-admin ユーザを設定できます。 
+---
+= コマンドラインインターフェイスを使用した SD-admin の設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージシステム管理者は、コマンドラインインターフェイスを使用して SD-admin ユーザを設定できます。
+
+.手順
+. SD-admin という名前のユーザーを追加します。
++
+[listing]
+----
+# useradd sd-admin
+----
++
+[listing]
+----
+# passwd sd-admin
+Changing password for sd-admin.
+New password:
+Re-enter new password:
+Password changed
+----
+. SD-admin という名前の管理者を追加します。
++
+[listing]
+----
+# dfm user add sd-admin
+Added administrator sd-admin.
+----
+. SD-admin-role という名前のロールを作成します。
++
+[listing]
+----
+# dfm role create sd-admin-role
+Created role sd-admin-role.
+----
+. 手順 3 で作成したロールに機能を追加します。
++
+[listing]
+----
+# dfm role add sd-admin-role DFM.Core.AccessCheck Global
+Added 1 capability to role sd-admin-role.
+----
+. Operations Manager 管理者は、グローバルグループの「 D FM/Database.Write 」機能を「 <SD-admin> 」に付与して、 SnapDrive for UNIX が Operations Manager のストレージシステムエンティティを更新できるようにすることもできます。
++
+[listing]
+----
+# dfm role add sd-admin-role DFM.Database.Write Global
+Added 1 capability to role sd-admin-role.
+----
+. SD-admin ユーザーに SD-admin-role ロールを追加します。
++
+[listing]
+----
+# dfm user role set sd-admin sd-admin-role
+Set 1 role for administrator sd-admin.
+----
+

@@ -1,0 +1,22 @@
+---
+permalink: linux-administration/concept_operating_system_limits_on_open_files.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, operating, limits, open, files, system 
+summary: SnapDrive for UNIX は、同時に開かれたファイル数をチェックします。制限を超えた場合、 SnapDrive for UNIX はエラーをスローします。 
+---
+= オペレーティングシステムで開いているファイル数の制限
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX は、同時に開かれたファイル数をチェックします。制限を超えた場合、 SnapDrive for UNIX はエラーをスローします。
+
+SnapDrive for UNIX は ' プロセスによって開かれたファイル数に関するオペレーティング・システムの制限をチェックします
+
+
+NOTE: 1 つのプロセスで同時に開くことができるファイルハンドル数のデフォルトの上限は、オペレーティングシステムによって異なります。オペレーティングシステムのマニュアルを参照して、制限を確認してください。
+
+1 回の処理で開いている LUN の数が、 1 つのプロセスで同時に開かれたファイルハンドル数のオペレーティングシステムの制限を超えると、 SnapDrive for UNIX は次のエラーメッセージで終了します。
+
+0001-001 Admin error: デバイス・パスとデバイスを開くことができません

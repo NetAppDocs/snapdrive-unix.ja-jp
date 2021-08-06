@@ -1,0 +1,44 @@
+---
+permalink: solaris/concept_disconnecting_a_filespec.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, filespec 
+summary: ファイル仕様を切断できます。次の例は、この処理を完了する方法を示しています。 
+---
+= ファイル仕様を切断しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ファイル仕様を切断できます。次の例は、この処理を完了する方法を示しています。
+
+次の例では '/mnt/fs1_0' のレイアウトを示します
+
+[listing]
+----
+# snapdrive storage show -fs /mnt/fs_1_0 -capabilities
+raw device: /dev/sde1   mount point: /mnt/fs_1_0 (persistent) fstype ufs
+allowed operations: all
+
+device filename    adapter  path    size    proto   state   clone         lun path                                                         backing snapshot
+----------------   -------  ----    ----    -----   -----   -----         --------                                                         ----------------
+/dev/sde              -      P      100m    iscsi   online  flex-clone    homer:/vol/Snapdrive_vol1_volume_clone_from_snap2_snapshot/lun1    vol1:snap2
+----
+次の出力は ' ファイル・システム /mnt/fs_1_0' を切断する方法を示しています
+
+[listing]
+----
+#snapdrive snap disconnect -fs /mnt/fs_1_0
+ delete file system /mnt/fs_1_0
+- fs /mnt/fs_1_0 ... deleted
+         - LUN homer:/vol/Snapdrive_vol1_volume_clone_from_snap2_snapshot/lun1 ... disconnected
+         - deleting volume clone ... homer:/vol/Snapdrive_vol1_volume_clone_from_snap2_snapshot  done
+----
+ファイルシステム「 /mnt/fs_1_0' 」を切断した後、 SnapDrive for UNIX では、次の条件が満たされた場合、クローンボリューム「 S napdrive_vol1_0_volume_clone_from_snap2_snapshot 」も削除されます。
+
+* ボリュームにマッピングされている LUN がありません
+* 新しい LUN が存在しません
+* 新しい Snapshot コピーが存在しません
+
+
+* SnapDrive for UNIX で作成されていない FlexClone を削除する * ： SnapDrive for UNIX では、 FlexClone が作成していない FlexClone は削除できません。

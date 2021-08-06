@@ -1,0 +1,23 @@
+---
+permalink: solaris/concept_deleting_storage_using_a_wizard.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, storage, wizard 
+summary: ストレージ削除ウィザードを使用して、特定の削除処理を実行できます。 
+---
+= ウィザードを使用してストレージを削除する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージ削除ウィザードを使用して、特定の削除処理を実行できます。
+
+ウィザードは、 SnapDrive storage wizard delete コマンドを使用して開始できます。
+
+次のエンティティを削除できます。
+
+* LUN
+* ディスクグループ
+* 論理ボリューム
+* ファイルシステム
+

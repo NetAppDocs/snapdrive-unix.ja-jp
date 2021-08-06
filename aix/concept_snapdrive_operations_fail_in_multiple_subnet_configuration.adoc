@@ -1,0 +1,19 @@
+---
+permalink: aix/concept_snapdrive_operations_fail_in_multiple_subnet_configuration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, fail, subnet, configuration, multiple 
+summary: インターネット制御メッセージプロトコル（ ICMP\ ）アクセスが無効になっているか、ホストとストレージシステムのネットワーク間で ICMP パケットが破棄されている場合、複数のサブネット構成で SnapDrive 処理が失敗します。 
+---
+= 複数サブネット構成で SnapDrive 処理が失敗する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+インターネット制御メッセージプロトコル（ ICMP ）アクセスが無効になっているか、ホストとストレージシステムのネットワーク間で ICMP パケットが破棄されていると、複数のサブネット構成で SnapDrive 処理が失敗します。
+
+
+
+== 回避策
+
+`_enable-ping--to-check-fer-reachability_` が 'off' に設定されていることを確認します

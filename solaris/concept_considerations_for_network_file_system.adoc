@@ -1,0 +1,29 @@
+---
+permalink: solaris/concept_considerations_for_network_file_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, nfs, configuration, guidelines 
+summary: SnapDrive for UNIX をインストールする前に、 Network File System\ （ NFS\ ）サービスの実行場所と、ストレージシステムディレクトリのエクスポート先を検討する必要があります。NFS クライアントの権限とインターフェイスに対する読み取り / 書き込み権限を確認してください。 
+---
+= NFS 構成のガイドライン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX をインストールする前に、 Network File System （ NFS ；ネットワークファイルシステム）サービスの実行場所と、ストレージシステムディレクトリのエクスポート先を確認しておく必要があります。NFS クライアントの権限とインターフェイスに対する読み取り / 書き込み権限を確認してください。
+
+SnapDrive for UNIX を使用して、 NFS マウントされたディレクトリをリストアまたは接続する場合、ストレージシステムのディレクトリがホストに正しくエクスポートされていることを確認する必要があります。ストレージシステムにアクセスできる IP インターフェイスがホストに複数ある場合は、ディレクトリがそれぞれのインターフェイスに正しくエクスポートされていることを確認する必要があります。
+
+SnapDrive for UNIX では ' これらのすべてのインタフェースに読み取り / 書き込みアクセス権がある場合 ' または SnapDrive snap connect に '-readonly' オプションを指定した場合 ' または少なくとも読み取り専用アクセス権がない場合には ' 警告が表示されますこれらのインターフェイスのいずれにもディレクトリへのアクセス権がない場合、 SnapDrive snap restore コマンドと SnapDrive snap connect コマンドは失敗します。
+
+root ユーザとして Single File SnapRestore （ SFSR ）を実行する場合は、ストレージシステムのディレクトリがホスト上で読み取り / 書き込み権限でエクスポートされ、次のエクスポートルールが設定されている必要があります。
+
+* Data ONTAP 7-Mode では、 `rw=< ホスト名 >, root=< ホスト名 >`
+* rwrule = sys 、 rorule = sys 、 superuser = sys 、 clustered Data ONTAP で superuser = sys
+
+
+* 関連情報 *
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.cdot-famg-nfs/home.html["ONTAP 9 NFS リファレンス"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1401220["『 Data ONTAP 8.2 File Access and Protocols Management Guide for 7-Mode 』"]

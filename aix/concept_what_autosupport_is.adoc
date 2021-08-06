@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_what_autosupport_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, autosupport 
+summary: AutoSupport を使用すると、 SnapDrive によって発生した運用エラーが、 SnapDrive for UNIX から /etc/log/ems ファイルに含まれるストレージシステムの EMS ログビューに送信されます。 
+---
+= AutoSupport とは
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AutoSupport を使用すると、 SnapDrive for UNIX は、 SnapDrive によって発生したすべての動作障害を、「 /etc/log/ems 」ファイルに含まれるストレージ・システムの EMS ログ・ビューに送信できます。

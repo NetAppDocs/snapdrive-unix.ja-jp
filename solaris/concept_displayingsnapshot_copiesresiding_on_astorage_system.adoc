@@ -1,0 +1,17 @@
+---
+permalink: solaris/concept_displayingsnapshot_copiesresiding_on_astorage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, display, snapshot, copy, storage 
+summary: ストレージシステム上の Snapshot コピーは、 SnapDrive コマンドを使用して表示できます。 
+---
+= ストレージシステム上にある Snapshot コピーを表示する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージシステム上の Snapshot コピーは、 SnapDrive コマンドを使用して表示できます。
+
+ストレージシステム上にある Snapshot コピーに関する情報を表示するには、次の構文を使用します。
+
+SnapDrive snap show -ffiler filername [filername...] [-verbose]

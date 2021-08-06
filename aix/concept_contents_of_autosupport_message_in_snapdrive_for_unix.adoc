@@ -1,0 +1,46 @@
+---
+permalink: aix/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, autosupport, message, support 
+summary: AutoSupport メッセージには次の情報が含まれています。 
+---
+= AutoSupport メッセージの内容
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AutoSupport メッセージには次の情報が含まれています。
+
+* イベントソース
+* イベント ID
+* SnapDrive for UNIX のバージョン
+* メッセージステータス：ログレベルのメッセージ。たとえば、 1 はアラート、 2 は重大、 3 はエラー、 4 は警告、 5 は通知、 6 を参照してください。 7 を参照してください
+* ホスト名
+* ホストオペレーティングシステム
+* ホストオペレーティングシステムのリリースバージョン
+* ストレージシステムの名前
+* Protection Manager / Role Based Access Control の使用
+* エラーカテゴリ
+* AutoSupport フラグメッセージエントリが FALSE になっています
+* ホストのマルチパスタイプ：「 snapdrive.conf 」ファイルで設定された値がログに記録されます。構成値が正しくないためにアシスタントがロードされていない場合、ホストマルチパスタイプはログに記録されません。
+* Host virtualization enabled ： VMware ゲストオペレーティングシステムに対してのみキャプチャされます。
+* プロトコル： 'napdrive.conf ファイルの '_default-transport_' に設定された値
+* Protection Enabled ： OnCommand Data Fabric Manager （ DFM ）に SnapDrive for UNIX が設定されている場合は、値「 _Yes_ 」が記録されます。
++
+
+NOTE: SnapDrive for UNIX では、 OnCommand DFM が使用されているかどうかは検証されません。
+
+
+
+SnapDrive storage show -all コマンドを実行すると、次の追加情報を使用できます。
+
+* プロトコルのタイプ（ FCP / iSCSI ）： LUN の作成に使用するプロトコル（存在する場合）。
+* 接続されている LUN の数
+* ディスクまたはボリュームグループの数
+* ファイル仕様の数
+* ホストボリュームの数
+
+
+
+NOTE: SnapDrive for UNIX で AutoSupport を有効にすると、操作に失敗したときに、エラー・メッセージが Event Management System （ EVM ）ストレージ・システムに記録されます。エラーメッセージに（ < 、 > 、 & 、 ' 、 " などの特殊文字が含まれている場合、 \r ）ストレージ・システムの EMS ログ・ビューで文字化けした値が表示されます。

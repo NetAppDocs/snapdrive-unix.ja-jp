@@ -1,0 +1,27 @@
+---
+permalink: solaris/task_identifying_the_installed_components.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, components, identify 
+summary: SnapDrive for UNIX 構成チェッカーツールを使用して、ホストプラットフォームにインストールされているコンポーネントを特定できます。 
+---
+= インストールされているコンポーネントを特定する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX 構成チェッカーツールを使用して、ホストプラットフォームにインストールされているコンポーネントを特定できます。
+
+.手順
+. インストールされているコンポーネントを特定します。
++
+*sdconfcheck detect*`
+
++
+'dconfcheck.out' ログ・ファイルは '/var/log' ファイル内にインストールされているコンポーネントを識別するために使用されますログファイルの名前は、「 dconfcheck.out.1` 」、「 dconfcheck.out.2 」のように段階的に変更されます。
+
++
+SnapDrive for UNIX 構成チェッカーツールは、 Red Hat Enterprise Linux 6 環境で ext3 ファイルシステムを検出しません。「 m odprobe -v ext3 」コマンドを実行して、 ext3 ファイルシステムをロードする必要があります。
+
+. 「 dconfcheck detect 」コマンドを実行した後で、リストされているコンポーネントをインストールまたは設定する必要がある場合があります。
+

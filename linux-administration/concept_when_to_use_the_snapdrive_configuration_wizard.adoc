@@ -1,0 +1,23 @@
+---
+permalink: linux-administration/concept_when_to_use_the_snapdrive_configuration_wizard.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, wizard, update 
+summary: SnapDrive 設定ウィザードを使用して、設定変数を更新します。設定ウィザードはいつでも実行でき、 SnapDrive の設定変更を変更できます。 
+---
+= SnapDrive 設定ウィザード
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive 設定ウィザードを使用して、設定変数を更新します。設定ウィザードはいつでも実行でき、 SnapDrive の設定変更を変更できます。
+
+構成ウィザードは '/opt/NetApp/snapDrive/setup/config_wizard' から実行できます
+
+「 exit 」と入力して、変更を保存せずに設定ウィザードを閉じます。
+
+また 'napdrive.conf ファイルで構成変数の値を直接変更することもできます
+
+* 関連情報 *
+
+xref:reference_stack_requirements.adoc[スタックの要件]

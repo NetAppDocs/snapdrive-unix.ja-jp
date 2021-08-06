@@ -1,0 +1,32 @@
+---
+permalink: linux-administration/concept_snapshot_restore_operation_fails_to_restore_file_system_on_raw_lun.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, fail, lun, snapshot, host 
+summary: 元にならないホストで Snapshot 接続処理を実行すると、 raw LUN 上のファイルシステムの Snapshot リストア処理が失敗する。 
+---
+= Snapshot のリストア処理で、 raw LUN 上のファイルシステムのリストアに失敗する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+元にならないホストで Snapshot 接続処理を実行すると、 raw LUN 上のファイルシステムの Snapshot リストア処理が失敗する。
+
+クローニングされた LUN が Snapshot コピー内の同じファイル仕様に接続されている場合に、 SnapDrive snap restore コマンドを実行しようとすると、次のエラー・メッセージが表示されます。
+
+[listing]
+----
+"0001-034 Command error: mount failed: mount: <device name> is not
+a valid block device"
+----
+コマンドは失敗します。これは、クローニングされた LUN を削除すると、 iSCSI デーモンがリストアされた LUN のデバイスエントリを再マッピングするためです。
+
+
+
+== 回避策
+
+次のいずれかを実行できます。
+
+* SnapDrive snap restore コマンドを再度実行します。
+* 元の LUN の Snapshot コピーをリストアする前に、接続されている LUN （ Snapshot コピーと同じファイル仕様にマウントされている場合）を削除します。
+

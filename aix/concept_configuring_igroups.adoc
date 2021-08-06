@@ -1,0 +1,16 @@
+---
+permalink: aix/concept_configuring_igroups.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configure, igroup 
+summary: SnapDrive for UNIX では、ストレージシステム上に存在する igroup を設定できます。設定された igroup を使用して、ストレージシステム上の LUN がマッピングされます。仮想環境でシームレスに移行するには、ストレージシステム用の igroup を設定する必要があります。 
+---
+= igroup を設定しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、ストレージシステム上に存在する igroup を設定できます。設定された igroup を使用して、ストレージシステム上の LUN がマッピングされます。仮想環境でシームレスに移行するには、ストレージシステム用の igroup を設定する必要があります。
+
+
+NOTE: igroup には、ソースイニシエータとデスティネーションイニシエータが含まれている必要があります。

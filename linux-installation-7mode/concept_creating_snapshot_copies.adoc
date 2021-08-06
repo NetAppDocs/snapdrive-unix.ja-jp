@@ -1,0 +1,19 @@
+---
+permalink: linux-installation-7mode/concept_creating_snapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, create 
+summary: スタンドアロン製品として導入した SnapDrive for UNIX では、ネットアップの Snapshot テクノロジを使用します。これにより、ホストデータの Snapshot コピーを作成および管理できます。Snapshot コピーを使用してデータをリストアできます。 
+---
+= Snapshot コピーを作成しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+スタンドアロン製品として導入した SnapDrive for UNIX では、ネットアップの Snapshot テクノロジを使用します。これにより、ホストデータの Snapshot コピーを作成および管理できます。Snapshot コピーを使用してデータをリストアできます。
+
+* 関連情報 *
+
+xref:task_creating_a_snapshot_copy.adoc[Snapshot コピーを作成します]
+
+xref:task_verifying_the_snapshot_copy.adoc[Snapshot コピーを検証しています]

@@ -1,0 +1,15 @@
+---
+permalink: linux-administration/concept_configuration_information_in_snapdrive_for_unix_for_guest_os.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, guest, lun, operating 
+summary: ゲストオペレーティングシステムでストレージシステムおよび Virtual Storage Console を設定して RDM LUN をプロビジョニングする必要があります。 
+---
+= SnapDrive for UNIX のゲストオペレーティングシステムの設定情報
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ゲストオペレーティングシステムでストレージシステムおよび Virtual Storage Console を設定して RDM LUN をプロビジョニングする必要があります。
+
+ログイン情報は、 Virtual Storage Console と通信して RDM LUN をプロビジョニングするために必要です。設定が完了すると、 SnapDrive for UNIX を使用してゲストオペレーティングシステムに RDM LUN を作成できます。

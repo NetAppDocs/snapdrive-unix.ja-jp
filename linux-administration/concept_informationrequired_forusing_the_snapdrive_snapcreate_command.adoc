@@ -1,0 +1,133 @@
+---
+permalink: linux-administration/concept_informationrequired_forusing_the_snapdrive_snapcreate_command.html 
+sidebar: sidebar 
+keywords: create, command, snap, snapdrive, snapshot 
+summary: Snapshot コピーを作成する際には、キャプチャするストレージエンティティを決定し、 Snapshot コピーの名前を指定する必要があります。 
+---
+= SnapDrive snap create コマンドの使用に必要な情報
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot コピーを作成する際には、キャプチャするストレージエンティティを決定し、 Snapshot コピーの名前を指定する必要があります。
+
+次の表に、 SnapDrive snap create コマンドを使用するときに必要な情報を示します。
+
+|===
+| 要件 / オプション | 引数 
+
+
+ a| 
+Snapshot コピーにキャプチャするストレージエンティティのタイプを決定します。1 つのコマンドラインで、 NFS エンティティ、 LUN 、 LUN 上に直接作成されるファイルシステム、および LVM エンティティを指定できます。
+
+該当する引数を指定してエンティティの名前を指定します。これは 'file_dspec' 引数の値です
+
+* ホストボリュームまたはファイルが指定されたディスクグループを指定すると、引数がストレージシステムの一連のディスクグループに変換されます。SnapDrive for UNIX では、エンティティを含むディスクグループ全体が作成されます。これは、エンティティがホストボリュームであってもファイルシステムであっても同様です。
+* NFS マウントポイントであるファイル仕様を指定した場合、引数はストレージシステムボリューム上のディレクトリツリーに変換されます。
+* LUN またはファイルシステムを含む LUN を指定すると、引数が LUN またはファイルシステムを含む LUN に変換されます。
++
+
+NOTE: -vg` 、 `-dg` 、 `-fs` 、 `-lvol` 、および `-hostvol` などのストレージエンティティでは、特殊文字を指定できません。ただし '-fs'-lvol'-hostvol' などのストレージ・エンティティにはスラッシュ (/) を使用できます
+
+
+
+
+
+ a| 
+LUN （ `-lun file_tspec` ）
+ a| 
+LUN の名前
+
+ストレージシステム、ボリューム、および LUN の名前を含める必要があります。
+
+
+
+ a| 
+ディスク・グループ (`-dgfile_spec') またはボリューム・グループ (`-vg file_spec')
+ a| 
+ディスクまたはボリュームグループの名前
+
+
+
+ a| 
+ファイルシステム (`-fs file_tspec')
+ a| 
+fileSystem _name を実行します
+
+
+
+ a| 
+ホスト・ボリューム (`-hostvolfile_spec') または論理ボリューム (`-lvolfile_spec')
+ a| 
+ホストまたは論理ボリュームの名前
+
+
+NOTE: 要求されたボリュームとそのボリュームを含むディスクグループの両方を指定する必要がありますたとえば '-hostvol dg3/acct_volume' のように指定します
+
+
+
+ a| 
+Snapshot コピー名（ snapnamesnap_name` ）
+ a| 
+Snapshot コピー名
+
+
+
+ a| 
+Snapshot コピーの名前を指定します。Snapshot コピー名が付いたストレージシステムおよびボリュームを含む長い名前か、 Snapshot コピー名の短縮形の名前かを指定できます。
+
+
+NOTE: 「 napname 」に指定した値が 200 文字を超えないようにしてください。
+
+
+
+ a| 
+` - 無関係」
+ a| 
+~
+
+
+
+ a| 
+オプション： Snapshot コピーの作成時に従属書き込みを行わないストレージエンティティの Snapshot コピーを作成するために、 SnapDrive for UNIX は個々のストレージエンティティの crash-consistent Snapshot コピーを作成しますが、エンティティ同士の整合性を維持することはありません。
+
+
+
+ a| 
+「 -force 」を使用します
+ a| 
+~
+
+
+
+ a| 
+-noprompt`
+ a| 
+~
+
+
+
+ a| 
+オプション：既存の Snapshot コピーを上書きするかどうかを指定します。このオプションを指定しないと、既存の Snapshot コピーの名前を指定した場合に処理が停止します。このオプションで既存の Snapshot コピーの名前を指定すると、 Snapshot コピーを上書きするかどうかの確認を求められます。SnapDrive for UNIX がプロンプトを表示しないようにするには '-nofrt' オプションも指定します( -noprompt` オプションを使用する場合は '-force オプションを常に指定する必要があります )
+
+
+
+ a| 
+「 -fstype 」を入力します
+ a| 
+「 _TYPE_` 」
+
+
+
+ a| 
+「 -vmtype 」と入力します
+ a| 
+「 _TYPE_` 」
+
+
+
+ a| 
+オプション： SnapDrive for UNIX の処理に使用するファイルシステムとボリュームマネージャのタイプを指定します。
+
+|===

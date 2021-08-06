@@ -1,0 +1,32 @@
+---
+permalink: aix/task_specifying_login_information_for_vserver.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, login, infromation, vserver, specify 
+summary: SVM のユーザログイン情報を指定する必要があります。SVM のセットアップ時に指定した名前に応じて、設定した SVM ユーザ名を各 SVM で使用する必要があります。SVM 名が変更された場合は、新しい SVM 名が SnapDrive for UNIX で設定されていることを確認する必要があります。 
+---
+= SVM のログイン情報を指定しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SVM のユーザログイン情報を指定する必要があります。SVM のセットアップ時に指定した名前に応じて、設定した SVM ユーザ名を各 SVM で使用する必要があります。SVM 名が変更された場合は、新しい SVM 名が SnapDrive for UNIX で設定されていることを確認する必要があります。
+
+.手順
+. 次のコマンドを入力します。
++
+`* SnapDrive config set_user_name filername_[_ filername..._]*`
+
++
+** `_user_name は、 SVM の初回セットアップ時に指定したユーザ名です。デフォルトのユーザは vsadmin です。`_filername_` は SVM 名です。
+** 「 _filer_name_` 」では、すべて同じユーザ・ログインまたはパスワードを持つ複数の SVM を 1 つのコマンド・ラインで入力できます。SVM 名は少なくとも 1 つ入力する必要があります。
++
+[listing]
+----
+# snapdrive config set vsadmin clstr-vs2
+Password for vsadmin:
+Retype password:
+----
+
+
+

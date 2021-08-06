@@ -1,0 +1,18 @@
+---
+permalink: solaris/concept_operations_supported_on_host_clustered_unix_systems.html 
+sidebar: sidebar 
+keywords: snap, snpadrive, support, host, cluster 
+summary: ホスト clustered UNIX システム上の SnapDrive for UNIX では、ストレージを作成し、ホストクラスタ全体の共有ストレージ上で Snapshot 処理を実行できます。 
+---
+= ホストクラスタ UNIX システムでサポートされている操作
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホスト clustered UNIX システム上の SnapDrive for UNIX では、ホストクラスタ全体の共有ストレージに対して、ストレージの作成と Snapshot 処理の実行が可能です。
+
+Snapshot 処理は、ディスクグループ、ファイルシステム、および LUN を含むストレージシステム上で実行されます。作成、名前変更、リストア、接続、切断、 を表示し、削除します。
+
+
+NOTE: ホストクラスタシステムの操作は、 Solaris ホスト上の Veritas SFRAC でのみ実行できます。

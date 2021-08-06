@@ -1,0 +1,22 @@
+---
+permalink: linux-administration/concept_about_the_data_collection_utility.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, data, utility, admin, connection 
+summary: SnapDrive for UNIX では、データ収集ユーティリティ（ snapdrive .dc\ ）を使用して、 SnapDrive for UNIX 、 SnapDrive 設定チェッカー、およびシステムセットアップに関する診断情報を収集できます。 
+---
+= データ収集ユーティリティについて
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX は ' データ収集ユーティリティ (napdrive.dc') を提供しますこのユーティリティは 'UNIX 用 SnapDrive ' SnapDrive 構成チェッカ ' およびシステムセットアップに関する診断情報を収集します
+
+これは、ネットアップの診断ユーティリティを実行し、 SnapDrive for UNIX のログファイルを特殊なディレクトリにコピーすることで実現されます。作成された圧縮ファイルにはこの情報が含まれており、分析用にネットアップテクニカルサポートに送信できます。
+
+SnapDrive 5.0 for UNIX では '-dump' および -dumpall' オプションが実装されています--dump' オプションは SnapDrive コマンドの最初のログを収集し '-dumpall' オプションは SnapDrive コマンドのすべてのログを収集します「 -dump' 」または「 -dumpall 」オプションを使用して SnapDrive 操作を実行すると、「 napdrive.dc 」が生成され、圧縮されたファイルの場所が一覧表示されます。tar ファイルは、 SnapDrive コマンドのすべてのログ情報を収集し、それぞれの場所からファイルを展開して取得できます。
+
+SnapDrive storage show` 、 SnapDrive storage create 」、 SnapDrive storage delete 、 SnapDrive snap create ` 、 SnapDrive snap connect 」などの SnapDrive コマンドには、「 -dump` または「 -dumpall 」オプションが実装されています。 SnapDrive snap disconnect` 、 SnapDrive snap restore 」、 SnapDrive clone split estimate 、および SnapDrive clone split start の各処理を実行できます。
+
+
+NOTE: ストレージシステムのログイン情報を含むファイルはコピーされません。また、設定を変更することもありません。

@@ -1,0 +1,16 @@
+---
+permalink: aix/concept_disconnecting_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, snapshot, copy 
+summary: LUN 、 LUN 上のファイルシステム、ディスクグループ、 NFS ディレクトリ、または LUN 上の共有ディスクグループ、ホストボリューム、およびファイルシステムから、 Snapshot コピーを切断できます。 
+---
+= Snapshot コピーを切断しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+LUN 、 LUN 上のファイルシステム、ディスクグループ、 NFS ディレクトリ、または LUN 上の共有ディスクグループ、ホストボリューム、およびファイルシステムから、 Snapshot コピーを切断できます。
+
+
+NOTE: SnapDrive for UNIX 4.2 以降のバージョンでは、スプリットクローンボリュームを切断できます。

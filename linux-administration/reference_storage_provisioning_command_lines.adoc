@@ -1,0 +1,162 @@
+---
+permalink: linux-administration/reference_storage_provisioning_command_lines.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, command, provisioning 
+summary: ストレージのプロビジョニングには、一部の SnapDrive for UNIX コマンドを使用します。 
+---
+= ストレージプロビジョニングのコマンドライン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージのプロビジョニングには、一部の SnapDrive for UNIX コマンドを使用します。
+
+ストレージプロビジョニング処理に使用するコマンドラインオプションは次のとおりです。
+
+|===
+| 操作 | コマンドラインオプション 
+
+
+ a| 
+作成
+ a| 
+SnapDrive storage create -lun_long_lun_name [lun_name...] [-lunsize_size_[{-dg | -vg ｝ _dG_name_][-igroup_name[_ig_name.._]] [{-reserve | -noreserve }] [-fstype_type_type_][-vmtype_type_type_d`
+
+
+
+ a| 
+SnapDrive storage create ｛ -lvol | -hostvol ｝ _file_spec_[｛ -dg | -vg ｝ _dG_name_] ｛ -dgsize | -vgsize ｝ _size_ -fileervol_long_filer_path_[｛ -noreserve | -reserve ｝ ] [-fstype_type_] [-vmtype] [-dvmtype] [-dvmtype]
+
+
+
+ a| 
+SnapDrive storage create -fs_file_spec_-nolvm [-fsopts options][-mntopts options][-nosist]{{-lun_long_lun_name_|-fileervol_long_filer_path_}-lunize_[-igroup _name_[-igroup _ig_name_or_ig_name...] -noltype [--vmfsotts_type] -vmfsot] -type[-nose] -vme}] -type[-nose}] -vme}--noft_ type[-nose}] -type[-nose}] -type[-nose}] -type}--n
+
+
+
+ a| 
+SnapDrive storage create _host_lvm_fspec _ -fileervol_long_filer_path_-dgsize_[-igroup _ig_name_[_ig_name..._]] [{-reserve | -noreserve }] を参照してください
+
+
+
+ a| 
+SnapDrive storage create _host_lvm_fspec _ -lun_long_lun_name _[_lun_name ..._] -lunsize_size_[-igroup_name] [ig_name...] [{-reserve|-noreserve }]`
+
+[NOTE]
+====
+作成するストレージのタイプに応じて '-file_spec' 引数のいずれかの形式を使用できます( 「 -dg 」は「 -vg` 」の同義語であり、「 -hostvol 」は「 -lvol 」の同義語です ) 。
+
+LUN 上に直接ファイルシステムを作成するには、次の形式を使用します： `-fs_file_spec_[-nolvm -fs_type_][-fsops_options_][-mntopts_options_][-vmtype_]`
+
+ディスク・グループまたはホスト・ボリュームを使用するファイル・システムを作成するには ' 次の形式を使用します `-fs_file_spec_[-fstype_type_type_][-fsopts_options_][-mntops_options_][-hostvol_file_spec_][-dG_TYPE_vmtype_d`
+
+論理ボリュームまたはホストボリュームを作成するには ' 次の形式を使用します [-hostvol_file_spec_][-dG_DG_NAME_][-fstype_type_][-vmtype_type_]`
+
+ディスク・グループを作成するには、次の形式を使用します。 `-dG_DG_NAME_[-fstype_type] [-vmtype_type_]]
+
+====
+
+
+ a| 
+つながる
+ a| 
+SnapDrive storage connect -fs_file_name -nolvm --lun_long_lun_name_[-igroup _ig_name _[_dig_name ..._]] [-nopersist] [-mntopts options] [-fstype_type] [-vmtype_type_type] [-vmtype_type_type]
+
+
+
+ a| 
+SnapDrive storage connect -fs_file_name _spec_-hostvol_file_spec -lun_long_lun_name_[_lun_name_name..._][-igroup _ig_name_[_dig_name..._]] [-nopersist] [-mptts options] [-fstype_type_type] [-vmtype] [-dvmtype]
+
+
+
+ a| 
+SnapDrive storage connect -lun_long_lun_name_[_lun_name_..][-igroup _ig_name_[_dig_name..._]] [-vmtype_type_]]
+
+
+
+ a| 
+SnapDrive storage connect -lun_long_lun_name_[_lun_name ..._][-vmtype_]]
+
+
+
+ a| 
+SnapDrive storage connect -fs_file_name _spec_{-hostvol|-lvol ｝ _file_spec_-lun_long_lun_name_[_lun_name ..._][-nosist][-mntopts options][-fstype_type_][-vmtype_type_type_]``
+
+
+
+ a| 
+切断します
+ a| 
+SnapDrive storage disconnect - lun_long_lun_name_[_lun_name ..._][-vmtype_]]
+
+
+
+ a| 
+SnapDrive storage disconnect ｛ -vg | -dg | -fs | -lvol | -hostvol ｝ _file_spec_[_file_spec..._][ ｛ -vg | -dg | -fs | -lvol | -hostvol ｝ _file_spec_… ] ... ] [-full] [-fstype_type_][-vmtype_type_]]
+
+
+
+ a| 
+サイズ変更
+ a| 
+SnapDrive storage resize ｛ -dg | -vg ｝ _file_spec_[_file_spec..._] ｛ -growby | -growto ｝ _size_[____addlun [-igroup_ig_name_[_ig_name...] [{-resesesg_name..._]] [-noreserve }] [-fstype_type] [vmtype
+
+
+
+ a| 
+表示 / 一覧表示
+ a| 
+SnapDrive storage ｛ show | list ｝ -fir_filername_[_filername..._][-verbose [-quiet ] [-capabilities]`
+
+
+
+ a| 
+SnapDrive storage ｛ show | list ｝ -fileervol_long_filer_path_[_filer_path..._][-verbose ] [-quiet ] [-capabilities]`
+
+
+
+ a| 
+SnapDrive storage {show|list} {-all | device }[-capabilities]`
+
+
+
+ a| 
+SnapDrive storage show [-verbose] ｛ -firer_filername_[_filername..._]|-filervol_volname_[_volname..._]}[-capabilities]`
+
+
+
+ a| 
+SnapDrive storage ｛ show | list ｝ -lun_long_lun_name _[_lun_name ..._][-verbose ] [-quiet ] [-status] [-capabilities]
+
+
+
+ a| 
+SnapDrive storage ｛ show | list ｝ ｛ -vg|-dg|-fs|-lvol|-hostvol ｝ _file_spec_[_file_spec..._][｛ -vg|-fs|-lvol|-hostvol ｝ _file_spec_[_file_spec...] [-verbose ] [-dosquiet] [vmtype] [-dose] [-dose] [d
+
+
+
+ a| 
+SnapDrive storage ｛ show | list ｝ ｛ -fir_filer_name_[_filer_name_..._]|-fileervol_long_filer_path_[_filer_path..._]} [-verbose] [-capabilities] [-quiet ]
+
+
+
+ a| 
+SnapDrive storage ｛ show | list ｝ -lun_long_lun_name _[_lun_name … _][-verbose ][-status][-fstype type][-vmtype type][-fabilities][-quiet ]
+
+
+
+ a| 
+削除
+ a| 
+SnapDrive storage delete [-lun]_long_lun_name [lun_name ...] [-fstype type] [-vmtype type]`
+
+
+
+ a| 
+SnapDrive storage delete [-vg | -dg | -fs | -lvol | -hostvol]_file_spec_[file_spec...] [{-vg|-dg|-fs|-lvol|-hostvol} _file_spec_[file_spec...] ... ] [-full]] [-fstype type] [-vmtype type]
+
+|===
+* 関連情報 *
+
+xref:reference_command_line_arguments.adoc[コマンドライン引数]

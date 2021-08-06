@@ -1,0 +1,13 @@
+---
+permalink: solaris/concept_how_to_configure_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configure 
+summary: SnapDrive の .conf ファイルを編集できます。このファイルには、 SnapDrive for UNIX で使用されるすべての設定変数とオプションが含まれており、要件に応じてオプションを有効または無効にすることができます。また、変数を追加してホスト固有の使用方法を作成することもできます。 
+---
+= SnapDrive for UNIX を設定しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX で使用されるすべての構成変数とオプションが含まれている「 napdrive.conf 」ファイルを編集し、要件に応じてオプションを有効または無効にすることができます。また、変数を追加してホスト固有の使用方法を作成することもできます。

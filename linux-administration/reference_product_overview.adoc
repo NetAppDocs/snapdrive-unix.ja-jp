@@ -1,0 +1,42 @@
+---
+permalink: linux-administration/reference_product_overview.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, product, overview, unix, data, management, snapshot 
+summary: SnapDrive for UNIX は、 UNIX 環境向けのホストベースのストレージおよびデータ管理解決策です。SnapDrive for UNIX は、ストレージのプロビジョニングを簡易化し、ファイルシステムと整合性のある Snapshot コピーを作成することで、データ管理を簡易化し、データの可用性を高め、アプリケーションデータの信頼性を向上させます。 
+---
+= 製品の概要
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX は、 UNIX 環境向けのホストベースのストレージおよびデータ管理解決策です。SnapDrive for UNIX は、ストレージのプロビジョニングを簡易化し、ファイルシステムと整合性のある Snapshot コピーを作成することで、データ管理を簡易化し、データの可用性を高め、アプリケーションデータの信頼性を向上させます。
+
+SnapDrive for UNIX は、スタンドアロン製品として、または UNIX 上で実行される他の SnapManager 製品と一緒に使用できます。SnapDrive for UNIX と SnapManager を併用すると、アプリケーションと整合性のあるデータバックアップを作成できます。
+
+
+
+== SnapDrive の特長
+
+SnapDrive for UNIX を使用すると、ストレージ管理タスクを簡易化できます。SnapDrive for UNIX を使用して実行できるタスクには、次のものがあります。
+
+* clustered Data ONTAP NetApp Snapshot テクノロジを使用して Snapshot コピーを作成する。
++
+SnapDrive for UNIX を使用すると、ファイルシステム、ボリュームグループ、ホストボリューム、または LUN の Snapshot コピーを作成および削除したり、 Snapshot コピーからストレージエンティティをクローニングしたりできます。
+
+* アプリケーションやホストのダウンタイムなしで、ストレージのプロビジョニングと管理を行えます。
++
+SnapDrive for UNIX を使用すると、ディスクグループ、ホストボリューム、ファイルシステム、ホストクラスタ環境の LUN などのストレージコンポーネントを作成し、削除することができます。SnapDrive for UNIX では、ストレージの拡張、ホストへのストレージの接続、ホストからのストレージの切断を行うこともできます。
+
+* ロールベースアクセス制御の機能。ストレージ管理者は、割り当てられたロールに応じて、 SnapDrive ユーザが実行できる処理を制限できます。
+
+
+SnapDrive には、上記の主要な機能以外にも次のような利点があります。
+
+* クローンスプリット処理の強化
+* ボリュームベース SnapRestore （ VBSR ）
+* コマンドラインインターフェイス（ CLI ）のオプション
+* データ収集ユーティリティ
+* ストレージシステムの名前変更のサポート
+* Linux ゲストオペレーティングシステムで Fibre Channel RDM LUN がサポートされます
+

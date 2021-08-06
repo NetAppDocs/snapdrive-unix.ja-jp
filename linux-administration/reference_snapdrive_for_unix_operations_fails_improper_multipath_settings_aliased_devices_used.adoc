@@ -1,0 +1,39 @@
+---
+permalink: linux-administration/reference_snapdrive_for_unix_operations_fails_improper_multipath_settings_aliased_devices_used.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, unix, fail, multipath, settings, device, error, sdu, rhel, command 
+summary: RHEL 5.11 で storage show コマンドまたは snap create コマンドを実行すると、次のエラーメッセージが表示されます。ホスト LVM が関与していない場合、 SDU デーモンへのステータスコールに失敗し、 -sles11sp3 ホストに– nolvm オプションを指定して実行します。 
+---
+= エイリアス設定されたデバイスを使用している場合、 SnapDrive for UNIX の処理が適切でないマルチパス設定により失敗します。
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+RHEL 5.11 で「 storage show 」コマンドまたは「 snap create 」コマンドを実行すると、次のエラーメッセージが表示されます。
+
+'SDU デーモンへの Tatus 呼び出しが失敗しました。ホスト LVM が関与していない場合、 sles11sp3 ホストに --nolvm オプションが指定されています
+
+* * SnapDrive storage show -all ` コマンドは、適切なエイリアス名 * を表示できません
++
+SnapDrive for UNIX で、マッパーデバイスの正しいエイリアス名が表示されない。この問題は、「 multipath.conf 」ファイルでマルチパス {} セクションが正しくない場合に発生します。
+
+* * 回避策 *
++
+マルチパス設定には、閉じるかっこを入力する必要があります。
+
+* * マッパーデバイスにエイリアス名が設定されていると、 SnapDrive 操作が次のエラーで失敗します *
++
+[listing]
+----
+Snapdrive could not import /dev/mapper/lvm_fs_SdDg:   device-mapper: resume ioctl failed: Invalid argument
+  Unable to resume lvm_fs_SdDg-lvm_fs_SdHv (252:4)   1 logical volume(s) in volume group "lvm_fs_SdDg" now active”
+----
++
+この問題は、デバイスとのエイリアス名のマッピングが適切でない場合に発生します。
+
+* * 回避策 *
++
+「 multipath -ll 」を実行し、デバイスとのエイリアス名マッピングが適切であることを確認してから、 SnapDrive for UNIX 操作を実行します。
+
+

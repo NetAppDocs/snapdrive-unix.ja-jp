@@ -1,0 +1,13 @@
+---
+permalink: aix/reference_command_summary.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, summary 
+summary: SnapDrive for UNIX では、構成、ストレージプロビジョニング、ホスト側の管理など、さまざまなコマンドラインがサポートされます。 Snapshot 処理 
+---
+= コマンドの概要
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、構成、ストレージプロビジョニング、ホスト側の管理など、さまざまなコマンドラインがサポートされます。 Snapshot 処理

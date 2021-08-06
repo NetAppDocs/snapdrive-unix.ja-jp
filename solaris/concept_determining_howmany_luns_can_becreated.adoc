@@ -1,0 +1,17 @@
+---
+permalink: solaris/concept_determining_howmany_luns_can_becreated.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lun, create 
+summary: SnapDrive for UNIX では、制限を超えずにホストに作成できる LUN の数を指定できます。 
+---
+= 作成可能な LUN 数の決定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、制限を超えずにホストに作成できる LUN の数を指定できます。
+
+この値は、 lun config check luns コマンドを使用して決定できます。 SnapDrive
+
+Solaris ホストの場合 ' このコマンドは '/kernel/drv/sd.conf をスキャンして 'LUN に適した未使用のエントリーの数を決定します

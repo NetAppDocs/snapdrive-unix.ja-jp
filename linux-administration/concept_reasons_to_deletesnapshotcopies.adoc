@@ -1,0 +1,25 @@
+---
+permalink: linux-administration/concept_reasons_to_deletesnapshotcopies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, why, snapshot, copy, old, space 
+summary: ストレージシステムボリュームの空きスペースを増やす場合や Snapshot コピーを減らす場合は、古い Snapshot コピーを削除してください。 
+---
+= Snapshot コピーを削除する理由
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージシステムボリュームの空きスペースを増やす場合や Snapshot コピーを減らす場合は、古い Snapshot コピーを削除してください。
+
+次の理由により、古い Snapshot コピーを削除する場合があります。
+
+* ストレージ・システム・ボリュームで保持する Snapshot コピーの数を、ハードリミットの 255 よりも少なく設定します。この上限に達すると、新しい Snapshot コピーの作成は失敗します。
+* ストレージ・システム・ボリュームの空きスペースを確保します。Snapshot コピーが上限に達する前でも、ディスクに十分なリザーブスペースがないと Snapshot コピーは失敗します。
+* Snapshot コピー名には、ワイルドカード（ * ）文字を使用することもできます。Snapshot の表示処理では、ワイルドカード文字を使用して、特定のパターンに一致するすべての Snapshot コピー名を表示できます。Snapshot コピー名でワイルドカードを使用する場合、次のルールが適用されます。
++
+** ワイルドカードは名前の末尾でのみ使用できます。ワイルドカードは、 Snapshot コピー名の先頭または途中では使用できません。
+** Snapshot コピー名のストレージ・システムまたはストレージ・システム・ボリュームのフィールドでは、ワイルドカードを使用できません。
+
+
+

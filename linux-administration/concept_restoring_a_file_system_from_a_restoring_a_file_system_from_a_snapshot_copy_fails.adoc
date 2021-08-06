@@ -1,0 +1,19 @@
+---
+permalink: linux-administration/concept_restoring_a_file_system_from_a_restoring_a_file_system_from_a_snapshot_copy_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, file, snapshot, copy, fail, error 
+summary: Red Hat Enterprise Linux 3 の更新を Red Hat Enterprise Linux 4 の更新に移行すると、 LVM1 から LVM2 に移行し、 Snapshot コピーからファイルシステムをリストアできなくなります。 
+---
+= Snapshot コピーからのファイルシステムのリストアは失敗します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Red Hat Enterprise Linux 3 の更新を Red Hat Enterprise Linux 4 の更新に移行すると、 LVM1 から LVM2 に移行し、 Snapshot コピーからファイルシステムをリストアできなくなります。
+
+LVM2 を使用して Snapshot コピーからファイルシステム（ LVM1 で取得）をリストアする際、 SnapDrive snap restore -fs` コマンドではファイルシステムはマウントされません。ただし、ディスクグループと関連付けられているホストボリュームはリストアされます。
+
+たとえば、 LVM1 で作成されたホスト・ボリュームのデバイス・ファイルは '/dev/Mydg_SDDG/Mydg_Sdhv' にあり 'LVM2 で作成されたホスト・ボリュームのデバイス・ファイルは '/dev/mapper/Myd_dg-sdg-Mydddddg-Sdhv' にあります
+
+これは、 Red Hat Enterprise Linux 4 Update 3 ホストでは、デバイスマッパーを使用してカーネルとのインターフェイスを行う LVM2 を使用し、 Red Hat Enterprise Linux 3 Update 5 ホストではデバイスマッパーを使用しない LVM1 が使用されるためです。

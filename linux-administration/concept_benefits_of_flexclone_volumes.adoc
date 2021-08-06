@@ -1,0 +1,21 @@
+---
+permalink: linux-administration/concept_benefits_of_flexclone_volumes.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, flexclone, volumes 
+summary: FlexClone ボリュームを使用すると、データ管理とパフォーマンスを向上させることができます。 
+---
+= FlexClone ボリュームの利点
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FlexClone ボリュームを使用すると、データ管理とパフォーマンスを向上させることができます。
+
+* データ管理を簡易化し、リスクを軽減
+* 柔軟性と利用率の向上：
++
+FlexClone ボリュームを使用すると、追加のユーザに元のデータへのアクセスを許可することなく、データのコピーを複数作成できます。
+
+* LUN クローンよりも高速です。
+

@@ -1,0 +1,17 @@
+---
+permalink: linux-administration/concept_displayingsnapshot_copies_of_a_storage_system_volume.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, storage, volume, copy, display 
+summary: ストレージシステムボリューム上の Snapshot コピーは、 SnapDrive コマンドを使用して表示できます。 
+---
+= ストレージ・システム・ボリュームの Snapshot コピーの表示
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージシステムボリューム上の Snapshot コピーは、 SnapDrive コマンドを使用して表示できます。
+
+ストレージ・システム・ボリュームの Snapshot コピーに関する情報を表示するには、次の構文を使用します。
+
+SnapDrive snap show -filol fileervol [fileervol...] [-verbose]

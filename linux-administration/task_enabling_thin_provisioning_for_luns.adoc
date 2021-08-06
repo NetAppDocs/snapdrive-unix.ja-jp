@@ -1,0 +1,36 @@
+---
+permalink: linux-administration/task_enabling_thin_provisioning_for_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, enable, lun, thin, provisioning, reservation, space 
+summary: SnapDrive for UNIX を使用して、ストレージシステムのシンプロビジョニングを実行できます。シンプロビジョニングは、スペースリザベーションとも呼ばれます。 
+---
+= LUN のシンプロビジョニングを有効化
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を使用して、ストレージシステムのシンプロビジョニングを実行できます。シンプロビジョニングは、スペースリザベーションとも呼ばれます。
+
+.ステップ
+. 'pace reservation-enabled ' 構成変数の値を 'On' に設定します
++
+また、「 -reserve 」パラメータと「 -noreserve 」パラメータを使用して、シンプロビジョニングを有効にすることもできます。
+
++
+パラメータは、「 space-reservation-enabled 」変数に指定された値をオーバーライドします。
+
++
+LUN 予約を有効または無効にするには、次のコマンドで「 -reserve 」と「 -noreserve 」を使用します。
+
++
+** SnapDrive storage create
+** SnapDrive ストレージのサイズ変更
+** SnapDrive スナップ接続
+** SnapDrive スナップ・リストア
+
+
++
+デフォルトでは、 SnapDrive for UNIX を使用すると、新規または新規のストレージ作成処理でスペースリザベーションが有効になります。スナップ・リストアおよびスナップ接続操作では、コマンド・ラインで「 -reserve 」または「 -noreserve 」パラメータが指定されていない場合、または構成ファイル内の値がコメント解除されている場合、 Snapshot コピー内のスペース・リザベーションが使用されます。
+
+

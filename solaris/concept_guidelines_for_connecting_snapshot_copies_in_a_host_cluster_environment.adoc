@@ -1,0 +1,30 @@
+---
+permalink: solaris/concept_guidelines_for_connecting_snapshot_copies_in_a_host_cluster_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, guideline, connect, copy, host, cluster, snapshot 
+summary: Snapshot コピーはホストクラスタ内の任意のノードから接続できます。ガイドラインに従って Snapshot コピーに接続します。 
+---
+= ホストクラスタ環境での Snapshot コピーの接続に関するガイドラインを参照してください
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot コピーはホストクラスタ内の任意のノードから接続できます。ガイドラインに従って Snapshot コピーに接続します。
+
+* SnapDrive snapshot connect コマンドは ' ホスト・クラスタ内の任意のノードから実行できますホスト・クラスタ内の任意の非マスター・ノードから '-deviceType shared オプションを使用して SnapDrive snap connect コマンドを開始すると ' コマンドがマスター・ノードに送信され ' 実行されますこれを実現するには ' すべてのホスト・クラスタ・ノードで 'rsh' または 'sh'access-without -password プロンプトが許可されていることを確認してください
+* この処理で指定する複数のファイルシステムとディスクグループには、同じデバイスタイプスコープを設定する必要があります。つまり、 all を共有するか、 all を専用にする必要があります。
+* raw LUN 上に NFS またはストレージ・エンティティを持つ SnapDrive snap connect コマンドはサポートされません
+* 「 -igroup 」オプションは、 SnapDrive snap connect コマンドの「 -deviceType 」共有オプションではなく、「 -deviceType 」専用オプションでサポートされています。
+* SnapDrive for UNIX は ' マスター・ノード上で SnapDrive snap connect コマンドを実行します共有ストレージエンティティを作成する前に、マスターノード上に LUN を作成してマッピングし、すべての非マスターノード上の LUN をマッピングします。また、ホストクラスタ内のすべてのノードに対して igroup を作成および管理します。このシーケンス中にエラーメッセージが発生すると、 Snapshot 接続処理は失敗します。
+* SnapDrive snap connect コマンドを使用すると ' 次のストレージ・エンティティを接続できます
++
+** ホストクラスタの共有モードまたは専用モードですでに存在する共有ファイルシステムまたはディスクグループ。
+** ホストクラスタ内でファイルシステムまたはディスクグループがすでに共有モードになっている場合でも、ホストクラスタ内の単一ノードに専用のファイルシステムまたはディスクグループを追加することができます。
+** ホストクラスタの外部のノードで作成されるファイルシステムまたはディスクグループの Snapshot コピー。
+
+
+* 非マスター・ノードにすでに存在する専用ファイル・システムまたはディスク・グループは ' ディスク・グループの -destdg オプションとファイル・システムの -autorname' オプションを指定しないと ' ホスト・クラスタ内の共有モードで再び接続できません
+
+
+つまり ' ホスト・クラスタ内の非マスター・ノードの 1 つで ' ファイル・システムがすでに専用モードになっている場合は '-destdg および -autorname` オプションを指定して SnapDrive snap connect コマンドを指定するか ' コマンドでデスティネーション・ファイル・システムを明示的に指定する必要があります

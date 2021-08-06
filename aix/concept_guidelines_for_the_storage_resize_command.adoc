@@ -1,0 +1,19 @@
+---
+permalink: aix/concept_guidelines_for_the_storage_resize_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, guidelines, storage, resize, command 
+summary: SnapDrive storage resize コマンドを使用する場合は、いくつかのガイドラインに従う必要があります。 
+---
+= storage resize コマンドのガイドラインを参照してください
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive storage resize コマンドを使用する場合は、いくつかのガイドラインに従う必要があります。
+
+* ストレージのサイズ変更処理で拡張できるのは、ストレージのサイズ変更のみです。エンティティのサイズを縮小するために使用することはできません。
+* すべての LUN は、同じストレージシステムボリュームに存在する必要があります。
+* サイズ変更処理では、論理ホストボリューム、または論理ホストボリュームまたは LUN 上のファイルシステムは直接サポートされません。その場合は、 LVM コマンドを使用してストレージのサイズを変更する必要があります。
+* LUN のサイズは変更できません新しい LUN を追加するには '-addlun オプションを使用する必要があります
+

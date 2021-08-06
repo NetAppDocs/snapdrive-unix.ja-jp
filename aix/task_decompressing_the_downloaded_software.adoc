@@ -1,0 +1,29 @@
+---
+permalink: aix/task_decompressing_the_downloaded_software.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, decompress, download, software 
+summary: ネットアップサポートサイトから SnapDrive for UNIX ソフトウェアパッケージをダウンロードしたら、ファイルを解凍してインストール用のソフトウェアを展開する必要があります。 
+---
+= ダウンロードしたソフトウェアを解凍します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ネットアップサポートサイトから SnapDrive for UNIX ソフトウェアパッケージをダウンロードしたら、ファイルを解凍してインストール用のソフトウェアを展開する必要があります。
+
+.手順
+. コマンドラインインターフェイス（ CLI ）のプロンプトで、次のコマンドを入力します。
++
+`*uncompressNetApp.snapp_aix_5.2.Z*`
+
++
+ソフトウェアのダウンロードについては、ネットアップサポートサイトを参照してください。
+
+
+
+* 関連情報 *
+
+http://mysupport.netapp.com["ネットアップサポート"]
+
+https://mysupport.netapp.com/NOW/products/interoperability["ネットアップの相互運用性"]

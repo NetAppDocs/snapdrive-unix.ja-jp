@@ -1,0 +1,15 @@
+---
+permalink: aix/concept_using_port_set_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, port, set 
+summary: ポートセットは、 SAN データポートまたはインターフェイスのグループであり、 SAN データポートまたはインターフェイスをグループ化することによってホストで使用できるパスを制御するために使用されます。 
+---
+= SnapDrive for UNIX でポートセットを使用する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ポートセットは、 SAN データポートまたはインターフェイスのグループであり、 SAN データポートまたはインターフェイスをグループ化することによってホストで使用できるパスを制御するために使用されます。
+
+ポートセットの設定はストレージシステム上のストレージ管理者が作成する、オプションのタスクです。ホストにポートセットが設定されていない場合は、ホストの SCSI 設定の制限に応じて、すべてのパスが表示されます。SnapDrive for UNIX では、ストレージ管理者が SVM ごとに指定する単一のポートセットを指定できます。したがって、ホストが Vserver 経由で表示できるパスの数には制限があります。

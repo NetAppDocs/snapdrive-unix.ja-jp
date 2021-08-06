@@ -1,0 +1,24 @@
+---
+permalink: solaris/concept_security_featuresprovided_bysnapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, security 
+summary: SnapDrive for UNIX には、より安全に操作できる特定の機能が用意されています。これらの機能を使用すると、ストレージシステム上でどのユーザが操作を実行できるか、およびどのホストから操作を実行できるかを、より細かく制御できます。 
+---
+= セキュリティ機能とは
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX には、より安全に操作できる特定の機能が用意されています。これらの機能を使用すると、ストレージシステム上でどのユーザが操作を実行できるか、およびどのホストから操作を実行できるかを、より細かく制御できます。
+
+セキュリティ機能を使用すると、次のタスクを実行できます。
+
+* アクセス制御権限を設定します
+* ストレージシステムのログイン情報を指定してください
+* SnapDrive for UNIX で HTTPS を使用するように指定します
+
+
+アクセス制御機能を使用すると、 SnapDrive for UNIX を実行するホストがストレージシステムで実行できる操作を指定できます。これらの権限はホストごとに個別に設定します。また、 SnapDrive for UNIX からストレージ・システムへのアクセスを許可するには、そのストレージ・システムのログイン名およびパスワードを入力する必要があります。
+
+HTTPS 機能を使用すると、パスワードの送信など、 Manage ONTAP インターフェイスからストレージシステムへのすべての通信に SSL 暗号化を指定できます。この動作は 'Solaris ホスト用の SnapDrive 4.1 以降のリリースではデフォルトですが 'use-https-to -ffiler' 構成変数の値を off に変更することにより 'SSL 暗号化を無効にできます

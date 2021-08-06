@@ -1,0 +1,21 @@
+---
+permalink: aix/concept_ghost_device_handles_in_aix_cause_longer_return_time_on_iscsi_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, ghost, device, aix, handle, iscsi, command, return 
+summary: ゴーストデバイスハンドル \ （定義された状態または障害状態のデバイスハンドル \ ）がある iSCSI または FC を使用して AIX デバイスを照会すると、原因 SCSI コマンドが AIX のデフォルトタイムアウトを約 30 秒待機できます。 
+---
+= AIX 原因でのゴーストデバイスハンドル iSCSI コマンドでのリターン時間が長くなる
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ゴーストデバイスハンドル（定義された状態または障害状態のデバイスハンドル）がある iSCSI または FC を使用して AIX デバイスを照会すると、原因 SCSI コマンドで AIX のデフォルトタイムアウトが約 30 秒待機することができます。
+
+FC の子デバイスハンドルがクリーンアップされていないか、 FC HBA がスイッチに接続されていない場合、 AIX システムを FC から iSCSI に切り替えたあとにこの問題が表示されます。
+
+* 回避策： *
+
+* ファイバチャネル HBA がスイッチに接続されていない場合は、ファイバチャネルスイッチに接続されていないすべてのファイバチャネルイニシエータにファイバチャネル IOA ラッププラグを取り付けます。
+* ファイバ・チャネル HBA がスイッチに接続されているが ' 子デバイスとして Failed または Defined device handles がある場合は 'rmdev コマンドを使用して古いゴースト・デバイス・ハンドルを削除します
+

@@ -1,0 +1,35 @@
+---
+permalink: linux-administration/concept_support_for_vserver.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, support, vserver, storage, lif, data 
+summary: SnapDrive for UNIX では SVM をサポートしています。SVM は、複数のプロトコルとユニファイドストレージをサポートするセキュアな仮想ストレージサーバです。SVM には、複数のデータボリュームと、クライアントへのデータの提供に使用する LIF が 1 つ以上含まれます。 
+---
+= SVM のサポート
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では SVM をサポートしています。SVM は、複数のプロトコルとユニファイドストレージをサポートするセキュアな仮想ストレージサーバです。SVM には、複数のデータボリュームと、クライアントへのデータの提供に使用する LIF が 1 つ以上含まれます。
+
+Vserver は共有の仮想データストレージおよびネットワークを安全に分離し、クライアントには単一の専用サーバとして認識されます。各 SVM には独立した管理者認証ドメインがあり、 SVM 管理者による個別管理が可能です。
+
+各 SVM のボリュームはジャンクションを通じて関連付けられ、ジャンクションパスにマウントされます。各ボリュームのファイルシステムは、ジャンクションでマウントされているように見えます。SVM のルートボリュームはネームスペース階層の最上位に位置し、その他のボリュームは SVM のルートボリュームにマウントされてグローバルネームスペースを拡張します。SVM のデータボリュームには、ファイルと LUN が含まれます。
+
+* SnapDrive for UNIX を使用して、 SVM でストレージプロビジョニング、 Snapshot コピー処理、および設定処理を実行できます。
+* アプリケーションデータは SVM のルートボリュームに格納されません。
+* SVM のルートが qtree の場合、 Snapshot コピー処理はサポートされません。
+* SVM 上に作成したすべてのボリュームは、ジャンクションパスにマウントする必要があります。
+
+
+* 関連情報 *
+
+link:concept_configuration_information_for_vserver_environment.adoc["SVM の設定情報"]
+
+link:task_verifying_login_information_for_vserver.adoc["SVM のログイン情報を確認しています"]
+
+link:task_specifying_login_information_for_vserver.adoc["SVM のログイン情報を指定しています"]
+
+link:task_deleting_a_user_for_a_vserver.adoc["SVM からユーザを削除する"]
+
+link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-ssg/home.html["ONTAP 9 ソフトウェアセットアップガイド"]

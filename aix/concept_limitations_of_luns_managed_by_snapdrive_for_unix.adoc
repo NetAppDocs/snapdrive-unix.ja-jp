@@ -1,0 +1,20 @@
+---
+permalink: aix/concept_limitations_of_luns_managed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, limitations, lun, managed 
+summary: SnapDrive を使用する場合は、 LUN に関する制限事項を確認しておく必要があります。 
+---
+= SnapDrive で管理される LUN の制限事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive を使用する場合は、 LUN に関する制限事項を確認しておく必要があります。
+
+* SnapDrive で管理される LUN は、ブートディスクまたはシステムディスクとして使用できません。
+* SnapDrive では、 LUN 名や Snapshot コピー名の長い形式でコロン（：）はサポートされません。
++
+長い Snapshot コピー名のコンポーネント間、またはストレージシステム名と LUN のストレージシステムボリューム名の間にコロンを使用できます。たとえば、「 toaster ： /vol/vol1/vol1: snap1 」は一般的な長い Snapshot 名ですが、「 toaster ： /vol/vol1/Luna 」は一般的な長い LUN 名です。
+
+

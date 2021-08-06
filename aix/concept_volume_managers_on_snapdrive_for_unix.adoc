@@ -1,0 +1,45 @@
+---
+permalink: aix/concept_volume_managers_on_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, manager 
+summary: AIX では ' ボリューム・マネージャは Native LVM および Veritas Volume Manager\ （ VxVM\ ）と呼ばれます 
+---
+= SnapDrive for UNIX のボリューム・マネージャ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AIX では、ボリュームマネージャは Native LVM および Veritas Volume Manager （ VxVM ）と呼ばれます。
+
+次の表に、ホストプラットフォーム上のボリュームマネージャを示します。
+
+|===
+| ホスト | ボリュームマネージャ | ボリュームまたはディスクグループ | 論理ボリュームの場所 | マルチパスデバイスの場所 
+
+
+ a| 
+AIX の場合
+ a| 
+ネイティブ LVM
+ a| 
+ボリューム・グループ vg`
+ a| 
+「 dev/lvol. 」と入力します
+
+すべての論理ボリュームは同じネームスペースを共有します
+ a| 
+「 /dev/hdisk 」（ FC のみ）マルチパスは iSCSI ではサポートされていません
+
+
+
+ a| 
+VERITAS Volume Manager （ VxVM ）
+ a| 
+ボリューム・グループ vg`
+ a| 
+/dev/vx/dsk/dg /lvol
+ a| 
+/dev/vx/dmp/Disk_1
+
+|===

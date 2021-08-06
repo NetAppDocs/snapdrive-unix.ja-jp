@@ -1,0 +1,147 @@
+---
+permalink: aix/task_displaying_asnapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, display, snapshot, copy 
+summary: SnapDrive snap show コマンドまたは list コマンドを実行すると、 Snapshot コピーが作成されたストレージ・システムの名前、ホスト名、日時などが表示されます。 
+---
+= Snapshot コピーを表示しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive snap show または list コマンドを実行すると、 Snapshot コピーが作成されたストレージ・システムの名前、ホスト名、日時などが表示されます。
+
+.手順
+. Snapshot コピーを表示するには、次のコマンド構文を入力します。
++
+`* SnapDrive snap show [-snapname] _long_snap_name _[_snap_name_...] [-verbose] *
+
+
+
+この処理では、 Snapshot コピーに関する次の最低情報が表示されます。
+
+* Snapshot コピーが作成されるストレージシステムの名前
+* Snapshot コピーを作成したホストの名前
+* ストレージシステム上の LUN へのパス
+* Snapshot コピーが作成された日時
+* Snapshot コピーの名前
+* Snapshot コピーに含まれているディスクグループの名前
+
+
+* 例 *: SnapDrive snap show コマンドの例を次に示します。
+
+[listing]
+----
+# snapdrive snap show -snapname toaster:/vol/vol2:snapA snapX snapY
+
+# snapdrive snap show -verbose toaster:/vol/vol2:snapA /vol/vol3:snapB snapC
+
+# snapdrive snap show toaster:/vol/vol2:snapA
+
+# snapdrive snap list -dg dg1 dg2
+----
+* 例：この例では、ワイルドカードを使用して、特定のボリューム上の利用可能な Snapshot コピーに関する情報を表示しています。
+
+[listing]
+----
+# snapdrive snap show toaster:/vol/vol1:*
+snap name host date
+snapped
+------------------------------------------------------------------
+-------------
+toaster:/vol/vol1:sss1 DBserver Mar 12
+16:19 dg1
+toaster:/vol/vol1:testdg DBserver Mar 12
+15:35 dg1
+toaster:/vol/vol1:t1 DBserver Mar 10
+18:06 dg1
+toaster:/vol/vol1:hp_1 HPserver Mar 8
+19:01 vg01
+toaster:/vol/vol1:r3 DBserver Mar 8
+13:39 rdg1
+toaster:/vol/vol1:r1 DBserver Mar 8
+13:20 rdg1
+toaster:/vol/vol1:snap2 DBserver Mar 8
+11:51 rdg1toaster:/vol/vol1:snap_p1 DBserver
+Mar 8 10:18 rdg1
+----
+* 例 *: この例では '-verbose オプションが AIX ホストのコマンド・ラインで使用されています
+
+[listing]
+----
+# snapdrive snap list betty:/vol/vol1:testsnap -v
+snap name host date
+snapped
+------------------------------------------------------------------
+-------------
+betty:/vol/vol1:testsnap aix198-75 Jul 31
+10:43 test1_SdDg
+host OS: AIX 3 5
+snapshot name: testsnap
+Volume Manager: aixlvm 5.3
+disk group: test1_SdDg
+host volume: test1_SdHv
+file system: test1_SdHv file system type: jfs2
+mountpoint:
+/mnt/test1
+lun path dev paths
+-------------------------------------------------------
+betty:/vol/vol1/aix198-75_luntest1_SdLun /dev/hdisk32
+----
+* 例：この例では、 SnapDrive for UNIX で作成されていない AIX ホスト上の Snapshot コピーに関するメッセージが含まれています。
+
+[listing]
+----
+# snapdrive snap show -filer toaster
+snap name host date
+snapped
+------------------------------------------------------------------
+-------------
+toaster:/vol/vol1:hourly.0 non-snapdrive snapshot
+toaster:/vol/vol1:hourly.0 non-snapdrive snapshot
+toaster:/vol/vol1:snap1 DBserver1 Oct 01 13:42 dg1
+dg2
+toaster:/vol/vol1:snap2 DBserver2 Oct 10 13:40
+DBdg/hvol1
+toaster:/vol/vol1:snap3 DBserver3 Oct 31 13:45
+DBdg
+----
+次に 'AIX ホスト上の LVM ベースのファイル・システムのスナップショット・コピーを SnapDrive 表示する例を示しますこの例では 'lun snap show コマンドと -verbose オプションを使用しています
+
+[listing]
+----
+# snapdrive snap show -v -fs /mnt/check_submit/csdg2/hv3_0
+snapname host date snapped
+------------------------------------------------------------------
+-------------
+toaster:/vol/vol1:mysnapshot sales-aix Aug 24 10:55 csdg2
+host OS: AIX 1 5
+snapshot name: mysnapshot
+Volume Manager: aixlvm 5.1
+disk group: csdg2
+host volume: csdg2_log
+host volume: csdg2_hv3_0
+file system: csdg2_hv3_0 file system type: jfs2 mountpoint:
+/mnt/check_submit/csdg2/hv3_0
+lun path dev paths
+-------------------------------------------------------
+spinel:/vol/vol1/check_submit_aix-4 /dev/hdisk4
+----
+* 例 * ：次の例ではワイルドカードを使用しています。
+
+[listing]
+----
+# snapdrive snap show toaster:/vol/volX:*
+# snapdrive snap show -v toaster:/vol/volX:DB1*
+filer1:/vol/volY:DB2*
+# snapdrive snap show toaster:/vol/vol2:mysnap* /vol/vol2:yoursnap*
+hersnap*
+# snapdrive snap show toaster:/vol/volX:*
+----
+* 例 * ：ワイルドカードを使用した場合、ワイルドカードは名前の途中で使用され、末尾には使用されません。
+
+[listing]
+----
+# snap show toaster:/vol/vol1:my*snap
+----

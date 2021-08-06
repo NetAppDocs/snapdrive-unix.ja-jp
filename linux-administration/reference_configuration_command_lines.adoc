@@ -1,0 +1,35 @@
+---
+permalink: linux-administration/reference_configuration_command_lines.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, command, line, operations, config 
+summary: 設定処理には SnapDrive for UNIX コマンドを使用します。 
+---
+= コンフィギュレーションコマンドライン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+設定処理には SnapDrive for UNIX コマンドを使用します。
+
+設定処理には次のコマンドラインオプションを使用します。
+
+* SnapDrive config access { show | list } _filername_`
+* SnapDrive 構成チェック LUN
+* SnapDrive config delete_apply_name[apply_name...] _
+* SnapDrive 構成リスト
+* SnapDrive config set [-dfm_user_name _apply_name]
+* SnapDrive config set [-viadmin]_user_name viadmin_name_`
+* SnapDrive config show [_host_file_name _]'
+* SnapDrive 構成チェック・クラスタ
+* SnapDrive config は LUN-count を準備しています
+* SnapDrive config migrate set_storage_system_name new_storage_system_nam_`
+* SnapDrive config migrate delete_new_storage_system_name [new_storage_system_name...]_`
+* SnapDrive 構成移行リスト
+* SnapDrive portset add portset_name filername [filername...] というポートセットが追加されました
+* SnapDrive portset delete filername [filername...]``
+* SnapDrive ポートセット・リスト
+* SnapDrive igroup add igroup_name filername [filername...]
+* SnapDrive igroup delete filername [filername...]
+* SnapDrive igroup リスト
+

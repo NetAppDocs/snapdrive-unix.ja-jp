@@ -1,0 +1,38 @@
+---
+permalink: linux-administration/concept_0001_680_admin_error_host_os_requires_an_update_to_internal_data_after_each_reboot.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, reboot, error, update, connect, admin, administration 
+summary: Red Hat Enterprise Linux 4 および Oracle Enterprise Linux 4 ホストでは、リブートのたびに Snapshot 接続処理とストレージ作成処理でエラーメッセージが表示されます。 
+---
+= 各リブート後、スナップ接続で「 0001-680 Admin error ：ホスト OS は内部データを更新する必要があります」となります。
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Red Hat Enterprise Linux 4 および Oracle Enterprise Linux 4 ホストでは、リブートのたびに Snapshot 接続処理とストレージ作成処理でエラーメッセージが表示されます。
+
+次のエラーメッセージは '`g driver` が再起動後に /dev/sgXX` ファイル内のすべての非アクティブなデバイスを削除するために発生します
+
+
+
+== 回避策
+
+. 構成変数「 _enable-implicthost-pineration_` 」の値を「 /opt/NetApp/snapdrive/snapdrive.conf 」ファイルで確認します。ON に設定する必要があります。
++
+ホストのリブート後、 SnapDrive for UNIX を使用する前に、次の手順を実行します。
+
+. 次のコマンドを入力して、 sg サービスと iSCSI サービスがロードされていることを確認します。
++
+lsmod
+
+. sg サービスと iSCSI サービス（ iSCSI セットアップを使用する場合）がロードされない場合は、次のコマンドを入力します。
++
+** 「オドプローブ sg 」
+** 「サービス iSCSI スタート」
+
+
+
+
+
+NOTE: 手順 2 と 3 を手動で実行しない場合は、ホスト起動スクリプトに「 m odprobe sg 」コマンドと「 service iscsi start 」コマンドを追加します。

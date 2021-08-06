@@ -1,0 +1,21 @@
+---
+permalink: solaris/concept_operation_with_multiple_filespec_and_storage_objects.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, filspec, storage, object, multiple 
+summary: 次の例は、特定の操作を実行する権限を持つユーザーでない場合に表示されるエラーメッセージを示しています。 
+---
+= 複数のファイル仕様およびストレージ・オブジェクトを使用する場合
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+次の例は、特定の操作を実行する権限を持つユーザーでない場合に表示されるエラーメッセージを示しています。
+
+[listing]
+----
+[marc]$ snapdrive storage create -lun storage_array1:/vol/vol1/lun5 lun6 -lun storage_array1:/vol/vol2/lun2 -lunsize 100m
+0002-332 Admin error:SD.Storage.Write access denied on volume storage_array1:/vol/vol1 for user nis_domain\marc on Operations Manager server ops_mngr_server
+SD.Storage.Write access denied on volume storage_array1:/vol/vol2 for user nis_domain\marc on Operations Manager server ops_mngr_server
+----
+この例では、 vol1 と vol2 という 2 つのストレージシステムボリュームに 3 つの LUN があります。ユーザ Marc は nis_domain' および vol2 上で filespec を作成する権限がありませんSnapDrive for UNIX の場合、上記の例では 2 つのエラー・メッセージが表示されます。エラーメッセージには、ユーザには vol1 と vol2 に対する「 D.Storage.Write 」アクセス権が必要であることが示されています。

@@ -1,0 +1,21 @@
+---
+permalink: linux-administration/concept_snapshot_connectand_snapshotrestore_operations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, restore, clones, copy, snapshot 
+summary: Snapshot コピーは、 Snapshot コピーへの接続時に情報のクローンを作成します。 
+---
+= Snapshot 接続および Snapshot のリストア処理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot コピーは、 Snapshot コピーへの接続時に情報のクローンを作成します。
+
+Snapshot リストア処理とは異なり、 Snapshot 接続処理では、ホストエンティティを構成する LUN の既存の内容が Snapshot コピーの内容で置き換えられることはありません。情報のクローンを作成します。
+
+接続が確立されると、 Snapshot 接続処理と Snapshot リストア処理の両方で同様の処理が実行されます。
+
+* Snapshot 接続処理では、ストレージエンティティの論理ボリュームがアクティブ化され、ファイルシステムがマウントされます。必要に応じて、ホストファイルシステムテーブルにエントリを追加することもできます。
+* Snapshot のリストア処理を実行すると、ストレージエンティティの論理ボリュームがアクティブ化され、ファイルシステムがマウントされ、 Snapshot コピーで保持されていたホストファイルシステムのマウントエントリが適用されます。
+

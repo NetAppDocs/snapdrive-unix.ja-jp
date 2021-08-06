@@ -1,0 +1,27 @@
+---
+permalink: linux-administration/task_viewing_the_list_of_igroups.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, igroups, configure, host 
+summary: ホストで設定されているすべての igroup を表示できます。 
+---
+= igroup のリストを表示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストで設定されているすべての igroup を表示できます。
+
+. ホスト・システムで、次のコマンドを入力します。
++
+「 * SnapDrive igroup list * 」
+
++
+[listing]
+----
+snapdrive igroup list
+appliance name   igroup name
+-----------------------------
+toaster        ig
+----
+

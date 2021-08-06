@@ -1,0 +1,28 @@
+---
+permalink: solaris/task_viewing_the_list_of_igroups.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, view, list, igroup 
+summary: ホストで設定されているすべての igroup を表示できます。 
+---
+= igroup のリストを表示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストで設定されているすべての igroup を表示できます。
+
+.手順
+. ホスト・システムで、次のコマンドを入力します。
++
+「 * SnapDrive igroup list * 」
+
++
+[listing]
+----
+snapdrive igroup list
+appliance name   igroup name
+-----------------------------
+toaster        ig
+----
+

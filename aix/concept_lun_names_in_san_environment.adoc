@@ -1,0 +1,28 @@
+---
+permalink: aix/concept_lun_names_in_san_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lun, san, environment 
+summary: すべての SAN 処理で、 IP アドレスに解決されるかどうかに関係なく、 LUN 名の形式は常にホスト名にする必要があります。SAN のみの環境では、データパスの概念はありません。管理インターフェイスのマッピングは、データパスインターフェイスと同じにする必要があります。 
+---
+= SAN 環境での LUN 名
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+すべての SAN 処理で、 IP アドレスに解決されるかどうかに関係なく、 LUN 名の形式は常にホスト名にする必要があります。SAN のみの環境では、データパスの概念はありません。管理インターフェイスのマッピングは、データパスインターフェイスと同じにする必要があります。
+
+
+
+== SAN の複数サブネット環境での構成リストの出力
+
+[listing]
+----
+
+#snapdrive config set -mgmtpath f3050-197-91 f3050-197-91
+
+#snapdrive config list -mgmtpath
+system name        management interface   datapath interface
+------------------------------------------------------------
+bart               10.72.197.91           10.72.197.91
+----

@@ -1,0 +1,27 @@
+---
+permalink: aix/concept_command_to_use_torestore_snapshotcopies.html 
+sidebar: sidebar 
+keywords: snap, snapshot, command, restore, snapshot, copy 
+summary: SnapDrive snap restore コマンドを使用して、 Snapshot コピーをリストアします。 
+---
+= Snapshot コピーのリストアに使用するコマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive snap restore コマンドを使用して、 Snapshot コピーをリストアします。
+
+SnapDrive snap restore コマンドは、コマンド・プロンプトで指定した Snapshot コピーからストレージ・システムにデータをリストアします。この操作は、 SnapDrive snap restore コマンドで指定した「 file-spec 」引数（たとえば、ディスクグループ、 NFS ファイル、 NFS ディレクトリツリー、 LUN 上に直接作成されたファイルシステム）の内容を、指定した Snapshot コピー内にある「 filespec 」引数の内容で置き換えます。
+
+存在しない 'file_dspec' 引数の Snapshot コピーをリストアすることもできますこの問題は、指定した値がホスト上に存在しなくても、 Snapshot コピーを作成したときに存在していた場合に発生します。たとえば、アンマウント済みのファイルシステムや、削除したディスクグループなどです。
+
+通常は、 Snapshot コピーを作成したホスト（つまり、元のホスト）から Snapshot コピーをリストアします。
+
+[NOTE]
+====
+* NFS エンティティでは、同じボリュームを 2 つの異なる IP にマウントする場合、スナップリストア処理を実行できるのは、これらのボリュームに対して一度に 1 つのファイル仕様のみです。
+* root 以外のユーザの場合は、 SnapDrive 4.1 for UNIX から、グローバルでストレージ書き込み機能を使用できます。また、スナップショットのリストアを実行するための GlobalSDSnapshot 機能も使用できます。
+
+
+====

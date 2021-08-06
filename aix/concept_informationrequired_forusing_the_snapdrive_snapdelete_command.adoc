@@ -1,0 +1,71 @@
+---
+permalink: aix/concept_informationrequired_forusing_the_snapdrive_snapdelete_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, command, information, required 
+summary: Snapshot コピーを削除するには、削除する Snapshot コピーの名前を指定します。SnapDrive snap delete コマンドを使用すると、削除された Snapshot コピーのリストを表示できます。 
+---
+= SnapDrive snap delete コマンドの使用に必要な情報
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot コピーを削除するには、削除する Snapshot コピーの名前を指定します。SnapDrive snap delete コマンドを使用すると、削除された Snapshot コピーのリストを表示できます。
+
+次の表に、 SnapDrive snap delete コマンドに関する情報を示します。
+
+|===
+| 要件 / オプション | 引数 
+
+
+ a| 
+Snapshot コピーの名前を指定します。ストレージ・システムの名前、ボリューム、および Snapshot コピーの名前を入力する場合は、 Snapshot コピー名の長い形式を使用します。次に、長い Snapshot コピー名の例を示します。「 big_filer ： /vol/account_vol ： snap_20031115`
+
+追加の Snapshot コピーを指定する場合は、最初の Snapshot コピーと同じストレージシステムおよびボリュームにある場合は、短縮形の名前を使用できます。それ以外の場合は、長い形式の名前をもう一度使用します。
+
+
+
+ a| 
+Snapshot コピー名（ snapname ）
+ a| 
+`_long_Snapshot copy_name_`
+
+
+
+ a| 
+追加の Snapshot コピー
+ a| 
+`_Snapshot copy_name_` ( ロングまたはショートフォーム )
+
+
+
+ a| 
+「 -verbose 」と表示されます
+ a| 
+~
+
+
+
+ a| 
+削除された Snapshot コピーのリストを表示するには、 -verbose オプションを追加します。このオプションを使用すると、 Snapshot コピー名の省略形を使用した場合に、ストレージ・システムとボリュームの情報が不足してしまいます。
+
+
+
+ a| 
+「 -force 」を使用します
+ a| 
+~
+
+
+
+ a| 
+-noprompt`
+ a| 
+~
+
+
+
+ a| 
+オプション：既存の Snapshot コピーを上書きするかどうかを指定します。このオプションを指定しないと、既存の Snapshot コピーの名前を指定した場合に処理が停止します。このオプションで既存の Snapshot コピーの名前を指定すると、 Snapshot コピーを上書きするかどうかの確認を求められます。SnapDrive for UNIX がプロンプトを表示しないようにするには '-nofrt' オプションも指定します( -noprompt` オプションを使用する場合は '-force オプションを常に指定する必要があります )
+
+|===

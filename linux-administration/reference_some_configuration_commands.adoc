@@ -1,0 +1,117 @@
+---
+permalink: linux-administration/reference_some_configuration_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, configuration, config 
+summary: SnapDrive for UNIX の設定に役立つコマンドはいくつかあります。 
+---
+= 一部のコンフィギュレーションコマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX の設定に役立つコマンドはいくつかあります。
+
+次の表に、 SnapDrive for UNIX の設定に役立つその他のコマンドをまとめます。
+
+|===
+| コマンドまたはアクション | 説明 
+
+
+ a| 
+SnapDrive for UNIX ソフトウェアのバージョンの設定と確認
+
+
+
+ a| 
+「 * SnapDrive config show * 」と表示されます
+ a| 
+「 napdrive.conf 」ファイルの値を確認します。
+
+
+
+ a| 
+「 * SnapDrive version * 」と入力します
+ a| 
+SnapDrive for UNIX のバージョンを確認します。
+
+
+
+ a| 
+`*snapdrived start*`
+ a| 
+SnapDrive for UNIX デーモンを開始します。
+
+
+
+ a| 
+*lun SnapDrive config は LUN-count の値 *' を準備します
+ a| 
+ホストで特定の数の LUN を作成する準備と、作成可能な LUN の数を決定します。
+
+
+
+ a| 
+*SnapDrive config set -viadmin <user><viadmin_name> *`
+ a| 
+Linux ゲスト OS で RDM LUN を作成するよう、ゲストを準備します。
+
+
+NOTE: これらのコマンドは、 Linux ホストでのみ使用できます。ホストユーティリティを使用せずに FCP プロトコルを使用します。
+
+
+
+ a| 
+「 * SnapDrive クローン・スプリット * 」
+ a| 
+ボリュームクローンまたは LUN クローンについて、スプリットのステータスを概算、開始、停止、および照会します。
+
+
+
+ a| 
+'napdrive.conf' ファイルの変数を編集します
+ a| 
+ログファイルのパス名とオプションを変更します。SnapDrive for UNIX では、次の 3 つのファイルに情報が記録されます
+
+* 監査ファイル
+* リカバリファイル
+* トレースファイル
+
+
+
+
+ a| 
+ホストとストレージシステム間のアクセス制御権限を設定および表示する
+
+
+
+ a| 
+アクセス制御パーミッション・ファイル（ sd`_hostname_`.prbac ）を ' そのホストに関連づけられているストレージ・システム上で編集します
+ a| 
+ホストがストレージシステムに付与するアクセス制御権限を指定します。ストレージシステム上のホストには、次のアクセスレベルを設定できます。
+
+* none -- アクセスなし。
+* snap create -- Snapshot コピーを作成します
+* snap use -- Snapshot コピーを削除して名前を変更します
+* snap all -- Snapshot コピーを作成、リストア、削除、および名前変更します。
+* storage create delete -- ストレージの作成、サイズ変更、および削除を行います。
+* ストレージの使用 -- ストレージを接続して切断します
+* Storage All ：ストレージの作成 ' 削除 ' 接続 ' 切断を行います
+* all access -- すべての操作。
+
+
+
+
+ a| 
+`* SnapDrive config access show <filer_name> *`
+ a| 
+ホストからストレージシステムへのアクセス制御権限に関する情報を表示する
+
+
+
+ a| 
+*SnapDrive config delete <filername> [<filername> 。。.]*
+ a| 
+指定したユーザ名とパスワードのペアを SnapDrive for UNIX から削除します。
+
+|===

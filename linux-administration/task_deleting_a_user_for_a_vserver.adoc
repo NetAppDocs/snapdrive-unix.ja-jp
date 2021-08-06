@@ -1,0 +1,31 @@
+---
+permalink: linux-administration/task_deleting_a_user_for_a_vserver.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, user, vserver, login, config 
+summary: SnapDrive config delete コマンドを実行すると、 SVM からログイン情報を削除できます。 
+---
+= SVM からユーザを削除する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive config delete コマンドを実行すると、 SVM からログイン情報を削除できます。
+
+. 次のコマンドを入力します。
++
+'*SnapDrive config delete_apply_name_*``
+
++
+`_apply_name_` は、ログイン情報を削除する SVM の名前です。
+
++
+[listing]
+----
+# snapdrive config delete clstr-vs2
+Deleted configuration for appliance: clstr-vs2
+----
++
+SnapDrive for UNIX を使用すると、指定した SVM のログイン情報が削除されます。
+
+

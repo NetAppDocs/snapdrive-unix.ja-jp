@@ -1,0 +1,104 @@
+---
+permalink: solaris/task_disconnectingsnapshot_copy_withstorage_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, snapshot, copy, storage 
+summary: SnapDrive snap disconnect コマンドを使用すると、ストレージエンティティを含む Snapshot コピーを切断できます。 
+---
+= ストレージエンティティを含む Snapshot コピーを切断しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive snap disconnect コマンドを使用すると、ストレージエンティティを含む Snapshot コピーを切断できます。
+
+.手順
+. 次のコマンドを入力します。
++
+`* SnapDrive snap disconnect ｛ -dg | -fs | -hostvol ｝ _file_spec_[_file_spec..._][-dg | -fs|-hostvol ｝ _file_spec_[_file_spec..._]] [-full] [-deviceType ｛ shared | dedicated] [-fstype type] [-vmtype][-vmtype][-vmtype][-dvmtype].
+
++
+このコマンドは ' 常にストレージ・エンティティー（ -lun'`-ddd`'`-hostvol' など）で開始する必要があります または '-fs' を指定します
+
++
+** LUN （「 -lun 」）を指定する場合は、長い LUN 名を入力する必要があります。他のストレージ・エンティティと同じコマンド・ライン上で '-lun' オプションを指定して LUN を指定することはできません（ -vg'-dg'`-fs'-lvol' または -hostvol オプション）
+** RDM LUN （「 -lun' 」）を指定する場合は、長い RDM LUN 名を入力する必要があります。RDM LUN を他のストレージ・エンティティと同じコマンド・ライン上で '-lun' オプションを使用して指定することはできません（ --vg'-dg'`-fs'`-lvol''-hostvol` オプション）
+** NFS マウントポイントを指定する場合は ' 同じコマンド・ラインで非 NFS エンティティー（ -vg`'-dgd`'`-fs'`-lvol'-hostvol ）を指定することはできませんNFS マウントポイントを指定するには、別のコマンドを使用する必要があります。
+
+
++
+
+NOTE: Snapshot コピーに含まれていない LUN をホストエンティティが使用している場合は、エラーメッセージが表示されます。各ターゲットディスクグループに含まれるホストボリュームまたはファイルシステムのサブセットを指定した場合も、エラーが発生します。
+
+
+
+SnapDrive for UNIX を使用すると、コマンドラインで指定したストレージエンティティのマッピングが削除されます。
+
+このコマンドラインを使用すると、ホストボリューム dg5/myvolume の基盤となるすべての LUN へのマッピングが削除されます。このコマンドは、 Snapshot 接続処理で作成された一時的な LUN をすべて削除します。
+
+[listing]
+----
+# snapdrive snap disconnect -hostvol dg5/myvolume
+----
+このコマンドラインを使用すると、ホストボリューム dg5/myvolume の基盤となるすべての LUN へのマッピングが削除されます。このコマンドは、 Snapshot 接続処理で作成された一時的な LUN をすべて削除します。
+
+[listing]
+----
+# snapdrive snap disconnect -hostvol dg5/myvolume
+----
+このコマンドは、ディスクグループ 1 （ dg1 ）とその LUN へのマッピングを切断します。また、 Snapshot 接続処理で作成された一時的な LUN をすべて削除します。
+
+[listing]
+----
+# snapdrive snap disconnect -lun toaster:/vol/vol1/luna -dg dg1
+----
+このコマンドラインを実行すると、ファイルシステム fs1 へのマッピングと、このファイルシステムの基盤となる RDM LUN へのマッピングが削除されます。また、 Snapshot 接続処理で作成された一時的な RDM LUN も削除されます。
+
+[listing]
+----
+# snapdrive snap disconnect -fs mnt/RDMNew
+----
+このコマンドラインを実行すると、ファイルシステム fs1 へのマッピングと、このファイルシステムの基盤となる LUN へのマッピングが削除されます。また、 Snapshot 接続処理で作成された一時的な LUN をすべて削除します。
+
+[listing]
+----
+# snapdrive snap disconnect -fs mnt/fs1
+----
+このコマンドラインを使用すると、ディスクグループ dg1 、 DG2 、および dg3 のマッピングが削除されます。このコマンドは、 Snapshot 接続処理で作成された一時的な LUN をすべて削除します。
+
+[listing]
+----
+# snapdrive snap disconnect -dg dg1 dg2 dg3
+----
+次の例は、 Veritas スタックのファイルシステムとディスクグループを使用して Snapshot コピーを切断します。
+
+[listing]
+----
+# snapdrive snap disconnect -fs /mnt/fs1_clone -fstype vxfs
+delete file system /mnt/fs1_clone
+- fs /mnt/fs1_clone ... deleted
+- hostvol vxvm1_0/fs1_SdHv_0 ... deleted
+- dg vxvm1_0 ... deleted
+- LUN snoopy:/vol/vol1/lunVxvm1_0 ... deleted
+----
+次の例は、ファイルシステムとディスクグループを含む Snapshot コピーを LVM スタック上で切断します。
+
+[listing]
+----
+# snapdrive snap disconnect -fs /mnt/fs1_clone -fstype
+					ufs
+delete file system /mnt/fs1_clone
+- fs /mnt/fs1_clone ... deleted
+- hostvol lvm1_0/fs1_SdHv_0 ... deleted
+- dg lvm1_0 ... deleted
+- LUN snoopy:/vol/vol1/lunLvm1_0 ... deleted
+----
+次の例は、ファイルシステムにある Snapshot コピーを切断します。
+
+[listing]
+----
+# snapdrive snap disconnect -fs /mnt/fs1
+delete file system /mnt/fs1
+- fs /mnt/fs1 ... deleted
+- LUN lech:/vol/vol1/lun1_0 ... deleted
+----

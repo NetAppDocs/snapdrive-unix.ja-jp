@@ -1,0 +1,24 @@
+---
+permalink: linux-administration/concept_guidelines_for_usingthe_storage_deletecommand.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, delete, command, guidelines, file 
+summary: SnapDrive の storage delete コマンドには、 SnapDrive for UNIX におけるいくつかの制限事項があります。 
+---
+= storage delete コマンドの使用に関するガイドラインを次に示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive storage delete コマンドには 'UNIX 用の SnapDrive にいくつかの制限があります
+
+* ファイルシステムを削除すると、 SnapDrive for UNIX によってファイルシステムのマウントポイントが常に削除されます。
++
+Linux ホストでは、複数のファイルシステムを単一のマウントポイントに接続できます。ただし、 SnapDrive for UNIX の場合、ファイルシステムごとに一意のマウントポイントが必要です。SnapDrive storage delete コマンドは ' 単一のマウント・ポイントに接続されているファイル・システムを削除するために使用すると失敗します
+
+* -lun' オプションを使用 SnapDrive して ' ホスト・ディスク・グループまたはファイル・システムのいずれかのメンバーである LUN の名前を指定すると 'lun storage delete コマンドは失敗します
+* -lun' オプションを使用 SnapDrive して ' ホスト上のマルチパス・ソフトウェアによって検出されない LUN の名前を指定すると 'lun storage delete コマンドは失敗します
+
+
+
+NOTE: SnapDrive SnapDrive 5.2 for UNIX より前のリリースでは、マッピング igroup に World Wide Port Name （ WWPN ；ワールドワイドポート名）が 3 つ以上含まれている場合、 RDM LUN の使用中に lun storage delete コマンドが失敗します。

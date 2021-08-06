@@ -1,0 +1,32 @@
+---
+permalink: aix/task_removing_a_port_set_from_snapdrive.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, remove, port, set, command 
+summary: SnapDrive で設定されているポートセットを削除するには、 SnapDrive portset delete コマンドを使用します。 
+---
+= SnapDrive からポートセットを削除しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive portset delete コマンドを使用して、 SnapDrive で設定されたポートセットを削除できます。
+
+.手順
+. ホスト・システムで、次のコマンドを入力します。
++
+`*SnapDrive portset delete_filername[filername...]_*`
+
++
+`_filername_` は、ポートセットが設定されている SVM の名前です。
+
++
+[listing]
+----
+snapdrive portset delete vs91
+Deleted portset configuration for appliance: vs91
+----
++
+SnapDrive 用に設定されたポートセットが削除されました。
+
+

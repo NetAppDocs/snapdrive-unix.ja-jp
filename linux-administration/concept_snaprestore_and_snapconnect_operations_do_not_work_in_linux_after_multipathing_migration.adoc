@@ -1,0 +1,32 @@
+---
+permalink: linux-administration/concept_snaprestore_and_snapconnect_operations_do_not_work_in_linux_after_multipathing_migration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snaprestore, snapconnect, migration, multipathing, operations 
+summary: マルチパスタイプを移行すると、 SnapRestore 処理と SnapConnect 処理は機能しません。 
+---
+= マルチパスタイプの移行後、 Linux で SnapRestore 処理と Snapconnect 処理は機能しません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+マルチパスタイプを移行すると、 SnapRestore 処理と SnapConnect 処理は機能しません。
+
+既存のマルチパス・タイプが「 _None_ 」に設定されている場合 ' さらに、後でマルチパス・タイプを「 _NativeMPIO_ 」に変更する傾向があります。既存の Snapshot コピーに対して Snapconnect 操作と SnapRestore 操作を実行すると、「スナップショット内に存在するマルチパス・ソフトウェア linuxnull を見つけることができません」というエラー・メッセージが表示されることがあります。
+
+SnapRestore 処理の例
+
+[listing]
+----
+snapdrive snap restore -fs /mnt/tstmp -snapname withoutmpio
+0002-105 Command error: Unable to find multipathing software linuxnull as present in the snapshot
+----
+Snapconnect 処理の例
+
+[listing]
+----
+snapdrive snap connect -fs /mnt/tstmp -snapname
+f3020-225-54:/vol/vol1:withoutmpio -autorename
+0002-105 Command error: Unable to find multipathing software
+linuxnull as present in the snapshot
+----

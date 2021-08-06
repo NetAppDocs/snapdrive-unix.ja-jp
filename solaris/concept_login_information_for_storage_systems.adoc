@@ -1,0 +1,17 @@
+---
+permalink: solaris/concept_login_information_for_storage_systems.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, login, storage, system 
+summary: SnapDrive for UNIX が各ストレージ・システムにアクセスできるように、ユーザ名またはパスワードを設定します。また、 root としてログインしているだけでなく、 SnapDrive for UNIX を実行しているユーザーが、プロンプトが表示されたときに正しいユーザー名またはパスワードを入力する必要があるため、セキュリティが確保されます。ログインが侵害された場合は、ログインを削除して、新しいユーザログインを設定できます。 
+---
+= ストレージシステムのログイン情報
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX が各ストレージ・システムにアクセスできるように、ユーザ名またはパスワードを設定します。また、 root としてログインしているだけでなく、 SnapDrive for UNIX を実行しているユーザーが、プロンプトが表示されたときに正しいユーザー名またはパスワードを入力する必要があるため、セキュリティが確保されます。ログインが侵害された場合は、ログインを削除して、新しいユーザログインを設定できます。
+
+ストレージシステムのセットアップ時に、ユーザログインを作成しておきます。SnapDrive for UNIX をストレージ・システムと連携させるには、このログイン情報を指定する必要があります。ストレージシステムのセットアップ時に指定した内容に応じて、各ストレージシステムは同じログインまたは一意のログインのどちらかを使用できます。
+
+SnapDrive for UNIX では、これらのログインとパスワードが暗号化された形式で各ホストに保存されます。SnapDrive for UNIX がストレージ・システムと通信するときにこの情報を暗号化するように指定するには '`_snapdrive.conf_' 構成変数 `_use-https-to-filer =on_` を設定します

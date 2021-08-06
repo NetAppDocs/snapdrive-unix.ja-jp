@@ -1,0 +1,15 @@
+---
+permalink: aix/concept_snapdrive_for_unix_and_raw_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, unix, raw, entity, storage, operation 
+summary: SnapDrive for UNIX を使用すると、 LUN などの raw エンティティ、または LUN に直接作成できるファイルシステムのストレージ処理が可能になり、ホストシステムの LVM を使用せずにストレージ処理を実行できます。 
+---
+= SnapDrive ： UNIX エンティティおよび raw エンティティの場合
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を使用すると、 LUN などの raw エンティティ、または LUN に直接作成できるファイルシステムのストレージ処理が可能になり、ホストシステムの LVM を使用せずにストレージ処理を実行できます。
+
+SnapDrive for UNIX ストレージのコマンドは、 LVM をアクティブ化せずに LUN などの raw エンティティを管理します。 SnapDrive for UNIX を使用すると、 LUN および LUN に含まれるファイルシステムを作成、削除、接続、および切断でき、 LVM をアクティブ化する必要はありません。

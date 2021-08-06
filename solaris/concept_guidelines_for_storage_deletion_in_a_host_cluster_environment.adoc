@@ -1,0 +1,37 @@
+---
+permalink: solaris/concept_guidelines_for_storage_deletion_in_a_host_cluster_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, delete, host, cluster 
+summary: ホストクラスタ環境で napdrive storage delete コマンドを使用する際には、注意が必要です。 
+---
+= ホストクラスタ環境でのストレージ削除に関するガイドライン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホスト・クラスタ環境で SnapDrive storage delete コマンドを使用する場合は、いくつかのガイドラインに注意する必要があります。
+
+* ホストクラスタ内の任意の非マスター・ノードから '-deviceType 共有オプションを指定して SnapDrive storage delete コマンドを開始すると ' コマンドがマスター・ノードに送信され ' 実行されますこれを実現するには 'rsh または ssh 'access-without -password prompt' がすべてのホスト・クラスタ・ノードで許可されていることを確認する必要があります
+* SnapDrive storage delete コマンドは ' ホスト・クラスタ内の任意のノードから実行できます
+* ストレージ削除処理を成功させるために、どちらも false に設定しないでください。
++
+** ストレージエンティティを共有する必要があります。
+** LUN はホストクラスタ内のすべてのノードにマッピングする必要があります。
+
+
+* デフォルト値は dedicated であるため ' 特定のノード上のストレージ・エンティティを削除するには '-deviceType dedicated オプションを使用するか ' コマンド・ライン構文内の -deviceType オプションを省略します
+* 共有ストレージ・エンティティまたは SnapDrive が -deviceType dedicated オプションで削除された場合 ' または共有オプションを使用して専用ストレージ・エンティティまたは LUN が削除された場合は 'lun storage delete コマンドを実行すると ' エラー・メッセージが表示されます
+* 次のいずれかの状況になると、ストレージ削除処理は失敗します。
++
+** ストレージエンティティの削除処理中にエラーが発生した場合。
++
+SnapDrive for UNIX を使用すると、ストレージエンティティが削除され、すべての非マスターノードから LUN が切断され、ホストクラスタ内のマスターノードから LUN が切断されて削除されます。
+
+** SnapDrive storage delete コマンドが実行される前に ' ホスト・クラスタ内のノードがシャットダウンされ ' 再起動する場合
++
+これは、 LUN がまだ存在しないノードにマッピングされているためです。これを回避するには '-force オプションを使用します
+
+
+
+

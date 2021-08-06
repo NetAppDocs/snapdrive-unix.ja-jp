@@ -1,0 +1,20 @@
+---
+permalink: aix/reference_rules_for_keywords.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rule, keyword 
+summary: SnapDrive for UNIX では、 UNIX 操作の SnapDrive のターゲットを指定するために、キーワードを使用します。 
+---
+= キーワードのルール
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、 UNIX 操作の SnapDrive のターゲットを指定するために、キーワードを使用します。
+
+SnapDrive for UNIX では、キーワードを使用して、作業中のホストおよびストレージシステムオブジェクトに対応する文字列のシーケンスを指定します。SnapDrive for UNIX のキーワードには、次のルールが適用されます。
+
+* 各キーワードの前にハイフン（ - ）を付けます。
+* キーワードは連結しないでください。
+* 省略形ではなく、キーワード全体とハイフンを入力します。
+

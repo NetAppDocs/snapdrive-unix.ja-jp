@@ -1,0 +1,132 @@
+---
+permalink: linux-administration/task_displaying_asnapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, shot, list, command 
+summary: SnapDrive snap show コマンドまたは list コマンドを実行すると、 Snapshot コピーが作成されたストレージ・システムの名前、ホスト名、日時などが表示されます。 
+---
+= Snapshot コピーを表示しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive snap show または list コマンドを実行すると、 Snapshot コピーが作成されたストレージ・システムの名前、ホスト名、日時などが表示されます。
+
+.手順
+. Snapshot コピーを表示するには、次のコマンド構文を入力します。
++
+`* SnapDrive snap show [-snapname] long_snap_name [snap_name ...] [-verbose] *
+
+
+
+この処理では、 Snapshot コピーに関する次の最低情報が表示されます。
+
+* Snapshot コピーが作成されるストレージシステムの名前
+* Snapshot コピーを作成したホストの名前
+* ストレージシステム上の LUN へのパス
+* Snapshot コピーが作成された日時
+* Snapshot コピーの名前
+* Snapshot コピーに含まれているディスクグループの名前
+
+
+* 例 *: SnapDrive snap show コマンドの例を次に示します。
+
+[listing]
+----
+# snapdrive snap show -snapname toaster:/vol/vol2:snapA snapX snapY
+
+# snapdrive snap show -verbose toaster:/vol/vol2:snapA /vol/vol3:snapB snapC
+
+# snapdrive snap show toaster:/vol/vol2:snapA
+
+# snapdrive snap list -dg dg1 dg2
+----
+* 例：この例では、ワイルドカードを使用して、特定のボリューム上の利用可能な Snapshot コピーに関する情報を表示しています。
+
+[listing]
+----
+# snapdrive snap show toaster:/vol/vol1:*
+snap name host date
+snapped
+------------------------------------------------------------------
+-------------
+toaster:/vol/vol1:sss1 DBserver Mar 12
+16:19 dg1
+toaster:/vol/vol1:testdg DBserver Mar 12
+15:35 dg1
+toaster:/vol/vol1:t1 DBserver Mar 10
+18:06 dg1
+toaster:/vol/vol1:hp_1 HPserver Mar 8
+19:01 vg01
+toaster:/vol/vol1:r3 DBserver Mar 8
+13:39 rdg1
+toaster:/vol/vol1:r1 DBserver Mar 8
+13:20 rdg1
+toaster:/vol/vol1:snap2 DBserver Mar 8
+11:51 rdg1toaster:/vol/vol1:snap_p1 DBserver
+Mar 8 10:18 rdg1
+----
+* 例 * ：この例では、「 -verbose 」オプションを指定した SnapDrive snap list コマンドを使用して、 Linux ホスト上の NFS マウント・ディレクトリ・ツリーの Snapshot コピーを示します。
+
+[listing]
+----
+# snapdrive snap list -fs /mnt/acctfs1 -v
+snap name host date
+snapped
+------------------------------------------------------------------
+----------
+besser:/vol/vol1:acctfs-s1 childs Aug 8 18:58
+/mnt/acctfs1
+host OS: Linux 2.4.21-9.ELsmp #1 SMP Thu Jan 8 17:08:56 EST 2004
+snapshot name: acctfs-s1 file system: type: nfs mountpoint:
+/mnt/acctfs1
+filer dir: besser:/vol/vol1
+----
+* 例 * ：この例では、 Linux ホストで SnapDrive snap show コマンドを実行しています。
+
+[listing]
+----
+# snapdrive snap show -snapname surf:/vol/vol1:swzldg5snapped
+snap name host date
+snapped
+------------------------------------------------------------------
+-------------
+surf:/vol/vol1:bagel5snapped pons Aug 18
+20:06 dg5
+#
+# ./linux/ix86/snapdrive snap show -v -snapname
+surf:/vol/vol1:bagel5snapped >
+snap name host date
+snapped
+------------------------------------------------------------------
+-------------
+surf:/vol/vol1:bagel5snapped pons Aug 18
+20:06 dg5
+host OS: Linux 2.4.21-9.ELsmp #1 SMP Thu Jan 8 17:08:56 EST 2004
+snapshot name: bagel5snapped
+Volume Manager: linuxlvm 1.0.3
+disk group: dg5
+host volume: vol1
+host volume: vol2
+host volume: vol3
+lun path dev paths
+-------------------------------------------------------
+surf:/vol/vol1/glk19 /dev/sdu
+----
+* 例 * ：次の例ではワイルドカードを使用しています。
+
+[listing]
+----
+# snapdrive snap show toaster:/vol/volX:*
+# snapdrive snap show -v toaster:/vol/volX:DB1*
+filer1:/vol/volY:DB2*
+# snapdrive snap show toaster:/vol/vol2:mysnap* /vol/vol2:yoursnap*
+hersnap*
+# snapdrive snap show toaster:/vol/volX:*
+----
+* 例 * ：ワイルドカードを使用した場合、ワイルドカードは名前の途中で使用され、末尾には使用されません。
+
+[listing]
+----
+# snap show toaster:/vol/vol1:my*snap
+----

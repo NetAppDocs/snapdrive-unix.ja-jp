@@ -1,0 +1,26 @@
+---
+permalink: solaris/concept_snapdrive_for_unix_provisioning_in_an_lvma_vxvm_environment.html 
+sidebar: sidebar 
+keywords: snapdrive, unix, storage, commands, provision, provisioning, vxvm, entities, objects 
+summary: SnapDrive for UNIX storage コマンドは、 VxVM オブジェクトを作成して VxVM エンティティをプロビジョニングします。 
+---
+= VxVM 環境での SnapDrive for UNIX プロビジョニング
+:icons: font
+:imagesdir: ../media/
+
+
+SnapDrive for UNIX storage コマンドは、 VxVM オブジェクトを作成して VxVM エンティティをプロビジョニングします。
+
+VxVM エンティティをプロビジョニングする SnapDrive for UNIX ストレージ操作を要求した場合（たとえば ' ホスト・ボリューム SnapDrive またはファイル・システムを含むディスク・グループ）は 'VxVM と連携して ' ストレージを使用する VxVM オブジェクトとファイル・システムを作成します
+
+ストレージのプロビジョニング処理では、次の処理が実行されます。
+
+* ホスト VxVM は、ストレージシステムの LUN とディスクまたはボリュームグループを組み合わせたものです。
++
+ストレージは論理ボリュームに分割され、ファイルシステムや生データを格納する raw ディスクデバイスとして使用されます。
+
+* SnapDrive for UNIX は、ホスト VxVM と統合して、各ディスクグループ、ホストボリューム、 Snapshot コピーを要求したファイルシステムを構成しているネットアップ LUN を特定します。
++
+指定したホストボリュームのデータをディスクグループ内のすべてのディスクに分散できるため、 Snapshot コピーを作成してリストアできるのはディスクグループ全体のみです。
+
+

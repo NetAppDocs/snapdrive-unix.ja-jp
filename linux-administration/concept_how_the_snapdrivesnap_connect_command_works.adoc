@@ -1,0 +1,25 @@
+---
+permalink: linux-administration/concept_how_the_snapdrivesnap_connect_command_works.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, command, import, host 
+summary: SnapDrive snap connect コマンドを使用すると、指定したエンティティのストレージのクローンが作成され、ホストにインポートされます。 
+---
+= SnapDrive snap connect コマンドの仕組み
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive snap connect コマンドを使用すると ' 指定したエンティティのストレージのクローンが作成され ' ホストにインポートされます
+
+* LUN （「 -lun' 」）を含む Snapshot コピーを指定すると、 SnapDrive for UNIX はその LUN の新しいコピーをホストにマッピングします。SnapDrive snap connect コマンドを使用して ' 他のストレージ・エンティティー (`-vg`'-dg`'`-fs'-lvol'または `-hostvol') と同じコマンド・ライン上の LUN を指定することはできません
+* LUN に直接存在するファイルシステムを指定すると、 SnapDrive for UNIX によって LUN がホストにマッピングされ、ファイルシステムがマウントされます。
+* 「 snap connect 」コマンドで相対パス名としてソースマウントポイントを指定した場合、 SnapDrive for UNIX は CLI で指定されたデスティネーションマウントポイントを無視し、「 source_mount_point_<N> 」という形式の内部命名規則を使用してデスティネーションマウントポイントに名前を付けます。
+* ディスク・グループを含むスナップショット・コピー ' またはディスク・グループの一部であるホスト・ボリュームまたはファイル・システムを指定する場合は ' SnapDrive snap connect コマンドを使用してターゲット・ディスク・グループ全体を接続します接続を確立するために、 SnapDrive for UNIX はターゲットディスクグループのすべての論理ボリュームを再アクティブ化し、論理ボリューム上のすべてのファイルシステムをマウントします。
+* 「 snap connect 」コマンドで「 autorname 」オプションを指定すると、ホストボリュームとファイルシステムの名前は常に変更されます。ディスクグループの名前は、ホストにすでに存在する場合にのみ変更されます。
+* NFS ディレクトリ・ツリーを含む Snapshot コピーを指定すると、 SnapDrive for UNIX により、 NFS ディレクトリ・ツリーを含む FlexVol ボリュームのクローンが作成されます。次に、 SnapDrive for UNIX がボリュームをホストに接続し、 NFS ファイルシステムをマウントします。ディレクトリツリー内で、 SnapDrive for UNIX を使用すると、 Snapshot コピーの作成後に作成した新しい NFS ファイルまたはディレクトリがすべて削除されます。「 snapmirror-nfs-removedirectories 」設定オプションが on に設定されている場合、 FlexVol for UNIX は、接続する NFS ディレクトリ外のファイルまたはディレクトリを SnapDrive ボリュームから削除します。
+* 「 re adonly 」オプションを使用して、 NFS ディレクトリ・ツリーを含む Snapshot コピーを接続すると、 SnapDrive for UNIX はクローンを作成せずに、ディレクトリの Snapshot コピーを直接マウントします。SnapDrive snap connect コマンドを使用して 'NFS 以外のエンティティと同じコマンド・ライン上の NFS マウントポイントを指定することはできませんつまり '-vg`'-dg`'`-fs'-lvol' または -hostvol' オプションを使用します
+
+
+
+NOTE: vFiler 環境では '-split' オプションを使用したスナップ接続操作は Data ONTAP 7.3 以降でサポートされています

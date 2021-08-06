@@ -1,0 +1,26 @@
+---
+permalink: solaris/concept_considerations_for_using_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, unix, considerations 
+summary: SnapDrive for UNIX を使用する際のさまざまな考慮事項を理解しておく必要があります。 
+---
+= SnapDrive for UNIX を使用する場合の考慮事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を使用する際のさまざまな考慮事項を理解しておく必要があります。
+
+* SnapDrive for UNIX で管理される LUN の場合、スペースリザベーション設定のデフォルト値を使用する必要があります。
+* FC および iSCSI 構成では ' ストレージ・システム上のスナップ・リザーブは ' ボリュームごとに 0% に設定されます
+* 同じホストに接続されているすべての LUN は、そのホストからのみアクセス可能な専用のストレージシステムボリュームに配置します。
+* Snapshot コピーを使用する場合、ストレージ・システム・ボリューム上の全スペースを使用して LUN を格納することはできません。
++
+LUN をホストするストレージ・システム・ボリュームのサイズは、ストレージ・システム・ボリューム上のすべての LUN の合計サイズの 2 倍以上にする必要があります。
+
+* Data ONTAP は「 /vol/vol0 」（ルート・ボリューム）を使用してストレージ・システムを管理します。
++
+このボリュームはデータの格納には使用しないでください。ストレージ・システムを管理するためにルート・ボリュームとしてその他のボリューム（「 /vol/vol0 」以外）を設定した場合には、データの保存にこのボリュームを使用しないでください。
+
+

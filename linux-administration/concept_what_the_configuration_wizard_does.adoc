@@ -1,0 +1,13 @@
+---
+permalink: linux-administration/concept_what_the_configuration_wizard_does.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, wizard, nfs, san, configuration 
+summary: SnapDrive 設定ウィザードでは、環境に応じて、 SnapDrive for UNIX および NFS または SAN を設定できます。また、 snapdrive.conf ファイルを開き、構成変数を編集することもできます。 
+---
+= SnapDrive 設定ウィザードの機能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive 設定ウィザードでは、環境に応じて、 SnapDrive for UNIX および NFS または SAN を設定できます。また 'opendrive.conf ファイルを開き ' 構成変数を編集することもできます

@@ -1,0 +1,33 @@
+---
+permalink: linux-installation-7mode/reference_where_to_go_next.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, after, configure, create, copy 
+summary: SnapDrive for UNIX を設定して Snapshot コピーを作成したら、リストア処理、 Snapshot コピーの接続、クローンの作成を実行できます。ロールベースアクセス制御（ RBAC ）、拡張クローンスプリット、ボリュームベース SnapRestore など、 SnapDrive のその他の重要な機能についても確認できます。 
+---
+= 次の手順
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を設定して Snapshot コピーを作成したら、リストア処理、 Snapshot コピーの接続、クローンの作成を実行できます。ロールベースアクセス制御（ RBAC ）、拡張クローンスプリット、ボリュームベース SnapRestore など、 SnapDrive のその他の重要な機能についても確認できます。
+
+これらの機能に関する詳細、および SnapDrive for UNIX のリリース固有の情報については、ネットアップのサポートサイトで次のドキュメントを参照してください。
+
+* link:../linux-administration/index.html["『 SnapDrive 5.3.2 for UNIX Administration Guide for Linux 』を参照してください"]
++
+導入完了後に SnapDrive for UNIX でさまざまな機能を設定する方法について説明します。igroup の設定方法、 SnapDrive for UNIX の設定方法、 RBAC の設定方法、データ収集ユーティリティを使用して SnapDrive for UNIX の問題を診断する方法について説明するトピックが含まれています。
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMLP2849339["『 SnapDrive 5.3.2 for UNIX Release Notes （ AIX 、 Linux 、 and Solaris ）』"]
++
+SnapDrive 5.3.2 for UNIX の新機能、重要な注意事項、既知の問題、および制限事項について説明します。
+
+* https://library.netapp.com/ecm/ecm_download_file/ECMP12471545["『 SnapManager 3.4 for Oracle Installation and Setup Guide for UNIX for Data ONTAP Operating in 7-Mode 』"]
++
+UNIX 環境で SnapManager for Oracle と 7-Mode を導入するために最初に実行する必要があるタスクについて説明します。製品をインストールして設定する方法、およびデータベースをバックアップする方法について説明するトピックが含まれます。
+
+* link:https://www.netapp.com/pdf.html?item=/media/16322-tr-4212.pdf["ネットアップテクニカルレポート 4212 ：『 SnapDrive for UNIX 5.3 ベストプラクティスガイド』"]
++
+SnapDrive for UNIX のベストプラクティスについて説明します。
+
+

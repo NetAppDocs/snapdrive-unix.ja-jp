@@ -1,0 +1,26 @@
+---
+permalink: linux-administration/task_connecting_tosnapshot_copies_ofshared_storageentities_other_thanluns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, storage, lun, command, connect 
+summary: lun snap connect コマンドを使用すると、 SnapDrive 以外の共有ストレージエンティティの Snapshot コピーに接続できます。 
+---
+= LUN 以外の共有ストレージエンティティの Snapshot コピーへの接続
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+lun snap connect コマンドを使用すると、 SnapDrive 以外の共有ストレージ・エンティティの Snapshot コピーに接続できます。
+
+.手順
+. 次のコマンドを入力します。
++
+`* SnapDrive snap connect_fspec_set_[_fspec_set..._]-snapname_long_snap_name_*`
+
++
+`*_fspec_set_[_fspec_set..._]-snapname_[-deviceType shareed] [-split]*`
+
++
+この構文では '`_fspec_set_`s{-dg|-fs}_src_file_spec [dest_file_spec_][-destd_dg_name_]`````` です
+
+

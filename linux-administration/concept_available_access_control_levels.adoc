@@ -1,0 +1,27 @@
+---
+permalink: linux-administration/concept_available_access_control_levels.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, control, access 
+summary: SnapDrive for UNIX は、ユーザにさまざまなアクセス制御レベルを提供します。これらのアクセスレベルは、 Snapshot コピーとストレージシステムの処理に関連します。 
+---
+= 使用可能なアクセス制御レベル
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX は、ユーザにさまざまなアクセス制御レベルを提供します。これらのアクセスレベルは、 Snapshot コピーとストレージシステムの処理に関連します。
+
+次のアクセスレベルを設定できます。
+
+* none -- ホストはストレージシステムにアクセスできません
+* snap create -- ホストは Snapshot コピーを作成できる。
+* スナップの使用 -- ホストは Snapshot コピーを削除したり名前を変更したりできます
+* すべてスナップ -- ホストは Snapshot コピーの作成、復元、削除、および名前変更を行うことができます。
+* storage create delete -- ホストはストレージの作成、サイズ変更、および削除を行うことができます。
+* ストレージ使用量 -- ホストはストレージを接続したり切断したり ' ストレージ上でクローンスプリットの見積もりやクローンスプリットの開始を実行したりすることができます
+* Storage All ：ホストは ' ストレージの作成 ' 削除 ' 接続 ' 切断 ' クローン・スプリットの見積もり ' クローン・スプリットの開始をストレージ上で実行できます
+* すべてのアクセス -- ホストは 'UNIX で上記のすべての SnapDrive へのアクセス権を持っています
+
+
+レベルはそれぞれ異なります。特定の処理の権限のみを指定した場合、 SnapDrive for UNIX ではそれらの処理のみを実行できます。たとえば、ストレージの使用を指定すると、ホストは SnapDrive for UNIX を使用してストレージに接続したり切断したりできますが、アクセス制御権限によって制御されるその他の処理は実行できません。

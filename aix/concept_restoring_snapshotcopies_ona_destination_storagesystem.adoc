@@ -1,0 +1,28 @@
+---
+permalink: aix/concept_restoring_snapshotcopies_ona_destination_storagesystem.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, snapshot, copies, destination, storage, system 
+summary: Snapshot コピーの作成元のストレージシステムにリストアできます。 
+---
+= デスティネーションストレージシステムでの Snapshot コピーのリストア
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot コピーの作成元のストレージシステムにリストアできます。
+
+デスティネーションストレージシステムで Snapshot コピーを作成すると、 Snapshot コピーがソースシステムからデスティネーションストレージシステムに自動的にレプリケートされます。SnapDrive for UNIX では、ソース・ストレージ・システム上で Snapshot コピーをリストアできます。また、デスティネーションストレージシステムに Snapshot コピーをリストアすることもできます。
+
+SnapMirror 関係で単一ファイルの snap restore を実行する場合は、ソースとデスティネーションのボリューム名を同じにすることはできません。ソースとデスティネーションのボリューム名が同じ場合、 SnapDrive for UNIX で次のエラーメッセージが表示されます。
+
+[listing]
+----
+0001-636 Command error: Snapdrive cannot restore LUNs on SnapMirror
+destination filer volumes: <filer-vol-name>
+----
+SnapDrive 4.0 for UNIX 以降では、ロールベースアクセス制御が有効になっている場合、 vFiler ユニットでスナップリストアを実行できるのは、 vFiler ユニットで Snapshot リストア機能が有効になっている場合だけです。
+
+* 関連情報 *
+
+xref:concept_role_based_access_control_in_snapdrive_for_unix.adoc[SnapDrive for UNIX でのロールベースアクセス制御]

@@ -1,0 +1,116 @@
+---
+permalink: linux-administration/task_setting_up_multipathing.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, multipathing, configure 
+summary: マルチパスを設定することで、ホストとストレージシステムの間に複数のネットワークパスを設定できます。SnapDrive for UNIX は、マルチパス環境でのエイリアスの使用をサポートしています。マッパーデバイスの正しいエイリアス名が /etc/multipath.conf ファイルに設定されていることを確認する必要があります。 
+---
+= マルチパスを設定しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+マルチパスを設定することで、ホストとストレージシステムの間に複数のネットワークパスを設定できます。SnapDrive for UNIX は、マルチパス環境でのエイリアスの使用をサポートしています。マッパーデバイスの適切なエイリアス名が /etc/multipath.conf ファイルに設定されていることを確認する必要があります。
+
+.手順
+. ホストのリブート後、次の例に示すようにマルチパスデーモンが実行されている必要があります。
++
+[listing]
+----
+root@lnx197-123 ~]# ps -ef | grep multipathd
+root      5713     1  0 22:44 ?        00:00:00 /sbin/multipathd
+root      5739  1783  0 22:44 pts/1    00:00:00 grep multipathd
+----
++
+マルチパスデーモンが実行されていない場合は、リブート後に必ずデーモンを再起動してください。マルチパスデーモンを開始するには、次のコマンドを実行します。
+
++
+[listing]
+----
+[root@lnx197-123 ~]# chkconfig --level 345 multipathd on
+----
++
+
+NOTE: 次の表に、マルチパス環境でエイリアス名の使用をサポートする SnapDrive 処理を示します。
+
++
+|===
+| 操作 | エイリアス名のサポート | デバイスタイプ 
+
+
+ a| 
+プライマリホストでプライマリから snap Create and Restore （ SFSR と VBSR ）を実行します
+ a| 
+はい。
+ a| 
+エイリアス設定されたデバイス
+
+
+
+ a| 
+プライマリまたはセカンダリからクローニングする
+ a| 
+はい。
+ a| 
+デバイスのエイリアスを解除します
+
+
+
+ a| 
+別のストレージにリストアします
+ a| 
+はい。
+ a| 
+デバイスのエイリアスを解除します
+
+
+
+ a| 
+セカンダリからリストアする
+ a| 
+はい。
+ a| 
+デバイスのエイリアスを解除します
+
+|===
++
+** Red Hat Enterprise Linux （ RHEL ） 6.4 以降または Oracle Linux 6.4 以降を使用している場合は、「 /etc/multipath.conf 」ファイルに値を設定する必要はありません。
++
+ただし、ダミーの /etc/multipath.conf ファイルを保持する必要があります。このファイルは、空にすることも、ブラックリストに登録された情報とエイリアス名を含むこともできます（必要な場合）。
+
+** SUSE Linux Enterprise Server （ SLES ） 11 SP3 以降を使用している場合は、「 /etc/multipath.conf 」ファイルを維持する必要はありません。
++
+ただし '/etc/multipath.conf ファイルを使用して ' 必要に応じてブラックリスト情報とエイリアス名を含めることができます
+
+
+
+. 文字列「 Hitachi_HUS103073FL3800_v3WTL7XA' 」をコマンド「 csi_id -gus/block/<LD> 」の出力に置き換えます。ここで、「 LD 」はローカルブロックデバイス名です。
++
+
+NOTE: 一部のローカルブロックデバイスでは 'scse_id' コマンドは文字列を返さない場合がありますこの場合、ローカルブロックデバイスは、 devnode ディレクティブを使用してブラックリストに登録する必要があります。
+
+. /etc/security/limits.conf ファイルに以下の行を追加して ' ホストでプロセスが開くことができるファイル記述子の数を増やします
++
+[listing]
+----
+soft nofile 4096
+       hard nofile 4096
+----
+. 次のコマンドを入力して、システムの再起動後に Linux SG ドライバが常にロードされていることを確認します。
++
+[listing]
+----
+echo "modprobe sg" >> /etc/rc.local
+----
+. ホストをリブートして、設定がアクティブであることを確認します。
++
+
+NOTE: lvm2-2.02.17-7.27.8 および `_filter_` の設定は、「」で = 「 [r | /dev/.\ * /by-path/. * 」、「 r | /dev/.\ * /by-id/. * 」、「 ` 」、「 r | /dev/cciss ¥ 」、「 SLES10 」の「 lvm._ 」として割り当てる必要があります。
+
+
+
+* 関連情報 *
+
+http://mysupport.netapp.com["ネットアップサポート"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["『 Linux Unified Host Utilities 7.1 Installation Guide 』"]

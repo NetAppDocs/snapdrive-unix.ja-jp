@@ -1,0 +1,13 @@
+---
+permalink: linux-administration/concept_snap_management_operation_fails_in_rhel_or_oel_5.x_due_to_an_issue_with_umount_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, fail, rhel, oel, umount, nfs, command 
+summary: umount コマンドを使用すると、問題が原因で、 RHEL/OEL 5.x でのスナップ管理処理が失敗します。これを解決するには、コマンドラインインターフェイスで -o vers=3 を使用して、 NFS エンティティがマウントされていることを確認します。 
+---
+= umount コマンドを使用する問題が原因で、 RHEL/OEL 5.x でのスナップ管理処理が失敗します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+umount コマンドを使用すると問題が原因で、 RHEL/OEL 5.x でのスナップ管理操作が失敗します。この問題を解決するには、コマンド・ライン・インターフェイスで -o vers=3 を使用して、 NFS エンティティがマウントされていることを確認してください。

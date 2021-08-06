@@ -1,0 +1,19 @@
+---
+permalink: solaris/reference_storage_disconnect_of_disk_group_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, disconnect, disk, group, fail 
+summary: Solaris バージョン 10 以降を使用するストレージ・システムでは '-full-option なしで SnapDrive for UNIX コマンドを実行してディスク・グループを削除および切断できませんホストボリュームが完全に切断または削除されていないため、 delete コマンドと disconnect コマンドは失敗します。 
+---
+= ディスクグループのストレージ切断に失敗しました
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Solaris バージョン 10 以降を使用するストレージ・システムでは '-full' オプションを指定せずに 'UNIX 用 SnapDrive コマンドを使用してディスク・グループを削除および切断すると失敗しますホストボリュームが完全に切断または削除されていないため、 delete コマンドと disconnect コマンドは失敗します。
+
+
+
+== 回避策
+
+すべてのファイル・システムと関連するホスト・ボリュームを切断するには '-full' コマンドを実行します

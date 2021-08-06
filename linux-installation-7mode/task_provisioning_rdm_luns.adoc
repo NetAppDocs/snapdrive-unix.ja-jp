@@ -1,0 +1,55 @@
+---
+permalink: linux-installation-7mode/task_provisioning_rdm_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rdm, lun, provision, create 
+summary: SnapDrive for UNIX では、 VMware 仮想環境内のゲストオペレーティングシステムで FC プロトコルを有効にして、 RDM LUN を作成およびプロビジョニングできます。ONTAP を使用して RDM LUN をプロビジョニングすることもできます。 
+---
+= RDM LUN のプロビジョニング
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、 VMware 仮想環境内のゲストオペレーティングシステムで FC プロトコルを有効にして、 RDM LUN を作成およびプロビジョニングできます。ONTAP を使用して RDM LUN をプロビジョニングすることもできます。
+
+* NetApp Virtual Storage Console （ VSC ）をインストールし、 VMware vCenter ™で設定する必要があります。
+* NetApp Virtual Storage Console for VMware vSphere ™のバックアップおよびリカバリ機能は、 vCenter ™に登録されている Windows オペレーティングシステムにインストールする必要があります。
+* 「デフォルト転送」は「 napdrive.conf 」ファイルでは FCP に設定し、 SnapDrive for UNIX デーモンを再起動する必要があります。
+
+
+.手順
+. RDM LUN を作成するためにゲストオペレーティングシステムを設定します。
++
+'*SnapDrive config set -viadmin_user viadmin_name_*
+
++
+** `_user_` は仮想インタフェースシステムの名前である。
+** 「 _viadmin_name_` 」は、仮想インターフェイスシステムの IP アドレスの名前です。
+
+
+. Virtual Storage Console のログイン情報を確認します。
++
+「 * SnapDrive config list * 」
+
++
+このコマンドは、 SnapDrive for UNIX で指定されているユーザ名または仮想インターフェイスを表示します。
+
+. ゲストオペレーティングシステムがストレージシステムと通信できることを確認します。
++
+'*storage show -all command_*
+
+. ストレージシステムに RDM LUN を作成します。
++
+`* SnapDrive storage create -lun_long_lun_name_-lunsize_bize_OF_The _lun_*`
+
+. RDM LUN をホストに接続します。
++
+'*SnapDrive storage connect-lun_long_lun_name_*'
+
+
+
+* 関連情報 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2843698["Virtual Storage Console 、 VASA Provider 、 Storage Replication Adapter 7.2 for VMware vSphere アドミニストレーションガイド"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1368859["『 Data ONTAP 8.2 Storage Management Guide for 7-Mode 』"]

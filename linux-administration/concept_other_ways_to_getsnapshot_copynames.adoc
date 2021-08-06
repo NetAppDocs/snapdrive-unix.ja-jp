@@ -1,0 +1,18 @@
+---
+permalink: linux-administration/concept_other_ways_to_getsnapshot_copynames.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, list, command, snapshot, copy, name 
+summary: SnapDrive snap list コマンドを使用して、 Snapshot コピー名を表示します。 
+---
+= Snapshot コピー名の取得方法は他にもあります
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive snap list コマンドを使用して、 Snapshot コピー名を表示します。
+
+Snapshot コピー名を取得するもう 1 つの方法は、ストレージ・システムにログインし、 SnapDrive snap list コマンドを使用することです。このコマンドは、 Snapshot コピーの名前を表示します。
+
+
+NOTE: SnapDrive snap show コマンドは ' ストレージ・システムの SnapDrive snap list コマンドと同じです

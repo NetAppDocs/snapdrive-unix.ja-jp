@@ -1,0 +1,13 @@
+---
+permalink: solaris/concept_volume_based_snaprestore.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, snaprestore 
+summary: SnapDrive 4.0 for UNIX 以降では、 Snapshot リストア機能がボリューム・レベルで提供されています。ここでは、ボリュームベースの Snapshot リストアを使用して実行できるさまざまなストレージ処理について説明します。 
+---
+= ボリュームベース SnapRestore
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive 4.0 for UNIX 以降では、 Snapshot リストア機能がボリューム・レベルで提供されています。ここでは、ボリュームベースの Snapshot リストアを使用して実行できるさまざまなストレージ処理について説明します。

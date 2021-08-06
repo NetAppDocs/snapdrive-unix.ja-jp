@@ -1,0 +1,22 @@
+---
+permalink: aix/task_starting_the_snapdrive_for_unix_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, start, daemon, command 
+summary: SnapDrive for UNIX コマンドを使用するには、まず SnapDrive for UNIX デーモンを開始して実行する必要があります。 
+---
+= SnapDrive for UNIX デーモンを開始しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX コマンドを使用するには、まず SnapDrive for UNIX デーモンを開始して実行する必要があります。
+
+root ユーザとしてログインする必要があります。
+
+.手順
+. デーモンを開始します。
++
+`*snapdrived start*`
+
+

@@ -1,0 +1,22 @@
+---
+permalink: solaris/concept_restoring_multiple_storage_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, storage, multiple 
+summary: 複数のストレージエンティティを含む Snapshot コピーをリストアできます。 
+---
+= 複数のストレージエンティティのリストア
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+複数のストレージエンティティを含む Snapshot コピーをリストアできます。
+
+複数のデスティネーションストレージシステムに存在するストレージエンティティを含む Snapshot コピーをリストアするには、次の要件を満たす必要があります。
+
+* コマンドプロンプトで指定するストレージエンティティは、単一のストレージシステムまたは HA ペア上に存在する必要があります。
+* ソースストレージシステムのボリューム名は、デスティネーションストレージシステムのボリューム名と一致している必要があります。
+* 「 napdrive.conf 」ファイルの「 'napmirror-dige-multi-milervolumes-enabled' 」引数を「 on 」に設定する必要があります。
+
+
+単一のストレージシステムまたは HA ペア上のストレージエンティティをリストアする場合は、 1 つのコマンドを使用します。

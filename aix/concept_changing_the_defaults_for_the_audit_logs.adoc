@@ -1,0 +1,34 @@
+---
+permalink: aix/concept_changing_the_defaults_for_the_audit_logs.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, default, change, audit, log 
+summary: snapdrive.conf ファイルを使用すると、監査ログファイルの最大サイズ、古い監査ファイルの最大数などのロギングパラメータを変更できます。 
+---
+= 監査ログのデフォルトを変更する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「 snapdrive.conf 」ファイルを使用すると、監査ログファイルの最大サイズや古い監査ファイルの最大数など、監査ログファイルのロギングパラメータを変更できます。
+
+'napdrive.conf' ファイルを使用すると ' 監査ログに次の値を設定できます
+
+* 監査ログファイルの最大サイズ。デフォルトサイズは 20K です。ファイル・サイズが「 snapdrive.conf 」ファイルに指定された値に達すると、 SnapDrive for UNIX は、名前に任意の数を追加して、現在の監査ログ・ファイルの名前を変更します。次に 'audit-log-file' 値で指定された名前を使用して ' 新しい監査ファイルが開始されます
+* SnapDrive for UNIX で保存される古い監査ファイルの最大数。デフォルトは 2. です。
+
+
+* 監査ログファイルの例： *
+
+[listing]
+----
+2501: Begin uid=0 gid=1 15:35:02 03/12/04 snapdrv snap create -dg
+rdg -snapname snap_rdg1
+2501: Status=0 15:35:07 03/12/04
+2562: Begin uid=0 gid=1 15:35:16 03/12/04 snapdrv snap create -dg
+rdg -snapname snap_rdg1
+2562: FAILED Status=4 15:35:19 03/12/04
+----
+この例の 1 番目の行ペアは、「 Status = 0 」行で示されているように、成功した操作を示しています。
+
+2 番目の行ペアは、失敗した操作を示します。"4" の戻りコードは、 "`" が既に存在することを意味します。 2 つのコマンドラインを見ると、最初に作成されたスナップショットコピー「 'nap_rdg1' 」が表示されます。2 行目で同じ処理を実行しようとしましたが、名前がすでに存在しているため、処理に失敗しました。

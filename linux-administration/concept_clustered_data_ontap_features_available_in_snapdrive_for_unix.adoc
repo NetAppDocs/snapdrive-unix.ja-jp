@@ -1,0 +1,71 @@
+---
+permalink: linux-administration/concept_clustered_data_ontap_features_available_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, data, ontap, clustered 
+summary: SnapDrive for UNIX 5.0 以降のバージョンでは、 clustered Data ONTAP の一部の機能がサポートされます。 
+---
+= SnapDrive for UNIX で使用できる clustered Data ONTAP の機能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX 5.0 以降のバージョンでは、 clustered Data ONTAP の一部の機能がサポートされます。
+
+次の機能がサポートされます。
+
+* ポートセット
+* Vserver
+* 適切な構成変数を使用したボリューム移行によるエラーへの対処
+* crash-consistent （整合グループ） Snapshot コピー
+* AutoSupport
+* SVM の raw デバイスマッピング（ RDM ）論理ユニット番号（ LUN ）
+* Operations Manager コンソールを使用したロールベースアクセス制御（ RBAC ）
+* 負荷共有ミラー（ LSM ）
++
+負荷共有ミラーは、読み取り専用アクセスをクライアントに追加で提供することで、 FlexVol へのネットワークトラフィックを軽減します。負荷共有ミラーを作成して管理することで、読み取り専用のトラフィックを FlexVol から切り離して分散させることができます。負荷共有ミラーは Infinite Volume をサポートしていません。負荷共有ミラーセットは、 1 つ以上のデスティネーションボリュームに接続できるソースボリュームで構成されます。セット内の各負荷共有ミラーは、ソースボリュームと同じ Storage Virtual Machine （ SVM ）に属している必要があります。クライアント要求の適切なロードバランシングを実現するには、別のアグリゲートにも負荷共有ミラーを作成し、クラスタ内の別のノードからアクセスする必要があります。詳細については、を参照してください link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["『 clustered Data ONTAP 論理ストレージ管理ガイド』"]。
+
++
+[NOTE]
+====
+** clustered Data ONTAP 8.2 以降のバージョンの ONTAP では LSM がサポートされています。clustered Data ONTAP 8.2.2 以下のバージョンを使用している場合は、 SnapDrive config set -cserver コマンドを使用してクラスタ管理者を設定する必要があります。
+** クラスタ管理者が設定されていても、 ONTAP 8.2 より前のバージョンでは LSM はサポートされません。
+
+
+====
+* IPspace
++
+IPspace は、 Storage Virtual Machine （ SVM ）を作成可能な IP アドレススペースを定義します。IPspace 内の SVM ごとにルーティングテーブルが 1 つ保持されるため、 SVM や IPspace をまたがってトラフィックがルーティングされることはありません。詳細については、を参照してください link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-nmg/home.html["『 clustered Data ONTAP ネットワーク管理ガイド』"]。
+
++
+
+NOTE: この機能は、 clustered Data ONTAP 8.3 を使用している場合にのみサポートされます。
+
+* MetroCluster セットアップ
++
+この機能は、 clustered Data ONTAP 8.3 を使用している場合にのみサポートされます。MetroCluster セットアップの詳細については、を参照してください link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-mcc-inst-cnfg-fabric/home.html["『 clustered Data ONTAP MetroCluster インストレーションおよび構成ガイド』"]。
+
+* トークン。 FlexClone ファイルおよび FlexClone LUN の作成用にノードのスペースをリザーブします
++
+この機能を使用するには FlexClone ライセンスが必要です。詳細については、を参照してください link:https://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["『 clustered Data ONTAP 論理ストレージ管理ガイド』"]。
+
+* カスタムの qtree エクスポート
++
+qtree には、親ボリュームとは異なる exportfs ポリシーを設定できます。
+
++
+
+NOTE: この機能は、 clustered Data ONTAP 8.2.1 以降を使用している場合にのみサポートされます。
+
+* Federal Information Processing Standard （ FIPS ；連邦情報処理標準）に準拠しています
+
+
+* 関連情報 *
+
+link:concept_support_for_storage_system_rename.adoc["ストレージシステム名の変更がサポートされます"]
+
+link:concept_using_port_set_in_snapdrive_for_unix.adoc["SnapDrive for UNIX でポートセットを使用する"]
+
+link:concept_managing_volume_migration_using_snapdrive_for_unix.adoc["SnapDrive for UNIX でのボリューム移行"]
+
+link:concept_support_for_vserver.adoc["SVM のサポート"]

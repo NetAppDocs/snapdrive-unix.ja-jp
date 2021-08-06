@@ -1,0 +1,26 @@
+---
+permalink: linux-installation-cmode/task_verifying_the_installation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, verify, installation, install 
+summary: SnapDrive for UNIX のインストール後、インストールが正常に完了したことを確認する必要があります。SnapDrive for UNIX では、実行可能ファイル、構成ファイル、アンインストールファイル、診断ファイルなどの複数のファイルがホストにインストールされます。 とマニュアルページです。 
+---
+= インストールの確認
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX のインストール後、インストールが正常に完了したことを確認する必要があります。SnapDrive for UNIX では、実行可能ファイル、構成ファイル、アンインストールファイル、診断ファイルなどの複数のファイルがホストにインストールされます。 とマニュアルページです。
+
+.手順
+. 「 napdrive.conf 」ファイルが「 /opt/NetApp/snapdrive/` 」フォルダにあることを確認します。
+. SnapDrive for UNIX 実行可能ファイルが次の場所にインストールされていることを確認します。
++
+** /opt/NetApp/snapdrive /bin/snapdrive
+** /opt/NetApp/snapDrive/bin/snapdrived`
+
+
+. SnapDrive for UNIX 診断ファイルが '/opt/NetApp/snapDrive/diag' フォルダにインストールされていることを確認します
+. SnapDrive for UNIX のマニュアル・ページが '/opt/NetApp/SNAPDRIVE /docs フォルダにインストールされていることを確認します
+. インストールされている構成コンポーネントの詳細を /var/log/sdconfcheck.out ファイルで確認します
+

@@ -1,0 +1,15 @@
+---
+permalink: aix/concept_limitations_for_nfs_file_or_directory_trees.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, limitations, nfs, directory, trees, files 
+summary: SnapDrive には、 NFS ファイルまたはディレクトリツリーに対するストレージプロビジョニングコマンドはありません。SnapDrive で SnapDrive snap create コマンドと SnapDrive snap restore コマンドがサポートされるのは、 Data ONTAP 7.3.5 以降を使用している場合のみです。 
+---
+= NFS ファイルまたはディレクトリツリーの制限事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive には、 NFS ファイルまたはディレクトリツリーに対するストレージプロビジョニングコマンドはありません。SnapDrive は、 Data ONTAP 7.3.5 以降を使用している場合にのみ、 SnapDrive snap create コマンドと SnapDrive snap restore コマンドをサポートしています。
+
+SnapDrive snap connect コマンドと SnapDrive snap disconnect コマンドには NFS が含まれ、読み取りおよび書き込みアクセスには Data ONTAP FlexVol ボリューム機能が使用されます。したがって、これらのコマンドは、 Data ONTAP 7.3.5 以降を使用している場合にのみ実行できます。Data ONTAP 7.3.5 以降およびトラディショナルボリュームの構成では、 Snapshot コピーを作成してリストアできますが、 Snapshot 接続処理で使用できるのは読み取り専用アクセスのみです。

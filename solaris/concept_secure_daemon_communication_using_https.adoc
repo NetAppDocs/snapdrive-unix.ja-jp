@@ -1,0 +1,23 @@
+---
+permalink: solaris/concept_secure_daemon_communication_using_https.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, secure, daemon, communication, https 
+summary: HTTPS を使用して、セキュアな Web サービスやデーモン通信を行うことができます。セキュアな通信を実現するには、 snapdrive.conf ファイルに設定するいくつかの設定変数を設定し、自己署名証明書または CA 署名証明書を生成してインストールします。 
+---
+= HTTPS を使用したセキュアなデーモン通信
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+HTTPS を使用して、セキュアな Web サービスやデーモン通信を行うことができます。セキュアな通信を実現するには、「 snapdrive.conf 」ファイルにいくつかの設定変数を設定し、自己署名証明書または CA 署名証明書を生成してインストールします。
+
+自己署名証明書または CA 署名証明書は、「 snapdrive.conf 」ファイルで指定されているパスで提供する必要があります。通信に HTTPS を使用するには 'napdrive.conf ファイルで次のパラメータを設定する必要があります
+
+* 「 use-https-to-SDU -daemon= on 」と入力します
+* 'contact-https-port-du-daemon=4095`
+* 'du -daemon-certificate-path=/opt/NTAPsnapdrive/snapdrive.pem
+
+
+
+NOTE: SnapDrive 5.0 for UNIX 以降のバージョンでは、デーモン通信用に HTTPS がサポートされています。デフォルトでは、このオプションは「 off 」に設定されています。

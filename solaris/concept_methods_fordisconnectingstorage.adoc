@@ -1,0 +1,27 @@
+---
+permalink: solaris/concept_methods_fordisconnectingstorage.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, storage 
+summary: ストレージの切断を簡単にするため、 SnapDrive for UNIX では、 SnapDrive storage disconnect コマンド用にいくつかの形式を提供しています。 
+---
+= ストレージを切断する方法
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージの切断を容易にするために、 SnapDrive for UNIX には SnapDrive storage disconnect コマンド用のいくつかの形式が用意されています。
+
+これは、切断操作が次の一般的なカテゴリに分類されるためです。
+
+* ホストから切断する LUN を指定しています。
+* ホストから切断する LUN 上に直接作成されたファイルシステムを指定します。
++
+SnapDrive for UNIX はファイルシステムと LUN の両方を切断します。
+
+* ホストから切断する LUN 上にあるディスクグループ、ホストボリューム、またはファイルシステムを指定します。
++
+SnapDrive for UNIX を使用すると、そのエンティティに関連付けられているすべての LUN が切断され、切断したエンティティを構成するファイルシステム、ホストボリューム、およびディスクグループのマッピングも削除されます。
+
+* ホストクラスタ環境での共有ディスクグループまたはファイルシステムの使用を無効にする。
+

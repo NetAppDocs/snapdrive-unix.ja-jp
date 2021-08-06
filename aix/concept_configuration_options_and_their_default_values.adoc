@@ -1,0 +1,976 @@
+---
+permalink: aix/concept_configuration_options_and_their_default_values.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, option, default, value 
+summary: 現在の設定可能な変数とその設定を確認するには、 SnapDrive config show コマンドを実行します。 
+---
+= 構成オプションとそのデフォルト値
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive config show コマンドを実行すると、現在の設定可能な変数とその設定を確認できます。
+
+サポートされる構成可能な項目とそのデフォルト設定は、ホストオペレーティングシステムや SnapDrive for UNIX のバージョンによって異なります。たとえば 'AIX では ' デフォルト・パスは /var/log/ です
+
+次の表に 'napdrive.conf ファイルのパラメータを示します
+
+|===
+| 変数（ Variable ） | 説明 
+
+
+ a| 
+「 lunpath monitor-frequency 」を参照してください
+ a| 
+SnapDrive for UNIX が LUN パスを自動的に修正する頻度を指定できます。デフォルト値は 24 時間です。
+
+
+
+ a| 
+「 blacklist-interfaces 」
+ a| 
+複数のイーサネットインターフェイスがある場合に、使用しないインターフェイスを指定して、処理時間を短縮できます。設定に複数のイーサネットインターフェイスがある場合、 SnapDrive for UNIX はインターフェイスのリストを検索して、インターフェイスが ping を実行できるかどうかを判断します。インターフェイスが ping に失敗すると、次のインターフェイスを確認する前に 5 回試行されます。そのため、処理の実行には余分な時間がかかります。
+
+SnapDrive で一部のインターフェイスを無視するには、「 blacklist-interfaces 」パラメータでそれらのインターフェイスを指定します。これにより、処理時間が短縮されます。
+
+
+
+ a| 
+「 all-access if-rbac - unspecified = on 」のように表示されます
+ a| 
+アクセス制御ファイルに権限文字列を入力して、 SnapDrive for UNIX を実行する各ホストのアクセス制御権限を指定します。指定する文字列は、 UNIX Snapshot コピーを格納する SnapDrive や、ストレージシステムでホストが実行するその他のストレージ処理を制御します。（これらのアクセス権限は、 show 処理や list 処理には影響しません）。
+
+この値を「オン」または「オフ」のいずれかに設定します。
+
+* 'On' は ' ストレージ・システム上にアクセス制御アクセス権ファイルが存在しない場合に 'UNIX 用 SnapDrive がすべてのアクセス権を有効にすることを指定しますデフォルト値は「オン」です。
+* 「 off 」は、アクセス制御アクセス許可ファイルに記述されているアクセス許可のみをホストに許可することを指定します。
+
+
+アクセス制御ファイルを指定した場合、このオプションは効果がありません。
+
+
+
+ a| 
+'allow-partial-clone-connect=on
+ a| 
+SnapDrive for UNIX を使用すると、クローニングされたディスクグループのファイルシステムのサブセットやホストボリュームのみに接続できます。
+
+この値を「オン」または「オフ」に設定します。
+
+* on ’は、 SnapDrive for UNIX を使用して、複製されたディスク・グループのファイル・システムのサブセットまたはホスト・ボリュームのみに接続できるように指定します。
+* 「 off 」は、 SnapDrive for UNIX が、複製されたディスク・グループのファイル・システムのサブセットまたはホスト・ボリュームのみに接続できないことを決定します。
+
+
+
+
+ a| 
+'audit-log-file=/var/log/sd-audit.log
+ a| 
+SnapDrive for UNIX が監査ログファイルを書き込む場所を指定します。
+
+デフォルト値はホストオペレーティングシステムによって異なります。例に示すパスは、 AIX ホストのデフォルトパスです。
+
+
+
+ a| 
+'audit-log-max-size=20480`
+ a| 
+監査ログファイルの最大サイズをバイト単位で指定します。ファイルがこのサイズに達すると、 SnapDrive for UNIX がファイルの名前を変更し、新しい監査ログを開始します。デフォルト値は「 20480 」バイトです。SnapDrive for UNIX では処理の途中で新しいログファイルが開始されることはないため、ファイルの正しいサイズはここで指定した値と若干異なる場合があります。
+
+
+NOTE: デフォルト値を使用する必要があります。デフォルト値を変更する場合は、ログファイルが多すぎるとディスクのスペースが消費され、最終的にはパフォーマンスに影響する可能性があることに注意してください。
+
+
+
+ a| 
+'audit-log-save=2'
+ a| 
+SnapDrive for UNIX で保存する古い監査ログファイルの数を指定します。この上限に達すると、 SnapDrive for UNIX は最も古いファイルを破棄し、新しいファイルを作成します。
+
+SnapDrive for UNIX は 'audit-log-save' 変数で指定した値に基づいて ' このファイルを回転させますデフォルト値は「 2 」です。
+
+
+NOTE: デフォルト値を使用する必要があります。デフォルト値を変更する場合は、ログファイルが多すぎるとディスクのスペースが消費され、最終的にはパフォーマンスに影響する可能性があることに注意してください。
+
+
+
+ a| 
+「 autosupport -enabled 」を選択します
+ a| 
+デフォルトでは 'autosupport-enabled オプションがオンになっていることを確認します
+
+このオプションは、ストレージシステムのイベント管理システム（ EMS ）ログに AutoSupport 情報を保存するためにデフォルトで有効になっています。
+
+
+NOTE: UNIX およびそれ以降のバージョンの SnapDrive 4.2 には 'autosupport.filer というオプションはありません
+
+
+
+ a| 
+`available-lun-reserve=8`
+ a| 
+現在の SnapDrive for UNIX 処理が完了したときに、ホストで作成可能な LUN の数です。指定された数の LUN を作成するために使用できるオペレーティング・システム・リソースが少ない場合 'UNIX 用 SnapDrive は '_enable-implicit-host-preparation_' 変数で指定された値に基づいて ' 追加のリソースを要求します
+
+デフォルト値は「 8 」です。
+
+[NOTE]
+====
+この変数は、 LUN を作成する前にホストの準備を必要とするシステムにのみ適用されます。ホストではこの準備が必要です。
+
+この変数は、 LUN を含む構成で使用します。
+
+====
+
+
+ a| 
+「 bypass-snapdrive -clone-generated-check 」というメッセージが表示されます
+ a| 
+生成された SnapDrive または非 SnapDrive によって生成された FlexClone を削除するように指定します。
+
+この値を「オン」または「オフ」のいずれかに設定します。
+
+* `on - SnapDrive for UNIX で、 SnapDrive によって生成された FlexClone ボリュームおよび非 SnapDrive によって生成された FlexClone ボリュームの削除を許可するように指定します。
+* `off` - SnapDrive for UNIX が、 SnapDrive によって生成された FlexClone ボリュームだけを削除することを許可するように指定します。デフォルト値は「 off 」です。
+
+
+
+
+ a| 
+「 check-export-permission-nfs-clone 」を指定します
+ a| 
+NFS エクスポート権限を設定することで、セカンダリホスト（親ボリュームに対するエクスポート権限がないホスト）またはストレージシステムでのクローニングの作成を許可または無効にすることができます。
+
+* on - SnapDrive for UNIX は ' セカンダリ・ホストのボリュームに対する適切なエクスポート権限をチェックしますデフォルト値は on です。
+* オフ - SnapDrive for UNIX は ' セカンダリ・ホストのボリュームに対する適切なエクスポート権限をチェックしません
+
+
+SnapDrive for UNIX では、 NFS エンティティにボリュームのエクスポート権限がない場合、クローニングは許可されません。この状況を解決するには 'napdrive.conf ファイルでこの変数を無効にしますクローニング処理を実行すると、 SnapDrive によってクローニングされたボリュームに対する適切なアクセス権限が付与されます。
+
+値を off に設定すると、 clustered Data ONTAP でセカンダリ保護が有効になります。
+
+
+
+ a| 
+'cluster-operation-timeout-secs=600`
+ a| 
+ホストクラスタの処理のタイムアウトを秒単位で指定します。この値は、リモートノードおよび HA ペアの処理を行う際に、 SnapDrive for UNIX の処理がタイムアウトになるタイミングを判断するために設定します。デフォルト値は「 600 」秒です。
+
+非マスターノードから SnapDrive for UNIX の処理が開始された場合は、非マスターノード以外のホストクラスタマスターノードをリモートノードにすることもできます。
+
+ホスト・クラスタ内の任意のノード上の SnapDrive for UNIX 操作が ' 設定した値またはデフォルトの 600 秒（値を設定しなかった場合）を超えると ' 操作はタイムアウトし ' 次のメッセージが表示されます
+
+[listing]
+----
+Remote Execution of command on slave node sfrac-57 timed out. Possible reason could be that timeout is too less for that system. You can increase the cluster connect timeout in snapdrive.conf file. Please do the necessary cleanup manually. Also, please check the operation can be restricted to lesser jobs to be done so that time required is reduced.
+----
+
+
+ a| 
+'contact-http-port=80`
+ a| 
+ストレージシステムとの通信に使用する HTTP ポートを指定します。デフォルト値は '80' です
+
+
+
+ a| 
+'contact-ssl-port=443
+ a| 
+ストレージシステムとの通信に使用する SSL ポートを指定します。デフォルト値は「 443 」です。
+
+
+
+ a| 
+'contact-http-port -sdu-daemon=4094`
+ a| 
+SnapDrive for UNIX デーモンとの通信に使用する HTTP ポートを指定します。デフォルト値は「 4094 」です。
+
+
+
+ a| 
+'contact-http-dfm -port=808080`
+ a| 
+Operations Manager サーバとの通信に使用する HTTP ポートを指定します。デフォルト値は '808080' です
+
+
+
+ a| 
+'contact-ssl-dfm -port=8488
+ a| 
+Operations Manager サーバとの通信に使用する SSL ポートを指定します。デフォルト値は「 8488 」です。
+
+
+
+ a| 
+「運動カットオーバー待機 = 120 」
+ a| 
+DataMotion for vFiler （カットオーバーフェーズ）処理が完了してから SnapDrive for UNIX コマンドが再試行されるまでに SnapDrive が UNIX を待機する秒数を指定します。デフォルト値は 120 秒です。
+
+
+
+ a| 
+「 fm-api-timeout=180` 」
+ a| 
+SnapDrive for UNIX が DFM API が戻るまで待機する秒数を指定します。デフォルト値は「 180 」秒です。
+
+
+
+ a| 
+「 fm-rbac - retries = 12 」と表示されます
+ a| 
+SnapDrive for UNIX が Operations Manager の更新に対してアクセスの再試行をチェックする回数を指定します。デフォルト値は「 12 」です。
+
+
+
+ a| 
+「 fm-rbac -retry-sleep-secs = 15 」のようになります
+ a| 
+SnapDrive for UNIX が Operations Manager の更新のアクセスチェックを再試行するまでに待機する秒数を指定します。デフォルト値は「 15 」です。
+
+
+
+ a| 
+「デフォルト - noprompt = off 」
+ a| 
+-noprompt オプションを使用可能にするかどうかを指定します。デフォルト値は「 off 」です（使用できません）。
+
+このオプションを onSnapDrive for UNIX に変更しても、「 -force 」によって要求されたアクションの確認は求められません。
+
+
+
+ a| 
+「デバイス再試行回数 = 3 」
+ a| 
+SnapDrive for UNIX が LUN を配置するデバイスに関する照会数を指定します。デフォルト値は「 3 」です。
+
+通常は、デフォルト値で十分です。また、ストレージシステムの負荷が非常に高いため、 snap create 処理に対する LUN クエリが失敗する場合もあります。
+
+LUN がオンラインで正しく設定されていても LUN クエリが失敗し続ける場合は、再試行回数を増やすことを推奨します。
+
+この変数は、 LUN を含む構成で使用します。
+
+
+NOTE: ホストクラスタ内のすべてのノードで「 evice-retries 」変数に同じ値を設定する必要があります。そうしないと、一部のノードで複数のホストクラスタノードを含むデバイス検出が失敗し、他のノードで成功する可能性があります。
+
+
+
+ a| 
+`d evice-retry-sleep-secs=1
+ a| 
+SnapDrive が存在するデバイスに関する照会の間に UNIX が待機する秒数を指定します。デフォルト値は「 1 」秒です。
+
+通常は、デフォルト値で十分です。また、ストレージシステムの負荷が非常に高いため、 snap create 処理に対する LUN クエリが失敗する場合もあります。
+
+LUN がオンラインで正しく設定されていても LUN クエリが失敗しない場合は、再試行の間隔を秒数で増やすことを推奨します。
+
+この変数は、 LUN を含む構成で使用します。
+
+
+NOTE: ホストクラスタ内のすべてのノードで「 device-retry-sleep-ssecs 」オプションに同じ値を設定する必要があります。そうしないと、一部のノードで複数のホストクラスタノードを含むデバイス検出が失敗し、他のノードで成功する可能性があります。
+
+
+
+ a| 
+「デフォルト転送 = iSCSI 」
+ a| 
+ストレージの作成時に SnapDrive for UNIX が転送タイプとして使用するプロトコルを指定します。必要な場合はこのプロトコルを指定します。指定できる値は 'iSCSI' または 'FCP' です
+
+
+NOTE: ホストの転送タイプが 1 つだけに設定されていて、そのタイプが SnapDrive for UNIX でサポートされている場合、 SnapDrive for UNIX では、「 snapdrive.conf 」ファイルで指定されたタイプに関係なく、その転送タイプが使用されます。
+
+AIX ホストでは、「マルチパスタイプ」オプションが正しく設定されていることを確認します。FCP を指定する場合は、「マルチパスタイプ」を次のいずれかの値に設定する必要があります。
+
+* 「 NativeMPIO 」
+* 「 D MP 」
+
+
+
+
+ a| 
+enable-alua = on
+ a| 
+ALUA で igroup のマルチパスがサポートされると判断します。ストレージ・システムは HA ペアであり '_single-image_モード では HA ペアのフェイルオーバー状態である必要があります
+
+* igroup の ALUA をサポートするためのデフォルト値は「 on 」です
+* ALUA サポートを無効にするには ' オプション off' を設定します
+
+
+
+
+ a| 
+'enable-fcp-cache = on ’
+ a| 
+キャッシュを有効にするか無効にするかを指定します。SnapDrive は、使用可能なアクティブポートのキャッシュと、応答を迅速に送信するためのポート名（ WWPN ）情報を保持します。
+
+この変数は、ポートに FC ケーブルが接続されていない場合やポートラッププラグが使用されている場合に、 SnapDrive for UNIX で FC インターフェイスと対応する WWPN に関する情報の取得に時間がかかることがある、一部の状況で役立ちます。キャッシュは、このような環境での SnapDrive 処理のパフォーマンスを解決または向上させるのに役立ちます。
+
+デフォルト値は「オン」です。
+
+
+
+ a| 
+'enable-implicit-host-pPreparation = on ’
+ a| 
+SnapDrive for UNIX が LUN のホスト準備を暗黙的に要求するか、または LUN が必要であることを通知して終了するかを決定します。
+
+* SnapDrive for UNIX では ' 必要な数の LUN を作成するためのリソースが十分にない場合 ' ホストに対して ' より多くのリソースを作成するように暗黙的に要求します作成される LUN の数は '_available-lun-reserve_' 変数で指定しますデフォルト値は「オン」です。
+* off` ： SnapDrive for UNIX は 'LUN の作成に追加のホスト準備が必要であるかどうかを通知し ' SnapDrive はオペレーションを終了しますこれにより、 LUN の作成に必要なリソースを解放するために必要な処理を実行できます。たとえば、 lun config prepare SnapDrive コマンドを実行できます。準備が完了したら、現在の SnapDrive for UNIX コマンドを再入力できます。
+
+
+
+NOTE: この変数は、準備を必要とするホストの LUN を作成する前にホストの準備が必要なシステムにのみ適用されます。この変数は、 LUN を含む構成でのみ使用されます。
+
+
+
+ a| 
+「 enable-migrate -nfs-version 」と入力します
+ a| 
+上位バージョンの NFS を使用してクローニング / リストアを実行できます。
+
+純粋な NFSv4 環境で、 NFSv3 で作成された Snapshot コピーを使用してクローニングやリストアなどのスナップ管理操作を実行しようとすると、スナップ管理操作が失敗します。
+
+デフォルト値は「 off 」です。この移行中に考慮されるのはプロトコル・バージョンのみであり 'rw' や largefiles などの他のオプションは 'UNIX 用 SnapDrive では考慮されません
+
+したがって ' 対応する NFS ファイル仕様の NFS バージョンだけが '/etc/fstab ファイルに追加されますNFSv3 では -o vers=3 を使用し 'NFSv4 では -o vers=4 を使用して ' ファイル仕様をマウントするために適切な NFS バージョンが使用されていることを確認しますすべてのマウント・オプションを使用して NFS ファイル仕様を移行する場合は ' スナップ管理操作で「 -mntops 」を使用することをお勧めしますclustered Data ONTAP での移行では、親ボリュームのエクスポートポリシールールでアクセスプロトコルの属性値に「 nfs 」を使用する必要があります。
+
+
+NOTE: NFS のバージョンをチェックするには ' マウント・オプションとして nfsvers' または r コマンドのみを使用してください
+
+
+
+ a| 
+「 enable-mountguard-support 」を参照してください
+ a| 
+AIX のマウントガード機能に対する SnapDrive for UNIX のサポートを有効にします。これにより、同時マウントまたは同時マウントが防止されます。あるノードにファイルシステムがマウントされていて、変数が有効になっている場合、 AIX は同じファイルシステムを別のノードにマウントできないようにします。デフォルトでは '_enable-mountguard-support_' 変数は 'off' に設定されています
+
+
+
+ a| 
+「 enable-ping-check-fer-reachability 」
+ a| 
+SnapDrive for UNIX が導入されているホストとストレージ・システムのネットワーク間で ICMP プロトコル・アクセスが無効になっているか、 ICMP パケットが破棄された場合、 SnapDrive for UNIX がストレージ・システムに到達できるかどうかをチェックする ping を実行しないように、この変数を「 off 」に設定する必要があります。この変数が On に設定されている場合は、 ping の失敗が原因で SnapDrive snap connect 処理のみが実行されます。デフォルトでは、この変数は「オン」に設定されています
+
+
+
+ a| 
+'enable-split-clone=off
+ a| 
+この変数が「オン」または「同期」に設定されている場合、スナップショット接続およびスナップショット切断操作中にクローンボリュームまたは LUN を分割できます。この変数には次の値を設定できます。
+
+* on - クローン・ボリュームまたは LUN の非同期スプリットを有効にします
+* 'sync' - クローン・ボリュームまたは LUN の同期スプリットを有効にします
+* off - クローン・ボリュームまたは LUN のスプリットを無効にしますデフォルト値は「 off 」です。
+
+
+この値を「 on 」または「 sync 」に設定した場合は、 Snapshot 接続処理中に「 off 」、 Snapshot 切断処理中に「 off 」に設定すると、 SnapDrive for UNIX では、 Snapshot コピーに含まれる元のボリュームまたは LUN が削除されません。
+
+また '-split' オプションを使用して ' クローン・ボリュームまたは LUN をスプリットすることもできます
+
+
+
+ a| 
+「 enforce-strong-ciphers = off 」を指定します
+ a| 
+クライアントと通信するために TLSv1 を強制するには、 SnapDrive デーモンのこの変数を「 on 」に設定します。
+
+これにより、クライアントと SnapDrive デーモン間の通信のセキュリティが強化され、より高度な暗号化が使用されるようになります。
+
+デフォルトでは、このオプションは「 off 」に設定されています。
+
+
+
+ a| 
+「 filer-restore-retries = 140` 」
+ a| 
+リストア中に障害が発生した場合に、 SnapDrive for UNIX がストレージ・システム上で Snapshot コピーのリストアを試行する回数を指定します。デフォルト値は「 140 」です。
+
+通常は、デフォルト値で十分です。他の状況では、ストレージシステムの負荷が非常に高いため、この処理が失敗することがあります。LUN がオンラインで正しく設定されていても、 LUN 障害が継続して発生する場合は、再試行回数を増やすことを推奨します。
+
+
+
+ a| 
+「 filer-restore-retry-sleep-secs = 15 」のようになります
+ a| 
+SnapDrive for UNIX が Snapshot コピーのリストアを試行する間隔を秒数で指定します。デフォルト値は '15' 秒です
+
+通常は、デフォルト値で十分です。他の状況では、ストレージシステムの負荷が非常に高いため、この処理が失敗することがあります。LUN がオンラインで正しく設定されていても LUN の障害が継続する場合は、再試行の間隔を秒数で長くすることを推奨します。
+
+
+
+ a| 
+`filesystem-freeze-timeout-secs=300`
+ a| 
+SnapDrive for UNIX がファイルシステムへのアクセスを試行する間隔を秒数で指定します。デフォルト値は「 300 」秒です。
+
+この変数は、 LUN を含む構成でのみ使用されます。
+
+
+
+ a| 
+「 FlexClone-writereserve - enabled=on 」と入力します
+ a| 
+次のいずれかの値を指定できます。
+
+* 「オン」
+* 「オフ」
+
+
+作成した FlexClone ボリュームのスペースリザベーションを決定します。使用できる値は 'ON' および OFF ですこの値は ' 以下の規則に基づいています
+
+* 予約：オン
+* 最適： file
+* 無制限：ボリューム
+* 予約：オフ
+* 最適： file
+* 無制限：なし
+
+
+
+
+ a| 
+「 fstype = JFS2 」
+ a| 
+SnapDrive for UNIX の処理に使用するファイルシステムのタイプを指定します。ファイルシステムは、 SnapDrive for UNIX でサポートされているオペレーティングシステムのタイプである必要があります。
+
+AIX ： 'jfs'jfs3' または vxfs
+
+デフォルト値は「 JFS2 」です。
+
+
+NOTE: JFS ファイルシステムタイプは、スナップショット操作でのみサポートされ、ストレージ操作ではサポートされません。
+
+CLI から '-fstype] オプションを使用して ' 使用するファイル・システムのタイプを指定することもできます
+
+
+
+ a| 
+「 lun-\n オンライン - 進行中 - スリープ - 秒 = 3`
+ a| 
+ボリュームベースの SnapRestore 処理の実行後、 LUN をオンラインに戻すまでの再試行間隔を秒数で指定します。デフォルト値は「 3 」です。
+
+
+
+ a| 
+'lun-on -presse-in-progress -retries = 40`
+ a| 
+ボリュームベースの SnapRestore 処理の実行後に LUN をオンラインに戻す試行回数を指定します。デフォルト値は「 40 」です。
+
+
+
+ a| 
+「 mGMT-retry-sleep-secs=2 」のようになります
+ a| 
+Manage ONTAP コントロールチャネル上の操作を再試行するまで SnapDrive for UNIX が待機する秒数を指定します。デフォルト値は「 2 」秒です。
+
+
+
+ a| 
+「 mGMT-retry-sleep-long-secs=90` 」
+ a| 
+フェイルオーバーエラーメッセージが発生した後、 Manage SnapDrive コントロールチャネルで操作を再試行するまで ONTAP for UNIX が待機する秒数を指定します。デフォルト値は「 90 」秒です。
+
+
+
+ a| 
+「マルチパスタイプ = NativeMPIO 」です
+ a| 
+使用するマルチパスソフトウェアを指定します。デフォルト値はホストオペレーティングシステムによって異なります。この変数は、次のいずれかの条件に該当する場合にのみ適用されます。
+
+* 複数のマルチパス解決策を使用できます。
+* 構成には LUN が含まれます。
++
+指定できる値は 'none' または 'nativemio' です
+
+
+
+この変数には次の値を設定できます。
+
+AIX ： AIX 用に設定した値は、使用しているプロトコルによって異なります。
+
+* FCP を使用している場合は、次のいずれかの値に設定します。
++
+** NativeMPIO デフォルト値は「 none 」です。
+
+
+* また、「 default -transport 」オプションを fcp に設定します。
+* iSCSI を使用している場合は ' この値を none に設定しますさらに '_default-transport_` オプションを 'iSCSI' に設定します
+
+
+
+
+ a| 
+「 override -vbsr -snapmirror-check 」を使用します
+ a| 
+リストアする Snapshot コピーが SnapMirror のベースライン Snapshot コピーよりも古くなった場合に、 Volume-Based SnapRestore （ VBSR ）の実行時に、 `_overrid-vbsr-snapmirror-check_` 変数の値を on に設定すると、 SnapMirror 関係を上書きできます。この変数は、 OnCommand データファブリックマネージャ（ DFM ）が設定されていない場合にのみ使用できます。
+
+デフォルトでは、値は「 off 」に設定されています。この変数は、 clustered Data ONTAP バージョン 8.2 以降には適用されません。
+
+
+
+ a| 
+`path="/sbin:/usr/sbin:/ bin:/usr/lib/VxVM/bin:/opt/NTAPontap /SANToolkit/bin:/opt/NTAPsanlun /bin:/opt/VRTS/bin:/etc/vx/bi n"`
+ a| 
+システムがツールの検索に使用する検索パスを指定します。
+
+これがシステムに適していることを確認してください。正しくない場合は、正しいパスに変更します。
+
+デフォルト値はオペレーティングシステムによって異なる場合があります。のデフォルトのパスです
+
+AIX ホストでは、コマンドの処理方法が異なるため、この変数は使用されません。
+
+
+
+ a| 
+/opt/NetApp/SNAPDRIVE および .pwfile
+ a| 
+ストレージシステムに対するユーザログイン用のパスワードファイルの場所を指定します。
+
+デフォルト値はオペレーティングシステムによって異なる場合があります。
+
+Linux のデフォルト・パスは、 /opt/netapp/snapdrive /pwfile /opt/ONTAP/snapDrive/pwfile` です
+
+
+
+ a| 
+「 ping -interfacese-with -mete` 」
+ a| 
+異なるサブネット IP が設定されている可能性のある、ホスト内の使用可能なすべてのインターフェイスを経由する不要な ping を回避します。この変数が「 on 」に設定されている場合、 UNIX 用 SnapDrive はストレージ・システムの同じサブネット IP だけを考慮し、アドレス応答を検証するためにストレージ・システムに ping を実行します。この変数が「 off 」に設定されている場合、 SnapDrive はホスト・システム内の使用可能なすべての IP を取得し、ストレージ・システムに ping を送信して、各サブネットを通じてアドレス解決を確認します。これは、 ping 攻撃としてローカルに検出される可能性があります。
+
+
+
+ a| 
+「 prefix-filer-lun 」を参照してください
+ a| 
+SnapDrive for UNIX 環境が内部的に生成するすべての LUN 名のプレフィックスを指定します。このプレフィックスのデフォルト値は空の文字列です。
+
+この変数を使用すると、現在のホストから作成されたすべての LUN の名前を、 SnapDrive for UNIX のコマンドラインで明示的に指定されていなくても、最初の文字列を共有できます。
+
+
+NOTE: この変数は、 LUN を含む構成でのみ使用されます。
+
+
+
+ a| 
+「 prefix-clone-name 」
+ a| 
+指定した文字列に元のストレージシステムボリューム名を付加して、 FlexClone ボリュームの名前を作成します。
+
+
+
+ a| 
+'prepare-lun-count=16
+ a| 
+SnapDrive for UNIX で作成する LUN の数を指定します。SnapDrive for UNIX では、追加の LUN を作成するホストの準備要求を受信すると、この値をチェックします。
+
+デフォルト値は「 16 」です。つまり、システムは準備が完了した後に追加の 16 個の LUN を作成できます。
+
+
+NOTE: この変数は、 LUN を作成する前にホストの準備が必要なシステムにのみ適用されます。この変数は、 LUN を含む構成でのみ使用されます。ホストではその準備が必要です。
+
+
+
+ a| 
+RBAC メソッド = df'
+ a| 
+アクセス制御方式を指定します。指定できる値は「 native 」と「 d fm 」です。
+
+変数が「 native 」に設定されている場合、アクセスチェックには「 /vol/vol0/sdprbac/sdhost-name.prbac 」または「 /vol/vol0/sdprbac/sdgeneric-name.prbac 」に格納されているアクセス制御ファイルが使用されます。
+
+変数が「 d fm 」に設定されている場合、 Operations Manager が前提条件となります。この場合、 SnapDrive for UNIX は Operations Manager へのアクセスチェックを実行します。
+
+
+
+ a| 
+'rbac キャッシュ = off
+ a| 
+キャッシュを有効にするか無効にするかを指定します。SnapDrive for UNIX では、アクセスチェッククエリのキャッシュとそれに対応する結果が保持されます。SnapDrive for UNIX は、設定されているすべての Operations Manager サーバが停止した場合にのみ、このキャッシュを使用します。
+
+キャッシュを有効にするには変数の値を「オン」に設定し、無効にするには「オフ」に設定します。デフォルト値は off で、 SnapDrive for UNIX が Operations Manager を使用するように設定され、設定されたコンフィギュレーション変数「 _RBAC - method_ 」が「 d fm 」に設定されます。
+
+
+
+ a| 
+RBAC キャッシュタイムアウト
+ a| 
+RBAC キャッシュのタイムアウト時間を指定しますこの時間は '_rbac キャッシュ _' が有効な場合にのみ適用されますデフォルト値は「 24 」時間です。SnapDrive for UNIX は、設定されているすべての Operations Manager サーバが停止した場合にのみ、このキャッシュを使用します。
+
+
+
+ a| 
+'recrecovery-log-file=/var/log/sdrecovery.log
+ a| 
+SnapDrive for UNIX がリカバリ・ログ・ファイルを書き込む場所を指定します。
+
+デフォルト値はホストオペレーティングシステムによって異なります。この例で示すパスは、 AIX ホストのデフォルトパスです。
+
+
+
+ a| 
+'rection-log-save=20`
+ a| 
+SnapDrive for UNIX で保存する古いリカバリログファイルの数を指定します。この上限に達すると、 SnapDrive for UNIX は、新しいファイルの作成時に最も古いファイルを破棄します。
+
+SnapDrive for UNIX は、新しい処理が開始されるたびにこのログファイルをローテーションします。デフォルト値は「 20 」です。
+
+
+NOTE: デフォルト値を使用する必要があります。デフォルトを変更する場合は、サイズの大きいログファイルが大量にあるとディスクのスペースが消費され、最終的にはパフォーマンスに影響する可能性があることに注意してください。
+
+
+
+ a| 
+'san clone - method' のように指定します
+ a| 
+作成できるクローンのタイプを指定します。
+
+次の値を指定できます。
+
+* 「 lunclone 」と入力します
++
+同じストレージシステムボリュームに LUN のクローンを作成することで接続を許可します。デフォルト値は「 lunclone 」です。
+
+* 「最適」
++
+ストレージシステムボリュームの制限された FlexClone ボリュームを作成することで接続を許可します。
+
+* 「無制限」
++
+ストレージシステムボリュームの無制限の FlexClone ボリュームを作成することによって接続を許可します。
+
+
+
+
+
+ a| 
+'ecure -communication - Cine-clusternodes= on ’
+ a| 
+SnapDrive for UNIX コマンドをリモートで実行するために、ホストクラスタノード内でセキュアな通信を指定します。
+
+SnapDrive for UNIX に RSH または SSH を使用するように設定するには、この構成変数の値を変更します。SnapDrive for UNIX がリモート実行に使用する RSH または SSH の方法論は、次の 2 つのコンポーネントの「 napdrive.conf 」ファイルのインストールディレクトリに設定された値によってのみ決定されます。
+
+* SnapDrive for UNIX 処理を実行するホスト。リモートノードのホスト WWPN 情報とデバイスパス情報を取得します。
++
+たとえば、 SnapDrive storage create コマンドをマスターホストクラスタノードで実行すると、ローカルの「 napdrive.conf 」ファイル内にのみ RSH または SSH 構成変数が使用され、次のいずれかの処理が実行されます。
+
++
+** リモート通信チャネルを確認します。
+** リモートノードで「 devfsadm 」コマンドを実行します。
+
+
+* マスターホストクラスタノードで SnapDrive for UNIX コマンドをリモートで実行する場合は、マスターホストクラスタノード以外のノードを指定します。
++
+SnapDrive for UNIX コマンドをマスターホストクラスタノードに送信するには、ローカルの「 napdrive.conf 」ファイルにある RSH または SSH の構成変数を調べ、リモートコマンドの実行に使用する RSH または SSH メカニズムを特定します。
+
+
+
+デフォルト値の「 on 」は、 SSH がリモートコマンド実行に使用されることを意味します。値「 off 」は、 RSH が実行に使用されることを意味します。
+
+
+
+ a| 
+'napcreate-cg-timeout=relaxed です
+ a| 
+ストレージ・システムがフェンシングを完了するために SnapDrive snap create コマンドで許可する間隔を指定しますこの変数の値は次のとおりです。
+
+* urgent - 短い間隔を指定します。
+* 「 medium 」 - 緊急と不完全の間の間隔を指定します。
+* 「 Relaxed 」 - 最長間隔を指定します。この値がデフォルトです。
+
+
+ストレージ・システムのフェンシングが許容時間内に完了しない場合、 SnapDrive for UNIX は、 7.2 より前のバージョンの Data ONTAP に方法論を使用して、 Snapshot コピーを作成します。
+
+
+
+ a| 
+'napcreate-check-inered-fnfs=ON' を選択します
+ a| 
+非永続的 NFS ファイルシステムとの連携を目的とした Snapshot 作成処理を有効または無効にします。この変数の値は次のとおりです。
+
+* on - SnapDrive for UNIX SnapDrive は 'nfs snap create コマンドで指定された NFS エンティティがファイル・システム・マウント・テーブルに存在するかどうかをチェックしますNFS エンティティがファイルシステムのマウントテーブルを介して永続的にマウントされていない場合は、 Snapshot の作成処理が失敗します。これがデフォルト値です。
+* off` - SnapDrive for UNIX は ' ファイル・システム・マウント・テーブルにマウント・エントリがない NFS エンティティのスナップショット・コピーを作成します
++
+Snapshot のリストア処理では、指定した NFS ファイルまたはディレクトリツリーが自動的にリストアされてマウントされます。
+
+
+
+SnapDrive の snap connect コマンドで '-nopersist' オプションを使用すると 'NFS ファイル・システムがファイル・システムのマウント・テーブルにマウント・エントリを追加するのを防止できます
+
+
+
+ a| 
+'napcreate-consistency -retry-sleep=1'
+ a| 
+best-effort の Snapshot コピー整合性再試行の間隔を秒数で指定します。デフォルト値は「 1 」秒です。
+
+
+
+ a| 
+「 napconnect-nfs-removedirectories = off 」のようになりました
+ a| 
+SnapDrive for UNIX が、 Snapshot 接続処理中に FlexClone ボリュームから不要な NFS ディレクトリを削除するか、保持するかを指定します。
+
+* ` on 」 - Snapshot 接続処理中に、不要な NFS ディレクトリ（ storage system directories not mentioned in the SnapDrive snap connect コマンド）を FlexClone ボリュームから削除します。
++
+FlexClone ボリュームは、 Snapshot の切断処理中に空の場合は破棄されます。
+
+* off - Snapshot 接続処理中に不要な NFS ストレージ・システム・ディレクトリを保持しますデフォルト値は「 off 」です。
++
+Snapshot の切断処理中に、指定したストレージ・システム・ディレクトリだけがホストからアンマウントされます。ホストの FlexClone ボリュームからマウントされているものがない場合、 Snapshot の切断処理中に FlexClone ボリュームが削除されます。
+
+
+
+接続処理中または切断処理中にこの変数を「 off 」に設定した場合、ストレージ・システム・ディレクトリが不要で、かつ空でないとしても、 FlexClone ボリュームは削除されません。
+
+
+
+ a| 
+「 napcreate -Mer-Make -snapinfo-on -qtree = off 」を指定します
+ a| 
+この変数を「 on 」に設定すると、 Snapshot 作成処理で qtree に関する Snapshot コピー情報が作成されます。デフォルト値は「 off 」（無効）です。
+
+SnapDrive for UNIX では、 LUN がまだスナップされていて qtree にある場合、常に qtree のルートに SnapInfo の書き込みを試行します。この変数を「 on 」に設定すると、 SnapDrive for UNIX は、このデータを書き込めない場合、 Snapshot 作成処理に失敗します。この変数は、 qtree SnapMirror を使用して Snapshot コピーをレプリケートする場合にのみ on に設定します。
+
+
+NOTE: qtree の Snapshot コピーは、ボリュームの Snapshot コピーと同じように機能します。
+
+
+
+ a| 
+'napcreate-consistency -retries = 3`
+ a| 
+SnapDrive for UNIX が整合性チェックの失敗を通知するメッセージを受信したあと、 Snapshot コピーで整合性チェックを試行する回数です。
+
+この変数は、フリーズ機能を含まないホストプラットフォームで特に便利です。この変数は、 LUN を含む構成でのみ使用されます。
+
+デフォルト値は「 3 」です。
+
+
+
+ a| 
+'napdelete-delete-rollback-withsnap=off
+ a| 
+Snapshot コピーに関連するすべてのロールバック Snapshot コピーを削除するには、この値を「 on 」に設定します。この機能を無効にするには ' オフに設定しますデフォルト値は「 off 」です。
+
+この変数は、 Snapshot の削除処理中にのみ有効となり、処理で問題が発生した場合にはリカバリログファイルによって使用されます。
+
+デフォルトの設定を使用することを推奨します。
+
+
+
+ a| 
+'napMirror -dest-mMultiple Filervolumesenabled=off
+ a| 
+複数のストレージ・システムまたはミラーリングされたデスティネーション・ストレージ・システム上のボリュームにまたがる Snapshot コピーをリストアするには、この変数を「 on 」に設定します。この機能を無効にするには ' オフに設定しますデフォルト値は「 off 」です。
+
+
+
+ a| 
+'naprestore-delete-rollback-afterrestore=off' のようになります
+ a| 
+Snapshot リストア処理が成功したあとにすべてのロールバック Snapshot コピーを削除するには、この変数を「 on 」に設定します。この機能を無効にするには ' オフに設定しますデフォルト値は「 off 」（有効）です。
+
+このオプションは、処理で問題が発生した場合に、リカバリログファイルによって使用されます。
+
+デフォルト値を使用することを推奨します。
+
+
+
+ a| 
+'naprestore-Make-rollback=ON' のようになります
+ a| 
+この機能を無効にするには ' この値を on に設定してロールバック Snapshot コピーを作成するか 'off に設定しますデフォルト値は「オン」です。
+
+ロールバックとは、 Snapshot リストア処理が開始される前にストレージシステム上で SnapDrive が作成するデータのコピーです。Snapshot のリストア処理中に問題が発生した場合は、ロールバック Snapshot コピーを使用して、処理が開始される前の状態にデータをリストアできます。
+
+リストア時にロールバック Snapshot コピーのセキュリティを強化しない場合は、このオプションを「 off 」に設定します。ロールバックを行いたいが、 Snapshot のリストア処理が失敗するのに十分でない場合は、変数「 naprestore-makerollback 」を「 off 」に設定します。
+
+この変数は、問題が発生した場合にネットアップテクニカルサポートに送信する、リカバリログファイルによって使用されます。
+
+デフォルト値を使用することを推奨します。
+
+
+
+ a| 
+'naprestore-Mer-Make -rollback=On`
+ a| 
+この変数原因を「 on 」に設定すると、ロールバックの作成に失敗した場合に Snapshot リストア処理が失敗します。この機能を無効にするには ' オフに設定しますデフォルト値は「オン」です。
+
+* on - SnapDrive for UNIX は ' スナップショット・リストア処理を開始する前に ' ストレージ・システム上のデータのロールバック・コピーの作成を試みますデータのロールバックコピーを作成できない場合、 SnapDrive for UNIX は Snapshot リストア処理を停止します。
+* off` - リストア時にロールバック Snapshot コピーのセキュリティを強化したいが、 Snapshot リストア処理が失敗するのに十分でない場合には、この値を使用します。
+
+
+この変数は、処理で問題が発生した場合にリカバリログファイルによって使用されます。
+
+デフォルト値を使用することを推奨します。
+
+
+
+ a| 
+'naprestore-snapmirror-check=On
+ a| 
+この変数を「 on 」に設定すると、 SnapMirror デスティネーション・ボリュームを確認するために、 SnapDrive snap restore コマンドが有効になります。オフに設定されている場合、 SnapDrive snap restore コマンドはデスティネーション・ボリュームをチェックできません。デフォルト値は「オン」です。
+
+この構成変数の値が「 on 」で、 SnapMirror 関係の状態が「 broken-off 」の場合、リストアは続行できます。
+
+
+
+ a| 
+'pace - reservations-enabled=on ’
+ a| 
+LUN 作成時のスペースリザベーションを有効にします。デフォルトでは、この変数は「 on 」に設定されます。したがって、 SnapDrive for UNIX で作成される LUN にはスペースリザベーションが設定されます。
+
+この変数を使用 SnapDrive して、 lun snap connect コマンドおよび lun storage create コマンドで作成された SnapDrive のスペース・リザベーションを無効にできます。SnapDrive storage create コマンド、 SnapDrive snap connect コマンド、および SnapDrive snap restore コマンドで LUN スペース・リザベーションを有効または無効にするには、「 -reserve 」および「 -noreserve 」コマンドライン・オプションを使用するのが最適です。
+
+SnapDrive for UNIX では、 LUN の作成、ストレージのサイズ変更、 Snapshot コピーの作成、およびこの変数または「 -reserve 」または「 -noreserve 」コマンドラインオプションで指定されたスペースリザベーション権限に基づいた Snapshot コピーの接続とリストアを行います。上記のタスクを実行する前に、ストレージシステム側のシンプロビジョニングオプションについては考慮していません。
+
+
+
+ a| 
+'trace-enabled=on
+ a| 
+トレース・ログ・ファイルを有効にするにはこの変数を 'ON' に設定します無効にするには 'OFF' に設定しますデフォルト値は「オン」です。このファイルを有効にしても、パフォーマンスには影響しません。
+
+
+
+ a| 
+'trace-level=7`
+ a| 
+SnapDrive for UNIX がトレース・ログ・ファイルに書き込むメッセージのタイプを指定します。この変数には、次の値を指定できます。
+
+* '1' - 致命的なエラーを記録します
+* '2` - 管理エラーを記録します
+* `3` - コマンドエラーを記録する
+* 「 4` 」 - 警告を記録します
+* 「 5 」 - 情報メッセージを記録します
+* '6' - 詳細モードで記録します
+* '7` - 完全な診断出力
+
+
+デフォルト値は '7` です
+
+
+NOTE: デフォルト値は変更しないことを推奨します。値を '7' 以外の値に設定しても ' 正常な診断に必要な情報は収集されません
+
+
+
+ a| 
+'trace-log-file=/var/log/sd-trace.log
+ a| 
+SnapDrive for UNIX がトレース・ログ・ファイルを書き込む場所を指定します。
+
+デフォルト値はホストオペレーティングシステムによって異なります。
+
+この例で示すパスは、 AIX ホストのデフォルトパスです。
+
+
+
+ a| 
+'trace-log-max-size=0`
+ a| 
+ログファイルの最大サイズをバイト単位で指定します。ログファイルがこのサイズに達すると、 SnapDrive for UNIX によって名前が変更され、新しいログファイルが開始されます。
+
+
+NOTE: ただし、トレースログファイルが最大サイズに達したときに、新しいトレースログファイルは作成されません。デーモン・トレース・ログ・ファイルの場合、ログ・ファイルが最大サイズに達すると、新しいログ・ファイルが作成されます。
+
+デフォルト値は「 0 」です。SnapDrive for UNIX では、処理の途中で新しいログファイルを開始することはありません。ファイルの実際のサイズは、ここで指定した値と多少異なる場合があります。
+
+
+NOTE: デフォルト値を使用することを推奨します。デフォルトを変更する場合は、サイズの大きなログファイルが多すぎるとディスクのスペースが消費され、最終的にはパフォーマンスに影響する可能性があることに注意してください。
+
+
+
+ a| 
+'trace-log-save=100`
+ a| 
+SnapDrive for UNIX で保存する、古いトレースログファイルの数を指定します。この上限に達すると、 SnapDrive for UNIX は、新しいファイルの作成時に最も古いファイルを破棄します。この変数は '_tracelog -max-size_' 変数で動作しますデフォルトでは '_trace-logmax-size=0_` は各ファイルに 1 つのコマンドを保存し '_trace-log-save=100_' は最後のログファイルを保持します
+
+
+
+ a| 
+「 use-https-to-dfM= on 」と入力します
+ a| 
+SnapDrive for UNIX が Operations Manager との通信に SSL 暗号化（ HTTPS ）を使用するかどうかを指定します。
+
+デフォルト値は「オン」です。
+
+
+
+ a| 
+「 use-https-to-filer = on 」のように指定します
+ a| 
+SnapDrive for UNIX がストレージシステムと通信するときに SSL 暗号化（ HTTPS ）を使用するかどうかを指定します。
+
+デフォルト値は「オン」です。
+
+
+NOTE: 7.0 より前のバージョンの Data ONTAP を使用している場合、 HTTPS を有効にした場合のパフォーマンスが低下することがあります。Data ONTAP 7.0 以降を実行している場合、パフォーマンスが低下することは問題ではありません。
+
+
+
+ a| 
+`vmtype=lvm`
+ a| 
+SnapDrive for UNIX の処理に使用するボリュームマネージャのタイプを指定します。ボリュームマネージャは、 SnapDrive for UNIX でサポートされているオペレーティングシステムのタイプである必要があります。この変数に設定できる値は次のとおりです。デフォルト値はホストのオペレーティングシステムによって異なります。
+
+* AIX ： VxVM または lvm
++
+デフォルト値は 'lvm` です
+
+
+
+また '-vmtype' オプションを使用して ' 使用するボリューム・マネージャのタイプを指定することもできます
+
+
+
+ a| 
+「 vol-restore 」と入力します
+ a| 
+SnapDrive for UNIX で、ボリュームベースの snap restore （ vbsr ）または単一ファイルの snap restore （ SFSR ）を実行するかどうかを決定します。
+
+指定可能な値は次のとおりです。
+
+* `preview'- SnapDrive for UNIX が ' 指定されたホスト・ファイル仕様のボリューム・ベースの SnapRestore プレビュー・メカニズムを開始するように指定します
+* `execute` - 指定したファイル仕様のボリューム・ベースの SnapRestore を使用して、 SnapDrive for UNIX が処理を続行するように指定します。
+* off - vbsr オプションを無効にし、 sfsr オプションを有効にします。デフォルト値は「 off 」です。
++
+
+NOTE: 変数が preview/execute に設定されている場合、 CLI を使用して SFSR 処理を実行することで、この設定を上書きすることはできません。
+
+
+
+
+
+ a| 
+volmove-cutover-retry=3`
+ a| 
+SnapDrive for UNIX がボリューム移行のカットオーバーフェーズ中に処理を再試行する回数を指定します。
+
+デフォルト値は「 3 」です。
+
+
+
+ a| 
+volmove-cutover-retry-sleep=3`
+ a| 
+volume-move-cutover-retry 処理の間に SnapDrive が UNIX 待機する秒数を指定します。
+
+デフォルト値は「 3 」です。
+
+
+
+ a| 
+'volume-clone-retry=3`
+ a| 
+SnapDrive for UNIX が FlexClone 作成中に処理を再試行する回数です。
+
+デフォルト値は「 3 」です。
+
+
+
+ a| 
+'volume-clone-retry-sleep=3`
+ a| 
+SnapDrive for UNIX が FlexClone 作成中に再試行するまで待機する秒数を指定します。
+
+デフォルト値は「 3 」です。
+
+|===

@@ -1,0 +1,33 @@
+---
+permalink: solaris/concept_storage_system_volume_preparation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, system, volume, prepare 
+summary: ストレージ・システム上でコマンド・プロンプトを使用するか、 FilerView オプションを使用して、 SnapDrive for UNIX 専用のストレージ・システム・ボリュームを作成できます。 
+---
+= ストレージ・システム・ボリュームの準備
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージ・システム上でコマンド・プロンプトを使用するか、 FilerView オプションを使用して、 SnapDrive for UNIX 専用のストレージ・システム・ボリュームを作成できます。
+
+SnapDrive for UNIX Logical Unit Number （ LUN ；論理ユニット番号）または Network File System （ NFS ；ネットワークファイルシステム）のエンティティを 1 つのホストに接続できるボリュームを作成するには、ストレージシステムで次のタスクを実行する必要があります。
+
+* ストレージシステムボリュームを作成
+* Fibre Channel 環境または Internet Small Computer System Interface （ iSCSI ）環境の場合は、ボリューム最適化のために、ホストに接続されているすべての LUN を保持しているストレージ・システム・ボリューム上で、 SnapDrive スナップ・リザーブ・オプションを 0% にリセットします。
+
+
+LUN または NFS ディレクトリツリーを保持するボリュームをストレージシステム上に作成する場合は、次の点に注意してください。
+
+* ストレージシステムボリュームには、複数の LUN または NFS ディレクトリツリーを作成できます。
+* ユーザデータは、ストレージシステムまたは vFiler ユニットのルートボリュームに格納しないでください。
+
+
+* 関連情報 *
+
+http://mysupport.netapp.com/portal/documentation["NetApp のドキュメント"]
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.cdot-famg-nfs/home.html["ONTAP 9 NFS リファレンス"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1401220["『 Data ONTAP 8.2 File Access and Protocols Management Guide for 7-Mode 』"]

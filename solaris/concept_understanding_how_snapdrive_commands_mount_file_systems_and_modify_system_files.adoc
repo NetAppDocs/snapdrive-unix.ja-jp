@@ -1,0 +1,43 @@
+---
+permalink: solaris/concept_understanding_how_snapdrive_commands_mount_file_systems_and_modify_system_files.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, mounting, modify, file 
+summary: 特定の SnapDrive for UNIX コマンドを使用すると、原因ファイルシステムをマウントまたはアンマウントできます。コマンドがファイルシステムをマウントする操作を実行すると、 SnapDrive for UNIX によって、ホストプラットフォームの標準システムファイルにファイルシステムの名前が追加されます。処理によってファイルシステムがアンマウントされた場合、 SnapDrive for UNIX はシステムファイルからその名前を削除します。これは問題にならないはずですが、システムファイルがいつ変更されるかを知ると便利です。 
+---
+= SnapDrive コマンドを使用すると、ファイルシステムのマウントやアンマウント、およびシステムファイルの変更が行われる場合があります
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+特定の SnapDrive for UNIX コマンドを使用すると、原因ファイルシステムをマウントまたはアンマウントできます。コマンドを実行してファイルシステムをマウントする処理を実行すると、 SnapDrive for UNIX によって、ホストプラットフォームの標準システムファイルにファイルシステムの名前が追加されます。処理によってファイルシステムがアンマウントされた場合、 SnapDrive for UNIX はシステムファイルからその名前を削除します。これは問題にならないはずですが、システムファイルがいつ変更されるかを知ると便利です。
+
+システムファイルの名前は、ホストプラットフォームによって異なります。次の表に、ホストプラットフォームとそのシステムファイルを示します。
+
+|===
+| * ホスト * | * システムファイル * 
+
+
+ a| 
+Solaris の場合
+ a| 
+「 etc/vfstab 」
+
+|===
+次のいずれかのコマンドでファイルシステムをマウントできます。
+
+* SnapDrive スナップ・リストア
+* SnapDrive スナップ接続
+* SnapDrive storage create
+* SnapDrive ホスト接続
+* SnapDrive ストレージ接続
+
+
+次のコマンドは、ファイルシステムをアンマウントできる処理を実行します。
+
+* SnapDrive スナップ・リストア
+* SnapDrive スナップ切断
+* SnapDrive ストレージ切断
+* SnapDrive storage delete
+* SnapDrive ホスト切断
+

@@ -1,0 +1,27 @@
+---
+permalink: linux-administration/concept_automatic_storage_system_update_on_operations_manager.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, update, manager, operations 
+summary: Operations Manager コンソールでは、ネットワークでサポートされているストレージシステムを検出できます。検出されたストレージシステムから定期的に収集されたデータを監視します。データは設定された間隔で更新されます。Operations Manager コンソール管理者は、更新間隔を設定できます。 
+---
+= Operations Manager コンソールでのストレージシステムの自動更新
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Operations Manager コンソールでは、ネットワークでサポートされているストレージシステムを検出できます。検出されたストレージシステムから定期的に収集されたデータを監視します。データは設定された間隔で更新されます。Operations Manager コンソール管理者は、更新間隔を設定できます。
+
+LUN の監視間隔、 qtree の監視間隔、 vFiler の監視間隔は、 LUN 、 qtree 、および vFiler の更新頻度を決定する重要なフィールドです。たとえば、ストレージシステムに新しい LUN が作成されても、 Operations Manager コンソールで新しい LUN がすぐに更新されるわけではありません。そのため、その LUN から Operations Manager コンソールへのアクセスチェックが失敗します。この状況を回避するには、要件に合わせて LUN の監視間隔を変更します。
+
+.手順
+. 監視間隔を変更するには、 Operations Manager コンソールで * Setup * > * Options * を選択します。
+. Operations Manager コンソール管理者は、コマンドラインインターフェイスで「 d fm host discovery filername 」を実行することにより、 Operations Manager コンソールを強制的に更新することもできます。
+. また、 Operations Manager コンソール管理者は、グローバルグループの「 Dfm.Database.Write 」機能を SD-admin に付与して、 SnapDrive for UNIX が Operations Manager コンソールでストレージシステムエンティティを更新できるようにすることもできます。
++
+[listing]
+----
+# dfm role add sd-admin-role DFM.Database.Write Global
+Added 1 capability to role sd-admin-role.
+----
+

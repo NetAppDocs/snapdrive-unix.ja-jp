@@ -1,0 +1,13 @@
+---
+permalink: solaris/concept_storage_provisioning_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, provisioning 
+summary: ストレージプロビジョニングを使用する場合、 SnapDrive for UNIX を使用できます。SnapDrive for UNIX を使用すると、ストレージを作成し、既存のストレージシステムやエンティティに接続することができます。 
+---
+= SnapDrive for UNIX でのストレージプロビジョニング
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージプロビジョニングを使用する場合、 SnapDrive for UNIX を使用できます。SnapDrive for UNIX を使用すると、ストレージを作成し、既存のストレージシステムやエンティティに接続することができます。

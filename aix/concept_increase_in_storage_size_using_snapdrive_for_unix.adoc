@@ -1,0 +1,24 @@
+---
+permalink: aix/concept_increase_in_storage_size_using_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, size, increase 
+summary: SnapDrive for UNIX では、ストレージ・システムのボリューム・グループまたはディスク・グループのサイズを拡張できます。これを行うには、 SnapDrive storage resize コマンドを使用します。 
+---
+= SnapDrive for UNIX を使用してストレージサイズを拡張します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、ストレージ・システムのボリューム・グループまたはディスク・グループのサイズを拡張できます。これを行うには、 SnapDrive storage resize コマンドを使用します。
+
+
+NOTE: このコマンドでは、ホストボリュームまたはファイルシステムのサイズは変更できません。たとえば、 resize コマンドを使用して、 LUN 上のファイルシステムのサイズを変更することはできません。基盤となるディスクグループのサイズを変更したあとに、 LVM コマンドを使用してホストボリュームとファイルシステムのサイズを変更する必要があります。
+
+ストレージのサイズ変更処理は、次の一般的なカテゴリに分類されます。
+
+* ストレージの拡張先となるターゲットサイズをバイト単位で設定します
+* ストレージの拡張に使用するバイト数を指定します
+
+
+SnapDrive for UNIX では、システム生成の LUN が追加されます。50 MB など、ストレージの拡張に使用する量を指定すると、 LUN は 50 MB になります。ストレージにターゲットサイズを指定すると、現在のサイズとターゲットサイズの差が計算されます。異なるサイズの LUN を作成した場合、その LUN のサイズが表示されます。

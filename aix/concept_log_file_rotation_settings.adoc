@@ -1,0 +1,47 @@
+---
+permalink: aix/concept_log_file_rotation_settings.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, file, log, rotation, setting 
+summary: snapdrive.conf ファイルの変数に指定した値は、ログファイルのローテーションに影響します。 
+---
+= ログファイルのローテーション設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「 snapdrive.conf 」ファイルで変数に指定した値は、ログファイルのローテーションに影響します。
+
+「 snapdrive.conf 」ファイルに指定した値により、ログファイルの自動ローテーションが有効になります。これらの値は、必要に応じて「 napdrive.conf 」変数を編集することで変更できます。次のオプションは、ログファイルのローテーションに影響します。
+
+* 「 audit-log-max-size 」
+* 「 audit-log-save 」の形式で指定します
+* 'trace-max-size
+* 'trace-log-max-sav
+* 「 rection-log-save 」を実行します
+
+
+自動ログローテーションを使用すると、 SnapDrive for UNIX は、「 audit-log-save 」、「 trace-log-save 」、および「 recrocy-log-save 」変数で指定された制限に達するまで、古いログファイルを保持します。次に、最も古いログファイルが削除されます。
+
+SnapDrive for UNIX は、ファイルの作成時に「 0 」という番号を割り当てて、最も古いファイルを追跡します。新しいファイルが作成されるたびに、既存の各ログファイルに割り当てられている番号が 1 ずつ増分されます。ログファイルの番号が保存値に達すると、 SnapDrive for UNIX はそのファイルを削除します。
+
+* 例：この例では '1s' コマンドを使用して ' システム上のログ・ファイルに関する情報を表示しています
+
+これらの設定に基づいて、ログファイルに次の情報が表示されます。
+
+[listing]
+----
+# ls -l /var/log/sd*
+-rw-r--r-- 1 root other 12247 Mar 13 13:09 /var/log/sd-audit.log
+-rw-r--r-- 1 root other 20489 Mar 12 16:57 /var/log/sd-audit.log.0
+-rw-r--r-- 1 root other 20536 Mar 12 03:13 /var/log/sd-audit.log.1
+-rw-r--r-- 1 root other 3250 Mar 12 18:38 /var/log/sd-recovery.log.1
+-rw-r--r-- 1 root other 6250 Mar 12 18:36 /var/log/sd-recovery.log.2
+-rw-r--r-- 1 root other 6238 Mar 12 18:33 /var/log/sd-recovery.log.3
+-rw-r--r-- 1 root other 191704 Mar 13 13:09 /var/log/sd-trace.log
+-rw-r--r-- 1 root other 227929 Mar 12 16:57 /var/log/sd-trace.log.0
+-rw-r--r-- 1 root other 213970 Mar 12 15:14 /var/log/sd-trace.log.1
+-rw-r--r-- 1 root other 261697 Mar 12 14:16 /var/log/sd-trace.log.2
+-rw-r--r-- 1 root other 232904 Mar 12 14:15 /var/log/sd-trace.log.3
+-rw-r--r-- 1 root other 206905 Mar 12 14:14 /var/log/sd-trace.log.4
+----

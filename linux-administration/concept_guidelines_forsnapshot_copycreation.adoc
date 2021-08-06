@@ -1,0 +1,35 @@
+---
+permalink: linux-administration/concept_guidelines_forsnapshot_copycreation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, create 
+summary: SnapDrive for UNIX を使用して Snapshot コピーを作成するときは、次の点を考慮してください。Snapshot コピーはボリュームあたり最大 255 個まで保持できます。 SnapDrive for UNIX では、作成された Snapshot コピーのみがサポートされます。ルートディスクグループの Snapshot コピーは作成できません。また、ブートデバイスまたはスワップデバイスも作成できません。また、 SnapDrive for UNIX では、クラッシュの整合性を保つためにフリーズ処理が必要になります。 
+---
+= Snapshot コピーの作成については、ガイドラインに従ってください
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を使用して Snapshot コピーを作成するときは、次の点を考慮してください。 Snapshot コピーはボリュームあたり最大 255 個まで保持できます。 SnapDrive for UNIX では、作成された Snapshot コピーのみがサポートされます。ルートディスクグループの Snapshot コピーは作成できません。また、ブートデバイスまたはスワップデバイスも作成できません。また、 SnapDrive for UNIX では、クラッシュの整合性を保つためにフリーズ処理が必要になります。
+
+コマンドで Snapshot コピーを作成する場合は、次のガイドラインに従ってください。
+
+* 各ストレージ・システム・ボリュームに保持できる Snapshot コピーの最大数は 255 です。この制限はストレージシステムによって設定されます。合計数は、他のツールがこれらの Snapshot コピーを使用しているかどうかによって異なります。
++
+Snapshot コピー数が上限に達すると、 Snapshot の作成処理は失敗します。SnapDrive for UNIX を使用して削除する前に、古い Snapshot コピーの一部を削除する必要があります。
+
+* SnapDrive for UNIX では、作成しない Snapshot コピーはサポートされません。たとえば、ストレージシステムコンソールから作成された Snapshot コピーはサポートされません。このような方法を使用すると、ファイルシステム内で不整合が発生する可能性があるためです。
+* SnapDrive for UNIX では、次の Snapshot コピーを作成できません。
++
+** ルートディスクグループ
++
+LVM のルートディスクグループの Snapshot コピーを作成しようとすると、 Snapshot の作成処理が失敗します。
+
+** デバイスをブートするか、デバイスを交換してください
++
+SnapDrive for UNIX では、システム・ブート・デバイスまたはシステム・スワップ・デバイスの Snapshot コピーは作成されません。
+
+
+
+* Snapshot コピーが複数のストレージシステムまたはストレージシステムボリュームにまたがっている場合、 SnapDrive for UNIX では、クラッシュ整合性を保証するためにフリーズ処理が必要になります。フリーズ処理を使用しない構成での Snapshot コピーの作成については、を参照してください。
+

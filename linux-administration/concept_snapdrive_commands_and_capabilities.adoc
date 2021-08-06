@@ -1,0 +1,244 @@
+---
+permalink: linux-administration/concept_snapdrive_commands_and_capabilities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, commands, rbac, role, access, control 
+summary: ロールベースアクセス制御（ RBAC ）では、各処理を成功させるために特定の機能が必要です。ユーザがストレージ操作を実行するには、適切な機能セットを割り当てられている必要があります。 
+---
+= SnapDrive のコマンドと機能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Role-Based Access Control （ RBAC ；ロールベースアクセス制御）では、処理が成功するためにはそれぞれ特定の機能が必要です。ユーザがストレージ操作を実行するには、適切な機能セットを割り当てられている必要があります。
+
+次の表に、必要なコマンドと対応する機能を示します。
+
+|===
+| コマンドを実行します | 機能 
+
+
+ a| 
+「 storage show 」
+ a| 
+SD.Storage.Read on volume （ SD 、ストレージ、ボリュームの読み取り
+
+
+
+ a| 
+「ストレージリスト」
+ a| 
+SD.Storage.Read on volume （ SD 、ストレージ、ボリュームの読み取り
+
+
+
+ a| 
+「 storage create 」
+ a| 
+* ボリューム内の LUN の場合：「 D 」「 Storage 」「 Write 」 on Volume 」
+* qtree 内の LUN の場合：「 D 」「 Storage.Write 」は qtree 上にあります
+
+
+
+
+ a| 
+「ストレージのサイズ変更」
+ a| 
+'D.Storage.Write-on LUN （ LUN に書き込み
+
+
+
+ a| 
+「 storage delete 」をクリックします
+ a| 
+LUN 上の 'D.Storage.Delete
+
+
+
+ a| 
+「スナップショー」
+ a| 
+'D.snapshot.Read' on volume （ボリューム上のスナップショットを読み取ります
+
+
+
+ a| 
+「スナップリスト」
+ a| 
+'D.snapshot.Read' on volume （ボリューム上のスナップショットを読み取ります
+
+
+
+ a| 
+'snap delete `
+ a| 
+'D.Storage.Delete' on volume （ボリュームのデータを削除
+
+
+
+ a| 
+'snap rename ( 仮名の変更
+ a| 
+'D.Storage.Write' on volume （ボリュームに書き込みます
+
+
+
+ a| 
+'snap connect`
+ a| 
+* ボリュームの LUN クローンの場合：ボリューム上の「スナップショット . クローン」
+* qtree 内の LUN クローンの場合： qtree 上の「スナップショット . クローン」
+* 従来のボリュームクローンの場合：ストレージシステム上の「スナップショット . クローン」
+* FlexClone ボリュームの場合：親ボリューム上の「 D.snapshot.Clone 」
+* 制限のない FlexClone ボリュームの場合：親ボリューム上の「スナップショット。制限のないクローン」
+
+
+
+
+ a| 
+'snap connect -fit`
+ a| 
+* LUN クローン（ LUN クローンおよびボリューム内でのスプリット）の場合：ボリューム上では「スナップショット」、ボリューム上では「スナップショット」、ボリューム上では「ストレージ」「書き込み」
+* LUN クローン（ LUN クローンおよび qtree 内でのスプリット）の場合：「 D 」、「スナップショット」、「 Clone 」（ qtree 上でのクローン）、「 D 」「 Storage 」「 Write 」（ストレージ上での書き込み）
+* 分割された従来のボリュームクローンの場合：ストレージシステム上の「スナップショット」およびストレージシステム上の「 D ストレージ」「書き込み」
+* スプリットされた Flex ボリュームクローンの場合は、親ボリューム上の「 D.snapshot.Clone 」。
+
+
+
+
+ a| 
+「 clone split start 」を指定します
+ a| 
+* LUN がボリュームまたは qtree に存在する LUN クローンの場合：ボリュームまたは qtree を含む「 D.snapshot.Clone 」
+* ボリュームクローンの場合：親ボリューム上の「 D.snapshot.Clone 」
+
+
+
+
+ a| 
+'Snap disconnect' （スナップ切断
+ a| 
+* LUN がボリュームまたは qtree に存在する LUN クローンの場合：ボリュームまたは qtree を含む「 D.snapshot.Clone 」
+* ボリュームクローンの場合：親ボリューム上の「 D.snapshot.Clone 」
+* 無制限のボリュームクローンを削除する場合：ボリューム上の「スナップショット。 DestroyUnrestrictedClone 」
+
+
+
+
+ a| 
+'Snap disconnect-split`
+ a| 
+* LUN がボリュームまたは qtree に存在する LUN クローンの場合：「 D 」、「スナップショット」、「クローン」は、 LUN を含むボリュームまたは qtree 上に作成されます
+* ボリュームクローンの場合：親ボリューム上の「 D 」「ストレージ」「削除」
+* 無制限のボリュームクローンを削除する場合：ボリューム上の「スナップショット。 DestroyUnrestrictedClone 」
+
+
+
+
+ a| 
+'snap restore ( スナップ復元
+ a| 
+* ボリュームに存在する LUN の場合：「スナップショット」「ボリューム上でのリストア」「 D ストレージ」「 LUN 上での書き込み」
+* qtree に存在する LUN の場合：「スナップショット。リストア」 qtree では「スナップショット。リストア」、「 D ストレージ . ライト」 LUN では「スナップショット . リストア」
+* ボリュームにない LUN の場合：「スナップショット。ボリュームに復元」および「 S D ストレージ」。ボリュームに書き込みます
+* qtree にない LUN の場合：「スナップショット・リストア」 qtree では「スナップショット・リストア」、「ストレージ・ライト」 qtree では「スナップショット・リストア」
+* ボリュームの場合：従来のボリュームの場合はストレージ・システム上の「スナップショット」、フレキシブル・ボリュームの場合は「スナップショット」「リストア」
+* ボリュームの単一ファイルの snap restore の場合：ボリュームの「スナップショット。復元」
+* qtree の単一ファイルの snap restore の場合 : `s D. snapshot. Restore ` qtree
+* ベースライン Snapshot コピーを無効にする場合：ボリュームの「スナップショット。 ruptBaseline 」
+
+
+
+
+ a| 
+ホスト接続 ' ホスト切断
+ a| 
+LUN に「 D.Config.Write 」と入力します
+
+
+
+ a| 
+「 config access 」を選択します
+ a| 
+ストレージ・システムの 'D.Config.Read
+
+
+
+ a| 
+「 config prepare 」
+ a| 
+少なくとも 1 つのストレージ・システムで 'D.Config.Write' を実行します
+
+
+
+ a| 
+「 config check 」
+ a| 
+1 つ以上のストレージ・システムの 'D.Config.Read
+
+
+
+ a| 
+「 config show 」を参照してください
+ a| 
+1 つ以上のストレージ・システムの 'D.Config.Read
+
+
+
+ a| 
+「 config set 」のようになります
+ a| 
+「 D.Config.Write 」をストレージシステムに書き込みます
+
+
+
+ a| 
+config set-dfm 、 config set-mgmtpath 、 `
+ a| 
+少なくとも 1 つのストレージ・システムで 'D.Config.Write' を実行します
+
+
+
+ a| 
+「 config delete 」
+ a| 
+ストレージ・システムの 'D.Config.Delete]
+
+
+
+ a| 
+config delete dfm_appliance 、 config delete -mgmtpath
+ a| 
+少なくとも 1 つのストレージ・システムで 'D.Config.Delete] を選択します
+
+
+
+ a| 
+「 config list 」
+ a| 
+1 つ以上のストレージ・システムの 'D.Config.Read
+
+
+
+ a| 
+'config migrate set
+ a| 
+少なくとも 1 つのストレージ・システムで 'D.Config.Write' を実行します
+
+
+
+ a| 
+「 config migrate delete 」
+ a| 
+少なくとも 1 つのストレージ・システムで 'D.Config.Delete] を選択します
+
+
+
+ a| 
+「 config migrate list 」
+ a| 
+1 つ以上のストレージ・システムの 'D.Config.Read
+
+|===
+
+NOTE: SnapDrive for UNIX では、管理者（ root ）の権限はチェックされません。

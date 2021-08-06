@@ -1,0 +1,21 @@
+---
+permalink: solaris/concept_guidelines_for_usingthe_storage_deletecommand.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, delete, command 
+summary: SnapDrive の storage delete コマンドには、 SnapDrive for UNIX におけるいくつかの制限事項があります。 
+---
+= storage delete コマンドの使用に関するガイドラインを次に示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive storage delete コマンドには 'UNIX 用の SnapDrive にいくつかの制限があります
+
+* ファイルシステムを削除すると、 SnapDrive for UNIX によってファイルシステムのマウントポイントが常に削除されます。
+* -lun' オプションを使用 SnapDrive して ' ホスト・ディスク・グループまたはファイル・システムのいずれかのメンバーである LUN の名前を指定すると 'lun storage delete コマンドは失敗します
+* -lun' オプションを使用 SnapDrive して ' ホスト上のマルチパス・ソフトウェアによって検出されない LUN の名前を指定すると 'lun storage delete コマンドは失敗します
++
+たとえば Solaris ホストの場合、 LUN は DMP 制御下にある必要があります。つまり 'LUN には対応する /dev/vx/dmp' デバイスが必要です
+
+

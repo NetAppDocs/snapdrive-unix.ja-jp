@@ -1,0 +1,25 @@
+---
+permalink: aix/concept_clustering_message_appears_during_snap.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, cluster, message, snaprestore, restore 
+summary: SnapDrive Any 環境 for UNIX host operating system with host cluster monitoring という一般的なメッセージが表示されます。ホストクラスタの監視機能がない場合やオフになっている場合でも表示されます。 
+---
+= SnapRestore の実行中にクラスタリングメッセージが表示されます
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive Any 環境 for UNIX host operating system with host cluster monitoring という一般的なメッセージが表示されます。ホストクラスタの監視機能がない場合やオフになっている場合でも表示されます。
+
+次のメッセージは、 snap restore コマンド「 #SnapDrive snap restore -vg clustg-mysnap snapname 」を実行したときに表示されます
+
+高可用性ホスト・クラスタリング・ソフトウェアを使用しているようですクラスタフェイルオーバーが発生しないようにするには、リストアするリソースのクラスタ監視を無効にしてからリストアしてください。続行しますか ?(y/n)` ： SnapDrive snap restore コマンドによってボリューム・グループが一時的にダウンしたため ' 問題が発生しますこの時点でクラスタの監視プロセスが実行されている場合、 SnapDrive SnapRestore 処理を実行すると、原因 a cluster failover が実行されることがあります。
+
+
+
+== 回避策
+
+HACMP はボリューム・グループおよびアプリケーションのデフォルト・リソース監視を提供しないため 'HACMP を実行する AIX ホストでは ' この問題は発生しません
+
+HACMP でストレージ監視を行うようにアプリケーションをカスタマイズした場合は、 SnapDrive snap restore コマンドを実行する前に、アプリケーションを無効にして監視する必要があります

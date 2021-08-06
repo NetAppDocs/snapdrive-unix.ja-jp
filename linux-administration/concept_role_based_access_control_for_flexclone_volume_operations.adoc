@@ -1,0 +1,29 @@
+---
+permalink: linux-administration/concept_role_based_access_control_for_flexclone_volume_operations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, role, access, control, rbac, flexcone, volume, manager, operations, storage 
+summary: Operations Manager がシステムに設定されている場合、 Operations Manager 管理者は、 FlexClone ボリュームに対してストレージ操作を実行するために必要な機能をユーザに付与する必要があります。 
+---
+= FlexClone ボリューム処理に対するロールベースアクセス制御
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Operations Manager がシステムに設定されている場合、 Operations Manager 管理者は、 FlexClone ボリュームに対してストレージ操作を実行するために必要な機能をユーザに付与する必要があります。
+
+* 無制限 FlexClone ボリューム * ：無制限 FlexClone ボリュームに対してストレージ操作を実行するには、次の機能が必要です。
+
+* 「 snap connect 」の場合、親ボリュームには「スナップショット」「 unrestrictedClone 」機能が必要です。
+* 「 snap disconnect 」の場合、 FlexClone ボリュームには「 D 」のスナップショットが必要です。 DestroyUnrestrictedClone 」機能が必要です。
+
+
+* 制限付き FlexClone ボリューム * ：制限付き FlexClone ボリュームのストレージ処理には、以下の機能が必要です。
+
+* 「 snap connect 」の場合は、親ボリュームに「 D.snapshot.Clone 」機能が必要です。
+* 「 snap disconnect 」の場合、親ボリュームには「 D 」の「 snapshot. Clone 」機能が必要です。
+
+
+「 snap connect 」操作中に FlexClone ボリュームを分割するには、「 D 」「 Storage 」「 Write 」アクセス機能を親ボリュームで有効にします。
+
+スプリット FlexClone ボリュームでのストレージ操作を「 snap disconnect 」中に実行するには、スプリットボリュームクローンで「 D ストレージ . 削除」機能が必要です。

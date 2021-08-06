@@ -1,0 +1,21 @@
+---
+permalink: linux-administration/concept_snapdrive_fails_to_add_newly_mapped_luns_in_rhel_6_6_and_rhel_7.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, fails, lun, rhel, rescan, red, hat, enterprise 
+summary: SG3_utils パッケージにバンドルされている再スキャンスクリプト /usr/bin/rescan-scsi-bus.sh で、 Red Hat Enterprise Linux 6.6 以降で実行されている SnapDrive for UNIX に新しくマッピングされた LUN を追加できません。 
+---
+= RHEL 6.6 以降で、新しくマッピングした LUN を SnapDrive に追加できません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SG3_utils パッケージにバンドルされている再スキャン・スクリプト /usr/bin/rescan-scsi-bus.sh は 'Red Hat Enterprise Linux 6.6 以降で実行されている SnapDrive for UNIX で ' 新しくマッピングされた LUN を追加できません
+
+
+
+== 回避策
+
+. 「 /root 」ディレクトリに「 dynamic lun-rescan.sh 」という名前のファイルを作成し、そのファイルに完全な権限を与えます。
+. 「 dynamic lun-rescan.sh 」ファイルに「 /usr/bin/rescan-scsi-bus.sh -a -r 」コマンドを追加します。
+

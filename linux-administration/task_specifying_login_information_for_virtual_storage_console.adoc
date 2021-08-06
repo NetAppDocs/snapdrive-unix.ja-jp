@@ -1,0 +1,55 @@
+---
+permalink: linux-administration/task_specifying_login_information_for_virtual_storage_console.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, login, virtual, storage, console, rdm, lun 
+summary: ゲストオペレーティングシステムで RDM LUN をプロビジョニングするには、 SnapDrive for UNIX で Virtual Storage Console を設定する必要があります。ただし、 SnapDrive for UNIX から Virtual Storage Console にアクセスするためのユーザ名とパスワードもあります。Virtual Storage Console でこれらのログインクレデンシャルが認証されません。 
+---
+= Virtual Storage Console のログイン情報を指定しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ゲストオペレーティングシステムで RDM LUN をプロビジョニングするには、 SnapDrive for UNIX で Virtual Storage Console を設定する必要があります。ただし、 SnapDrive for UNIX から Virtual Storage Console にアクセスするためのユーザ名とパスワードもあります。Virtual Storage Console でこれらのログインクレデンシャルが認証されません。
+
+Virtual Storage Console が vCenter で設定されていることを確認します。
+
+. 次のコマンドを入力します。
++
+*SnapDrive config set -viadmin <user><viadmin_name> *`
+
++
+`_user_` は仮想インタフェースシステムのユーザー名である。
+
++
+「 _viadmin_name_` 」は、仮想インターフェイスシステムの名前または IP アドレスです。
+
+. パスワードがある場合は、プロンプトでパスワードを入力します。
++
+[NOTE]
+====
+パスワードを設定していない場合は、を押します
+
+「 Enter 」キーを押します
+
+パスワードの入力を求められた場合は（ null 値）。
+
+====
++
+次の例では、仮想インターフェイス用に「 admin 」というユーザを設定します。
+
++
+[listing]
+----
+guest# snapdrive config set -viadmin sdadmin ruffleskin
+Password for sdadmin:
+Retype Password:
+----
++
+これで、 SnapDrive for UNIX がゲストオペレーティングシステムで RDM LUN のプロビジョニングを実行できるようになります。
+
++
+
+NOTE: 新しい仮想インターフェイスを設定する場合は、既存の仮想インターフェイスの詳細が上書きされます。 SnapDrive for UNIX では、ゲストオペレーティングシステムに仮想インターフェイスを 1 つしか設定できないためです。
+
+

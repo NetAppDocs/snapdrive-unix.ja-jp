@@ -1,0 +1,55 @@
+---
+permalink: linux-administration/task_stopping_the_clone_and_lun_clone_split.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, clone, split, lun, volume, specification 
+summary: ジョブ ID またはファイル仕様を使用して、ボリュームクローンまたは LUN クローンのクローンスプリットを停止できます。 
+---
+= ボリュームクローンまたは LUN クローンスプリット処理を停止します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ジョブ ID またはファイル仕様を使用して、ボリュームクローンまたは LUN クローンのクローンスプリットを停止できます。
+
+.手順
+. 次のコマンドを入力します。
++
+`* SnapDrive clone split stop [-lun]_long_lun_name_[_long_lun_name..._]|[{-dg|-vg|-fs|-hostvol|-lvol ｝ _file_spec_[file_spec_[file_spec...] | [-job_<jobid>_]*`
+
++
+SnapDrive for UNIX は、進行中のクローンスプリットの停止処理を停止します。
+
+
+
+次の例は、ファイル仕様を使用して停止されたクローンスプリット処理を示しています。
+
+[listing]
+----
+# snapdrive clone split stop -fs /mnt/my_mnt4 /mnt/my_mnt3
+Clone-Split for "/mnt/my_mnt4" is 0% Completed and Stopped.
+Clone-Split for "/mnt/my_mnt3" is 0% Completed and Stopped.
+----
+次の例は、ジョブ ID を使用して停止されたクローンスプリット処理を示しています。
+
+[listing]
+----
+# snapdrive clone split stop -job B265Dbv8gh
+Clone-Split for "/mnt/my_mnt3" is 14% Completed and Stopped.
+Clone-Split for "/mnt/my_mnt4" is 17% Completed and Stopped.
+----
+次の例は、すでに停止しているファイル仕様のクローンスプリットの停止処理を示す一般的な出力を示しています。
+
+[listing]
+----
+# snapdrive clone split stop -fs /mnt/my_mnt4 /mnt/my_mnt3
+Clone-Split for "/mnt/my_mnt3" is not stopped : No split is in progress for this resource
+Clone-Split for "/mnt/my_mnt4" is not stopped : No split is in progress for this resource
+----
+[NOTE]
+====
+* ジョブ ID に含まれる特定のファイル仕様に対してクローン・スプリットが停止し、クローン・スプリットの停止が成功すると、ファイル仕様がジョブから削除されます。
+* ジョブのクローンスプリットが停止し、そのジョブのすべてのファイル仕様に対してクローンスプリットの停止が成功すると、ジョブはジョブセットから削除されます。
+
+
+====

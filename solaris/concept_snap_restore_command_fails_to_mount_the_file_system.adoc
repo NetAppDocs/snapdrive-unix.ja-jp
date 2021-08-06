@@ -1,0 +1,17 @@
+---
+permalink: solaris/concept_snap_restore_command_fails_to_mount_the_file_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, command, fail, mount, file 
+summary: Solaris 上の SFRAC 5.0 では、 snap restore コマンドと snap connect コマンドを実行してもファイルシステムをマウントできません。 
+---
+= snap restore コマンドを実行すると、ファイルシステムがマウントされません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Solaris 上の SFRAC 5.0 では 'snap restore' コマンドと 'snap connect' コマンドを使用してもファイルシステムをマウントできません
+
+スナップショット・コピーを作成する前に ' ユーザーは問題 the SnapDrive snap create コマンドを実行するクラスタ・ノード上で次のコマンドを実行する必要があります
+
+/opt/VRTS/bin/fsclustadm setprimary mount_point

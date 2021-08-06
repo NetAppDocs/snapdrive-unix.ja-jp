@@ -1,0 +1,37 @@
+---
+permalink: aix/task_deleting_a_snapshotcopy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, snapshot, copy 
+summary: SnapDrive snap delete コマンドを使用すると、 Snapshot コピーを削除できます。 
+---
+= Snapshot コピーを削除しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive snap delete コマンドを使用すると、 Snapshot コピーを削除できます。
+
+.手順
+. 次のコマンドを入力します。
++
+`* SnapDrive snap delete [-snapname] _long_snap_name _[_snap_name..._][-verbose [-force [-nopromp] *
+
++
+
+NOTE: 指定した Snapshot コピーが使用中の場合、この処理は失敗します。SnapDrive for UNIX では、すべての Snapshot コピーが削除されている場合にのみ、この処理が正常に完了したことが報告されます。
+
+
+
+SnapDrive for UNIX を実行すると、「 snap delete 」コマンドラインで指定した LUN の既存の内容が削除され、指定した Snapshot コピー内の LUN の内容に置き換えられます。
+
+次の例は、削除対象のリストを表示します。
+
+[listing]
+----
+# snapdrive snap delete -v filer1:/vol/vol1/snap1 snap2 snap3
+snapdrive: deleting
+filer1:/vol/vol1/snap1
+filer1:/vol/vol1/snap2
+filer1:/vol/vol1/snap3
+----

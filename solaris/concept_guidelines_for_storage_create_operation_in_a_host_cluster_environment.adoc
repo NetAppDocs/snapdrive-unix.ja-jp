@@ -1,0 +1,31 @@
+---
+permalink: solaris/concept_guidelines_for_storage_create_operation_in_a_host_cluster_environment.html 
+sidebar: sidebar 
+keywords: snap, snapshot, storage, create, host cluster 
+summary: ホストクラスタ環境でストレージを作成する場合は、一定のガイドラインに従う必要があります。 
+---
+= ホストクラスタ環境でのストレージ作成処理に関するガイドラインを確認してください
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストクラスタ環境でストレージを作成する場合は、一定のガイドラインに従う必要があります。
+
+* SnapDrive storage create コマンドは ' ホスト・クラスタ内の任意のノードから実行できます
+* ストレージ作成処理が成功するためには、どちらも true に設定しないでください。
++
+** ストレージエンティティがホストクラスタ内のどのノードにも存在しないようにしてください。
+** LUN をホストクラスタ内のどのノードにもマッピングしないでください。
+
+
+* 特定のノードにストレージ・エンティティを作成するには '-ddeviceType オプションを dedicated または -deviceType shared オプションを使用します専用モードのストレージ・エンティティを作成する場合は '-deviceType オプションを省略できますこれは ' デフォルト値が「 d 」であるためです
+* ホストクラスタ全体でのファイルシステムのストレージ作成は、 Veritas File System （ VxFS ）で Veritas Volume Manager を使用するディスクグループでサポートされています。この操作は raw LUN ではサポートされません -nolvm オプションもサポートされません
+* 「 -igroup 」オプションは、ストレージ作成操作ではサポートされません。
+* 次のいずれかの状況が発生すると、ストレージ作成処理が失敗します。
++
+** ストレージエンティティの作成プロセス中にエラーメッセージが発生した場合。SnapDrive for UNIX は、ホストクラスタ内のマスターノードからストレージ作成処理を実行します。共有ストレージエンティティを作成する前に、 SnapDrive for UNIX によって LUN が作成され、マスターノードにマッピングされたあと、それらの LUN がすべての非マスターノードにマッピングされます。SnapDrive for UNIX では、すべてのノードの igroup を内部的に作成および管理します。
+** ホストクラスタボリュームマネージャ（ CVM ）を開始する前にホストクラスタ内のノードがシャットダウンしてリブートした場合は、 LUN で使用される共有ディスクグループがノードで検出されている必要があります。デフォルト SnapDrive では、 FC ポート・アドレスが変更されていない場合、 LUN は表示されます。変更されていない場合は、 lun storage connect コマンドを使用して LUN をマッピングする必要があります。
+
+
+

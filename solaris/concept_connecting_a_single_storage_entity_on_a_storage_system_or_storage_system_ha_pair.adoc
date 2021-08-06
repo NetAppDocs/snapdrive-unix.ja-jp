@@ -1,0 +1,15 @@
+---
+permalink: solaris/concept_connecting_a_single_storage_entity_on_a_storage_system_or_storage_system_ha_pair.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, ha, storage, entity, system, connect 
+summary: 1 つのストレージエンティティを含む Snapshot コピーを接続することができます。 
+---
+= ストレージシステムまたはストレージシステムの HA ペア上にある単一のストレージエンティティを接続する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+1 つのストレージエンティティを含む Snapshot コピーを接続することができます。
+
+ストレージシステムまたはストレージシステム HA ペア上にある単一のストレージエンティティを含む Snapshot コピーを接続できます。デスティネーションストレージシステム上のボリュームの名前は、ソースストレージシステム上のボリュームの名前と一致している必要があります。

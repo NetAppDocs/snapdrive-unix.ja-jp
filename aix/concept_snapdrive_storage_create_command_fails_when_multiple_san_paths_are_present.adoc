@@ -1,0 +1,38 @@
+---
+permalink: aix/concept_snapdrive_storage_create_command_fails_when_multiple_san_paths_are_present.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, create, command, san, multipathing, fail 
+summary: 複数の SAN パスが存在するが、マルチパスが無効になっている場合、 san storage create コマンドは失敗します。 SnapDrive 
+---
+= 複数の SAN パスが存在するが、マルチパスが無効になっている場合に、 SnapDrive storage create コマンドが失敗します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+複数の SAN パスが存在するが ' マルチパスが無効になっている場合 'san storage create コマンドは失敗します SnapDrive
+
+たとえば、 SVM に iSCSI LIF が 2 つある場合は、次のようになります。
+
+[listing]
+----
+[root@scspr0189449001 etc]# iscsiadm --mode session --rescan
+Rescanning session [sid: 1, target: iqn.1992-08.com.netapp:sn.f7335762b23e11e695360050569c153a:vs.3, portal: 10.224.70.253,3260]
+Rescanning session [sid: 2, target: iqn.1992-08.com.netapp:sn.f7335762b23e11e695360050569c153a:vs.3, portal: 10.224.70.254,3260]
+----
+snapdrive.conf ファイルで「 multipath-type 」が「 none 」に設定されていて、マルチパスサービスが無効になっている場合、 LVM を使用してストレージの作成を試みたときに、次のエラーが返されます。
+
+[listing]
+----
+root@scspr0189449001 etc]# snapdrive storage create -fs /mnt/test -lun rgvsim:/vol/asmvol/test -lunsize 500m
+        LUN rgvsim:/vol/asmvol/test ... created
+        mapping new lun(s) ... done
+        discovering new lun(s) ... *failed*
+        Cleaning up ...
+         - LUN rgvsim:/vol/asmvol/test ... deleted
+         0001-422 Admin error: LVM initialization of luns failed:
+        Device /dev/sdb,/dev/sdc not found (or ignored by filtering).
+----
+これは 'pvcreate' コマンドでは ' カンマで区切られた両方のデバイスが 'pvcreate/dev/sdb'/dev/sdc' および '/dev/sdb'/dev/sdc' という名前の単一のデバイスとして使用されるためです
+
+ストレージへのパスが複数あり、 LVM を使用する必要がある場合は、マルチパスを有効にする必要があります。

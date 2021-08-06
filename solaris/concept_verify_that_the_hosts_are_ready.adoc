@@ -1,0 +1,35 @@
+---
+permalink: solaris/concept_verify_that_the_hosts_are_ready.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, host, verify 
+summary: ホストの準備が完了していることを確認する必要があります。検証処理を開始するには、 ping filername コマンドを入力して、ホストがストレージ・システムに接続されているかどうかを最初にテストする必要があります。 
+---
+= ホストの準備が完了していることを確認する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストの準備が完了していることを確認する必要があります。検証処理を開始するには、まず「 ping filername 」コマンドを入力して、ホストがストレージ・システムに接続されているかどうかをテストする必要があります。
+
+また、ホストとストレージシステムが相互に通信できることも確認する必要があります。これを確認するには、 SnapDrive storage show -all コマンドを実行して、ホストとストレージ・システムが通信しているかどうかを確認します。特定の処理を実行して、ホストの準備が完了していることを確認します。
+
+* ホストとストレージシステムが、ホスト用の Host Utilities のマニュアルに記載されている手順に従って正しく設定されていることを確認します。
+* NFS を使用する設定があることを確認し、 exports ファイルを設定します。
+* ホストが、必要なオペレーティングシステムパッチを含めた SnapDrive for UNIX の最小要件を満たしていることを確認します。
+* Veritas スタックをホストにインストールする前に、 NTAPasl ライブラリをインストールします。
++
+
+NOTE: NTAPasl ライブラリをインストールせずに Veritas スタックをインストールした場合は 'NTAPasl ライブラリをインストールし 'vxinstall' コマンドを実行して 'LUN とディスク・グループをオンラインにする必要があります
+
+
+
+* 関連情報 *
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.cdot-famg-nfs/home.html["ONTAP 9 NFS リファレンス"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1401220["『 Data ONTAP 8.2 File Access and Protocols Management Guide for 7-Mode 』"]
+
+http://mysupport.netapp.com["ネットアップサポート"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1148981["『 Solaris Host Utilities 6.1 Installation and Setup Guide 』"]

@@ -1,0 +1,27 @@
+---
+permalink: solaris/concept_crash_consistency_with_data_ontap_7_2_and_later.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, crash, consistency, ontap 
+summary: SnapDrive for UNIX では、 Data ONTAP 7.2 以降のバージョンで提供されている整合グループがサポートされているため、複数のボリュームにまたがるすべての Snapshot コピーが crash-consistent になります。 
+---
+= Data ONTAP 7.2 以降とのクラッシュ整合性
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、 Data ONTAP 7.2 以降のバージョンで提供されている整合グループがサポートされているため、複数のボリュームにまたがるすべての Snapshot コピーが crash-consistent になります。
+
+Data ONTAP バージョン 7.2 以降では、整合グループおよびストレージ・システムのフェンシングがサポートされます。SnapDrive for UNIX では、これらの機能を使用して、複数のボリュームにまたがるすべての Snapshot コピーが crash-consistent になります。
+
+複数のボリュームに crash-consistent Snapshot コピーを作成するために、 SnapDrive for UNIX は以下の処理を行います。
+
+* ストレージエンティティを含むすべてのボリュームの I/O を遮断（フリーズ）します。
+* 各ボリュームの Snapshot コピーを作成します。
+
+
+ボリュームの遮断と Snapshot コピーの作成にかかる時間は限られており、 Data ONTAP によって制御されます。
+
+「 napdrive.conf 」ファイルの「 * snapcreate -cg-timeout * 」パラメータには、 Data ONTAP 制限内でストレージ・システムのフェンシングを許可する時間の長さを指定します。緊急、中、または不完全の間隔を指定できます。ストレージシステムがフェンシング処理を完了するのに許容以上の時間が必要な場合、 SnapDrive for UNIX は、以前のバージョンの Data ONTAP 7.2 に対応した整合性方法を使用して Snapshot コピーを作成します。この方法は、 Snapshot コピーを作成するときに、 -nofilerfence オプションを使用して指定することもできます。
+
+Data ONTAP 7.2 以前のバージョンの Data ONTAP が混在するストレージ・システムを対象としたストレージ・エンティティーの Snapshot コピーを要求した場合、 Data ONTAP for UNIX では、 7.2 より前のバージョンの SnapDrive で整合性のある方法を使用した Snapshot コピーも作成されます。

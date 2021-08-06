@@ -1,0 +1,23 @@
+---
+permalink: solaris/concept_support_for_guest_operating_systems.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, support, guest, operating, system 
+summary: SnapDrive for UNIX では、ゲストオペレーティングシステムをサポートしており、 LUN 、ファイルシステム、論理ボリューム、およびディスクグループのストレージを作成し、 Snapshot コピーを管理できます。RDM LUN をプロビジョニングする場合は、 snapdrive.conf ファイルで Fibre Channel （ FC ；ファイバチャネル）プロトコルを指定する必要があります。 
+---
+= ゲストオペレーティングシステムのサポート
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、ゲストオペレーティングシステムをサポートしており、 LUN 、ファイルシステム、論理ボリューム、およびディスクグループのストレージを作成し、 Snapshot コピーを管理できます。RDM LUN をプロビジョニングする場合は、 snapdrive.conf ファイルで Fibre Channel （ FC ；ファイバチャネル）プロトコルを指定する必要があります。
+
+* LUN 、 RDM LUN 、ファイルシステム、論理ボリューム、ディスクグループを含むストレージを作成します。
++
+ストレージの作成後、ストレージ容量を拡張または縮小したり、ストレージをホストに接続したり、切断したりできます。また、ストレージに関する設定情報を表示することもできます。
+
+* ストレージシステム上の 1 つ以上のボリュームグループの Snapshot コピーを作成する。
++
+Snapshot コピーには、ファイルシステム、論理ボリューム、ディスクグループ、 LUN 、 RDM LUN を含めることができます。 NFS ディレクトリツリー。Snapshot コピーの作成後に、 Snapshot コピーの名前変更、リストア、または削除を行うことができます。同じホストまたは別のホストの別の場所に Snapshot コピーを接続することもできます。Snapshot コピーの接続が完了したら、コンテンツを表示および変更したり、接続を解除したりできます。また、 Snapshot コピーに関する情報を表示することもできます。
+
+

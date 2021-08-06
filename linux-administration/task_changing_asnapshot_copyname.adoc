@@ -1,0 +1,33 @@
+---
+permalink: linux-administration/task_changing_asnapshot_copyname.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, rename, command, source, name 
+summary: SnapDrive snap rename コマンドを使用すると、 Snapshot コピーの名前を変更できます。Snapshot の名前変更処理を実行すると、ソース Snapshot コピーの名前がターゲット引数で指定された名前に変更されます。 
+---
+= Snapshot コピーの名前を変更する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive snap rename コマンドを使用すると、 Snapshot コピーの名前を変更できます。Snapshot の名前変更処理を実行すると、ソース Snapshot コピーの名前がターゲット引数で指定された名前に変更されます。
+
+この構文を実行する前に、このコマンドのオプション、キーワード、引数について理解しておく必要があります。
+
+.手順
+. 次のコマンドを入力して、 Snapshot コピー名を変更します。
++
+`* SnapDrive snap rename [-snapname] _old_long_snap_name new_snap_name _[-force [-noprompt]] *
+
+
+
+次に、 SnapDrive snap rename コマンドの例を示します。最初のコマンド・ラインには '-force オプションが含まれていますこれは ' 新しい snapshot という名前の Snapshot コピーがすでに存在するためです2 番目の例では、両方の Snapshot コピー名が長い形式の名前を使用していますが、両方が同じストレージシステムボリュームに解決されます。
+
+[listing]
+----
+snapdrive snap rename -force filer1:/vol/vol1:oldsnap new snapshot
+----
+[listing]
+----
+snapdrive snap rename filer1:/vol/vol1:FridaySnap filer1:/vol/vol1:Snap040130
+----

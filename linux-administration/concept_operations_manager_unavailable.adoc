@@ -1,0 +1,26 @@
+---
+permalink: linux-administration/concept_operations_manager_unavailable.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, operations, manager, access, check, console, unavailable 
+summary: SnapDrive for UNIX のアクセスチェックには、 Operations Manager コンソールが必要です。Operations Manager コンソールサーバを使用できない理由はさまざまです。 
+---
+= Operations Manager コンソールを使用できません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX のアクセスチェックには、 Operations Manager コンソールが必要です。Operations Manager コンソールサーバを使用できない理由はさまざまです。
+
+RBAC メソッド 'rbac method=df' が設定されていて 'Operations Manager コンソールが使用できない場合 'UNIX の SnapDrive には次のエラー・メッセージが表示されます
+
+[listing]
+----
+[root]# snapdrive storage delete -lun storage_array1:/vol/vol2/qtree1/lun1
+0002-333 Admin error: Unable to connect to the DFM ops_mngr_server
+----
+SnapDrive for UNIX では、 Operations Manager コンソールから返されるユーザアクセスチェック結果のキャッシュを保持することもできます。このキャッシュは 24 時間有効で、設定することはできません。Operations Manager コンソールを使用できない場合、 SnapDrive for UNIX はキャッシュを使用してアクセスを判断します。このキャッシュは、設定されているすべての Operations Manager コンソールサーバが応答しない場合にのみ使用されます。
+
+SnapDrive for UNIX でアクセス・チェックにキャッシュを使用するには '_rbac キャッシュ _' 構成変数をオンにして ' アクセス結果のキャッシュを維持する必要がありますコンフィギュレーション変数 '_rbac キャッシュ _ ' はデフォルトでオフになっています
+
+SnapDrive for UNIX を使用するには 'Operations Manager コンソールが使用できない場合でも ' サーバ管理者は 'snapdrive.conf ファイルの Role-Based Access Control (RBAC) メソッドを '_rbac - method=native_' にリセットする必要がありますsnapdrive.conf ファイルを変更した場合は、 SnapDrive for UNIX デーモンを再起動する必要があります。`_rbac -method=native_` が設定されている場合 'UNIX 用の SnapDrive を使用できるのは root ユーザだけです

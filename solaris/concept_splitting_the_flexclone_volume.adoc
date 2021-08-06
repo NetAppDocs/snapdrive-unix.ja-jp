@@ -1,0 +1,19 @@
+---
+permalink: solaris/concept_splitting_the_flexclone_volume.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, split, flexclone, volume 
+summary: SnapDrive for UNIX コマンドを使用して、既存の FlexClone ボリュームをスプリットできます。 
+---
+= FlexClone ボリュームをスプリットします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX コマンドを使用して、既存の FlexClone ボリュームをスプリットできます。
+
+FlexClone ボリュームを分割するには 'snap connect コマンドで '-split CLI オプションを追加で指定する必要があります切断するには、スプリット FlexClone ボリュームを「接続解除」するために、 disconnect コマンドに「 -split」 オプションを指定する必要があります。ここでは '-split' 操作を開始するためのブロッキング・モードとノン・ブロッキング・モードが有効です
+
+* 関連情報 *
+
+xref:concept_splitting_the_volume_or_lun_clone_operations.adoc[ボリュームクローンまたは LUN クローンをスプリットします]

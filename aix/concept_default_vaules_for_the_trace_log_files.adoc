@@ -1,0 +1,24 @@
+---
+permalink: aix/concept_default_vaules_for_the_trace_log_files.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, default, value, trace, log, file 
+summary: トレースログファイルでは、さまざまなパラメータを設定したり、変更したりできます。これらのパラメータは snapdrive.conf ファイルで設定する必要があります。 
+---
+= トレースログファイルのデフォルト値
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+トレースログファイルでは、さまざまなパラメータを設定したり、変更したりできます。これらのパラメータは 'napdrive.conf ファイルで設定する必要があります
+
+「 napdrive.conf 」ファイルでは、次の値を設定する必要があります。
+
+* トレースログが含まれているファイルの名前。
+* トレースログファイルの最大サイズ。デフォルトのサイズは「 0 」バイトです。この値により、各トレースログファイルに、 SnapDrive for UNIX コマンドが 1 つだけ含まれるようになります。
++
+デフォルトサイズを 0 以外の値にリセットした場合、ファイルが指定したサイズに達すると、 SnapDrive for UNIX は、名前に任意の番号を追加して現在のトレースログファイルの名前を変更します。次に 'trace-log-file' 値で指定した名前を使用して ' 新しいトレース・ログ・ファイルを開始します
+
+* SnapDrive for UNIX で保存される古いトレースファイルの最大数。デフォルトは 100. です。
+* SnapDrive for UNIX がトレース・ログ・ファイルに書き込むメッセージのタイプ。デフォルトでは、トレースログファイルには、致命的なエラー、 admin エラー、コマンドエラー、警告、および情報メッセージが含まれています。
+

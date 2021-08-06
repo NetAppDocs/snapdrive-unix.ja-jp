@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_rbac_and_storage_operation_examples.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rbac, storage, operation, example 
+summary: ロールベースアクセス制御を使用すると、割り当てられた機能に応じてストレージの処理を実行できます。ストレージ操作を実行するための適切な機能がない場合は、エラーメッセージが表示されます。 
+---
+= RBAC とストレージ処理の例
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ロールベースアクセス制御を使用すると、割り当てられた機能に応じてストレージの処理を実行できます。ストレージ操作を実行するための適切な機能がない場合は、エラーメッセージが表示されます。

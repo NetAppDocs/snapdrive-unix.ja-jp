@@ -1,0 +1,27 @@
+---
+permalink: aix/task_viewing_all_the_data_interfaces_of_a_management_interface.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, view, data, interface, management, interface 
+summary: NFS 環境で SnapDrive config list コマンドを使用すると、管理インターフェイスのすべてのデータインターフェイスを表示できます。 
+---
+= 管理インターフェイスのすべてのデータインターフェイスを表示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NFS 環境で SnapDrive config list コマンドを使用すると、管理インターフェイスのすべてのデータインターフェイスを表示できます。
+
+. CLI で、次のコマンドを入力します。
++
+'*SnapDrive config list-mgmtpath*'
+
++
+[listing]
+----
+#snapdrive config list -mgmtpath
+system name        management interface   datapath interface
+-------------------------------------------------------------------------------
+f3050-197-91        10.72.197.91           10.72.220.91|10.72.168.91
+----
+

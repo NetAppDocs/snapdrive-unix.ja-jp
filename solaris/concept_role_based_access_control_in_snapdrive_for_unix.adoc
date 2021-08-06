@@ -1,0 +1,23 @@
+---
+permalink: solaris/concept_role_based_access_control_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rbac, access, control 
+summary: ロールベースアクセス制御（ RBAC ）はユーザログインとロールの権限に使用されます。RBAC では、管理者がロールを定義してユーザのグループを管理できます。データベースへのアクセスを特定の管理者に制限する必要がある場合は、その管理者用の管理者アカウントを設定する必要があります。また、情報を制限したり、これらの管理者が表示したり、実行できる処理を実行したりする場合は、作成した管理者アカウントにロールを適用する必要があります。 
+---
+= SnapDrive for UNIX でのロールベースアクセス制御
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ロールベースアクセス制御（ RBAC ）はユーザログインとロールの権限に使用されます。RBAC では、管理者がロールを定義してユーザのグループを管理できます。データベースへのアクセスを特定の管理者に制限する必要がある場合は、その管理者用の管理者アカウントを設定する必要があります。また、情報を制限したり、これらの管理者が表示したり、実行できる処理を実行したりする場合は、作成した管理者アカウントにロールを適用する必要があります。
+
+SnapDrive for UNIX では、 Operations Manager コンソールを使用して RBAC を使用します。Operations Manager コンソールを使用して、 LUN 、 qtree 、ボリューム、アグリゲート、 vFiler ユニットなどのストレージオブジェクトにきめ細かくアクセスできます。
+
+* 関連情報 *
+
+xref:concept_mandatory_checks_for_volume_based_snaprestore.adoc[ボリュームベース SnapRestore の必須チェック項目です]
+
+xref:concept_restoring_snapshotcopies_ona_destination_storagesystem.adoc[デスティネーションストレージシステムでの Snapshot コピーのリストア]
+
+xref:concept_snap_disconnect_procedure.adoc[手順のスナップ切断]

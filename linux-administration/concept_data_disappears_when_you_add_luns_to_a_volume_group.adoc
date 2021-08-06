@@ -1,0 +1,26 @@
+---
+permalink: linux-administration/concept_data_disappears_when_you_add_luns_to_a_volume_group.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, data, lun, volume, group, disappear 
+summary: 既存の LUN をボリュームグループに追加すると、 LUN 上のデータは消去されます。 
+---
+= ボリュームグループに LUN を追加するとデータが消去されます
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+既存の LUN をボリュームグループに追加すると、 LUN 上のデータは消去されます。
+
+LVM によって管理されているボリューム・グループに既存の LUN を追加し 'pvcreate コマンドを実行すると ' データは上書きされます
+
+
+
+== 回避策
+
+既存の LUN にあるデータが必要な場合は、そのデータを LVM で作成した LUN に移行する必要があります。次の手順を実行します。
+
+. 新しい LUN を作成します。
+. 'pvcreate' コマンド 'vgcreate' コマンド 'lvcreate' コマンドを使用して 'LUN を LVM 制御下に配置します
+. 既存の LUN から、作成して LVM の制御下に配置した LUN にデータをコピーします。
+

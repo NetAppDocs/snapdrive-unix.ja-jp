@@ -1,0 +1,23 @@
+---
+permalink: linux-administration/reference_examples_of_using_snapdrive_dc.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, example, data, collection 
+summary: 次に、データ収集コマンドの例を示します。 
+---
+= snapdrive .dc の使用例
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+次に、データ収集コマンドの例を示します。
+
+この例では、コマンドラインオプションを使用して、作成されるファイルのディレクトリと名前を指定しています。
+
+[listing]
+----
+# snapdrive.dc -d . -n mysystem
+...
+     Compressed file is ./ntap_snapdrive_mysystem.tar.Z.
+     Please send this file to technical support for analysis.
+----

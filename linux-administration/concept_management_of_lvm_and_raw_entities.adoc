@@ -1,0 +1,13 @@
+---
+permalink: linux-administration/concept_management_of_lvm_and_raw_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lvm, raw, entity, management, volume, logical 
+summary: SnapDrive for UNIX では、 LVM （論理ボリュームマネージャ）と raw エンティティを管理できます。SnapDrive for UNIX には、ストレージエンティティの作成時にストレージをプロビジョニングおよび管理するためのコマンドも用意されています。 
+---
+= LVM と raw エンティティの管理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、 LVM （論理ボリュームマネージャ）と raw エンティティを管理できます。SnapDrive for UNIX には、ストレージエンティティの作成時にストレージをプロビジョニングおよび管理するためのコマンドも用意されています。

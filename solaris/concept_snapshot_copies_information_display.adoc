@@ -1,0 +1,13 @@
+---
+permalink: solaris/concept_snapshot_copies_information_display.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, display 
+summary: ストレージシステム、ストレージシステムボリューム、 LUN 、およびその他のストレージエンティティの Snapshot コピーを表示できます。SnapDrive snap show \ （または list \ ）コマンドを使用して、 Snapshot コピーを表示します。 
+---
+= Snapshot コピーの情報が表示されます
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージシステム、ストレージシステムボリューム、 LUN 、およびその他のストレージエンティティの Snapshot コピーを表示できます。SnapDrive snap show コマンド（または list コマンド）を使用して、 Snapshot コピーを表示します。

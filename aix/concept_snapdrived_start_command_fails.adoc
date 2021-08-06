@@ -1,0 +1,20 @@
+---
+permalink: aix/concept_snapdrived_start_command_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, start, command, fail 
+summary: いくつかの条件で、 snapdrived start コマンドが失敗する場合があります。この問題を解決するには、いくつかのトラブルシューティング手順を実行します。 
+---
+= snapdrived start コマンドが失敗しました
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+一部の条件では 'napdrived start' コマンドが失敗することがありますこの問題を解決するには、いくつかのトラブルシューティング手順を実行します。
+
+* 「 napdrive.conf 」ファイルで指定されたデーモンポートが、他のアプリケーションですでに使用されているかどうかを確認します。
+* 以前のデーモンインスタンスが正常に停止しているかどうかを確認します。
+* システム全体のセマフォの上限に達しているかどうかを確認します。この場合、デーモンが開始されません。
+* マシン上で iSCSI 、 VxVM などのサービスが実行されていないかどうかを確認します。
+* HTTPS が「オン」に設定されている場合は、自己署名証明書が指定されたディレクトリにインストールされているかどうかを確認します。
+

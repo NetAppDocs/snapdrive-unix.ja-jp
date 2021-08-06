@@ -1,0 +1,31 @@
+---
+permalink: linux-administration/concept_guidelines_forconnectingsnapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, snapshot, copy, guidelines 
+summary: Snapshot コピーに接続するときは、次のガイドラインに従ってください。 
+---
+= Snapshot コピーを接続する場合のガイドラインを次に示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot コピーに接続するときは、次のガイドラインに従ってください。
+
+* SnapDrive snap connect コマンドは、 SnapDrive 4.2 for UNIX で作成された Snapshot コピーに対してのみ機能します。
+* 非発信元ホストの場合、 UNIX 用 SnapDrive 4.1 では、 Linux LVM1 または LVM2 を使用した Snapshot 接続処理がサポートされます。ただし、 Linux LVM1 ボリュームマネージャに LUN が含まれている場合は、元のホストでの Snapshot 接続処理はサポートされません。
+* 元のホスト上では、以前のバージョンの SnapDrive for UNIX で作成された Snapshot コピーの接続とリストアが SnapDrive for UNIX でサポートされます。
++
+
+NOTE: Linux の元のホストでは、 Snapshot 接続処理は Linux LVM2 および SnapDrive for UNIX によって作成された Snapshot コピーとのみ連携します。
+
+* Linux ホストでは、接続した Snapshot コピーに LUN またはファイルシステムを使用した LUN が含まれている場合、 Linux の LVM1 をアクティブ化せずに作成された SnapDrive snap connect コマンドがサポートされます。SnapDrive for UNIX では、 Linux LVM1 で作成された Linux エンティティの SnapDrive snap connect コマンドはサポートされません。
++
+SnapDrive snap connect コマンドでは 'Linux ホスト上のディスク・グループの名前を変更することはできませんたとえば、次のコマンドはサポートされていません。 SnapDrive snap connect -dg dg1 dg1copy -snapname toaster ： /vol/vol1/vol1 ： dg1snapshot
+
+* NFS ディレクトリ・ツリーへの読み取り / 書き込みアクセスの場合、 SnapDrive snap connect コマンドは Data ONTAP FlexVol ボリューム機能を使用するため、 Data ONTAP 7.3 以降が必要です。Data ONTAP 7.1 を使用した設定では、 NFS ファイルやディレクトリツリーを接続できますが、読み取り専用アクセスが提供されます。
+* SnapDrive 接続処理中に「 enable-split-clone 」構成変数の値を「 on 」または「 Sync 」に設定し、 Snapshot 切断処理中に「 off 」に設定した場合、 UNIX 用 は Snapshot コピーに存在する元のボリュームまたは LUN を削除しません。
+* vFiler ユニット内のボリュームまたは LUN の Snapshot コピーに接続するには、 Data ONTAP 7.2.2 構成オプションの「 vfiler.vol_clone_zapi_allow 」の値を「 on 」に設定する必要があります。
+* ホスト構成が異なるホストでは、 Snapshot 接続処理はサポートされていません。
+* Data ONTAP ではルート・ボリュームのクローンを作成できないため、物理ストレージ・システムまたは vFiler ユニットのルート・ボリュームへの接続に使用する SnapDrive snap connect コマンドは失敗します。
+

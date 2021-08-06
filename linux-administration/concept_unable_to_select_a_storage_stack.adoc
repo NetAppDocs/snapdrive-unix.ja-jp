@@ -1,0 +1,27 @@
+---
+permalink: linux-administration/concept_unable_to_select_a_storage_stack.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, stack, value, incorrect, wrong, select, inappropriate 
+summary: snapdrive.conf ファイルで指定されている値が適切でないため、ストレージスタックを選択できません。 
+---
+= ストレージスタックを選択できません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「 snapdrive.conf 」ファイルに指定されている値が適切でないため、ストレージスタックを選択できません。
+
+次の警告メッセージが表示されます。
+
+[listing]
+----
+WARNING!!! Unable to find a SAN storage stack. Please verify that the appropriate transport protocol, volume manager, file system and multipathing type are installed and configured in the system. If NFS is being used, this warning message can be ignored.
+----
+* NFS 環境を使用している場合は、警告メッセージを無視して、ホストシステムで引き続き SnapDrive 処理を使用します。
+* SAN 環境を使用している場合は、 Linux マトリックススタックに記載されている「 napdrive.conf 」ファイルに適切な値が指定されていることを確認してください。次に、デーモンを再起動します。
+
+
+* 関連情報 *
+
+xref:reference_stack_requirements.adoc[スタックの要件]

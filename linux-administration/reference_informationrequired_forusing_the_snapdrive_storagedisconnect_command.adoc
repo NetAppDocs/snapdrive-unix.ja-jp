@@ -1,0 +1,106 @@
+---
+permalink: linux-administration/reference_informationrequired_forusing_the_snapdrive_storagedisconnect_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, command, storage 
+summary: 次の表に、 SnapDrive storage disconnect コマンドを使用する場合、入力する必要がある情報を示します。 
+---
+= SnapDrive storage disconnect コマンドを使用するために必要な情報
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+次の表に、 SnapDrive storage disconnect コマンドを使用する場合に提供する必要がある情報を示します。
+
+|===
+| 要件 | 引数 
+
+
+ a| 
+入力したコマンドに基づいて、次のいずれかのからマッピングを削除できます。
+
+* LUN
++
+1 つ以上の LUN を切断する場合は、最初の引数で LUN 名の長い形式を使用する必要があります。長い形式の LUN 名には、ストレージシステム名、ボリューム名、ボリューム内の LUN の名前を指定します。
+
++
+追加の LUN を指定する場合は、新しい LUN が以前の LUN と同じストレージシステムおよびボリュームにある場合に、 LUN 名を単独で使用できます。それ以外の場合は、新しいストレージ・システム名とボリューム名（またはボリューム名）を指定して以前の値を置き換えることができます。
+
+* LUN 上のファイルシステム
++
+「 -fs 」に指定された「 file_tspec 」は、ファイルシステムマウントポイントの名前です。SnapDrive for UNIX では、指定したファイルシステムに関連付けられている LUN が自動的に検索されて切断されます。
+
+* ディスクまたはボリュームグループ
+* ディスクまたはボリュームグループ上のファイルシステム
+* ホストまたは論理ボリューム
+
+
+filespec 引数に入力する値によって、切断するストレージエンティティを特定する必要があります。
+
+
+
+ a| 
+LUN （「 -lun' 」）
+ a| 
+`_lun_name_`( ロングまたはショートフォーム )
+
+
+
+ a| 
+ディスク・グループ（ dg_file_spec_` ）またはボリューム・グループ（ g-vg_file_spec_ ）
+ a| 
+ディスクまたはボリュームグループの名前
+
+
+
+ a| 
+ファイルシステム (`-fs_file_spec_`)
+ a| 
+`_filesystem_name_`
+
+
+
+ a| 
+ホスト・ボリューム (`-hostvol_file_spec_`) または論理ボリューム (`-lvol_file_spec_`)
+ a| 
+ホストまたは論理ボリュームの名前
+
+
+
+ a| 
+コマンド・プロンプトで指定したストレージを SnapDrive for UNIX から切断する場合 '1 つ以上のホスト・ボリュームを持つディスク・グループなど ' 他のエンティティを持つホスト側エンティティをコマンド・プロンプトに -full' オプションを含めます
+
+このオプションを指定しない場合は、空のホスト側エンティティのみを指定する必要があります。
+
+
+
+ a| 
+「 -full` 」
+ a| 
+~
+
+
+
+ a| 
+ノードまたはホストクラスタがファイルシステムを共有できないようにする場合
+
+
+
+ a| 
+「 -fstype 」を入力します
+ a| 
+「 _TYPE_` 」
+
+
+
+ a| 
+「 -vmtype 」と入力します
+ a| 
+「 _TYPE_` 」
+
+
+
+ a| 
+* オプション： SnapDrive for UNIX 操作に使用するファイルシステムとボリュームマネージャのタイプを指定します。
+
+|===

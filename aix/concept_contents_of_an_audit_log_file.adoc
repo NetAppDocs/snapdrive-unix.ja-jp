@@ -1,0 +1,55 @@
+---
+permalink: aix/concept_contents_of_an_audit_log_file.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, contents, aufit, log, file 
+summary: 監査ログには、 SnapDrive for UNIX で実行したコマンドに関する情報が表示されます。 
+---
+= 監査ログファイルの内容
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+監査ログには、 SnapDrive for UNIX で実行したコマンドに関する情報が表示されます。
+
+監査ログファイルには、次の情報の履歴が保持されます。
+
+* コマンドを実行しました。
+* これらのコマンドから返される値。
+* コマンドを呼び出したユーザのユーザ ID 。
+* コマンドが開始された（戻りコードがない）ときのタイムスタンプと、コマンドが終了した（戻りコードがある）ときの別のタイムスタンプ。監査ログ・レコードには、 SnapDrive の使用に関する情報のみが表示されます（コマンドが発行されます）。
+
+
+監査ログファイルには次の情報が含まれています。
+
+|===
+| フィールド | 説明 
+
+
+ a| 
+UID
+ a| 
+ユーザ ID
+
+
+
+ a| 
+GID
+ a| 
+グループ ID
+
+
+
+ a| 
+msgText
+ a| 
+メッセージテキスト
+
+
+
+ a| 
+ReturnCode
+ a| 
+コマンドからのリターンコード
+
+|===

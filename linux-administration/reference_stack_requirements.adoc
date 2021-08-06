@@ -1,0 +1,172 @@
+---
+permalink: linux-administration/reference_stack_requirements.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, stack, host, nfs, manager, ontap, multistore, utilities, iscsi, fc 
+summary: SnapDrive for UNIX には、ホストオペレーティングシステム、ホストファイルシステム、 NFS 、ボリュームマネージャ、 FC または iSCSI ホストユーティリティ、ストレージシステムのライセンス、 ONTAP ソフトウェア、 MultiStore ソフトウェア、およびインターネットプロトコル（ IP\ ）アクセスが必要です。SnapDrive for UNIX には、満たす必要がある特定のスタック要件もあります。 
+---
+= スタックの要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX には、ホストオペレーティングシステム、ホストファイルシステム、 NFS 、ボリュームマネージャ、 FC または iSCSI ホストユーティリティ、ストレージシステムライセンス、 ONTAP ソフトウェア、 MultiStore ソフトウェア、およびインターネットプロトコル（ IP ）アクセスが必要です。SnapDrive for UNIX には、満たす必要がある特定のスタック要件もあります。
+
+
+
+== ホスト側のエンティティ
+
+ホスト側のエンティティのリストを次に示します。
+
+* ホストオペレーティングシステム
+* ボリュームマネージャ
+* ファイルシステム
+* Linux Host Utilities のことです
+
+
+
+
+== RDM LUN 用のゲスト側のエンティティがサポートされます
+
+ゲスト側のエンティティのリストを次に示します。
+
+* ゲストオペレーティングシステム
+* ボリュームマネージャ
+* ファイルシステム
+* プロトコルが iSCSI の場合は、 Linux iSCSI Host Utility だけで十分です
+
+
+
+
+== UNIX スタック用の SnapDrive
+
+マトリックス・スタックに示されているように 'napdrive.conf ファイルの '_multipathing-type_''`_fstype_''`_default-transport_''_vmtype_` 変数には ' 許容可能な値を入力する必要があります入力した値がホストシステムにインストールされ、実行されていることを確認する必要があります。
+
+|===
+| ホストプラットフォーム | デフォルトの転送タイプ | マルチパスタイプ | FSstype （英語） | vmtype を指定します 
+
+
+ a| 
+Linux の場合
+ a| 
+FCP
+ a| 
+なし
+ a| 
+ext4
+ a| 
+LVM
+
+
+
+ a| 
+iSCSI
+ a| 
+なし
+ a| 
+ext4
+ a| 
+LVM
+
+
+
+ a| 
+FCP
+ a| 
+nativempio
+ a| 
+ext4
+ a| 
+LVM
+
+
+
+ a| 
+iSCSI
+ a| 
+nativempio
+ a| 
+ext4
+ a| 
+LVM
+
+
+
+ a| 
+FCP
+ a| 
+なし
+ a| 
+ext3
+ a| 
+LVM
+
+
+
+ a| 
+iSCSI
+ a| 
+なし
+ a| 
+ext3
+ a| 
+LVM
+
+
+
+ a| 
+FCP
+ a| 
+nativempio
+ a| 
+ext3
+ a| 
+LVM
+
+
+
+ a| 
+iSCSI
+ a| 
+nativempio
+ a| 
+ext3
+ a| 
+LVM
+
+|===
+
+NOTE: SnapDrive for UNIX は 'ext2 ファイルシステムをサポートしていません
+
+* FCP および iSCSI のストレージスタックを使用する場合、 SnapDrive では FCP ストレージスタックのみがサポートされます。
++
+SnapDrive では、 AIX の iSCSI ストレージスタックはサポートされていません。
+
+* Linux 用のホストオペレーティングシステムと適切なパッチがインストールされている必要があります。
+* Linux のボリュームマネージャは LVM2 です。
+* Host Utilities が Linux にインストールされている
+* ストレージシステムに ONTAP ソフトウェアがインストールされている必要があります。
+* vFiler ユニットをセットアップするには、ストレージシステムに MultiStore ソフトウェアをインストールしてください。
+* ホストとストレージシステムの間でインターネットプロトコル（ IP ）アクセスが可能です。
+
+
+ネットアップでは、 Host Utilities やコンポーネントの変更を継続的に行っています。この変更を追跡するには、 Interoperability Matrix を使用します。 Interoperability Matrix には、 SAN 環境でネットアップ製品を使用するための最新情報が記載されています。
+
+ストレージシステムのライセンスと MultiStore ライセンスは、ストレージシステムエンティティを構成します。
+
+
+
+== ストレージシステムのライセンス要件
+
+* 構成によっては、 FC 、 iSCSI 、または NFS のいずれかのライセンスが必要です
+* FlexClone ライセンス
+* ストレージシステム上の SnapRestore ライセンス
+
+
+* 関連情報 *
+
+xref:concept_unable_to_select_a_storage_stack.adoc[ストレージスタックを選択できません]
+
+xref:concept_when_to_use_the_snapdrive_configuration_wizard.adoc[SnapDrive 設定ウィザード]
+
+https://mysupport.netapp.com/NOW/products/interoperability["ネットアップの相互運用性"]

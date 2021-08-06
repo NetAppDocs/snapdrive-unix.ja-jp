@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_snapdrive_for_unix_options_keywords_and_arguments.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, option, keyword, argument 
+summary: SnapDrive for UNIX のコマンドには、オプション、キーワード、および引数が関連付けられています。 
+---
+= SnapDrive for UNIX のオプション、キーワード、引数
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX のコマンドには、オプション、キーワード、および引数が関連付けられています。

@@ -1,0 +1,68 @@
+---
+permalink: solaris/task_connecting_to_asnapshot_copy_thatcontains_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, snapshot, copy, lun 
+summary: SnapDrive を含む Snapshot コピーに接続するには、 lun snap connect コマンドを使用します。 
+---
+= LUN を含む Snapshot コピーへの接続
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive snap connect コマンドを使用すると、 LUN を含む Snapshot コピーに接続できます。
+
+.手順
+. 次のコマンド構文を入力して、 LUN を含む Snapshot コピーに接続します。
++
+`* SnapDrive snap connect -lun_s_lun_name d_lun_name d_lun_name_[[-lun]s_lun_name d_lun_name_name...__ snapname_long_snap_name_[-igroup_ig_name_[_ ig_name...] [-split]*`
+
++
+
+NOTE: `s_lun_name_` と `_d_lun_name_` は 'lun_name または qtree_name/lun_name の形式で指定する必要があります
+
+
+
+SnapDrive for UNIX では、指定した LUN のクローンを作成し、新しい場所に接続します。
+
+次の例では、 hornet/vol/vol1/tuesdaysnapshot 内の LUN mylun1 を mylun1copy に接続します。
+
+[listing]
+----
+# ./snapdrive snap connect -lun mylun1 mylun1copy -snapname
+hornet:/vol/vol1:tuesdaysnapshot
+connecting hornet:/vol/vol1/mylun1:
+LUN copy mylun1copy ... created
+(original: hornet:/vol/vol1/mylun1) mapping new lun(s) ... done
+discovering new lun(s) ... done
+----
+次の例では、 mylun1 と mylun2 という 2 つの LUN を、それぞれ mylun1copy と mylun2copy に接続します。
+
+[listing]
+----
+# ./snapdrive snap connect -lun mylun1 mylun1copy -lun mylun2
+mylun2copy -snapname hornet:/vol/vol1:tuesdaysnapshot
+connecting hornet:/vol/vol1/mylun1:
+LUN copy mylun1copy ... created
+(original: hornet:/vol/vol1/mylun1)
+mapping new lun(s) ... done
+connecting hornet:/vol/vol1/mylun2:
+LUN copy mylun2copy ... created
+(original: hornet:/vol/vol1/mylun2)
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+----
+次の例では、 LUN lun1_clone を Snapshot Lech ： /vol/vol1 ： RRT に接続します。
+
+[listing]
+----
+
+snapdrive snap connect -fs /mnt/fs /mnt/fs1  -snapname lech:/vol/vol1:rrt
+connecting /mnt/fs:
+   LUN copy lun1_0 ... created
+     (original: lech:/vol/vol1/lun1)
+   exporting new lun(s) to Guest OS ... done
+   discovering new lun(s) ... done
+Successfully connected to snapshot lech:/vol/vol1:rrt
+        file system: /mnt/fs1
+----

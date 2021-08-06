@@ -1,0 +1,13 @@
+---
+permalink: linux-administration/concept_what_snapdrive_wizard_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, wizards, operation 
+summary: SnapDrive には、特定の SnapDrive 処理を対話型で実行するために役立つさまざまなウィザードが用意されています。 
+---
+= SnapDrive ウィザードとは
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive には、特定の SnapDrive 処理を対話型で実行するために役立つさまざまなウィザードが用意されています。

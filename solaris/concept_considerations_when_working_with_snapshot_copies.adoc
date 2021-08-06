@@ -1,0 +1,32 @@
+---
+permalink: solaris/concept_considerations_when_working_with_snapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy 
+summary: Snapshot コピーを使用する場合に注意すべき点はいくつかあります。たとえば、 SnapDrive for UNIX が作成した Snapshot コピーのみで機能する点や、ストレージシステムからホストに Snapshot コピーが自動的にレプリケートされる点などです。 
+---
+= Snapshot コピーを使用する場合の考慮事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot コピーを使用する場合に注意すべき点はいくつかあります。たとえば、 SnapDrive for UNIX が作成した Snapshot コピーのみで機能する点や、ストレージシステムからホストに Snapshot コピーが自動的にレプリケートされる点などです。
+
+Snapshot 処理を使用するときは、次の点を考慮してください。
+
+* SnapDrive for UNIX は、作成した Snapshot コピーでのみ機能します。
++
+作成されなかった Snapshot コピーはリストアできません。
+
+* デスティネーションストレージシステム上に Snapshot コピーを作成すると、その Snapshot コピーが作成されたソースストレージシステムからデスティネーションストレージシステムに自動的にレプリケートされます。
++
+SnapDrive for UNIX では、デスティネーション・ストレージ・システムにも Snapshot コピーをリストアできます。
+
+* 元のホストに接続するには、 SnapDrive snap connect コマンドを使用して、前回接続した（またはまだ接続している）ホスト上の同じホスト上の新しい場所にある Snapshot コピーに接続します。
+* 複数のストレージシステムボリュームまたは複数のストレージシステムにまたがるストレージエンティティのスナップショットのサポートは、ソフトウェアスタックでフリーズ処理を許可しない構成では制限されます。
+* NFS プロトコルを使用してボリュームをエクスポートする場合は、 SnapDrive for UNIX コマンドを使用するために、 Anonymous User ID オプションを 0 に設定する必要があります。
+* Single-File SnapRestore （ SFSR ）処理を実行したあと、 Snapshot コピーの作成をただちに失敗します。
++
+しばらくしてから処理を再試行する必要があります。詳細については、を参照してください link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["『 clustered Data ONTAP 論理ストレージ管理ガイド』"]。
+
+

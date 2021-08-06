@@ -1,0 +1,85 @@
+---
+permalink: linux-administration/task_generating_self_signed_certificates.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, certificate, self, signed, daemon, cli 
+summary: SnapDrive for UNIX デーモンサービスでは、認証用の自己署名証明書を生成する必要があります。この認証は、 CLI との通信時に必要になります。 
+---
+= 自己署名証明書の生成
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX デーモンサービスでは、認証用の自己署名証明書を生成する必要があります。この認証は、 CLI との通信時に必要になります。
+
+.手順
+. RSA キーを生成します。
++
+*$openssl genrsa 1024> host.key $chmod 400 host.key*`
+
++
+[listing]
+----
+# openssl genrsa 1024 > host.key Generating
+RSA private key, 1024 bit long modulus
+...............................++++++ ...++++++ e is 65537(0x10001)
+# chmod 400 host.key
+----
+. 証明書を作成します。
++
+`*$openssl req -new-x509 -nodes-sha1 -days 365 -key host.key > host.cert *`
+
++
+非暗号化証明書を作成するには '-x509' および -nodes オプションを使用します「 -days 」オプションは、証明書が有効なままになる日数を指定します。
+
+. 証明書の x509 データを入力するように求められたら、ローカルデータを入力します。
++
+[listing]
+----
+# openssl req -new -x509 -nodes -sha1 -days 365 -key host.key > host.cert
+You are about to be asked to enter information that will be incorporated into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN. There are quite a few fields
+but you can leave some blank For some fields there will be a default value, If you enter '.', the field will be left blank.
+
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:California
+Locality Name (eg, city) []:Sunnyvale
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:abc.com
+Organizational Unit Name (eg, section) []:
+Common Name (eg, YOUR name) []:localhost
+Email Address []:postmaster@example.org
+----
++
+
+NOTE: 「 Common Name 」の値は _localhost_ である必要があります。
+
+. メタデータを抽出します（オプション）。
++
+....
+$ openssl x509 -noout -fingerprint -text < host.cert > host.info
+....
++
+証明書のメタデータは、あとで簡単に参照できるように保存できます。
+
+. キーと証明書のデータを結合します。
++
+SnapDrive for UNIX では、キーと証明書のデータが同じファイルに含まれている必要があります。組み合わせたファイルはキーファイルとして保護する必要があります。
+
++
+'*$cat host.cert host.key > host.pem\*
+
++
+'*&rm host.key*' と入力します
+
++
+`*$chmod 400 host.pem*`
+
++
+[listing]
+----
+# cat host.cert host.key >  /opt/NetApp/snapdrive.pem
+# rm host.key rm: remove regular file `host.key'? y
+# chmod 400 /opt/NetApp/snapdrive.pem
+----
+. デーモン証明書の完全パスを 'napdrive.conf ファイルの `_sdu-daemon-certificate-path_` 変数に追加します
+

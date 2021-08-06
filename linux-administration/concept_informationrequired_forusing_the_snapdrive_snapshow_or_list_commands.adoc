@@ -1,0 +1,103 @@
+---
+permalink: linux-administration/concept_informationrequired_forusing_the_snapdrive_snapshow_or_list_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, list, command, storage, display, show 
+summary: SnapDrive snap show または list コマンドを使用すると、ストレージ・システム、ストレージ・システム・ボリューム、ディスク、またはボリューム・グループ、ファイルシステム、 Snapshot コピーなど。 
+---
+= SnapDrive snap show コマンドまたは list コマンドの使用に必要な情報
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive snap show または list コマンドを使用すると ' ストレージ・システム ' ストレージ・システム・ボリューム ' ディスク ' またはボリューム・グループ ' ファイル・システム ' Snapshot コピーなど。
+
+次の表に、 SnapDrive snap show | list コマンドの使用時に入力する必要がある情報を示します。
+
+
+NOTE: コマンドとして SnapDrive snap show と SnapDrive snap list のどちらを入力した場合でも、同じ引数を使用できます。これらのコマンドは同義語です。
+
+|===
+| 要件 / オプション | 引数 
+
+
+ a| 
+入力したコマンドに基づいて、次のいずれかの情報を表示できます。
+
+* ストレージシステム
+* ストレージシステムボリューム
+* ディスクまたはボリュームグループ
+* ファイルシステム
+* ホストまたは論理ボリューム
+* Snapshot コピー
+
+
+「 file-spec 」引数に入力する値は、情報を表示するストレージエンティティを識別する必要があります。このコマンドでは、エンティティが現在のホスト上にあることを前提としています。
+
+
+
+ a| 
+ストレージ・システム（「ファイラー」）
+ a| 
+`_filername_`
+
+
+
+ a| 
+ストレージ・システム上のボリューム（ -fileervol ）
+ a| 
+`_fileervol_`
+
+
+
+ a| 
+ディスク・グループ（ dg_file_spec_` ）またはボリューム・グループ（ g-vg_file_spec_` ）
+ a| 
+`_ ディスクまたはボリュームグループの名前
+
+
+
+ a| 
+ファイルシステム (`-fs_file_spec_`)
+ a| 
+`_filesystem_name_`
+
+
+
+ a| 
+ホスト・ボリューム (`-hostvol_file_spec_`) または論理ボリューム (`-lvol_file_spec_`)
+ a| 
+`_ ホストまたは論理ボリュームの名前
+
+
+
+ a| 
+Snapshot コピー名（ snapname_long_snap_name_` ）
+ a| 
+`_long_snap_name_`
+
+
+
+ a| 
+追加の Snapshot コピー名
+ a| 
+`_snap_name_`( ロングまたはショートバージョン )
+
+
+
+ a| 
+Snapshot コピーに関する情報を表示する場合は、 Snapshot コピーの名前を指定します。最初の Snapshot コピー '`_long_snap_name_` には ' ストレージ・システム名 ' ボリューム名 ' および Snapshot コピー名を含む長いバージョンの名前を入力しますSnapshot コピーが同じストレージシステムおよびボリューム上にある場合は、短縮形の Snapshot コピー名を使用できます。
+
+
+
+ a| 
+「 -verbose 」と表示されます
+ a| 
+~
+
+
+
+ a| 
+追加情報を表示するには、「 -verbose 」オプションを含めます。
+
+|===

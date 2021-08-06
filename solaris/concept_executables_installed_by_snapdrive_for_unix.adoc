@@ -1,0 +1,19 @@
+---
+permalink: solaris/concept_executables_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, executable, install, unix 
+summary: SnapDrive for UNIX は 'Solaris オペレーティングシステム用の実行可能ファイルをインストールします 
+---
+= SnapDrive for UNIX によってインストールされた実行可能ファイル
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX は 'Solaris オペレーティングシステム用の実行可能ファイルをインストールします
+
+これらの実行可能ファイルは、次の場所にインストールされます。
+
+* /opt/NTAPsnapdrive/bin/snapdrive
+* /opt/NTAPsnapdrive/bin/snapdrived`
+

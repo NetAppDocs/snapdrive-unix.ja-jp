@@ -1,0 +1,187 @@
+---
+permalink: solaris/task_snapdrive_configuration_wizard_in_nfs_san_and_mixed_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, wizard 
+summary: 設定ウィザードでは、 NFS 、 SAN 、混在の環境でを設定できます。 
+---
+= SnapDrive 設定ウィザードを使用する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+設定ウィザードでは、 NFS 、 SAN 、混在の環境でを設定できます。
+
+
+
+== NFS 環境での設定手順
+
+NFS 環境でを設定する手順は次のとおりです。
+
+.手順
+. NFS * プロファイルを選択します。
+. Protection Manager の統合を有効にします。
++
+** DataFabric Manager を使用してアクセス許可のチェックを有効にするには、 [ はい ] を選択します。
++
+*** DataFabric Manager サーバの名前または IP アドレスを入力し、続けてユーザ名とパスワードを入力します。
+*** DataFabric Manager と通信するには 'http/https' ポートを入力しますデフォルト値は '808080' です
+*** DataFabric Manager にアクセスするための SSL サーバポートを入力します。デフォルト値は「 8488 」です。
+*** DataFabric Manager と通信できるように HTTPS を有効にします。
+
+
+** RBAC を使用してアクセス許可のチェックを有効にするには 'No' を選択します
+
+
+. ロールベースアクセス制御方式を指定します。指定できる値は「 native 」と「 d fm 」です。
++
+** 「 native 」を選択して、「 /vol/vol0/sdprbac/sdhost-name.prbac 」または「 /vol/vol0/sdprbac/sdgenericname.prbac 」に格納されている制御ファイルを使用して、ホストのアクセス権限を確認します。
+** 「 d fm 」を選択すると、 Operations Manager コンソールを使用してアクセス権を確認できます。
++
+
+NOTE: DataFabric Manager を設定せずに DFM を RBAC メソッドとして選択した場合は、 Protection Manager との統合を有効にしないで RBAC 方法を DFM として選択したことを示す警告メッセージが表示されます。
+
+
+
+. ストレージ・システムと通信するには、「 https 」または「 http 」を指定します。
+. 最後に 'napdrive.conf ファイルの設定変更を保存し ' デーモンを再起動します
++
+** 「はい」を選択すると、 SnapDrive デーモンが再起動され、設定の変更が反映されます。
+** 「いいえ」を選択すると、「 napdrive.conf 」ファイルで変数の値が変更されますが、変更は反映されません。
+
+
+
+
+
+
+== SAN 環境での構成手順
+
+SAN 環境でを設定する手順は次のとおりです。
+
+.手順
+. SAN プロファイルを選択します。
+. 必要な転送プロトコルを選択します。
++
+** default-transport を設定するには 'FCP を選択します
+** default-transport を設定するには 'iSCSI' を選択します
+
+
+. SAN ストレージスタックを選択します（ MPIO 解決策、ボリュームマネージャ、およびファイルシステムの組み合わせ）。オプションは Solaris SPARC の場合は「ネイティブ」、「なし」です。オプションは「ネイティブ」、「リタス」、「なし」です
++
+SnapDrive では、 iSCSI 転送プロトコルに対して Veritas がサポートされていません。
+
+. Protection Manager の統合を有効にします。
++
+** DataFabric Manager を使用してアクセス許可のチェックを有効にするには、 [ はい ] を選択します。
++
+*** DataFabric Manager サーバの名前または IP アドレスを入力し、続けてユーザ名とパスワードを入力します。
+*** DataFabric Manager と通信するには 'http/https' ポートを入力しますデフォルト値は '808080' です
+*** DataFabric Manager にアクセスするための SSL サーバポートを入力します。デフォルト値は「 8488 」です。
+*** DataFabric Manager と通信できるように HTTPS を有効にします
+
+
+** RBAC を使用してアクセス許可のチェックを有効にするには 'No' を選択します
+
+
+. ロールベースアクセス制御方式を指定します。指定できる値は「 native 」と「 d fm 」です。
++
+** 「 native 」を選択して、「 /vol/vol0/sdprbac/sdhost-name.prbac 」または「 /vol/vol0/sdprbac/sdgenericname.prbac 」に格納されている制御ファイルを使用して、ホストのアクセス権限を確認します。
+** 「 d fm 」を選択して、 Operations Manager を使用してアクセス許可を確認します。
++
+
+NOTE: DataFabric Manager を設定せずに「 RBAC メソッド」として「 dfm 」を選択すると、 Protection Manager 統合を有効にしないで RBAC メソッドを「 dfm 」として選択したことを示す警告メッセージが表示されます。
+
+
+
+. SMVI の統合を有効にして、ゲスト OS で RDM LUN を作成します。
++
+** ゲスト OS で RDM LUN を作成するには 'yes' を選択します次に、 SMVI Server の IP アドレス、ユーザ名、パスワードを入力します。
+** このオプションをスキップするには 'no' を選択します
++
+
+NOTE: SMVI を設定するこの手順では、転送プロトコルが FCP でホストオペレーティングシステムが solaris_x86 の場合にのみプロンプトが表示されます。
+
+
+
+. ストレージ・システムと通信するには、「 https 」または「 http 」を指定します。
+. 最後に 'napdrive.conf ファイルの設定変更を保存し ' デーモンを再起動します
++
+** 「はい」を選択すると、 SnapDrive デーモンが再起動され、設定の変更が反映されます。
+** 「いいえ」を選択すると、「 napdrive.conf 」ファイルで変数の値が変更されますが、変更は反映されません。
+
+
+
+
+
+
+== SAN と NFS が混在する環境で構成する手順
+
+SAN と NFS が混在する環境で設定する手順は次のとおりです。
+
+.手順
+. 混合プロファイルを選択します。
+. 必要な転送プロトコルを選択します。
++
+** default-transport を設定するには 'FCP を選択します
+** default-transport を設定するには 'iSCSI' を選択します
+
+
+. SAN ストレージスタックを選択します（ MPIO 解決策、ボリュームマネージャ、ファイルシステムの組み合わせ）。オプションは「 native 」と「 none 」です。Solaris SPARC の場合 ' オプションは 'native'`itas' および 'none` です
++
+SnapDrive では、 iSCSI 転送プロトコルに対して Veritas がサポートされていません。
+
+. Protection Manager の統合を有効にします。
++
+** DataFabric Manager を使用してアクセス許可のチェックを有効にするには、 [ はい ] を選択します
++
+*** DataFabric Manager サーバの名前または IP アドレスを入力し、続けてユーザ名とパスワードを入力します。
+*** DataFabric Manager と通信するには 'http/https' ポートを入力しますデフォルト値は '808080' です
+*** DataFabric Manager にアクセスするための SSL サーバポートを入力します。デフォルト値は「 8488 」です。
+*** DataFabric Manager と通信できるように HTTPS を有効にします。
+
+
+** RBAC を使用してアクセス許可のチェックを有効にするには 'No' を選択します
+
+
+. ロールベースアクセス制御方式を指定します。指定できる値は「 native 」と「 d fm 」です。
++
+** 「 native 」を選択して、「 /vol/vol0/sdprbac/sdhost-name.prbac 」または「 /vol/vol0/sdprbac/sdgenericname.prbac 」に格納されている制御ファイルを使用して、ホストのアクセス権限を確認します
+** 「 d fm 」を選択すると、 Operations Manager コンソールを使用してアクセス権を確認できます。
++
+
+NOTE: DataFabric Manager を設定せずに「 RBAC メソッド」として「 dfm 」を選択すると、 Protection Manager 統合を有効にしないで RBAC メソッドを「 dfm 」として選択したことを示す警告メッセージが表示されます。
+
+
+
+. SMVI の統合を有効にして、ゲスト OS で RDM LUN を作成します。
++
+** ゲスト OS で RDM LUN を作成するには 'yes' を選択します次に、 SMVI Server の IP アドレス、ユーザ名、パスワードを入力します。
+** このオプションをスキップするには 'no' を選択します
++
+
+NOTE: SMVI を設定するこの手順では、転送プロトコルが FCP でホストオペレーティングシステムが solaris_x86 の場合にのみプロンプトが表示されます。
+
+
+
+. ストレージ・システムと通信するには、「 https 」または「 http 」を指定します。
+. 最後に 'napdrive.conf ファイルの設定変更を保存し ' デーモンを再起動します
++
+** 「はい」を選択すると、 SnapDrive デーモンが再起動され、設定の変更が反映されます。
+** 「いいえ」を選択すると、「 napdrive.conf 」ファイルで変数の値が変更されますが、変更は反映されません。
+
+
+
+
+SnapDrive は 'napdrive.conf ファイルの次の変数を変更します
+
+* `_contact-http-dfm_port_`
+* `-contact-ssl-dfm_port_`
+* `_use-https-to-dfm_`
+* `_default-transport_`
+* `_use-https-to-filer_`
+* 「 _fstype_` 」
+* `_multipathing-type_`
+* `_vmtype_`
+* `_rbac メソッド _
+* `_rbac キャッシュ _`
+

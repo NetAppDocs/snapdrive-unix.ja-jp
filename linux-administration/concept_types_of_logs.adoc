@@ -1,0 +1,30 @@
+---
+permalink: linux-administration/concept_types_of_logs.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, log, file, troubleshoot, audit, recovery, trace 
+summary: SnapDrive for UNIX では、さまざまなタイプのログファイルがサポートされます。これは、 SnapDrive for UNIX が想定どおりに機能しない場合のトラブルシューティングに役立ちます。 
+---
+= ログのタイプ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、さまざまなタイプのログファイルがサポートされます。これは、 SnapDrive for UNIX が想定どおりに機能しない場合のトラブルシューティングに役立ちます。
+
+* 監査ログ
++
+SnapDrive for UNIX では、すべてのコマンドとその戻りコードが監査ログに記録されます。SnapDrive for UNIX では、コマンドを開始するとエントリが作成され、コマンドが完了するとエントリが作成されます。このコマンドのあとのエントリには、コマンドのステータスと完了時間の両方が表示されます。
+
+* リカバリログ
++
+一部の SnapDrive for UNIX 処理では、中断されてもシステムが不整合状態のままになるか、使用可能な状態を下回る可能性があります。この状況は、ユーザがプログラムを終了した場合、または操作の途中でホストがクラッシュした場合に発生する可能性があります。リカバリログには、 Snap restore 処理のステップが含まれています。このガイドには、手動によるリカバリプロセスをテクニカルサポートが支援できるように、実行する手順と実行の進捗状況が記載されています。
+
+* トレースログ
++
+SnapDrive for UNIX レポートは、問題の診断に役立つ情報を提供します。問題が発生した場合は、ネットアップテクニカルサポートがこのログファイルを要求することがあります。
+
++
+SnapDrive 4.0 for UNIX では、 SnapDrive for UNIX デーモン・サービスが導入されています。SnapDrive for UNIX コマンドを実行するには、デーモンが実行されている必要があります。コマンドが並列で実行されている場合でも、デーモン・トレースはコマンドごとに実行する必要があります。ログファイルの場所と名前は、 /var/log/sd-trace.log です。これらのトレースファイルには、コマンド固有のトレースエントリのみが含まれています。デーモン実行のためのトレース・ログは ' 別のトレース・ファイル '/var/log/sd-daemon-trace.log' に記録されます
+
+

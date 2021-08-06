@@ -1,0 +1,22 @@
+---
+permalink: aix/concept_the_storageconnect_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, connect, command 
+summary: SnapDrive の storage connect コマンドを使用して、ストレージエンティティをホストに接続します。このコマンドを使用して、 LUN とストレージエンティティをホストに接続できます 
+---
+= storage connect コマンドを使用します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive storage connect コマンドは ' ストレージ・エンティティをホストに接続しますこのコマンドを使用して、 LUN とストレージエンティティをホストに接続できます
+
+SnapDrive storage connect コマンドを使用して、次の接続先に接続します。
+
+* LUN
+* LUN 上に直接作成されるファイルシステム
+* LUN 上に作成されたディスクグループ、ホストボリューム、およびファイルシステム
+
+
+SnapDrive storage connect` コマンドを入力して LUN をホストに接続すると、 SnapDrive for UNIX は必要な検出とマッピングを実行します。LUN の内容は変更されません。

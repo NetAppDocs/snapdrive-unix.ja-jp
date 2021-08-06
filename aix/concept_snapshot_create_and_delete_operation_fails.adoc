@@ -1,0 +1,114 @@
+---
+permalink: aix/concept_snapshot_create_and_delete_operation_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, delete, operation, fail 
+summary: LUN がビジー状態のため、 Snapshot の作成処理と削除処理でストレージシステム上の Snapshot コピーを削除できません。 
+---
+= Snapshot の作成処理と削除処理が失敗する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+LUN がビジー状態のため、 Snapshot の作成処理と削除処理でストレージシステム上の Snapshot コピーを削除できません。
+
+次のエラーメッセージが表示されます。
+
+[listing]
+----
+0001-124 Admin error: Failed to remove snapshot <snap-name> on
+filer <filer-name>: LUN clone
+----
+このエラーが発生し、次の条件に該当する場合は Snapshot コピーを直接削除できない可能性があります。
+
+* ディスクグループは複数のストレージシステムにまたがります。
+* 次の SnapDrive コマンドは、 50 回以上ループで実行されます（繰り返しの回数はホストオペレーティングシステムによって異なります）。
++
+** SnapDrive storage create
+** SnapDrive snap create
+** SnapDrive storage delete
+** SnapDrive スナップ・リストア
+** SnapDrive スナップ接続
+** SnapDrive storage delete
+** SnapDrive snap delete
+
+
+
+
+この時点で、ストレージ・システム上の Snapshot コピーのステータスは「 *LUNs-bBusy * 」と表示され、このステータスは数時間延長されます。
+
+
+
+== 回避策
+
+|===
+| * if...* | * 次に ... * 
+
+
+ a| 
+Snapshot コピー内のクローン LUN のうち、ホストに接続されていないものがあります。
+ a| 
+Snapshot コピーを削除するには、次のいずれかを実行します。
+
+* 「 filer split clone 」コマンドを使用して、クローン LUN をストレージ・システムからスプリットします。
+* クローン LUN を削除します。
+
+
+
+
+ a| 
+Snapshot コピー内のクローン LUN のうち、ホストに接続されていないものがあります。
+ a| 
+次の手順を実行します。
+
+. lun snap disconnect コマンドを使用 SnapDrive して、クローニングされた LUN をホストから切断します。
+. クローン LUN を削除します。
+. Snapshot コピーを削除します。
+
+
+
+
+ a| 
+次のいずれかがあります。
+
+* 他の Snapshot コピーにも存在する、 Snapshot コピー内のクローン LUN
+* クローン LUN をバックアップします
+
+ a| 
+次の手順を実行します。
+
+. ストレージ・システムのコマンド・プロンプトで、「 lun snap usage -s <volumename> <snap-name> 」コマンドを実行します
++
+次の例に示すように、クローニングされた LUN の Snapshot コピーが含まれている Snapshot コピーの名前が表示されます。
+
++
+[listing]
+----
+tonic*> lun snap usage vol1
+james_lun (filer view)
+mpiotest2:
+LUN:
+/vol/vol1/.snapshot/mpiotest2/d
+hilip_0
+Backed By:
+/vol/vol1/.snapshot/dhilip_lun/
+james
+----
+. 次の例に示すように、 lun snap usage コマンドの出力と同じ順序で、ストレージシステムから Snapshot コピーを削除します。
++
+'snap delete vol1 mpiotest2`
+
++
+
+NOTE: 削除する Snapshot コピーが他のホストで使用されていないことを確認します。アクセス中の場合は削除できません。
+
+
+
+
+
+ a| 
+クローン LUN がありません
+ a| 
+ストレージ・システム上の Snapshot コピーの [LUNs - Busy （ LUN - ビジー） ] ステータスが消えるまで待ちます
+
+|===

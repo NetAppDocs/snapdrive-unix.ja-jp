@@ -1,0 +1,20 @@
+---
+permalink: linux-installation-cmode/task_creating_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, snapshot, copy 
+summary: 複数のファイルシステム、ホストボリューム、 LUN 、またはディスクグループの Snapshot コピーを作成するには、ネットワーク接続型ストレージでストレージエリアネットワーク（ SAN ）および NFS ボリューム（ NAS ）を使用している間に 1 つのコマンドを実行します。 
+---
+= Snapshot コピーを作成します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Network-Attached Storage （ NAS ；ネットワーク接続型ストレージ）内の Storage Area Network （ SAN ；ストレージエリアネットワーク）ボリュームと NFS ボリュームを使用している間に、 1 つのコマンドを使用することで、複数のファイルシステム、ホストボリューム、 LUN 、またはディスクグループの Snapshot コピーを作成できます。
+
+.手順
+. Snapshot コピーを作成
++
+`* SnapDrive snap create -fs_file_name _spec_-snapname_snapshot_copy_name_*`
+
+

@@ -1,0 +1,20 @@
+---
+permalink: aix/concept_considerations_forrestoring_asnapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, considerations, restore, snapshot, copy 
+summary: Snapshot コピーをリストアする前に、ファイルシステムを使用していないこと、およびリストアプロセスを中断しないことを確認してください。 
+---
+= Snapshot コピーのリストアに関する考慮事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot コピーをリストアする前に、ファイルシステムを使用していないこと、およびリストアプロセスを中断しないことを確認してください。
+
+Snapshot コピーをリストアする前に、次の重要な情報を考慮してください。
+
+* リストアするファイルシステムのディレクトリにないことを確認します。SnapDrive snap restore コマンドは ' 情報をリストアするファイル・システム上のディレクトリ以外の任意のディレクトリから実行できます
+* Ctrl+C キーを押してリストア処理を中断しないでくださいこのようにすると、システムが使用できなくなる可能性があります。その場合は、リカバリのためにネットアップテクニカルサポートへの連絡が必要になることがあります。
+* NFS エンティティをボリュームにエクスポートする場合は、 SnapDrive snap restore コマンドが正常に機能するように、 Anonymous User ID オプションを「 0 」に設定します。
+

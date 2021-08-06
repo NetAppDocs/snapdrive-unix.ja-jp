@@ -1,0 +1,18 @@
+---
+permalink: linux-administration/concept_checking_host_information.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, host, check 
+summary: 一部のホストシステムでは、新しい LUN を作成する前に準備が必要です。SnapDrive for UNIX では、以下の手順を実行して、ホストで新しい LUN を作成する準備をするコマンドが用意されています。 
+---
+= ホスト情報を確認しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+一部のホストシステムでは、新しい LUN を作成する前に準備が必要です。SnapDrive for UNIX では、以下の手順を実行して、ホストで新しい LUN を作成する準備をするコマンドが用意されています。
+
+新しい LUN SnapDrive を作成する前にオペレーティング・システムで準備が必要な場合は、 lun config コマンドを使用できます。lun config コマンドを使用 SnapDrive すると、ホストにマッピングされたストレージ・システム上に作成された LUN の数を確認できます。
+
+
+NOTE: すべてのホストプラットフォームオペレーティングシステムでホストを準備する必要があるわけではありません。現時点では、これらのコマンドは Linux ホストでのみ必要です。

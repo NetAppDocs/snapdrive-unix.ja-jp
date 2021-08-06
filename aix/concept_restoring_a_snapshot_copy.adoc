@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_restoring_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, snapshot, copy 
+summary: 単一のストレージエンティティまたは複数のストレージエンティティの Snapshot コピーをリストアできます。 
+---
+= Snapshot コピーをリストアしています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+単一のストレージエンティティまたは複数のストレージエンティティの Snapshot コピーをリストアできます。

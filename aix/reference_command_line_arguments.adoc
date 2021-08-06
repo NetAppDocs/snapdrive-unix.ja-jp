@@ -1,0 +1,207 @@
+---
+permalink: aix/reference_command_line_arguments.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, line, argument 
+summary: SnapDrive for UNIX は、特定の形式の引数を取ります。 
+---
+= コマンドライン引数
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX は、特定の形式の引数を取ります。
+
+次の表に、キーワードで指定できる引数を示します。
+
+SnapDrive type_name operation_name[_<keywords/option><arguments>_]` の形式を使用します。たとえば、ホスト・ファイル・システム「 /mnt/dir 」から「 _snap_hr 」という名前の Snapshot コピーを作成する場合は、次のコマンド・ラインを入力します。
+
+`* SnapDrive snap create -fs/mnt/dir -snapname_snap_hr_.*`
+
+|===
+| 引数 | 説明 
+
+
+ a| 
+dest_fspec
+ a| 
+ディスクグループまたは LUN を接続したあとにターゲットエンティティにアクセスできるようにするための名前。
+
+
+
+ a| 
+DgName の略
+ a| 
+ディスクグループまたはボリュームグループの名前。
+
+
+
+ a| 
+D_LUN_name
+ a| 
+SnapDrive for UNIX が Snapshot コピーの新たに接続したコピーで LUN を使用できるようにするために使用するデスティネーション名を指定できます。
+
+
+
+ a| 
+ファイラー名
+ a| 
+ストレージシステムの名前。
+
+
+
+ a| 
+filer_path
+ a| 
+ストレージシステムオブジェクトへのパス名。この名前にはストレージシステムの名前とボリュームを含めることができますが、 SnapDrive for UNIX で、前の引数で指定した値に基づいて欠落しているコンポーネントのデフォルト値を使用できる場合は省略できます。パス名の例を次に示します。
+
+* 「 test_filer ： /vol/vol3/qtree_2` 」になります
+* /vol/vol3/qtree_2`
+* 'qtree_2'
+
+
+
+
+ a| 
+file-spec
+ a| 
+ホストボリューム、 LUN 、ディスクまたはボリュームグループ、ファイルシステム、 NFS ディレクトリツリーなどのストレージエンティティの名前。
+
+一般に、 file-spec 引数は、次のいずれかとして使用します。
+
+* SnapDrive for UNIX で Snapshot コピーの作成または Snapshot コピーからのリストアを実行するオブジェクト
+* ストレージのプロビジョニング時に作成または使用するオブジェクト
+
+
+すべて同じタイプのオブジェクトである必要はありません。複数のホストボリュームを指定する場合は、すべて同じボリュームマネージャに属している必要があります。
+
+冗長なディスクグループまたはホストボリュームに解決するこの引数の値を指定すると、コマンドは失敗します。
+
+不正な使用例 : この例では、 dg1 にホストボリューム HV1 と HV2 があり、ファイルシステム fs1 と fs2 があると仮定しています。その結果、次の引数は冗長なディスクグループまたはホストボリュームを含むため失敗します。
+
+dG_dg1_-hostvol dg1/hV1'
+
+dG_dg1_`
+
+`-fs/fs1`
+
+-hostvol dg1/HV1-fs/fs1'
+
+正しい使用例：この例は、この引数の正しい使用方法を示しています。
+
+-hostvoldg1/hv1dg1/hv2`
+
+「 -fs/fs1/fs2 」と入力します
+
+--hostvoldg1/HV1-fs/fs2`
+
+
+
+ a| 
+fspec_set
+ a| 
+snap connect コマンドで次の項目を識別するために使用します。
+
+* ホスト LVM のエンティティ
+* LUN に格納されているファイルシステム
+
+
+また、この引数では、 SnapDrive for UNIX が、 Snapshot コピーの新たに接続されたコピー内のエンティティを使用できるようにするときに使用する一連のデスティネーション名を指定できます。
+
+fspec_set の形式は '{-vg|-dg|-fs|-lvol|-hostvol}_src_fspec_[_dest | dest_fspec_][{-destvd|-destvg }_dg_name_][{-ddestlv|-desv }_lv_name_]````{-destlv|-desv ｝ です
+
+
+
+ a| 
+host_lvm_fspec
+ a| 
+storage create コマンドの実行時に、ファイルシステム、論理ボリューム、またはディスクグループを作成するかどうかを指定できます。この引数には、次の 3 つの形式のいずれかを指定できます。使用する形式は、作成するエンティティによって異なります。
+
+
+NOTE: dg オプションと -vg オプションは同義語です OS によってはディスク・グループと呼ばれるものもあり ' ボリューム・グループと呼ばれるものもありますまた、「 -lvol 」と「 -hostvol 」も同義語です。このガイドでは '-ddg を使用してディスク・グループとボリューム・グループの両方を参照し '-hostvol を使用して論理ボリュームとホスト・ボリュームの両方を参照します
+
+
+
+ a| 
+ファイル・システムを作成するには ' 次の形式を使用します [-fs file_spec[-fstype_type_][-fsopts_options_][-hostvol_file_dspec_][-dG_dG_NAME_DG_] 論理ボリュームまたはホスト・ボリュームを作成するには ' 次の形式を使用します [-dG_file_dG_spec] dg ファイル名または dg-dg ファイル名を使用してください
+
+作成する最上位のエンティティに名前を付ける必要があります。基になるエンティティの名前を指定する必要はありません。基になるエンティティの名前を指定しない場合、 SnapDrive for UNIX によって内部で生成された名前でそれらのエンティティが作成されます。
+
+SnapDrive for UNIX でファイルシステムを作成するように指定する場合は、ホスト LVM で SnapDrive for UNIX がサポートするタイプを指定する必要があります。これらのタイプには 'JFS2 または VxFS が含まれます
+
+オプション「 -fsopts 」は、新しいファイルシステムを作成するホスト操作に渡すオプションを指定するために使用されます。たとえば、「 mkfs 」のように指定します。
+
+
+
+ a| 
+IG_name
+ a| 
+イニシエータグループの名前。
+
+
+
+ a| 
+long_filer_path
+ a| 
+ストレージシステム名、ボリューム名、および場合によってはそのボリューム内のその他のディレクトリ要素とファイル要素を含むパス名。長いパス名の例を次に示します。
+
+「 test_filer ： /vol/vol3/qtree_2` 」になります
+
+10.10.10.1 ： /vol/Vol4/lun_21`
+
+
+
+ a| 
+long_lun_name
+ a| 
+ストレージシステム名、ボリューム名、および LUN 名を含む名前。次に、長い LUN 名の例を示します。
+
+「 test_filer ： /vol/vol1/Luna 」という名前になります
+
+
+
+ a| 
+long_snap_name
+ a| 
+ストレージシステム名、ボリューム名、および Snapshot コピー名を含む名前。次に、長い Snapshot コピー名の例を示します。「 test_filer ： /vol/ account_vol ： snap_20040202 」
+
+SnapDrive snap show コマンドと SnapDrive snap delete コマンドを使用すると、ワイルドカードとしてアスタリスク（ * ）文字を使用して、 Snapshot コピー名の任意の部分に一致させることができます。ワイルドカード文字を使用する場合は、 Snapshot コピー名の末尾にワイルドカード文字を付ける必要があります。名前の他のポイントでワイルドカードを使用していると、 SnapDrive for UNIX でエラーメッセージが表示されます。
+
+例：この例では、「 snap show `command 」と「 snap delete 」コマンドの両方でワイルドカードを使用しています。「 snap show myfiler ： /vol/vol2 ： mysnap *` 」
+
+「 myfiler ： /vol/vol2/qtree1 ： /vol/vol1/qtree1 ： qtree_snap delete 10.10.10.10 ： /vol/vol2/vol2 ： mysnap * 10.10.10.11 ： /vol/vol3 ： yoursnap *
+
+ワイルドカードの制限事項： Snapshot コピー名の途中でワイルドカードを入力することはできません。たとえば、次のコマンド・ラインを使用すると、ワイルドカードが Snapshot コピー名の中央にあるため、エラー・メッセージが生成されます。「 banana ： /vol/vol1/vol1 ： my * snap
+
+
+
+ a| 
+LUN_name
+ a| 
+LUN の名前。この名前には、 LUN が配置されているストレージシステムとボリュームは含まれません。LUN 名の例： Luna を次に示します
+
+
+
+ a| 
+パス
+ a| 
+任意のパス名。
+
+
+
+ a| 
+prefix_string です
+ a| 
+ボリュームクローンの名前生成で使用されるプレフィックスです
+
+
+
+ a| 
+S_LUN_name
+ a| 
+「 _long_snap_name_` で指定された Snapshot コピーにキャプチャされる LUN エンティティを示します。
+
+|===
+* 関連情報 *
+
+xref:reference_storage_provisioning_command_lines.adoc[ストレージプロビジョニングのコマンドライン]

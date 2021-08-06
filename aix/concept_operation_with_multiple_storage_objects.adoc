@@ -1,0 +1,42 @@
+---
+permalink: aix/concept_operation_with_multiple_storage_objects.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, multiple, storage, object, operation 
+summary: 次の例は、特定の操作を実行する権限を持つユーザーでない場合に表示されるエラーメッセージを示しています。 
+---
+= 複数のストレージオブジェクトを使用する処理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+次の例は、特定の操作を実行する権限を持つユーザーでない場合に表示されるエラーメッセージを示しています。
+
+[listing]
+----
+[john]$ snapdrive storage show –all
+
+Connected LUNs and devices:
+
+device filename   adapter  path  size  proto  state  clone  lun path                           backing Snapshot
+----------------  -------  ----  ----  -----  -----  -----  --------                           ---------------
+/dev/sdao            -     -     200m  iscsi  online  No    storage_array1:/vol/vol2/passlun1           -
+/dev/sda1            -     -     200m  fcp    online  No    storage_array1:/vol/vol2/passlun2           -
+
+Host devices and file systems:
+
+dg: testfs1_SdDg                dgtype lvm
+hostvol: /dev/mapper/testfs1_SdDg-testfs1_SdHv  state: AVAIL
+fs: /dev/mapper/testfs1_SdDg-testfs1_SdHv       mount point: /mnt/testfs1 (persistent) fstype jfs2
+
+device filename   adapter  path  size  proto  state   clone  lun path                                backing Snapshot
+----------------  -------  ----  ----  -----  -----   -----  --------                                ---------
+/dev/sdn             -      P    108m  iscsi  online   No    storage_array1:/vol/vol2/testfs1_SdLun         -
+/dev/sdn1             -      P    108m  fcp  online   No    storage_array1:/vol/vol2/testfs1_SdLun1         -
+
+0002-719 Warning: SD.Storage.Read access denied on volume storage_array1:/vol/vol1 for user unix_host\john on Operations Manager server ops_mngr_server
+----
+John は、 vol1 ではなく vol2 上のストレージエンティティのリストを表示する権限を持っています。SnapDrive for UNIX は、 vol1 のエンティティを表示し、 vol2 に関する警告メッセージを表示します。
+
+
+NOTE: 「 storage list 」、「 storage show 」、「 snap list 」、「 snap show 」コマンドの場合、 SnapDrive for UNIX はエラーではなく警告を表示します。

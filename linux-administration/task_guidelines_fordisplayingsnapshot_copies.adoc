@@ -1,0 +1,31 @@
+---
+permalink: linux-administration/task_guidelines_fordisplayingsnapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, wildcard, copy 
+summary: ワイルドカードを使用して Snapshot コピーを表示できます。特定のオブジェクトに存在するすべての Snapshot コピーを表示できます。 
+---
+= Snapshot コピーの表示に関するガイドライン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ワイルドカードを使用して Snapshot コピーを表示できます。特定のオブジェクトに存在するすべての Snapshot コピーを表示できます。
+
+Snapshot コピーを使用する前に、次の点に注意してください。
+
+* Snapshot コピー名には、ワイルドカード（ * ）文字を使用できます。Snapshot の表示処理では、ワイルドカード文字を使用して、特定のパターンまたは特定のボリューム上のすべての Snapshot コピー名に一致するすべての Snapshot コピー名を表示できます。Snapshot コピー名にワイルドカードを使用すると、次のルールが適用されます。
++
+** ワイルドカードは名前の末尾でのみ使用できます。ワイルドカードは、 Snapshot コピー名の先頭または途中では使用できません。
+** Snapshot コピー名のストレージ・システムまたはストレージ・システム・ボリュームのフィールドでは、ワイルドカードを使用できません。
+
+
+* このコマンドを使用して、ストレージシステムとそのボリューム、ディスクグループ、ホストボリュームグループ、ファイルシステム、ホストボリュームなど、特定のオブジェクトのすべての Snapshot コピーを一覧表示することもできます。 論理ボリュームを定義できます。
+* SnapDrive snap show コマンドを入力したときに 'UNIX 用の SnapDrive ではどの Snapshot コピーも見つからなかった場合は ' 一致する Snapshot コピーがありませんというメッセージが表示されます コマンドラインで引数を指定し、引数の一部が存在しない場合、 SnapDrive for UNIX は Snapshot コピーが存在する引数の一部を返します。また、無効な引数も表示されます。
+* SnapDrive snap create コマンドが突然中断されると ' 不完全な '.stoc.xml' ファイルがストレージ・システム上のボリュームに格納されますこれにより ' ストレージ・システムによって作成されるスケジュールされたすべての Snapshot コピーには ' 不完全な `.stoc.xml` ファイルのコピーが作成されますSnapDrive snap list コマンドが正常に動作するようにするには ' 次の手順を実行します
+
+
+.手順
+. ボリューム内の不完全な `.stoc.xml' ファイルを削除します
+. 不完全な「 .stoc.xml」 ファイルが格納されたストレージ・システムで作成され、スケジュールされている Snapshot コピーを削除します。
+

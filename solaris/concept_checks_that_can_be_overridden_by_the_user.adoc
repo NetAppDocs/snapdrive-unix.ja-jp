@@ -1,0 +1,27 @@
+---
+permalink: solaris/concept_checks_that_can_be_overridden_by_the_user.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, user, check, ovverride 
+summary: ボリュームベースの SnapRestore を実行する前に、 SnapDrive for UNIX では、 -force オプションを使用してユーザが上書きできるチェックがいくつか実行されます。これらのチェックは、ボリュームベースの SnapRestore を安全に使用するために必要です。 
+---
+= ユーザーがオーバーライドできるチェック
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリューム・ベースの SnapRestore を実行する前に 'UNIX 用 SnapDrive は '-force オプションを使用してユーザーが上書きできるチェックをいくつか実行しますこれらのチェックは、ボリュームベースの SnapRestore を安全に使用するために必要です。
+
+システムが実行するさまざまなチェックに従うことをお勧めしますが ' これらのチェックは '-force オプションを使用してオーバーライドできます
+
+次の SnapDrive for UNIX のボリュームベースの SnapRestore チェックを無効にできます。
+
+* SnapDrive for UNIX は、 crash-consistent でない Snapshot コピー内の LUN をチェックします。Snapshot コピー内にアプリケーションと整合性のない LUN が見つかった場合は、警告が表示されます。
+* SnapDrive for UNIX は、 Snapshot コピーの作成後に作成されたアクティブボリュームに LUN が追加されているかどうかをチェックします。SnapDrive for UNIX で追加の LUN が検出されると、アクティブボリューム内のそれらの LUN も失われることを警告するメッセージが表示されます。
+* SnapDrive for UNIX は、新しい Snapshot コピーをチェックします。これらの新しい Snapshot コピーはリストアされず、失われます。
+* SnapDrive for UNIX は、ボリューム内の通常のファイル（ローカルホストから認識されるファイル）をチェックします。
+* SnapDrive for UNIX は、 NFS エクスポートをチェックします。
+* SnapDrive for UNIX は CIFS 共有をチェックします。
+
+
+SnapDrive 3.0 for UNIX 以前を使用して作成された Snapshot コピーについては、ボリュームベースの SnapRestore プレビューで前述の 2 つのチェックを実行することはできません。「 -force 」オプションを指定した場合は、ボリューム・ベースの SnapRestore 実行中に、これらのチェックに不合格になり続行するようにプロンプト・メッセージが表示されます。

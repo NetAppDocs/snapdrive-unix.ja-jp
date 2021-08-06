@@ -1,0 +1,22 @@
+---
+permalink: aix/concept_the_storagedisconnect_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, disconnect, command 
+summary: SnapDrive storage create SnapDrive コマンドまたは lun storage connect コマンドを使用して、ホストにマッピングされていた LUN またはストレージエンティティを削除します。 
+---
+= storage disconnect コマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「 storage disconnect 」処理では、 SnapDrive storage create コマンドまたは SnapDrive storage connect コマンドを使用して、ホストにマッピングされた LUN またはストレージエンティティが削除されます。
+
+SnapDrive storage disconnect コマンドを使用して、次の接続を切断します。
+
+* LUN
+* LUN 上に直接作成されるファイルシステム
+* LUN 上に作成されたディスクグループ、ホストボリューム、およびファイルシステム
+
+
+SnapDrive for UNIX が LUN マッピングを削除すると、 LUN に含まれているディスクグループまたはファイルシステムがエクスポートされます。この操作によってディスクとファイルシステムがエクスポート済みとしてマークされるのは、 LUN の内容からマッピングを切断した場合の唯一の変更です。

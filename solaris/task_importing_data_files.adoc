@@ -1,0 +1,21 @@
+---
+permalink: solaris/task_importing_data_files.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, import, data, file 
+summary: SnapDrive for UNIX でサポートされている最新の構成がツールに表示されるように、サポートマトリックスの最新データをダウンロードして構成チェッカーツールを更新できます。更新されたデータファイルを使用した構成チェックツールでは、 SnapDrive for UNIX でサポートされる構成がチェックされ、システム内のサポートされるすべてのコンポーネントがリストされます。 
+---
+= データファイルをインポートする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX でサポートされている最新の構成がツールに表示されるように、サポートマトリックスの最新データをダウンロードして構成チェッカーツールを更新できます。更新されたデータファイルを使用した構成チェックツールでは、 SnapDrive for UNIX でサポートされる構成がチェックされ、システム内のサポートされるすべてのコンポーネントがリストされます。
+
+.手順
+. ToolChest から最新のデータファイルをダウンロードします。
+. 最新のデータファイルをインポートします。
++
+*sdconfcheck import-file./confcheck_data.tar.gz*
+
+

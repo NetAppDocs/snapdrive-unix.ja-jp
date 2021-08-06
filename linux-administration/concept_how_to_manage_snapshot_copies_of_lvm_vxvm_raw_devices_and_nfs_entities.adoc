@@ -1,0 +1,31 @@
+---
+permalink: linux-administration/concept_how_to_manage_snapshot_copies_of_lvm_vxvm_raw_devices_and_nfs_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, lvm, nfs, raw, device 
+summary: SnapDrive コマンドを使用して、 LVM 、 raw デバイス、および NFS エンティティの Snapshot コピーを作成、リストア、および管理できます。 
+---
+= LVM 、 raw デバイス、および NFS エンティティの Snapshot コピーを管理する方法
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive コマンドを使用して、 LVM 、 raw デバイス、および NFS エンティティの Snapshot コピーを作成、リストア、および管理できます。
+
+ストレージエンティティの Snapshot コピーを作成、リストア、管理するには、ホストでコマンドを実行する必要があります。
+
+* ボリュームマネージャのエンティティ
++
+ボリュームマネージャのエンティティは、ホストボリュームを含むディスクグループと、ホストボリュームマネージャを使用して作成したファイルシステムです。
+
+* raw エンティティ
++
+raw エンティティとは、ボリュームやディスクグループを作成せずにファイルシステムを含む LUN または LUN のことであり、ホストに直接マッピングされます。
+
+* NFS エンティティ
++
+NFS エンティティは、 NFS ファイルおよびディレクトリツリーです。
+
+
+
+作成する Snapshot コピーは、複数のストレージシステムおよびストレージシステムボリュームに存在できます。SnapDrive は、 Snapshot コピー内のストレージエンティティに対する読み取り権限または書き込み権限をチェックして、すべての Snapshot コピーデータが crash-consistent であることを確認します。データが crash-consistent でないかぎり、 SnapDrive は Snapshot コピーを作成しません。

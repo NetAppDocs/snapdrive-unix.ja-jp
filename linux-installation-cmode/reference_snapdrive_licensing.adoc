@@ -1,0 +1,46 @@
+---
+permalink: linux-installation-cmode/reference_snapdrive_licensing.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, license, requirements, unix 
+summary: SnapDrive for UNIX をインストールする前に、必要なソフトウェアとプロトコルの適切なライセンスがあることを確認する必要があります。 
+---
+= SnapDrive for UNIX のライセンス要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX をインストールする前に、必要なソフトウェアとプロトコルの適切なライセンスがあることを確認する必要があります。
+
+SnapDrive for UNIX のライセンス要件は次のとおりです。
+
+|===
+| 使用許諾 | 説明 | インストール先 
+
+
+ a| 
+SnapRestore
+ a| 
+SnapDrive for UNIX で Snapshot コピーをリストアする場合に必要になるライセンスです。
+ a| 
+ネットアップストレージシステム
+
+
+
+ a| 
+FlexClone
+ a| 
+Snapshot コピーのクローニングを行うためのオプションのライセンスです。
+ a| 
+ネットアップストレージシステム
+
+
+
+ a| 
+プロトコル
+ a| 
+LUN に必要です。 iSCSI または FC ライセンスです。
+ a| 
+ネットアップストレージシステム
+
+|===

@@ -1,0 +1,18 @@
+---
+permalink: linux-administration/concept_access_permissions_on_a_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, permission 
+summary: アクセス権限は、ホストが特定の Snapshot コピーおよびストレージ処理を実行できるかどうかを示します。アクセス権限は、 SnapDrive storage show 処理や storage list 処理には影響しません。SnapDrive を使用すると、ストレージシステム上のファイル内の各ホストのアクセス権限を指定できます。 
+---
+= ストレージシステムのアクセス権限
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アクセス権限は、ホストが特定の Snapshot コピーおよびストレージ処理を実行できるかどうかを示します。アクセス権限は、 SnapDrive storage show 処理や storage list 処理には影響しません。SnapDrive を使用すると、ストレージシステム上のファイル内の各ホストのアクセス権限を指定できます。
+
+また、指定したホストの権限ファイルが見つからない場合に SnapDrive で実行する必要がある処理を指定することもできます。アクションを指定するには 'all-access if -rbac -unspecified の構成ファイルに値を設定しますアクセス権限を変更してストレージシステムへのアクセスを有効または無効にすることもできます。
+
+
+NOTE: SnapDrive 4.0 for UNIX 以降では、ロールベースアクセス制御機能に応じてストレージ処理を実行できます。

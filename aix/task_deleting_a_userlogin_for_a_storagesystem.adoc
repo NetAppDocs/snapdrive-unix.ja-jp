@@ -1,0 +1,32 @@
+---
+permalink: aix/task_deleting_a_userlogin_for_a_storagesystem.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, user, login, storage 
+summary: 1 つ以上のストレージシステムのユーザログインを削除するには、 SnapDrive config delete コマンドを実行します。 
+---
+= ストレージシステムのユーザログインを削除する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive config delete コマンドを実行すると '1 つ以上のストレージ・システムのユーザー・ログインを削除できます
+
+root ユーザとしてログインしていることを確認します。
+
+.手順
+. 次のコマンドを入力します。
++
+'*SnapDrive config delete_apply_name[apply_name] _ *
+
++
+`_apply_name_` は ' ユーザー・ログイン情報を削除するストレージ・システムの名前です
+
++
+SnapDrive for UNIX を使用すると、指定したストレージシステムのユーザ名またはパスワードのログイン情報が削除されます。
+
++
+
+NOTE: SnapDrive for UNIX からストレージ・システムにアクセスできるようにするには、新しいユーザ・ログインを指定する必要があります。
+
+

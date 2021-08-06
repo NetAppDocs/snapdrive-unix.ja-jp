@@ -1,0 +1,26 @@
+---
+permalink: linux-administration/concept_mixed_environments_of_san_and_nfs.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, san, nfs, mixed, interface, management 
+summary: SAN と NFS が混在する環境では、管理インターフェイスとデータインターフェイスをマッピングして、最初のデータインターフェイスが管理インターフェイスと同じになるようにする必要があります。 
+---
+= SAN と NFS が混在する環境で
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SAN と NFS が混在する環境では、管理インターフェイスとデータインターフェイスをマッピングして、最初のデータインターフェイスが管理インターフェイスと同じになるようにする必要があります。
+
+次の例では、管理インターフェイスは「 10.72.197.91' データインターフェイスは「 10.72.220.91' 」です。
+
+[listing]
+----
+
+#snapdrive config set -mgmtpath f3050-197-91 f3050-197-91 f3050-197-91 f3050-220-91
+
+#snapdrive config list -mgmtpath
+ system name        management interface   datapath interface
+ --------------------------------------------------------------------
+ bart               10.72.197.91           10.72.197.91|10.72.220.91
+----

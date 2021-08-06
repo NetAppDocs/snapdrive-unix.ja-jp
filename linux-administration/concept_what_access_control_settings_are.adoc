@@ -1,0 +1,48 @@
+---
+permalink: linux-administration/concept_what_access_control_settings_are.html 
+sidebar: sidebar 
+keywords: access, control, settings, snap, snapdrive, user, storage, files 
+summary: ユーザアクセスを判別するために、 SnapDrive for UNIX は、ストレージシステムのルートボリューム内の 2 つのうちの 1 つのアクセス権ファイルをチェックします。アクセス制御を評価するには、対象のファイルに設定されているルールを確認する必要があります。 
+---
+= アクセス制御の設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ユーザアクセスを判別するために、 SnapDrive for UNIX は、ストレージシステムのルートボリューム内の 2 つのうちの 1 つのアクセス権ファイルをチェックします。アクセス制御を評価するには、対象のファイルに設定されているルールを確認する必要があります。
+
+* 「 dhost-name.prbac 」ファイルは「 /vol/vol0/sdprbac 」ディレクトリ（ SnapDrive 権限ロールベースのアクセス制御）にあります。
++
+ファイル名は 'dbhost-name.prbac' ですここで '_host-name_' は ' アクセス権が適用されるホストの名前ですストレージシステムに接続されている各ホストのアクセス権ファイルを作成できます。SnapDrive config access コマンドを使用すると ' 特定のストレージ・システム上のホストに使用できるアクセス権に関する情報を表示できます
+
++
+「 dhost-name .prbac 」が存在しない場合は、「 dgeneric.prbac 」ファイルを使用してアクセス権を確認します。
+
+* 「 dgeneric.prbac 」ファイルもディレクトリ「 /vol/vol0/sdprbac 」にあります。
++
+ファイル名「 dgeneric.prbac 」は、ストレージシステム上の「 dbhost-name .prbac 」ファイルにアクセスできない複数のホストのデフォルトアクセス設定として使用されます。
+
+
+
+アクセス権限を確認するには、「 dbhost -name.prbac 」ファイルと「 dbgeneric.prbac 」ファイルの両方が必要です。これにより、「 dbhost -name.prbac 」ファイルに指定された値が上書きされるため、アクセス権限が確認されます。
+
+「 bothsdhost-name.prbac 」ファイルと「 dgeneric.prbac 」ファイルがない場合は、「 'napdrive.conf 」ファイルに定義されているコンフィギュレーション変数「 _all-access -if-rbac - unspecified _ 」を確認します。
+
+あるホストから特定の vFiler ユニットへのアクセス制御の設定は手動で行います。特定のホストからのアクセスは、影響を受ける vFiler ユニットのルートボリュームにあるファイルによって制御されます。このファイルには '/vol/<vfiler root volume>/sdprbac/sdhost-name .prbac' が含まれていますここで '`_host-name_' は影響を受けるホストの名前で 'gethostname(3) から返されますこのファイルにアクセスできるホストから、このファイルが読み取り可能であり、書き込み可能でないことを確認してください。
+
+
+NOTE: ホスト名を確認するには 'hostname コマンドを実行します
+
+ファイルが空であるか、読み取り不能であるか、または形式が無効な場合、 SnapDrive for UNIX は処理へのホストアクセスを許可しません。
+
+あるホストから特定の SVM ユニットへのアクセス制御を手動で設定する必要があります。特定のホストからのアクセスは、影響を受ける SVM ユニットのルートボリュームにあるファイルによって制御されます。このファイルには '/vol/<vserver root volume>/sdhost-name .prbac' という名前が付けられていますここで host-name は影響を受けるホストの名前で 'gethostname(3)' から返されますこのファイルにアクセスできるホストから、このファイルが読み取り可能であり、書き込み可能でないことを確認してください。
+
+[NOTE]
+====
+ホスト・システムに Vserver のルート・ボリュームをマウントし、「 * 。 prbac 」ファイルを作成するには、次のコマンドを実行します。
+
+'*mount <vservername> ： / <mntpoint>*'
+
+====
+ファイルが見つからない場合、 SnapDrive for UNIX は「 napdrive.conf 」ファイルの設定変数「 _all-access if -rbac -unspecified _ 」をチェックします。この変数が on （デフォルト値）に設定されている場合 ' ホストはそのストレージ・システム上のこれらすべての操作に完全にアクセスできますこの変数が「 off 」に設定されている場合、 SnapDrive for UNIX は、そのストレージ・システムのアクセス制御によって制御されるすべての操作を実行するホスト権限を拒否します。

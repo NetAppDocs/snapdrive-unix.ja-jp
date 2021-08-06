@@ -1,0 +1,33 @@
+---
+permalink: linux-administration/task_verifying_login_information_for_vserver.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, login, vserver, verify, config, command 
+summary: SnapDrive の config list コマンドを使用して、 SnapDrive for UNIX で SVM が設定されているかどうかを確認できます。 
+---
+= SVM のログイン情報を確認しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive の config list コマンドを使用して、 SnapDrive for UNIX で SVM が設定されているかどうかを確認できます。
+
+. 次のコマンドを入力します。
++
+SnapDrive 構成リスト
+
++
+このコマンドを実行すると、 SnapDrive for UNIX で指定したユーザ名または SVM が表示され、 SVM のパスワードは表示されません。
+
++
+次に、「 vsadmin 」を「 S torageSystem 」として表示する例を示します。
+
++
+[listing]
+----
+# snapdrive config list
+username    appliance name   appliance type
+-------------------------------------------
+vsadmin     clstr-vs2        StorageSystem
+----
+

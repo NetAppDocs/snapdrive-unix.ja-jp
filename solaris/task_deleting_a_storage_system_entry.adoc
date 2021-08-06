@@ -1,0 +1,31 @@
+---
+permalink: solaris/task_deleting_a_storage_system_entry.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, storage, mapping, host, information 
+summary: ホストシステムからストレージシステムのマッピング情報を削除できます。 
+---
+= ホストシステムからストレージシステムのマッピング情報を削除する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストシステムからストレージシステムのマッピング情報を削除できます。
+
+.手順
+. 次のコマンドを入力します。
++
+'*SnapDrive config migrate delete_new_storage_system_name_[_new_storage_system_name..._]*'
+
++
+** `_new_storage_system_name_` は、新しいストレージシステムの名前です。
+** '_[new_storage_system_name...]_ は '1 つのコマンド・ラインで複数のストレージ・システム名を削除できることを定義します
++
+[listing]
+----
+snapdrive config migrate delete roaster
+Deleted entry for appliance: roaster
+----
+
+
+

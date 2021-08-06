@@ -1,0 +1,25 @@
+---
+permalink: solaris/concept_what_volume_based_snaprestore_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snaprestore, volume 
+summary: ボリュームベース SnapRestore （ VBSR ）は、そのストレージオブジェクトをすべて含むボリュームをリストアします。ボリュームベースのリストアは、各ストレージオブジェクトを個別にリストアした場合よりも高速です。VBSR は FlexClone ボリュームおよび vFiler 構成とも連動します。VBSR for vFiler は Data ONTAP 7.3 以降で使用できます。 
+---
+= ボリュームベース SnapRestore とは
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Volume-Based SnapRestore （ VBSR ）は、ボリュームのストレージオブジェクトをすべて含むボリュームをリストアします。ボリュームベースのリストアは、各ストレージオブジェクトを個別にリストアした場合よりも高速です。VBSR は FlexClone ボリュームおよび vFiler 構成とも連動します。VBSR for vFiler は Data ONTAP 7.3 以降で使用できます。
+
+SnapDrive 3.0 for UNIX 以前では、ファイルシステム、ディスクグループ、ホストボリュームなどのホスト側エンティティ、またはアプリケーションと整合性のある Snapshot から NFS 経由で作成された通常のファイルの LUN をリストアできます。SnapDrive for UNIX では、 Data ONTAP で実装される単一ファイルの Snap リストア SFSR を使用します。SFSR は次のように機能します。
+
+* SFSR の処理中に通常のファイルを変更する場合は、 SFSR が完了するまで中断されます。
+* LUN の場合、 SFSR が LUN を利用でき、 I/O （読み取りと書き込みの両方）が許可されます。通常のファイルおよび LUN の SFSR には、リストアする LUN またはファイルのサイズによっては時間がかかる場合があります。
+
+
+したがって、 SFSR を使用した環境によっては、障害物となります。
+
+SnapDrive 4.0 for UNIX 以降では、ボリューム・ベースの Snapshot コピーを作成できます。VBSR の処理にかかる時間が大幅に短縮され、 CPU とストレージのリソースが不要になります。アクティブファイルシステム上のすべてのデータがリストアされます。この機能は、同じ Snapshot コピーからボリューム上のすべての LUN または通常のファイルをリストアする場合に使用できます。
+
+ボリュームベースの Snapshot コピーは、リストア処理に使用されるボリューム Snapshot コピーのあとに作成された Snapshot コピーがすべて削除されるため、注意が必要です。このボリュームに作成された新しいファイルと新しい LUN をすべて削除する必要があります。

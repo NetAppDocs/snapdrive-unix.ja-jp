@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_prerequisites_for_using_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, hardware, software, configuration 
+summary: ストレージシステムに応じて、 NFS ディレクトリツリーを使用する Fibre Channel （ FC ；ファイバチャネル）、 Internet Small Computer System Interface （ iSCSI ）、または Network File System （ NFS ；ネットワークファイルシステム）の構成を設定できます。 
+---
+= ハードウェアとソフトウェアの設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージシステムに応じて、 NFS ディレクトリツリーを使用する Fibre Channel （ FC ）、 Internet Small Computer System Interface （ iSCSI ）、または Network File System （ NFS ）のいずれかの構成を設定できます。

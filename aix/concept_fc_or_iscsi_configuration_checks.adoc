@@ -1,0 +1,29 @@
+---
+permalink: aix/concept_fc_or_iscsi_configuration_checks.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, fc, iscsi, configuration, check 
+summary: ファイバチャネルプロトコル（ FCP ）および Internet Small Computer System Interface （ iSCSI ）は、以前は独立したユーティリティとして配布されていましたが、 AIX Host Utilities で利用できる FCP と iSCSI の両方の構成サポートを確認できます。 
+---
+= FC または iSCSI の設定チェック
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ファイバチャネルプロトコル（ FCP ）および Internet Small Computer System Interface （ iSCSI ）は、以前は独立したユーティリティとして配布されていましたが、 AIX Host Utilities で提供されている FCP と iSCSI の両方の構成サポートを確認できます。
+
+FC または iSCSI を使用する構成の場合は、 SnapDrive for UNIX をインストールする前に、次の作業を完了しておく必要があります。
+
+* ホストシステムに AIX Host Utilities がインストールされていることを確認します。
+* ホストおよびストレージシステムをセットアップする。
++
+ホストを使用するには、ご使用のストレージ・システムの Host Utilities に付属のマニュアルに記載されている手順に従ってください。マルチパスまたは Volume Manager ソフトウェアを含む構成では、 AIX Host Utilities および SnapDrive for UNIX でサポートされているソフトウェアを使用する必要があります。
+
+
+
+
+NOTE: SnapDrive for UNIX およびその要件に関する最新情報については、 Interoperability Matrix を参照してください。
+
+* 関連情報 *
+
+https://mysupport.netapp.com/NOW/products/interoperability["ネットアップの相互運用性"]

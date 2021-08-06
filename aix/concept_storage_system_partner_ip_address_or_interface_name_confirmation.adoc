@@ -1,0 +1,32 @@
+---
+permalink: aix/concept_storage_system_partner_ip_address_or_interface_name_confirmation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, system, ip, interface, name, address 
+summary: ストレージシステムで setup プログラムを実行すると、フェイルオーバー時に使用するパートナーストレージシステムの IP アドレスまたはインターフェイス名の入力を求められます。このパラメータを指定しないと、 SnapDrive for UNIX では、テイクオーバーしたストレージシステム上のストレージエンティティを検索できません。 
+---
+= ストレージシステムパートナーの IP アドレスまたはインターフェイス名の確認
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージシステムで setup プログラムを実行すると、フェイルオーバー時に使用するパートナーストレージシステムの IP アドレスまたはインターフェイス名の入力を求められます。このパラメータを指定しないと、 SnapDrive for UNIX では、テイクオーバーしたストレージシステム上のストレージエンティティを検索できません。
+
+パートナー IP アドレスまたはインターフェイス名は、 HA ペア構成のパートナーストレージシステムの IP アドレスまたはインターフェイス名です。プライマリストレージシステムに障害が発生した場合、パートナーのストレージシステムがプライマリストレージシステムの機能を引き継ぎます。
+
+
+
+== 例：ストレージシステムのセットアップスクリプト
+
+次に、ストレージシステムのセットアップスクリプトから IP アドレスを要求した場合の出力例を示します。
+
+[listing]
+----
+storage_system_A> setup...
+Should interface e0 take over a partner IP address during failover?
+[n]: y
+Please enter the IP address or interface name to be taken over by e0
+[]: 10.2.21.35
+storage_system_A> reboot -t 0
+----
+この例では、 IP アドレス 10.2.2.21.35 を使用します。

@@ -1,0 +1,16 @@
+---
+permalink: linux-administration/concept_the_storagedeletecommand.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, delete, command, host, lun 
+summary: SnapDrive storage delete コマンドを使用すると、ホスト上のストレージエンティティが削除されるだけでなく、基盤となるホスト側のエンティティと LUN もすべて削除されます。 
+---
+= storage delete コマンドを使用します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive storage delete コマンドは ' 基盤となるすべてのホスト側エンティティと ' それらのエンティティをサポートするストレージ・システム LUN に加えて ' ホスト上のストレージ・エンティティを削除します
+
+
+IMPORTANT: このコマンドはデータを削除します。

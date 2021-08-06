@@ -1,0 +1,13 @@
+---
+permalink: linux-administration/concept_deleting_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, snapshot, copy 
+summary: SnapDrive snap delete コマンドを使用すると、ストレージシステム上の Snapshot コピーを削除できます。 
+---
+= Snapshot コピーを削除しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive snap delete コマンドを使用すると、ストレージシステム上の Snapshot コピーを削除できます。

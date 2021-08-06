@@ -1,0 +1,68 @@
+---
+permalink: solaris/concept_requirements_for_storage_systems.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, system, requirements 
+summary: ストレージシステムを設定する前に、要件を考慮する必要があります。 
+---
+= ストレージシステムの要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージシステムを設定する前に、要件を考慮する必要があります。
+
+|===
+| コンポーネント | 要件 
+
+
+ a| 
+オペレーティングシステム
+ a| 
+Data ONTAP 7.3.5 以降。
+
+* SnapDrive for UNIX は FlexVol をサポートしていますが、 FlexVol のすべての機能を使用するわけではありません。
+* NFS を使用する構成では、 Data ONTAP 7.3.5 以降を使用し、 FlexVol ボリュームでは、接続されている NFS ファイルまたはディレクトリツリーの読み書きに SnapDrive snap connect を使用する必要があります。
++
+トラディショナルボリュームの構成では、 NFS ファイルおよびディレクトリツリーへの読み取り専用アクセスが提供されます。
+
+
+
+
+
+ a| 
+ストレージシステムのセットアップ
+ a| 
+ストレージシステムのフェイルオーバーが発生した場合に使用できる HA ペアのパートナー IP アドレスを指定する必要があります。
+
+
+NOTE: IP アドレスは、ストレージシステムで setup プログラムを実行するときに指定します。
+
+
+
+ a| 
+ライセンス
+ a| 
+* FC 、 iSCSI 、 NFS は、ホストプラットフォームに応じて異なります
+* FlexClone ライセンス
++
+
+NOTE: SnapDrive を実行するには、ストレージシステムで適切なプロトコルが実行されている必要があります。
+
+* SnapRestore ソフトウェア
+* MultiStore ソフトウェア
++
+SnapRestore と MultiStore のライセンスは、ストレージシステムのセットアップ時に設定する必要があります。vFiler 環境をセットアップする場合は、 MultiStore ライセンスが必要です。
+
+* ストレージシステムへの HTTP アクセスを保護する
+
+
+|===
+SnapDrive for UNIX の処理では、ストレージ・システムのホスト名に対して大文字と小文字が区別されないため、ストレージ・システムの設定時に IP アドレスが一意であることを確認する必要があります。
+
+
+NOTE: SnapDrive の最新の要件については、 Interoperability Matrix を参照してください。
+
+* 関連情報 *
+
+https://mysupport.netapp.com/NOW/products/interoperability["ネットアップの相互運用性"]

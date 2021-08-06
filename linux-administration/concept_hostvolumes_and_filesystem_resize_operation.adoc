@@ -1,0 +1,30 @@
+---
+permalink: linux-administration/concept_hostvolumes_and_filesystem_resize_operation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, host, file, resize, operation, storage, command, volume 
+summary: SnapDrive storage resize コマンドは、ストレージ・システムのディスク・グループおよびボリューム・グループにのみ適用されます。ホストボリュームまたはファイルシステムのサイズを拡張する場合は、 LVM コマンドを使用する必要があります。 
+---
+= ホストボリュームおよびファイルシステムのサイズ変更処理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive storage resize コマンドは ' ストレージ・システムのディスク・グループおよびボリューム・グループにのみ適用されますホストボリュームまたはファイルシステムのサイズを拡張する場合は、 LVM コマンドを使用する必要があります。
+
+次の表に、各プラットフォームで使用できる LVM コマンドをまとめます。これらのコマンドの詳細については、マニュアルページを参照してください。
+
+|===
+| * ホスト * | * ボリュームマネージャ * | * ホストボリューム * | * ファイルシステム * 
+
+
+ a| 
+Linux の場合
+ a| 
+LVM
+ a| 
+lvextend
+ a| 
+「 resize2fs 」を参照してください
+
+|===

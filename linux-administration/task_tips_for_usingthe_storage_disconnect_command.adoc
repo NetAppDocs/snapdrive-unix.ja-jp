@@ -1,0 +1,28 @@
+---
+permalink: linux-administration/task_tips_for_usingthe_storage_disconnect_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, disconnect, command, lun 
+summary: 一部のオペレーティングシステムで SnapDrive storage disconnect コマンドを使用すると、ホストボリューム名、ファイルシステムマウントポイント、ストレージシステムボリューム名、 LUN の名前などの情報が失われます。この情報がなければ、あとでストレージに接続することは困難です。 
+---
+= storage disconnect コマンドの使用に関するヒント
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+一部のオペレーティング・システムで SnapDrive storage disconnect コマンドを使用すると、ホスト・ボリューム名、ファイルシステム・マウントポイント、ストレージ・システム・ボリューム名、 LUN 名などの情報が失われます。この情報がなければ、あとでストレージに接続することは困難です。
+
+情報が失われないようにするには、まず、 SnapDrive storage disconnect コマンドを実行する前に、 SnapDrive snap create コマンドを使用して、ストレージの Snapshot コピーを作成する必要があります。
+
+これにより、あとでストレージを再接続する場合に、次の回避策を使用できます。
+
+.手順
+. 次のコマンドを実行します。
++
+SnapDrive snap restore filespec - snapname long_snap_name `
+
++
+このコマンドに Snapshot コピーの完全パスを含めます。
+
+. 必要に応じて、 SnapDrive snap delete コマンドを実行して、 Snapshot コピーを削除します。
+

@@ -1,0 +1,25 @@
+---
+permalink: solaris/concept_nfs_configuration_checks.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, nfs, configuration, check 
+summary: Network File System \ （ NFS\ ）を使用する構成の場合、ホストおよびストレージシステムをセットアップする前に、 NFS クライアントが正しく動作していることを確認する必要があります。 
+---
+= NFS 設定チェック
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Network File System （ NFS ；ネットワークファイルシステム）を使用する構成の場合は、ホストおよびストレージシステムをセットアップする前に、 NFS クライアントが正しく動作していることを確認する必要があります。
+
+NFS を使用する構成の場合、次の作業を実行する必要があります。
+
+* NFS クライアントが正しく動作していることを確認します。
++
+NFS プロトコルの管理の詳細については、を参照してください link:https://library.netapp.com/ecm/ecm_download_file/ECMP1401220["『 7-Mode ファイルアクセスおよびプロトコル管理ガイド』"] Data ONTAP 7-Mode を使用している場合は、を参照してください  clustered Data ONTAP を使用している場合。
+
+* ホストおよびストレージシステムをセットアップする。
++
+ストレージ・システム上で NFS マウント・ディレクトリとともに SnapDrive for UNIX を使用するには、ストレージ・システムのディレクトリがホストに正しくエクスポートされていることを確認する必要があります。ホストに複数のインターネットプロトコル（ IP ）インターフェイスとデータおよび管理インターフェイスがある場合は、ディレクトリがデータインターフェイスと管理インターフェイスの両方に正しくエクスポートされていることを確認する必要があります。SnapDrive for UNIX では ' これらのすべてのインタフェースに読み取り / 書き込みアクセス権がある場合 ' または SnapDrive snap connect コマンドに -readonly オプションを指定した場合 ' 少なくとも読み取り専用アクセス権がない限り ' 警告が表示されますSnapDrive snap restore コマンドと SnapDrive snap connect コマンドは ' ディレクトリへのアクセス権を持つインタフェースがどれも存在しない場合には失敗します
+
+

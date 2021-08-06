@@ -1,0 +1,20 @@
+---
+permalink: solaris/concept_what_snapdrive_for_unix_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, unix 
+summary: SnapDrive for UNIX を使用すると、ストレージ管理タスクが簡易化されます。SnapDrive for UNIX は、 Snapshot テクノロジを使用して、共有または非共有のストレージシステムに格納されたデータのイメージを作成します。SnapDrive はストレージプロビジョニングにも役立ちます。 
+---
+= SnapDrive for UNIX の機能
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を使用すると、ストレージ管理タスクが簡易化されます。SnapDrive for UNIX は、 Snapshot テクノロジを使用して、共有または非共有のストレージシステムに格納されたデータのイメージを作成します。SnapDrive はストレージプロビジョニングにも役立ちます。
+
+SnapDrive for UNIX では、次のタスクを実行できます。
+
+* ** データのバックアップとリストア： ** SnapDrive for UNIX では、 Snapshot テクノロジを使用して、ストレージ・システムに保存されているホスト・データのイメージ（ Snapshot コピー）を作成できます。この Snapshot コピーはデータのコピーを提供します。このコピーはあとでリストアできます。Snapshot コピーのデータは、 1 つのストレージシステム上に存在することも、複数のストレージシステムとそのボリュームにまたがることもできます。これらのストレージシステムは、 HA ペア構成、ノードローカルのファイルシステムまたはディスクグループ、あるいはホストクラスタ環境の LUN にすることができます。
+* * ストレージの管理： * ディスク・グループ ' ホスト・ボリューム ' ファイル・システム ' ホスト・クラスタ上の LUN ' 非クラスタ環境などのストレージ・コンポーネントを作成および削除できますSnapDrive for UNIX では、ストレージを拡張し、ホストに接続し、接続を解除することで、このストレージを管理できます。
+* ** ロールベースアクセス制御 :** SnapDrive for UNIX は、ロールベースアクセス制御 (RBAC) を提供します。RBAC を使用すると、 SnapDrive 管理者は、さまざまな SnapDrive 処理においてストレージシステムへのアクセスを制限できます。このストレージ操作へのアクセス権は、ユーザに割り当てられているロールによって異なります。ストレージ管理者は、 RBAC を使用して、割り当てられたロールに応じて SnapDrive ユーザが実行できる処理を制限できます。
+

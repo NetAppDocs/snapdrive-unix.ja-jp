@@ -1,0 +1,42 @@
+---
+permalink: solaris/concept_postinstallation_checks.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, post, install, check 
+summary: インストールが完了したら、 SnapDrive for UNIX が正常にインストールされるように、いくつかのタスクを実行する必要があります。 
+---
+= インストール後のチェックの実行
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+インストールが完了したら、 SnapDrive for UNIX が正常にインストールされるように、いくつかのタスクを実行する必要があります。
+
+. インストールプログラムによって、ホストに必要なファイルがすべてインストールされていることを確認します。
+. 「 napdrive.conf 」ファイルの設定変数が正しい設定になっていることを確認します。
++
+これらの変数の大部分については、デフォルト値を適用できます。
+
+. SnapDrive for UNIX に、現在のストレージ・システムのログイン情報を入力します。
++
+ストレージシステムをセットアップする際に、ユーザログインを指定しました。SnapDrive for UNIX では、ストレージ・システムと連携するために、このログイン情報が必要です。
+
+. Role-Based Access Control （ RBAC ；ロールベースアクセス制御）を使用するには、「 napdrive.conf 」ファイルの「 _rbac - method=dfm_」 変数を設定します。
++
+デフォルトでは、 SnapDrive 4.0 for UNIX 以降は、 root クレデンシャルを使用してストレージ・システムにアクセスします。RBAC 機能がオンになっていません。
+
+. ストレージ・システムおよびデーモン・サービスとのセキュアな接続に HTTPS を使用するには 'napdrive.conf ファイルの '_use-https-to-SDdu-daemon=on_' を設定します
++
+
+NOTE: SnapDrive 5.0 for UNIX 以降のバージョンでは、デーモン通信用に HTTPS がサポートされています。デフォルトでは、このオプションは「 off 」に設定されています。
+
+. SnapDrive for UNIX で使用するサーバ証明書をにインストールします
++
+'sw-daemon-certificate-path=/opt/NTAPsnapdrive/snapdrive.pem' ファイルで指定されているパス
+
+. 次のコマンドを実行して、 SnapDrive for UNIX デーモンサービスのデフォルトパスワードを変更します。
++
+`*snapdrived passwd*`
+
+. インストールされている構成コンポーネントの詳細を /var/log/sdconfcheck.out' で確認します
+

@@ -1,0 +1,15 @@
+---
+permalink: aix/concept_support_for_storage_system_rename.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, system, rename, support 
+summary: SnapDrive では、ストレージシステムの名前を変更できます。Snapshot コピーが作成され、コピーの作成後にストレージシステムの名前が変更された場合、すべてのクライアントが再認証されていれば、 SnapDrive で Snapshot 処理を実行できます（ hosts ）。 
+---
+= ストレージシステム名の変更がサポートされます
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive では、ストレージシステムの名前を変更できます。Snapshot コピーが作成され、コピーの作成後にストレージシステムの名前が変更された場合、すべてのクライアント（ホスト）が再認証されていれば、 SnapDrive で Snapshot 処理を実行できます。
+
+リストア、接続、切断、表示、削除などの Snapshot 処理は、クライアントを再認証しないとホストシステムで引き続き機能します。ホスト名がレジストリキーの一部として使用されているため、パスワードを再認証する必要があります。

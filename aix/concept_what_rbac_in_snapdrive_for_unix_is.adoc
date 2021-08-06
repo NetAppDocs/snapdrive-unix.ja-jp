@@ -1,0 +1,25 @@
+---
+permalink: aix/concept_what_rbac_in_snapdrive_for_unix_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rbac, access, control, role 
+summary: RBAC を使用すると、 SnapDrive 管理者は、さまざまな SnapDrive 操作によってストレージシステムへのアクセスを制限できます。ストレージ処理に関するこの制限アクセスまたはフルアクセスは、ユーザに割り当てられたロールによって異なります。 
+---
+= SnapDrive for UNIX の Role-Based Access Control （ RBAC ；ロールベースアクセス制御）とは何ですか
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+RBAC を使用すると、 SnapDrive 管理者は、さまざまな SnapDrive 操作によってストレージシステムへのアクセスを制限できます。ストレージ処理に関するこの制限アクセスまたはフルアクセスは、ユーザに割り当てられたロールによって異なります。
+
+SnapDrive 4.0 for UNIX 以降では、 SnapDrive for UNIX のすべての処理に対する RBAC アクセスチェックが必要です。この動作により、ストレージ管理者は、割り当てられたロールに応じて SnapDrive ユーザが実行できる処理を制限できます。RBAC は、 Operations Manager インフラを使用して実装します。SnapDrive 4.0 for UNIX よりも前のリリースでは、アクセス制御が制限されており、 root ユーザのみが SnapDrive for UNIX の処理を実行できました。SnapDrive 4.0 for UNIX 以降では、 Operations Manager コンソールの RBAC インフラストラクチャを使用して、ルート以外のローカルユーザおよび Network Information System （ NIS ）ユーザをサポートしています。SnapDrive for UNIX では、ストレージシステムの root パスワードは必要なく、 SD-<hostname> ユーザを使用してストレージシステムと通信します。
+
+デフォルトでは、 Operations Manager コンソールの RBAC 機能は使用されません。RBAC 機能を有効にするには 'napdrive.conf ファイルの変数 `_rbac -method=dfm_' を設定し ' SnapDrive for UNIX デーモンを再起動する必要があります
+
+この機能を使用するには、次の要件を満たしている必要があります。
+
+* Operations Manager コンソール 3.7 以降
+* SnapDrive ホストとストレージシステムを含む IP ネットワークに、 Operations Manager コンソールサーバが存在し、設定されている必要があります。
+* SnapDrive のインストール時に、 Operations Manager コンソールの通信設定を行う必要があります。
+* SnapDrive for UNIX デーモンが実行されている必要があります。
+

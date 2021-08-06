@@ -1,0 +1,13 @@
+---
+permalink: solaris/concept_host_cluster_environment_for_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, host, cluster, unix 
+summary: ホストクラスタシステムの SnapDrive 処理は、 Solaris ホスト上の Veritas SFRAC でのみ使用できます。 
+---
+= SnapDrive for UNIX のホストクラスタ環境
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストクラスタシステムの SnapDrive 処理は、 Solaris ホスト上の Veritas SFRAC でのみ使用できます。

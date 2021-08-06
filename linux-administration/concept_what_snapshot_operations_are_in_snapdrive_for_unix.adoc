@@ -1,0 +1,17 @@
+---
+permalink: linux-administration/concept_what_snapshot_operations_are_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, ontap, image, host, storage, data, unix 
+summary: SnapDrive for UNIX では、 Data ONTAP の Snapshot テクノロジを使用して、ストレージシステムに格納されているホストデータのイメージ（ Snapshot コピー）を作成できます。 
+---
+= SnapDrive for UNIX の Snapshot 処理とは
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、 Data ONTAP の Snapshot テクノロジを使用して、ストレージシステムに格納されているホストデータのイメージ（ Snapshot コピー）を作成できます。
+
+この Snapshot コピーはデータのコピーを提供します。このコピーはあとでリストアできます。Snapshot コピーのデータは、 1 つのストレージシステム上に存在することも、複数のストレージシステムとそのボリュームにまたがることもできます。これらのストレージシステムは、 HA ペア構成、ノードローカルのファイルシステム、またはホストクラスタ環境のディスクグループまたは LUN です。SnapDrive for UNIX がインストールされている非クラスタ構成 UNIX ホストでは、ストレージ・システム上に 1 つ以上のボリューム・グループの Snapshot コピーを作成できます。
+
+Snapshot コピーには、ファイルシステム、論理ボリューム、ディスクグループ、 LUN 、および NFS ディレクトリツリーを含めることができます。作成した Snapshot コピーは、名前変更、リストア、または削除できます。同じホストまたは別のホストの別の場所に接続することもできます。接続が完了すると、 Snapshot コピーの内容を表示および変更したり、 Snapshot コピーの接続を解除したりできます。また、 SnapDrive for UNIX を使用すると、作成した Snapshot コピーに関する情報を表示できます。SnapDrive for UNIX がインストールされたクラスタ UNIX ホストでは、ディスクグループとファイルシステムを含むホストクラスタノードに対して Snapshot 処理を実行できます。Snapshot 処理には、 create 、 rename 、 restore 、 connect 、 disconnect 、 を表示し、削除します。

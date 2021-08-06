@@ -1,0 +1,29 @@
+---
+permalink: solaris/concept_command_syntax_to_increase_the_sizeof_the_storage.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, syntax, increase, size, storage 
+summary: ストレージのサイズを拡張するには、使用する正しい構文を確認しておく必要があります。 
+---
+= ストレージのサイズを拡張するコマンド構文
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージのサイズを拡張するには、使用する正しい構文を確認しておく必要があります。
+
+SnapDrive storage resize -dG_file_name _spec_{-growby | -growto ｝ size [-addlun [-igroup_ig_name_[_ig_name..._]] [{-reserve | -noreserve }]] [-fstype_type] [-vmtype_type_type_type_] [-vmtype_type_type_]
+
+[NOTE]
+====
+SnapDrive storage resize コマンドを使用して、エンティティのサイズを縮小することはできません。サイズを拡張するには、このコマンドを使用する必要があります。
+
+SnapDrive storage resize コマンドは ' 論理ボリュームまたはファイル・システムでは直接サポートされていませんたとえば、 lun storage resize コマンドを使用して、 SnapDrive 上のファイルシステムのサイズを変更することはできません。
+
+* result * ：このコマンドは、次のいずれかを使用してストレージエンティティ（論理ボリュームまたはディスクグループ）のサイズを拡張します。
+
+* バイトをストレージに追加する (`-growby-`)
+* サイズを指定したバイト・サイズに増やす（「 -growto 」）。
+
+
+====

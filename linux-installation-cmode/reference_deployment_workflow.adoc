@@ -1,0 +1,15 @@
+---
+permalink: linux-installation-cmode/reference_deployment_workflow.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, deployment, workflow, install, provision 
+summary: SnapDrive で Snapshot コピーを作成する前に、 Linux Host Utilities \ （ FC または iSCSI プロトコルを使用する場合）、 SnapDrive for UNIX をインストールし、 SnapDrive でサポートされる構成を確認し、ストレージをプロビジョニングし、 Linux ホストからネットアップストレージシステムへの接続をセットアップする必要があります。 
+---
+= 導入のワークフロー
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive で Snapshot コピーを作成する前に、 Linux Host Utilities （ FC プロトコルまたは iSCSI プロトコルを使用する場合）、 SnapDrive for UNIX をインストールし、 SnapDrive でサポートされる構成を確認し、ストレージをプロビジョニングし、 Linux ホストからネットアップストレージシステムへの接続をセットアップする必要があります。
+
+image::../media/sdu_deployment_workflow_cmode.gif[SDU の導入ワークフロー cmode]

@@ -1,0 +1,52 @@
+---
+permalink: solaris/task_installing_snapdrivefor_unix_on_asolaris_host.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, solaris, host, unix 
+summary: Solaris ホストに SnapDrive for UNIX をインストールするには、 root ユーザとしてログインする必要があります。このファイルをリモートで実行していて、システム設定で root としてログインできない場合は、 su コマンドを使用して root にすることができます。インストールファイルは、標準の Solaris.pkg ファイルです。 
+---
+= Solaris ホストへの SnapDrive for UNIX のインストール
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Solaris ホストに SnapDrive for UNIX をインストールするには、 root ユーザとしてログインする必要があります。このファイルをリモートで実行していて、システム設定で root としてログインできない場合は、「 su 」コマンドを使用して root にすることができます。インストールファイルは、標準の Solaris.pkg ファイルです。
+
+SnapDrive for UNIX がインストールされているディレクトリは削除しないでください。ディレクトリを削除すると、デーモンの開始と停止で問題が発生する可能性があります。SnapDrive for UNIX をインストールする前に、 Solaris Host Utilities もインストールしておく必要があります。
+
+スパースルートゾーンでは、一部のファイルシステムはスパースルートゾーンで読み取り専用アクセスを持つため、 SnapDrive for UNIX のインストールは部分的にしか成功しません。この状況を回避するには、グローバルゾーンにいくつかのシンボリックリンクを作成して、リンクがスパースルートゾーンで使用できるようにします。
+
+ln -s /opt/NTAPsnapdrive/bin/snapdrive /usr/bin/snapdrive
+
+ln -s /opt/NTAPsnapdrive/bin/snapdrive /usr/sbin/snapdrive
+
+ln -s /opt/NTAPsnapdrive/bin/snapdrivved /usr/sbin/snapdrived`
+
+.手順
+. ネットアップサポートサイトからダウンロードしたソフトウェアをインストールした Solaris ホスト上のディレクトリに移動します。
+. 次のコマンドを入力して、 SnapDrive for UNIX をインストールします。
++
+'*./install*'
+
++
+このスクリプトは、 SnapDrive for UNIX ソフトウェアを問題なくインストールします。インストール情報をログファイルに書き込みます。
+
++
+[listing]
+----
+# ./install
+		Installing NTAPsnapdrive now ...
+		NTAPsnapdrive install completed successfully.
+		snapdrive Installation complete. Log is in
+		/tmp/snapdrive_install_log.23752.
+----
+. システムに SnapDrive for UNIX を設定してセットアップを完了します。
++
+この情報のほとんどはデフォルトで設定されますが、次の情報を指定する必要があります。
+
++
+** ストレージシステムのログイン情報。
+** AutoSupport 設定（ AutoSupport はオプション機能ですが、有効にすることを推奨します）。
+
+
+

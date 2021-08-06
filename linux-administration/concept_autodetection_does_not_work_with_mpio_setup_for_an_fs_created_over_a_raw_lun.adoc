@@ -1,0 +1,19 @@
+---
+permalink: linux-administration/concept_autodetection_does_not_work_with_mpio_setup_for_an_fs_created_over_a_raw_lun.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, autodetection, lun, mpio 
+summary: 自動検出は、 SnapDrive for UNIX を使用した Linux MPIO 環境において、 raw LUN 上のファイルシステムでは機能しません。 
+---
+= raw LUN で作成された FS の MPIO セットアップでは自動検出は機能しません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+自動検出は、 SnapDrive for UNIX を使用した Linux MPIO 環境において、 raw LUN 上のファイルシステムでは機能しません。
+
+
+
+== 回避策
+
+オプションの -fs を使用して ' すべての SnapDrive 操作を実行します

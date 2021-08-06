@@ -1,0 +1,31 @@
+---
+permalink: linux-administration/task_verifying_virtual_storage_console.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, login, verify, virtual, console, storage 
+summary: SnapDrive for UNIX で仮想インターフェイスが設定されているかどうかは、 SnapDrive の config list コマンドを使用して確認できます。 
+---
+= Virtual Storage Console のログイン情報を確認しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX で仮想インターフェイスが設定されているかどうかは、 SnapDrive config list` コマンドを使用して確認できます。
+
+. 次のコマンドを入力します。 SnapDrive config list'
++
+このコマンドは、 SnapDrive for UNIX で指定されているユーザ名または仮想インターフェイスを表示します。仮想インターフェイスシステムのパスワードは表示されません。
+
++
+次に、 ruffleskin という名前の仮想インターフェイスに対応するユーザを表示する例を示します。
+
++
+[listing]
+----
+# snapdrive config list
+user name    appliance name   appliance type
+------------------------------------------------
+root       rumplestiltskins   StorageSystem
+sdadmin    ruffleskin	     VirtualInterface
+----
+

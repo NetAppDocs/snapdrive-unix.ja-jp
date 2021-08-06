@@ -1,0 +1,19 @@
+---
+permalink: linux-administration/concept_snapdrive_for_unix_commands_fail_when_there_is_a_customized_ld_library_path.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, fail, customized 
+summary: カスタマイズした LD_LIBRARY_PATH がある場合や、 snapcreate -check-check-ason_nfs が off に設定されている場合、 SnapDrive for UNIX コマンドは失敗します。 
+---
+= カスタマイズした LD_LIBRARY_PATH で SnapDrive for UNIX コマンドが失敗する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+カスタマイズされた「 LD_LIBRARY_PATH 」があり、「 napcreate -check-eason_nfs 」が off に設定されている場合、 SnapDrive for UNIX コマンドは失敗します。
+
+
+
+== 回避策
+
+ラッパー・スクリプト内の「 env 」変数を設定して、変数が SnapDrive バイナリに対してのみ表示されるようにします。

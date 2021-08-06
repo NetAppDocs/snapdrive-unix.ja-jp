@@ -1,0 +1,29 @@
+---
+permalink: linux-administration/concept_mandatory_checks_for_volume_based_snaprestore.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, checks, volume, snaprestore 
+summary: ボリュームベースの SnapRestore を実行する前に、 SnapDrive for UNIX でシステムに対していくつかの必須チェックが実行されます。これらのチェックは、ボリュームベースの SnapRestore を安全に使用するために必要です。必須チェックは、ユーザーが上書きすることはできません。 
+---
+= ボリュームベース SnapRestore の必須チェック項目です
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリュームベースの SnapRestore を実行する前に、 SnapDrive for UNIX でシステムに対していくつかの必須チェックが実行されます。これらのチェックは、ボリュームベースの SnapRestore を安全に使用するために必要です。必須チェックは、ユーザーが上書きすることはできません。
+
+ボリュームベースの SnapRestore を実装する前に、 SnapDrive for UNIX で実行される必須のチェック項目は次のとおりです。
+
+* ボリュームベースの SnapRestore は、 SnapDrive for UNIX を使用して作成された Snapshot でのみ機能します。
+* ボリュームベース SnapRestore 内のボリュームをストレージシステムのルートボリュームにすることはできません。
+* SnapDrive for UNIX はボリュームクローンをチェックします。新しい Snapshot コピーにボリュームクローンが含まれている場合は、ボリュームリストア処理は実行できません。これは Data ONTAP の制限事項です。
+* ボリュームベース SnapRestore 内のボリュームに、リストア用に指定した LUN （ファイルシステム、ディスクグループ、またはホストボリューム内の raw LUN ）以外のマッピングされた LUN がないようにします。
+* SnapDrive for UNIX は、ボリュームが SnapMirror 関係にあるかどうかをチェックします。
+* SnapDrive for UNIX は、ボリュームが SnapVault 関係にあるかどうかをチェックします。
+
+
+SnapDrive for UNIX が RBAC に Operations Manager を使用しており、ユーザに SD.snapshot.DisruptBaseline 機能が割り当てられている場合、 SnapMirror と SnapVault のチェックは無視できます。これらのチェックを無効にするための RBAC 機能の詳細については、 SnapDrive for UNIX のロールベースアクセス制御を参照してください。
+
+* 関連情報 *
+
+xref:concept_role_based_access_control_in_snapdrive_for_unix.adoc[SnapDrive for UNIX でのロールベースアクセス制御]

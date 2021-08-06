@@ -1,0 +1,69 @@
+---
+permalink: linux-administration/task_estimating_the_storage_space_using_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, clone, estimate 
+summary: クローンスプリットの推定によって、ストレージシステム内に Snapshot コピー用のクローンがない場合、 Snapshot コピーを使用して必要なストレージスペース（ MB ）を見積もることができます。 
+---
+= Snapshot コピーを使用したストレージスペースの見積もり
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クローンスプリットの推定によって、ストレージシステム内に Snapshot コピー用のクローンがない場合、 Snapshot コピーを使用して必要なストレージスペース（ MB ）を見積もることができます。
+
+.手順
+. 次のコマンドを入力して、必要なストレージスペースを見積もります。
++
+` * SnapDrive clone split estimate - snapname [_long_snap_name_] ｛ volclone | -lunclone ｝ ] [-v | -verbose ] *
+
+
+
+次の例は、 Snapshot コピーを使用して LUN クローンをスプリットする場合のストレージスペースを見積もります。
+
+[listing]
+----
+snapdrive clone split estimate -snapname f3050-220-112:/vol/vol_1:snap_1 -lunclone
+Resource       Container  Required Available Storage
+                          Space(MB)Space(MB) Status
+f3050-220-112: f3050-220 	5120	   14078    AVAILABLE
+/vol/vol_1:snap_1 -112:/vol/vol_1
+----
+次の例では '-fs' オプションを指定したスナップショット・コピーを使用して LUN クローンをスプリットするためのストレージ・スペースを見積もります
+
+[listing]
+----
+# snapdrive clone split estimate -fs /mnt/my_mnt1 -snapname f3050-220-112:/vol/vol_1:snap_1 -lunclone
+Resource         Container Required Available Storage
+                            Space(MB)Space(MB) Status
+f3050-220-112:   f3050-220  4120     14078  AVAILABLE
+/vol/vol_1:snap_1 -112:/vol/vol_1
+----
+次の例では '-fs' オプションを指定したスナップショット・コピーを使用して ' ボリューム・クローンをスプリットするためのストレージ・スペースを見積もります
+
+[listing]
+----
+# snapdrive clone split estimate -fs /mnt/fs1 -snapname f3050-220-112:/vol/vol_1:snap_1 -volclone
+Resource      Container   Required Available Storage
+                          Space(MB)Space(MB) Status
+f3050-220-112:  f3050-220 54019   54517  AVAILABLE
+/vol/vol0:snap_1 112:aggr0
+----
+次の例は、 Snapshot コピーを使用してボリュームクローンをスプリットするためのストレージスペースを見積もります。
+
+[listing]
+----
+# snapdrive clone split estimate -snapname f3050-220-112:/vol/vol_1:snap_1 -volclone
+Resource      Container   Required Available Storage
+                          Space(MB)Space(MB) Status
+f3050-220-112:  f3050-220 54019    54517    AVAILABLE
+/vol/vol0:snap_1 112:aggr0
+----
+[NOTE]
+====
+* Snapshot コピーに対してクローンスプリットの見積もりを行う場合は、「 Resource 」フィールドに Snapshot コピーの名前が表示されます。
+* Snapshot コピーと -lunclone オプションを併用してデッド・ファイルの仕様を指定した場合、「必須スペース」には 0 と表示されます。
+* Snapshot を使用した LUN クローンスプリットの見積もりは、 SnapDrive 4.2 for UNIX 以降で作成された Snapshot コピーに対してのみ可能です。
+
+
+====

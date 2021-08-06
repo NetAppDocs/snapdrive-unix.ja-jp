@@ -1,0 +1,48 @@
+---
+permalink: linux-administration/reference_preconfigured_roles_for_ease_of_user_role_configuration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, roles, user, configuration, config, assign 
+summary: 事前設定されたロールにより、ユーザへのロールの割り当てが容易になります。 
+---
+= ユーザロールを簡単に設定できるように事前設定されたロール
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+事前設定されたロールにより、ユーザへのロールの割り当てが容易になります。
+
+次の表に、事前定義されたロールを示します。
+
+|===
+| ロール名 | 説明 
+
+
+ a| 
+GlobalSDStorage の略
+ a| 
+SnapDrive for UNIX を使用してストレージを管理します
+
+
+
+ a| 
+GlobalSDConfig
+ a| 
+SnapDrive for UNIX を使用して構成を管理します
+
+
+
+ a| 
+GlobalSDSnapshot
+ a| 
+SnapDrive for UNIX を使用して Snapshot コピーを管理します
+
+
+
+ a| 
+GlobalSDFullControl の略
+ a| 
+UNIX での SnapDrive のフル活用
+
+|===
+上記の表の「グローバル」とは、 Operations Manager コンソールで管理されるすべてのストレージシステムのことです。

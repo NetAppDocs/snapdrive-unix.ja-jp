@@ -1,0 +1,17 @@
+---
+permalink: aix/concept_security_considerations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, security, considerations, login 
+summary: SnapDrive for UNIX を有効にして、ホストに接続されたストレージシステムにアクセスできます。また、ストレージシステムに割り当てられたログイン名とパスワードを使用するようにホストを設定する必要があります。この情報を指定しないと、 SnapDrive for UNIX はストレージ・システムと通信できません。 
+---
+= セキュリティに関する考慮事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を有効にして、ホストに接続されたストレージシステムにアクセスできます。また、ストレージシステムに割り当てられたログイン名とパスワードを使用するようにホストを設定する必要があります。この情報を指定しないと、 SnapDrive for UNIX はストレージ・システムと通信できません。
+
+root ユーザは、割り当てられたロールに応じて、他のユーザに特定のコマンドの実行を許可できます。ストレージおよびスナップ管理操作を実行するために root ユーザである必要はありません。
+
+SnapDrive for UNIX は、ホストに関するユーザ認証情報を暗号化されたファイルに格納します。AIX ホストでは、デフォルトで、 SnapDrive がパスワード情報を暗号化してネットワーク経由で送信します。SnapDrive for UNIX は、標準 IP 接続を介して HTTPS を使用して通信します。

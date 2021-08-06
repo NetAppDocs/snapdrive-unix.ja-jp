@@ -1,0 +1,15 @@
+---
+permalink: solaris/task_recieving_error_does_not_look_snapdrive_generated.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, error, disconnect, clone, volume 
+summary: 場合によっては、 SnapDrive snap disconnect 処理でクローンボリュームの削除に失敗し、「 does not look snapdrive -generated 」というエラーメッセージが表示されることがあります。 
+---
+= スナップ切断処理でクローンボリュームの削除に失敗する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+場合によっては、 SnapDrive snap disconnect 操作でクローンボリュームを削除できず、「 d OES not look snapdrive -generated 」というエラーメッセージが表示されることがあります。
+
+問題の回避策は ' 元の名前に戻し '`napdrive.conf ファイルの '_bypass-snapdrive-clone-generated-check_' が 'on に設定されていることを確認します

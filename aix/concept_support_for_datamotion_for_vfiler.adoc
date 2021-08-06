@@ -1,0 +1,21 @@
+---
+permalink: aix/concept_support_for_datamotion_for_vfiler.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, netappdatamotion, vfiler, support 
+summary: SnapDrive for UNIX は DataMotion for vFiler をサポートしています。DataMotion for vFiler を実行すると、カットオーバーフェーズ中に一部の SnapDrive for UNIX 処理が失敗する場合があります。 
+---
+= NetAppDataMotion for vFiler がサポートされています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX は DataMotion for vFiler をサポートしています。DataMotion for vFiler を実行すると、カットオーバーフェーズ中に一部の SnapDrive for UNIX 処理が失敗する場合があります。
+
+
+NOTE: vFiler 移行のカットオーバーフェーズ中に SnapDrive for UNIX の処理が失敗した場合は、 DataMotion for vFiler の処理が完了したあとに SnapDrive for UNIX の処理を実行する必要があります。
+
+UNIX 操作で SnapDrive を実行するには 'napdrive.conf ファイルの `_dmotion -cutover-wait_` 変数を設定する必要があります
+
+
+NOTE: vFiler 移行のカットオーバーフェーズ中にボリュームベースの「 snap restore 」コマンドを実行すると、 snap restore 処理が失敗することがあります。移行が完了して vFiler がデスティネーションで使用可能になったら、ボリュームベースの snap restore 処理を実行すると、 LUN がオフラインになります。LUN を手動でオンラインに戻す必要があります。

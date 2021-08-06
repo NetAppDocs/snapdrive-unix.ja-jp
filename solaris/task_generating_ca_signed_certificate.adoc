@@ -1,0 +1,118 @@
+---
+permalink: solaris/task_generating_ca_signed_certificate.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, certificate, generate, ca 
+summary: SnapDrive for UNIX デーモンサービスでデーモン通信を成功させるには、 CA 署名証明書を生成する必要があります。CA 署名証明書は、 snapdrive.conf ファイルで指定されたパスに指定する必要があります。 
+---
+= CA 署名証明書を生成する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX デーモンサービスでデーモン通信を成功させるには、 CA 署名証明書を生成する必要があります。CA 署名証明書は 'napdrive.conf ファイルに指定されているパスで提供する必要があります
+
+* root ユーザとしてログインする必要があります。
+* 通信に HTTPS を使用するには 'napdrive.conf ファイルで次のパラメータを設定しておく必要があります
++
+** https-to-SDU -daemon = on を使用します
+** contact-https-port-SDdu-daemon = 4095
+** sdu-daemon-certificate-path = /opt/NetApp/snapDrive/snapDrive.pem のようになります
+
+
+
+
+.手順
+. PEM 形式の新しい暗号化されていない RSA 秘密鍵を生成します。
++
+*$openssl genrsa-out privkey.pem 1024*`
+
++
+[listing]
+----
+Generating RSA private key, 1024 bit long modulus
+ ....................++++++ ....................................++++++
+e is 65537 (0x10001)
+----
+. CA 秘密鍵と証明書「 vi /etc/ssl/openssl.cnf 」を作成するように「 /etc/ssl/openssl.cnf 」を設定します。
+. RSA 秘密鍵を使用して署名なし証明書を作成します。
++
+*$openssl req -new-x509 -key privkey.pem-out cer.pem*
+
++
+[listing]
+----
+You are about to be asked to enter information that will be
+incorporated into your certificate request.
+What you are about to enter is what is called a Distinguished Name or
+a DN.
+There are quite a few fields but you can leave some blank For some
+fields there will be a default value, If you enter '.', the field
+will be left blank.
+-----
+Country Name (2 letter code) [XX]:NY
+State or Province Name (full name) []:Nebraska Locality Name (eg,
+city) [Default City]:Omaha Organization Name (eg, company) [Default
+Company Ltd]:abc.com Organizational Unit Name (eg, section) []:
+Common Name (eg, your name or your server's hostname) []:localhost
+Email Address []:abc@example.org
+----
+. 秘密鍵と証明書を使用して CSR を作成します。
++
+*cat cert.pem privkey.pem|openssl x509 -x509toreq -signkey privkey.pem-out certreq.csr`
+
++
+[listing]
+----
+Getting request Private Key Generating certificate request
+----
+. 作成した CSR を使用して、 CA 秘密鍵で証明書に署名します。
++
+'*$openssl ca-in certreq.csr-out newcert.pem*
+
++
+[listing]
+----
+Using configuration from /etc/pki/tls/openssl.cnf Check that the
+request matches the signature Signature ok Certificate Details:
+         Serial Number: 4096 (0x1000)
+         Validity
+            Not Before: May 17 06:02:51 2015 GMT
+             Not After : May 16 06:02:51 2016 GMT
+             Subject:
+             countryName               = NY
+             stateOrProvinceName       = Nebraska
+             organizationName          = abc.com
+             commonName                = localhost
+             emailAddress              = abc@example.org
+             X509v3 extensions:
+             X509v3 Basic Constraints:
+                 CA:FALSE
+             X509v3 Key Usage:
+                 Digital Signature, Non Repudiation, Key Encipherment
+             Netscape Comment:
+                 OpenSSL Generated Certificate
+             X509v3 Subject Key Identifier:
+                 FB:B0:F6:A0:9B:F2:C2:BC:50:BF:45:B2:9D:DB:AA:3B:C5:07:5B:7F
+             X509v3 Authority Key Identifier:
+
+ keyid:FB:B0:F6:A0:9B:F2:C2:BC:50:BF:45:B2:9D:DB:AA:3B:C5:07:5B:7F
+
+ Certificate is to be certified until May 16 06:02:51 2016 GMT (365
+ days) Sign the certificate? [y/n]:y
+
+
+ 1 out of 1 certificate requests certified, commit? [y/n]y Write out
+ database with 1 new entries Data Base Updated
+----
+. SSL サーバで使用する署名済み証明書と秘密鍵をインストールします。
++
+[listing]
+----
+The newcert.pem is the certificate signed by your local CA that you can then use in an
+ssl server:
+( openssl x509 -in newcert.pem; cat privkey.pem ) > server.pem
+ln -s server.pem `openssl x509 -hash -noout -in server.pem`.0 # dot-zero
+( server.pem refers to location of https server certificate)
+----
+

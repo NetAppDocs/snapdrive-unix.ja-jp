@@ -1,0 +1,75 @@
+---
+permalink: solaris/task_viewing_the_access_control_permission.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, view, access, control, permission 
+summary: アクセス制御権限を表示するには、 SnapDrive config access show コマンドを実行します。 
+---
+= アクセス制御権限を表示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+アクセス制御権限を表示するには、 SnapDrive config access show コマンドを実行します。
+
+.手順
+. SnapDrive config access show コマンドを実行します。
++
+このコマンドの形式は次のとおりです。 SnapDrive config access ｛ show | list ｝ filername `
+
++
+「 show 」または「 list 」のどちらのバージョンのコマンドを入力しても、同じパラメータを使用できます。
+
++
+このコマンド・ラインを使用すると、ストレージ・システムの toaster が、ホストに許可されているアクセス許可を判別できます。出力に基づいて、このストレージシステム上のホストに対する権限はすべて snap になります。
+
++
+[listing]
+----
+# snapdrive config access show toaster
+This host has the following access permission to filer, toaster:
+SNAP ALL
+Commands allowed:
+snap create
+snap restore
+snap delete
+snap rename
+#
+----
++
+この例では ' パーミッション・ファイルはストレージ・システム上に存在しないため 'UNIX 用 SnapDrive は 'napdrive.conf ファイル内の変数 _all-access if -rbac -unspecified _ をチェックして ' ホストに付与されているパーミッションを判別しますこの変数は 'ON' に設定されますこれは ' アクセスレベルが All access に設定されたパーミッションファイルを作成するのと同じです
+
++
+[listing]
+----
+# snapdrive config access list toaster
+This host has the following access permission to filer, toaster:
+ALL ACCESS
+Commands allowed:
+snap create
+snap restore
+snap delete
+snap rename
+storage create
+storage resize
+snap connect
+storage connect
+storage delete
+snap disconnect
+storage disconnect
+clone split estimate
+clone split start
+#
+----
++
+この例は、ストレージ・システム toaster にアクセス権ファイルがない場合に表示されるメッセージの種類を示しています。また、「 The 'napdrive.conf 」ファイルの変数「 _all-access if -rbac -unspecified _ 」が off に設定されています。
+
++
+[listing]
+----
+# snapdrive config access list toaster
+Unable to read the access permission file on filer, toaster. Verify that the
+file is present.
+Granting no permissions to filer, toaster.
+----
+

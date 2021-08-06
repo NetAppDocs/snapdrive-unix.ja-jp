@@ -1,0 +1,18 @@
+---
+permalink: solaris/concept_snapdrived_stop_or_snapdrived_start_command_hangs.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, stop, start, command, hang 
+summary: snapdrived stop コマンドまたは snapdrived start コマンドは、場合によってはハングすることがあります。 
+---
+= snapdrived stop コマンドまたは snapdrived start コマンドを実行するとハングします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+場合によっては、「コマンドを使用しないで停止」または「コマンドを使用しないでください」がハングすることがあります。
+
+この問題を解決するには、「コマンド実行中」の数と、コマンドの実行開始時刻を確認するために「コマンドの未完了」ステータスを実行します。'napdrived stop' コマンドは、実行中のすべてのコマンドが完了するまで待機します。コマンドがハングすると思われる場合は、問題の「 napdrived-force stop 」または「管理された -force restart 」コマンドを使用します。
+
+
+IMPORTANT: 「 -force 」オプションを使用すると、実行中のすべてのコマンドとデーモンが停止します。これにより、古いデバイスのエントリや今後のデーモンの開始など、システムの状態に影響が及ぶ可能性があります。

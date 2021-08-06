@@ -1,0 +1,13 @@
+---
+permalink: solaris/task_stopping_the_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, stop, daemon 
+summary: SnapDrive for UNIX の構成ファイルを変更した場合は、デーモンを停止して再起動する必要があります。デーモンを強制的または強制的に停止できます。 
+---
+= デーモンを停止しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX の構成ファイルを変更した場合は、デーモンを停止して再起動する必要があります。デーモンを強制的または強制的に停止できます。

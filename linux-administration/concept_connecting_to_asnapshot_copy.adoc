@@ -1,0 +1,26 @@
+---
+permalink: linux-administration/concept_connecting_to_asnapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, copy, snapshot, host 
+summary: あるホストから別のホストに Snapshot コピーを接続できます。 
+---
+= Snapshot コピーへの接続
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+あるホストから別のホストに Snapshot コピーを接続できます。
+
+SnapDrive for UNIX では、ホスト上の別の場所から Snapshot コピーにホストを接続できます。この新しい場所は、 Snapshot コピーを作成したホスト（元のホスト）または別のホスト（元のホスト以外）に設定できます。
+
+新しい場所に Snapshot コピーをセットアップできるので、 Snapshot コピーを別のメディアにバックアップしたり、ディスクグループのメンテナンスを実施したり、データの元のコピーを中断せずに Snapshot コピーデータにアクセスしたりできます。
+
+このコマンドを使用すると、次のいずれかを含む Snapshot コピーにホストを接続できます。
+
+* LUN
+* LUN 上に直接作成されるファイルシステム
+* LUN 上に作成されたディスクグループ、ホストボリューム、およびファイルシステム
+* NFS ディレクトリツリー
+* 共有ストレージシステム上のディスクグループ、ホストボリューム、およびファイルシステム
+

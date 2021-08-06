@@ -1,0 +1,15 @@
+---
+permalink: solaris/concept_connecting_existingluns_with_sharedresources.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, lun, shared, resource 
+summary: 共有ディスクグループまたはファイルシステムを使用するホストクラスタ構成に新しいノードを追加する場合は、別の構文に従う必要があります。 
+---
+= 共有リソースを使用して既存の LUN を接続する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+共有ディスクグループまたはファイルシステムを使用するホストクラスタ構成に新しいノードを追加する場合は、別の構文に従う必要があります。
+
+SnapDrive storage connect -fs_file_spec - lun_long_lun_name_[lun_name...] [-deviceType shareed] [-mntopts options]

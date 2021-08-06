@@ -1,0 +1,71 @@
+---
+permalink: aix/task_viewing_the_result_of_a_clone_split_using_filespec.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, view, result, clone, split, job, id, filespec, operation 
+summary: ジョブ ID またはファイル仕様を使用して、完了したクローンスプリット処理の結果を表示できます。 
+---
+= ジョブ ID またはファイル仕様を使用したクローンスプリット処理の結果の表示
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ジョブ ID またはファイル仕様を使用して、完了したクローンスプリット処理の結果を表示できます。
+
+.手順
+. ファイル仕様を使用してクローンスプリットの結果を表示するには、次のコマンドを入力します。
++
+'*SnapDrive クローン・スプリットの結果 [-lun]_long_lun_name_[_long_lun_name_...] | [{-dg | -vg | -fs|-hostvol|-lvol ｝ file-spec [file_spec...] | [-job_<jobid>_]*`
+
++
+SnapDrive for UNIX の場合、ファイル仕様に対して完了または失敗したクローン・スプリットの結果が表示され、ジョブからファイル仕様が削除され、ジョブ・キューからジョブが削除されます。
+
+
+
+次の例は、正常に完了したジョブ ID のクローンスプリットの結果を示しています。
+
+[listing]
+----
+# snapdrive clone split result -job VT1ov6Q8vU
+Clone-Split for "/mnt/my_mnt3" is 100% completed and succeeded
+Clone-Split for "/mnt/my_mnt4" is 100% completed and succeeded
+----
+2 つのファイル仕様があり、そのうちの 1 つのファイル仕様でストレージシステムのスペース不足が原因で失敗した場合は、クローンスプリット処理の結果に、 1 つのファイル仕様が失敗し、別のファイル仕様が正常に完了したと表示されます。
+
+次に、ファイル仕様が正常に完了した場合のクローンスプリットの結果の例を示します。
+
+[listing]
+----
+# snapdrive clone split result -fs /mnt/my_mnt3 /mnt/my_mnt4
+Clone-Split for "/mnt/my_mnt3" is 100% completed and succeeded
+Clone-Split for "/mnt/my_mnt4" is 100% completed and succeeded
+----
+次の例は、クローンスプリット処理がまだ実行中で、まだ完了していない場合のクローンスプリットの結果を示しています。
+
+[listing]
+----
+# snapdrive clone split result -job R57aCzUaeG
+Clone-Split for "/mnt/my_mnt3" is 0% completed and Split in progress
+----
+次の例は、ジョブセットから完全に削除されたジョブを示しています。ファイル仕様を使用して結果を表示しようとすると、 SnapDrive for UNIX で「 does not belong to any job 」というエラーメッセージが表示されます。
+
+[listing]
+----
+# snapdrive clone split result -fs /mnt/my_mnt2
+Storage resource /mnt/my_mnt2 does not belong to any job
+----
+次の例は、ジョブセットから完全に削除されたジョブを示しています。ジョブ ID を使用して結果を表示しようとすると、 SnapDrive for UNIX で「 Job ID is not valid」 というエラーメッセージが表示されます。
+
+[listing]
+----
+# snapdrive clone split result -job T59aCzUaeG
+Job ID is not valid
+----
+次の例は、クローンスプリットの実行中に、別のクローンスプリットで障害が発生した場合のクローンスプリットの結果を表示します。
+
+[listing]
+----
+# snapdrive clone split result -job qJrG8U59mg
+Clone-Split for "/mnt/my_mnt4" is 100% completed and succeeded
+Clone-Split for "/mnt/my_mnt5" is 0% completed and split failed
+----

@@ -1,0 +1,17 @@
+---
+permalink: solaris/concept_files_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, file, unix 
+summary: SnapDrive for UNIX では、実行ファイル、構成ファイル、アンインストールファイル、診断ファイル、マニュアルページなど、複数のファイルがインストールされます。 ホスト。これらのファイルを使用すると、問題を検出し、現在のバージョンの製品の構成情報を SnapDrive for UNIX に格納できます。 
+---
+= SnapDrive for UNIX によってインストールされるファイル
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、実行ファイル、構成ファイル、アンインストールファイル、診断ファイル、マニュアルページなど、複数のファイルがインストールされます。 ホスト。これらのファイルを使用すると、問題を検出し、現在のバージョンの製品の構成情報を SnapDrive for UNIX に格納できます。
+
+* 関連情報 *
+
+xref:concept_types_of_logs.adoc[ログのタイプ]

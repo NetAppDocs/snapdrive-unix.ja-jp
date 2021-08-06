@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/reference_collecting_information_needed_by_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, information, keywords, arguments, values, options, format 
+summary: SnapDrive for UNIX のコマンドは、という形式に従い、キーワードを関連付けます。コマンドにはオプションと引数があり、ユーザが値を入力する必要があります。 
+---
+= コマンドで必要な情報を収集する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX のコマンドは、という形式に従い、キーワードを関連付けます。コマンドにはオプションと引数があり、ユーザが値を入力する必要があります。
+
+チェックリストを使用すると、ユーザは SnapDrive for UNIX をすばやく実行できます。コマンドごとに、次の情報が表示されます。
+
+* 推奨される形式
+* コマンドで使用できるキーワード、オプション、引数、および指定する値についての情報
+* コマンドの例を示します
+

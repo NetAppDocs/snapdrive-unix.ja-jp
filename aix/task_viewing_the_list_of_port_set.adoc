@@ -1,0 +1,28 @@
+---
+permalink: aix/task_viewing_the_list_of_port_set.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, view, list, port, set 
+summary: SnapDrive の portset list コマンドを使用して、ホストの SnapDrive で設定されているポートセットをすべて表示できます。 
+---
+= ポートセットのリストを表示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive portset list コマンドを使用して、ホスト上の SnapDrive で設定されているすべてのポートセットを表示できます。
+
+.手順
+. ホスト・システムで、次のコマンドを入力します。
++
+「 * SnapDrive portset list * 」
+
++
+[listing]
+----
+snapdrive portset list
+appliance name   Portset name
+-----------------------------
+vs91        ps2
+----
+

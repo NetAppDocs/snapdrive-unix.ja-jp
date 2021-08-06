@@ -1,0 +1,39 @@
+---
+permalink: solaris/concept_san_filespec_created_with_solaris_volume_manager_svm_using_iscsi_does_not_automount.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, filespec, iscsi, volume, solaris, manager, network, mount 
+summary: ホストシステムを再起動しても、 iSCSI を使用して Solaris Volume Manager\ （ SVM \ ）で作成されたストレージエリアネットワークファイルの仕様は自動的にはマウントされず、ホストは起動しません。 
+---
+= iSCSI を使用して Solaris Volume Manager で作成されたストレージエリアネットワークファイルの仕様は、自動的にはマウントされません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストシステムを再起動しても、 iSCSI を使用して Solaris Volume Manager （ SVM ）で作成されたストレージエリアネットワークファイルの仕様は自動的にはマウントされず、ホストは起動しません。
+
+ホストが起動したら、記載された手順に従ってファイル仕様をマウントできます。
+
+
+
+== 回避策
+
+. メタセットを入力します
++
+`*-s dgname-t*`
+
++
+コマンドを使用して、ディスクセットの所有権を手動で変更できます。
+
++
+
+NOTE: メタデータが定義されていることを確認します。
+
+. を入力します
++
+*mount-a *`
+
++
+ファイル仕様をマウントするためのコマンド。
+
+

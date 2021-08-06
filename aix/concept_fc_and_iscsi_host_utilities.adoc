@@ -1,0 +1,15 @@
+---
+permalink: aix/concept_fc_and_iscsi_host_utilities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, aix, host, utilities 
+summary: AIX Host Utilities を使用する構成の場合、 AIX Host Utilities をインストールして、システムが正しくセットアップされていることを確認する必要があります。 
+---
+= AIX Host Utilities をインストールしています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AIX Host Utilities を使用する構成の場合、 AIX Host Utilities をインストールして、システムが正しくセットアップされていることを確認する必要があります。
+
+AIX Host Utilities の付属マニュアルを使用してください。このガイドには、 SnapDrive for UNIX をインストールする前にセットアップする必要のあるボリュームマネージャ、マルチパス、およびその他の機能に関する情報が記載されています。

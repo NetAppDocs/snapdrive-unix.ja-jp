@@ -1,0 +1,19 @@
+---
+permalink: aix/concept_crash_consistent_snapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, crash, consistent, snapshot, copy 
+summary: ファイルシステムまたはディスクグループの crash-consistent Snapshot コピーの作成が必要になる場合があります。SnapDrive for UNIX では、エンティティで指定されたすべてのストレージシステムボリュームのイメージを含む Snapshot コピーが作成されます。 
+---
+= crash-consistent Snapshot コピー
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ファイルシステムまたはディスクグループの crash-consistent Snapshot コピーの作成が必要になる場合があります。SnapDrive for UNIX では、エンティティで指定されたすべてのストレージシステムボリュームのイメージを含む Snapshot コピーが作成されます。
+
+ファイル・システムやディスク・グループなどのストレージ・エンティティの Snapshot コピーを作成すると、 SnapDrive for UNIX は、「 file-spec 」引数で指定したエンティティを構成するすべてのストレージ・システム・ボリュームのイメージを含む Snapshot コピーを作成します。「 file_dspec 」引数では、 SnapDrive for UNIX が Snapshot コピーの作成に使用するファイルシステム、 LUN 、 NFS ディレクトリツリーなどのストレージエンティティを指定します。
+
+SnapDrive for UNIX では、 Snapshot コピーで要求したエンティティを構成する整合性のあるストレージコンポーネントが作成されます。つまり、 SnapDrive snap create 「 command 」「 file-spec 」引数で指定した以外の場所で使用されている LUN またはディレクトリに、 Snapshot コピー内で整合性のあるイメージが含まれていない可能性があります。SnapDrive for UNIX を使用すると 'file-spec 引数で指定された ' スナップショット・コピー内で整合性のあるエンティティのみをリストアできます
+
+単一のストレージシステムボリュームに含まれるエンティティの Snapshot コピーは、常に crash-consistent です。SnapDrive for UNIX では、複数のストレージ・システムまたはストレージ・システム・ボリュームにまたがる Snapshot コピーも crash-consistent であるように、特別な手順を実行します。Data ONTAP for UNIX がクラッシュ時の整合性を確保するために使用する方法は、 Snapshot コピー内のストレージエンティティの格納先である SnapDrive のバージョンによって異なります。

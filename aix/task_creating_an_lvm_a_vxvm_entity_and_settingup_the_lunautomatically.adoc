@@ -1,0 +1,43 @@
+---
+permalink: aix/task_creating_an_lvm_a_vxvm_entity_and_settingup_the_lunautomatically.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lv, lun, create, automatically 
+summary: ホスト上にファイルシステム、論理ボリューム、ディスクグループなどのエンティティを作成すると、 SnapDrive for UNIX によって、関連する LUN が自動的に作成されます。 
+---
+= LVM エンティティを作成し、 LUN を自動的に設定する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホスト上にファイルシステム、論理ボリューム、ディスクグループなどのエンティティを作成すると、 SnapDrive for UNIX によって、関連する LUN が自動的に作成されます。
+
+* 「 host_lvm_fspec 」引数では、ファイルシステム、論理ボリューム、またはディスクグループを作成するかどうかを指定できます。この引数には 3 つの一般的な形式があります。使用する形式は、作成するエンティティによって異なります。
++
+ファイルシステムを作成するには、次の形式を使用します。 `-fsfile_name [-fstype type] [-fsopts options] [-mntopts options] [-nopersist] [-hostvol file_name
+
++
+論理ボリュームまたはホストボリュームを作成するには、次の形式を使用します。
+
++
+`*[-hostvol file_spec]_file_spec_[-dG_DG_NAME_]*`
+
++
+ディスクまたはボリュームグループを作成するには、次の形式を使用します。
+
++
+*-dg-dG_DG_NAME__ *
+
+* ファイルシステムを作成する場合は、ホストボリュームの仕様、ディスクグループの仕様、または両方の仕様を追加して、ファイルシステムが存在するホストボリュームとディスクグループを指定することもできます。この仕様を指定しないと、 SnapDrive for UNIX によってホストボリュームとディスクグループのどちらかまたは両方の名前が自動的に生成されます。
+* ホストボリュームを指定すると、 SnapDrive for UNIX は接続されたホストボリュームを作成します。SnapDrive for UNIX がサポートするのはホストボリュームの作成時の唯一の形式ですが、ストライピングされた既存のホストボリュームを操作することはできます。
+
+
+.手順
+. コマンドラインで、次のコマンドを入力します。
++
+`* SnapDrive storage create _host_Vxvm_fspec _ -fileervol_long_filer_path_-dgsize [-igroup_ig_name [ig_name...] _[{-reserve | -noreserve }] *
+
++
+指定したホストエンティティが SnapDrive for UNIX によって作成され、指定したストレージシステム上に LUN が作成されます。ホストの準備と各 LUN の検出に関連するすべてのタスクのほか、 LUN をホストエンティティにマッピングして接続します。
+
+

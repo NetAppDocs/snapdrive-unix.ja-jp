@@ -1,0 +1,17 @@
+---
+permalink: solaris/concept_stale_devices_in_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, lun, clone, stale, device 
+summary: LUN とクローンを削除すると、 UNIX で古いデバイスが残る可能性があります。また、これらの古いデバイスを削除しても、 SnapDrive for UNIX では実行されないことがあります。 
+---
+= LUN およびクローンを削除すると、 UNIX では古いデバイスが残ります
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+LUN とクローンを削除すると、 UNIX で古いデバイスが残る可能性があります。また、これらの古いデバイスを削除しても、 SnapDrive for UNIX では実行されないことがあります。
+
+手動で、または SnapDrive for UNIX を使用して、 Snapshot コピーから LUN および LUN のクローン用のデバイスを作成すると、デバイスエントリが UNIX で自動的に作成されます。SnapDrive for UNIX を使用して LUN および LUN のクローンのデバイスを Snapshot コピーから削除すると、 UNIX で古いデバイスが使用される可能性があります。
+
+古いデバイスの削除はエンドユーザの責任であり、 UNIX 管理者が実行する必要があります。

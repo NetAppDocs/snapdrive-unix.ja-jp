@@ -1,0 +1,25 @@
+---
+permalink: solaris/task_forcing_daemon_restart.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, force, daemon, restart, command 
+summary: デーモンを強制的に再起動できます。デーモンを強制的に再起動すると、実行中のすべてのコマンドの実行が停止します。 
+---
+= デーモンを強制的に再起動して
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+デーモンを強制的に再起動できます。デーモンを強制的に再起動すると、実行中のすべてのコマンドの実行が停止します。
+
+root ユーザとしてログインしていることを確認します。
+
+.手順
+. デーモンを強制的に再起動するには、次のコマンドを入力します。
++
+「 * snapdrived-force restart * 」を入力します
+
++
+強制再起動要求を受信すると ' デーモンは実行中およびキュー内のすべてのコマンドを停止しますデーモンは、実行中のすべてのコマンドの実行をキャンセルした後にのみ再起動されます。
+
+

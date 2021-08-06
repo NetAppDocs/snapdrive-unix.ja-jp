@@ -1,0 +1,15 @@
+---
+permalink: aix/concept_troubleshooting.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, troubleshoot 
+summary: SnapDrive for UNIX のトラブルシューティングツールを使用すると、問題の解決に加えて情報も確認できます。 
+---
+= トラブルシューティング
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX のトラブルシューティングツールを使用すると、問題の解決に加えて情報も確認できます。
+
+このリリース時点で、 SnapDrive for UNIX にはいくつかの既知の問題と制限事項があります。一部の問題は UNIX ホストプラットフォームのすべての SnapDrive に影響しますが、それ以外の問題は特定のホストプラットフォームにのみ影響します。既知の問題およびトラブルシューティングのヒントについては、 SnapDrive for UNIX のリリースノートを参照してください。 _

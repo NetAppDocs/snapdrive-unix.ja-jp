@@ -1,0 +1,16 @@
+---
+permalink: linux-administration/concept_storage_creation_for_a_file_system_that_resides_on_a_lun.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, create, file, lun, host, lvm 
+summary: SnapDrive for UNIX を使用して LUN 上に直接常駐するファイルシステムを作成すると、 SnapDrive for UNIX によって LUN が作成されてマッピングされ、ホスト LVM を使用せずにファイルシステムが作成されてマウントされます。 
+---
+= LUN 上にあるファイルシステムのストレージ作成
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を使用して LUN 上に直接常駐するファイルシステムを作成すると、 SnapDrive for UNIX によって LUN が作成されてマッピングされ、ホスト LVM を使用せずにファイルシステムが作成されてマウントされます。
+
+
+NOTE: ホストのルートファイルシステムに読み取り専用権限が設定されている場合、 SnapDrive for UNIX の処理はサポートされません。

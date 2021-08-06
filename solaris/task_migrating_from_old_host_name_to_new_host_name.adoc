@@ -1,0 +1,30 @@
+---
+permalink: solaris/task_migrating_from_old_host_name_to_new_host_name.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, migrate, old, new, storage, system 
+summary: SnapDrive config migrate set コマンドを使用して、古いストレージ・システムから新しいストレージ・システムに移行することができます。移行後、新しいストレージシステムを使用して、ホストシステムですべての SnapDrive 処理を実行できます。 
+---
+= 古いストレージシステムから新しいストレージシステムへの移行
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive config migrate set コマンドを使用すると ' 古いストレージ・システムから新しいストレージ・システムに移行できます移行後、新しいストレージシステムを使用して、ホストシステムですべての SnapDrive 処理を実行できます。
+
+.手順
+. 次のコマンドを入力します。
++
+'*SnapDrive config migrate set_old_storage_system_name new_storage_system_name_*
+
+
+
+次の例は、古いストレージシステム「 tuffleskin 」から新しいストレージシステム「 roaster 」に移行できることを示しています。
+
+[listing]
+----
+snapdrive config migrate set tuffleskin roaster
+----
+* 関連情報 *
+
+xref:concept_migrating_to_new_vserver_name.adoc[新しい SVM 名に移行しています]

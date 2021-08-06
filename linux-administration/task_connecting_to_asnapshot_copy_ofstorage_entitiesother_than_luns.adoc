@@ -1,0 +1,132 @@
+---
+permalink: linux-administration/task_connecting_to_asnapshot_copy_ofstorage_entitiesother_than_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, lun, connect, mountpoint 
+summary: SnapDrive 以外のストレージエンティティを含む Snapshot コピーへの接続には、 lun snap connect コマンドを使用できます。指定したデスティネーション名が現在使用されている場合や、マウントポイントとして使用されるファイルシステム名がある場合は、このコマンドは使用できません。 
+---
+= LUN 以外のストレージエンティティの Snapshot コピーへの接続
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+lun snap connect コマンドを使用すると、 SnapDrive 以外のストレージ・エンティティを含む Snapshot コピーに接続できます。指定したデスティネーション名が現在使用されている場合や、マウントポイントとして使用されるファイルシステム名がある場合は、このコマンドは使用できません。
+
+.手順
+. 次のコマンドを入力します。
++
+`* SnapDrive snap connect -snapname fspec_set[_fspec_set..._]-snapname_long_snap_name_[-igroup_ig_name_[ig_name...] [-autostrine] [-autorename] [-nopersist] [{-reserve | -noreserve }] [-readonly ] [-split] *
+
++
+上記の使用方法では '_fspec_set_ は次の形式になります
+
++
+*{ -dg|-fs|-hostvol} _src_file_dspec_[_deste_file_dspec_][{-dvmd|-destvg }_ddgname_][{-dlv|-desv } lvname*`
+
++
+このコマンドは ' 常に ' 接続するストレージ・エンティティの名前で開始する必要があります ( たとえば '-ddd`'-hostvol'`-fs')NFS マウントポイントを指定する場合は ' 同じコマンド・ラインで非 NFS エンティティー（ -vg`'-dgd`'`-fs'`-lvol'-hostvol ）を指定することはできません
+
++
+
+NOTE: Linux ホストでは、 SnapDrive for UNIX が元のホスト上で Snapshot 接続処理をサポートします。ただし、 LUN が Linux の LVM1 ボリュームマネージャに含まれている場合は除きます。
+
+
+
+SnapDrive for UNIX では、指定した LUN のクローンを作成し、新しい場所に接続します。
+
+次のコマンドラインでは、ディスクグループを接続し、デフォルト名をデスティネーション名として使用します（つまり、ソース名からディスクグループが作成されます）。
+
+[listing]
+----
+# snapdrive snap connect -vg vg1 -snapname
+filer1:/vol/vol1:vg1snapshot
+connecting vg1:
+LUN copy vg1_lun1_0 ... created
+(original: filer1:/vol/vol1/vg1_lun1)
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+Importing vg1
+----
+次のコマンドラインでは、ディスクグループと単一のホストボリュームを接続します。デスティネーションホストボリュームとディスクグループの名前も指定します。
+
+[listing]
+----
+# snapdrive snap connect -lvol vg1/vol1 vg1copy/vol1copy -snapname
+filer1:/vol/vol1:vg1snapshot
+connecting vg1:
+LUN copy vg1_lun1_0 ... created
+(original: filer1:/vol/vol1/vg1_lun1)
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+Importing vg1copy
+----
+次のコマンドラインでは、 1 つのディスクグループを 2 つの LUN と 2 つのファイルシステムに接続しています。各ファイルシステムのデスティネーション名、いずれかのファイルシステムのホストボリューム、および両方のファイルシステムのディスクグループを指定します。
+
+[listing]
+----
+# snapdrive snap connect -fs mnt/fs1 /mnt/fs1copy -destvg vg1copy \
+-fs /mnt/fs2 /mnt/fs2copy -destlv vg1copy/vol2copy -destvg vg1copy
+\ -snapname filer1:/vol/vol1:vg1snapshot
+connecting vg1:
+LUN copy vg1_lun1_0 ... created
+(original: filer1:/vol/vol1/vg1_lun1)
+LUN copy vg1_lun2_0 ... created
+(original: filer1:/vol/vol1/vg1_lun2)
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+Importing vg1copy
+----
+次のコマンド・ラインを使用すると、 2 つのファイル・システムがディスク・グループに接続されるため、 -autoexpand オプションが含まれます。デフォルト名がデスティネーション名として使用されます（つまり、ソース名から作成されます）。
+
+[listing]
+----
+# snapdrive snap connect -lvol mnt/fs1 -snapname
+filer1:/vol/vol1:vg1snapshot \
+-autoexpand
+connecting vg1:
+LUN copy vg1_lun1_0 ... created
+(original: filer1:/vol/vol1/vg1_lun1)
+LUN copy vg1_lun2_0 ... created
+(original: filer1:/vol/vol1/vg1_lun2)
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+Importing vg1
+----
+次のコマンド・ラインは '2 つのファイル・システムと 2 つの LUN を持つディスク・グループを接続する際に '-autorname' オプションを含みます
+
+[listing]
+----
+# snapdrive snap connect -fs mnt/fs1 -snapname
+filer1:/vol/vol1:vg1snapshot \
+-autorename
+connecting vg1:
+LUN copy vg1_lun1_0 ... created
+(original: filer1:/vol/vol1/vg1_lun1)
+LUN copy vg1_lun2_0 ... created
+(original: filer1:/vol/vol1/vg1_lun2)
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+Importing vg1_0
+----
+次の例では、ファイルシステム 1 （ fs1 ）はストレージシステム 1 に、ファイルシステム 2 （ fs2 ）はストレージシステム 1 に、ストレージシステム 2 はパートナーストレージシステムであるストレージシステム 2 にそれぞれ存在します。ファイルシステム 3 （ fs3 ）は、 HA ペアの一部ではないストレージシステム 1 、パートナーストレージシステム 2 、およびストレージシステム 3 に配置されます。追加のファイル・システム fs4 は ' すべてストレージ・システム 4 上に存在します
+
+次に、 fs1 、 fs2 、 fs3 、および fs4 の Snapshot コピーを作成するコマンドを示します。
+
+[listing]
+----
+snapdrive snap create -fs /mnt/fs1 /mnt/fs2 /mnt/fs3 /mnt/fs4
+-snapname fs_all_snap
+----
+次のコマンドでは、宛先ストレージシステムの fs1 と fs2 を接続します。fs1 と fs2 の両方が HA ペア上に存在するので、次のコマンドを 1 つ実行して復元できます。
+
+[listing]
+----
+snapdrive snap connect -fs /mnt/fs1 /mt/fs2 -snapname fs_all_snap
+----
+次のコマンドは fs4 をリストアします。
+
+[listing]
+----
+snapdrive snap connect -fs /mnt/fs4 -snapname fs_all_snap
+----
+このファイルシステムはストレージシステム 1 、ストレージシステム 2 、およびストレージシステム 3 に存在するため、 SnapDrive for UNIX は、デスティネーションストレージシステムの fs3 に接続できません。

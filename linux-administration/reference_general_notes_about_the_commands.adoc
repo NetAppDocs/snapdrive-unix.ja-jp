@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/reference_general_notes_about_the_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, general, commands, dg, vg, lvol, hostvol, unix 
+summary: SnapDrive for UNIX のコマンドには、 -dg 、 -vg 、 -lvol 、 -hostvol などのオプションがあります。 
+---
+= コマンドに関する一般的な注意事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX コマンドには '-dg'-vg'-lvol' および -hostvol' などのオプションがあります
+
+コマンドに関する一般的な注意事項は次のとおりです。
+
+* dg オプションと -vg オプションは同義語です OS によってはディスク・グループと呼ばれるものもあり ' ボリューム・グループと呼ばれるものもありますこのマニュアルでは、 -dg はディスク・グループとボリューム・グループの両方を指します。
+* 「 -lvol 」オプションと「 -hostvol 」オプションは同義語です。 OS によっては論理ボリュームを参照するものと、ホストボリュームを参照するものがあります。このガイドでは '-hostvol' を使用して論理ボリュームとホストボリュームの両方を参照します
+* デフォルトの igroup を使用することを推奨します。「 -igroup 」オプションを指定して、 igroup を明示的に指定することはできません。
+

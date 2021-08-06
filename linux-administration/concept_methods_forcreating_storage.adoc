@@ -1,0 +1,21 @@
+---
+permalink: linux-administration/concept_methods_forcreating_storage.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, storage, command, lun 
+summary: SnapDrive for UNIX では、ストレージを簡単に作成できるように、 SnapDrive storage create コマンドの基本的な形式をいくつか提供しています。ストレージ作成処理は、さまざまな一般カテゴリに分類されます。 
+---
+= ストレージを作成する方法
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では ' ストレージを簡単に作成できるようにするために ' いくつかの基本的なフォーマットが SnapDrive storage create コマンドに用意されていますストレージ作成処理は、さまざまな一般カテゴリに分類されます。
+
+* LUN の作成： SnapDrive storage create コマンドは ' ストレージ・システム上に自動的に LUN を作成しますが ' 追加のストレージ・エンティティは作成しませんSnapDrive for UNIX では、ホストの準備および各 LUN のストレージ検出に関連するすべてのタスクのほか、マッピングと接続も実行します。
+* LUN 上に直接ファイルシステムを作成し、 LUN を自動的にセットアップする -- SnapDrive for UNIX は、ファイルシステムのセットアップに必要なすべてのアクションを実行します。作成する LUN を指定する必要はありません。
+* LUN 上 SnapDrive にファイル・システムを直接作成し 'LUN に関連づけたい LUN を指定するこの場合は 'lun storage create コマンドを使用して ' セットアップするファイル・システムとファイル・システムに関連づけたい LUN を指定します
+* LVM を作成し 'LUN を自動的にセットアップする SnapDrive storage create コマンドを使用すると ' ホスト上にファイル・システム ' 論理ボリューム ' またはディスク・グループを作成できますSnapDrive for UNIX は、必要なディスクグループと LUN の自動作成を含め、エンティティのセットアップに必要なすべての操作を実行します。作成する LUN を指定する必要はありません。
+* ホスト上に LVM エンティティを作成し、関連付ける LUN を指定する -- この場合は、 SnapDrive storage create コマンドを使用して、設定するエンティティ（ファイルシステム、論理ボリューム、またはディスクグループ）と、そのエンティティに関連付ける LUN の両方を指定します。
+* ホストクラスタ環境の共有ホスト上にファイルシステムを作成する - この場合は、共有ホスト上にファイルシステム、論理ボリューム、またはディスクグループを作成します。
+

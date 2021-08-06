@@ -1,0 +1,29 @@
+---
+permalink: solaris/concept_creating_snapshotcopies_of_unrelatedentities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, unrelated, create 
+summary: SnapDrive for UNIX では、 crash-consistent Snapshot コピーを個別に保持することによって、関連のないエンティティの Snapshot コピーを作成します。 
+---
+= 関連のないエンティティの Snapshot コピーの作成
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、 crash-consistent Snapshot コピーを個別に保持することによって、関連のないエンティティの Snapshot コピーを作成します。
+
+特に指定しないかぎり、 SnapDrive for UNIX は、特定の SnapDrive snap create コマンドラインで指定するすべてのエンティティが関連しているとみなします。つまり、あるエンティティに対する更新の有効性は、指定された他のエンティティに対する更新に依存します。このようにストレージエンティティに従属書き込みがある場合、 SnapDrive for UNIX では、グループとしてのすべてのストレージエンティティについて整合性がとれた crash-consistent Snapshot コピーの作成手順が実行されます。
+
+次の例は、 SnapDrive for UNIX が、従属書き込みを含むストレージエンティティの Snapshot コピーを作成する方法を示しています。次の例では、 lun snap create コマンドで、 SnapDrive 上のファイルシステムとディスクグループを指定しています。ディスクグループは、単一のストレージシステム上にある LUN で構成されます（「 Snapshot コピーの作成」を参照）。LUN 上のファイルシステムは、別のストレージシステムおよびストレージシステムボリュームに存在します。1 つのグループとして、ファイルシステムとディスクグループは複数のストレージシステムボリュームにまたがっており、個別には存在しません。
+
+次のコマンドでは、ファイルシステム /mnt/fs1 とディスクグループ dg1 の両方が含まれる Snapshot コピーを指定します。 SnapDrive snap create -fs/mnt/fs1 -dg dg1 -snapname fs1_dg1
+
+これらのストレージエンティティは従属書き込みを行うことができるため、 SnapDrive for UNIX はクラッシュ整合性のある Snapshot コピーを作成しようとし、ファイルシステム /mnt/fs1 とディスクグループ dg1 をグループとして扱います。つまり、 SnapDrive for UNIX は、 Snapshot コピーを作成する前にストレージシステムボリュームへの I/O 処理をフリーズするために必要です。
+
+複数のボリュームにまたがる複数のストレージエンティティに対して crash-consistent Snapshot コピーを作成すると時間がかかり、 SnapDrive for UNIX の I/O 処理がフリーズしない場合は常に実行可能ではありません。これにより、 SnapDrive for UNIX では、関連のないストレージエンティティの Snapshot コピーを作成できます。関連付けられていないストレージエンティティとは、 Snapshot コピーの作成時に従属書き込みを行わないように指定できるエンティティのことです。エンティティには従属書き込みがないため、 SnapDrive for UNIX では、エンティティをグループとして整合性を保つための手順は実行されません。代わりに、 SnapDrive for UNIX では、個々のストレージエンティティの crash-consistent Snapshot コピーが作成されます。
+
+次のコマンドは、前のセクションで説明した LUN およびディスクグループ上のファイルシステムの Snapshot コピーを指定します。unrelated オプションが指定されているため、 SnapDrive for UNIX は、ファイルシステム /mnt/fs1 とディスクグループ dg1 が個々のストレージエンティティとしてクラッシュコンシステントであるが、グループとして扱われない Snapshot コピーを作成します。次のコマンドを実行しても、ストレージシステムボリューム上の I/O 処理をフリーズするために SnapDrive for UNIX は必要ありません。 SnapDrive snap create -fs/mnt/fs1 -dg dg1 -unrelated -snapname fs1_dg1 `
+
+* 関連情報 *
+
+xref:task_creating_asnapshot_copy.adoc[Snapshot コピーを作成します]

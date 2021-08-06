@@ -1,0 +1,42 @@
+---
+permalink: linux-administration/concept_snapdrive_for_unix_faces_issue_after_sles_upgrade_from_version_10_to_11.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, error, suse, upgrade, file, base, device 
+summary: SUSE Linux Enterprise Server\ （ SLES\ ）をバージョン 10 から 11 にアップグレードすると、 SnapDrive for UNIX でエラーが表示されます。ベースデバイス名を作成し、ファイルシステムをマウントする必要があります。 
+---
+= SUSE Linux Enterprise Server をバージョン 10 から 11 にアップグレードすると、 SnapDrive for UNIX にエラーメッセージが表示されます
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SUSE Linux Enterprise Server （ SLES ）をバージョン 10 から 11 にアップグレードすると、 SnapDrive for UNIX にエラーが表示されます。ベースデバイス名を作成し、ファイルシステムをマウントする必要があります。
+
+ストレージの処理を実行すると、 SnapDrive for UNIX で「 0001-791 Admin error ： Device /dev/sdc にはパーティションがありません。ファイルシステム /mnt/testfs の永続的なマウントをサポートするには、 1 つのパーティションが必要です。-nopersist オプションを使用してコマンドを再試行します
+
+
+
+== 回避策
+
+. 次の例に示すように '-f' および -nopersist' オプションを使用して ' ベース・デバイス名を記録します
++
+「 * IBMX336-250-111: /etc/udev/rules.d# 」 SnapDrive storage connect -fs/mnt/testfs -lun f3020-207-11 ： /vol/san1/lun200/nolvm -nolpersist*`
+
++
+ファイル・システムは予期したとおりに作成されませんが ' ベース・デバイス名が記録されます（この場合は '/dev/sdc' ）
+
+. 「 m kdir --p /mnt/testfs 」ディレクトリをベースデバイス名に作成します。
+. 「 bldk` 」を動かしなさい。
+. 次の情報を指定します。
++
+*UUID=239ae9a1-75fd-4faf-b9f4-a0b80bf7b62c /mnt/testfs ext3 *`
+
+. ファイルシステムをマウントします。
++
+`*# mount /mnt/testfs *``
+
+. ストレージオプションを表示します。
++
+`*# SnapDrive storage show -fs/mnt/testfs3*`
+
+

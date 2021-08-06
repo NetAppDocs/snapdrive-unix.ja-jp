@@ -1,0 +1,26 @@
+---
+permalink: linux-administration/concept_command_to_use_todisplay_availablestorage.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, display, storage, directory, file 
+summary: SnapDrive storage show または SnapDrive storage list には、 1 つ以上のストレージエンティティの基盤となる LUN または NFS ディレクトリツリーが表示されます。SnapDrive storage show コマンドを使用すると、ディスクグループ、ホストボリューム、ファイルシステム、または NFS ディレクトリツリーの Snapshot コピーの内容を確認できます。 
+---
+= 使用可能なストレージの表示に使用するコマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive storage show または SnapDrive storage list には '1 つ以上のストレージ・エンティティの基盤となる または NFS ディレクトリ・ツリーが表示されますSnapDrive storage show コマンドを使用すると、ディスク・グループ、ホスト・ボリューム、ファイル・システム、または NFS ディレクトリ・ツリーの Snapshot コピーの内容を確認できます。
+
+これらのコマンドを使用すると、次の情報を表示できます。
+
+* 特定のストレージシステムまたはストレージシステムボリュームに使用可能な LUN
+* ファイルシステム、ホストボリューム、またはディスクグループに関連付けられた LUN
+* NFS マウントポイントとディレクトリツリー
+* 特定のホストで認識されている LUN と、その LUN に含まれる LVM エンティティ
+* 特定のホストで認識されているデバイス
+* 共有ホストおよび専用ホスト上のリソース
+
+
+
+NOTE: コマンド・ラインでは、 SnapDrive storage show または SnapDrive storage list を使用できます。

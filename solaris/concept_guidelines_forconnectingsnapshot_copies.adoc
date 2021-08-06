@@ -1,0 +1,22 @@
+---
+permalink: solaris/concept_guidelines_forconnectingsnapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, snapshot, copy 
+summary: Snapshot コピーに接続するときは、次のガイドラインに従ってください。 
+---
+= Snapshot コピーを接続する場合のガイドラインを次に示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot コピーに接続するときは、次のガイドラインに従ってください。
+
+* SnapDrive snap connect コマンドは、 SnapDrive 4.2 for UNIX で作成された Snapshot コピーに対してのみ機能します。
+* 元のホスト上では、以前のバージョンの SnapDrive for UNIX で作成された Snapshot コピーの接続とリストアが SnapDrive for UNIX でサポートされます。
+* NFS ディレクトリ・ツリーへの読み取り / 書き込みアクセスの場合、 SnapDrive snap connect コマンドは Data ONTAP FlexVol ボリューム機能を使用するため、 Data ONTAP 7.3 以降が必要です。Data ONTAP 7.1 を使用した設定では、 NFS ファイルやディレクトリツリーを接続できますが、読み取り専用アクセスが提供されます。
+* SnapDrive 接続処理中にコンフィギュレーション変数の _enable-split-clone_` を on または 'Sync に設定し 'Snapshot 切断処理中に off' を設定した場合 'UNIX 用 は Snapshot コピーに存在する元のボリュームまたは LUN を削除しません
+* Data ONTAP 7.2.2 の構成オプション vfiler の値を設定する必要があります。vFIler ユニット内のボリュームまたは LUN の Snapshot コピーに接続するには 'vol_clone_zapi_allow' を "'`" に設定します
+* ホスト構成が異なるホストでは、 Snapshot 接続処理はサポートされていません。
+* Data ONTAP ではルート・ボリュームのクローンを作成できないため、物理ストレージ・システムまたは vFiler ユニットのルート・ボリュームへの接続に使用する SnapDrive snap connect コマンドは失敗します。
+

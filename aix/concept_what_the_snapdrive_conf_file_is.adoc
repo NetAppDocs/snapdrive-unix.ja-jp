@@ -1,0 +1,15 @@
+---
+permalink: aix/concept_what_the_snapdrive_conf_file_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, file, configuraiton, variable 
+summary: snapdrive.conf ファイルには、 SnapDrive for UNIX が機能するために使用する、設定可能な各変数の名前と値のペアが含まれています。SnapDrive for UNIX では、このファイルの情報は起動するたびに自動的にチェックされます。このファイルは、テキストエディタを使用して変更できます。 
+---
+= snapdrive.conf ファイルの内容
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「 napdrive.conf 」ファイルには、 SnapDrive for UNIX が機能するために使用する設定可能な変数ごとに名前と値のペアが含まれています。SnapDrive for UNIX では、このファイルの情報は起動するたびに自動的にチェックされます。このファイルは、テキストエディタを使用して変更できます。
+
+「 snapdrive.conf 」ファイルは、 SnapDrive インストールディレクトリにあります。SnapDrive config show コマンドは 'napdrive.conf ファイルの現在の内容とアクティブな内容を表示します

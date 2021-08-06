@@ -1,0 +1,17 @@
+---
+permalink: aix/concept_configuration_files_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, file, install 
+summary: SnapDrive for UNIX をインストールすると、 snapdrive.conf ファイルがインストールされます。このファイルには、現在のバージョンの製品の構成情報が格納されます。 
+---
+= SnapDrive for UNIX によってインストールされる構成ファイル
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX は 'napdrive.conf ファイルをインストールしますこのファイルには ' 現在のバージョンの製品の構成情報が格納されます
+
+ご使用のシステムの「 snapdrive.conf 」ファイルを変更する必要があります。SnapDrive for UNIX のバージョンをアップグレードすると ' 現在の「 snapdrive.conf 」ファイルが保持されます構成ファイルは次の場所にあります。
+
+/opt/NetApp/snapdrive/snapdrive.conf

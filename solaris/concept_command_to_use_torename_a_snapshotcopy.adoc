@@ -1,0 +1,13 @@
+---
+permalink: solaris/concept_command_to_use_torename_a_snapshotcopy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, rename, snapshot, copy 
+summary: snapshot snap rename コマンドを使用して、 Snapshot コピーの名前を変更します。 
+---
+= Snapshot コピーの名前を変更するために使用するコマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot コピーの名前を変更するには、「 snapshot-rename 」コマンドを使用します。

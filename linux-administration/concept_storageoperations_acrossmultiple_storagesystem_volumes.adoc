@@ -1,0 +1,13 @@
+---
+permalink: linux-administration/concept_storageoperations_acrossmultiple_storagesystem_volumes.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, volume, lvm, logical, manager 
+summary: SnapDrive for UNIX では、操作によって論理ボリュームマネージャ \ （ LVM \ ）が操作されないかぎり、複数のストレージシステムボリュームにわたって多くのストレージ操作を実行できます。これにより、複数のストレージシステムボリュームに存在する LUN のリストを操作できます。 
+---
+= 複数のストレージシステムボリュームにわたってストレージを運用
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、操作によって論理ボリュームマネージャ（ LVM ）が操作されないかぎり、複数のストレージシステムボリュームにわたって多くのストレージ操作を実行できます。これにより、複数のストレージシステムボリュームに存在する LUN のリストを操作できます。

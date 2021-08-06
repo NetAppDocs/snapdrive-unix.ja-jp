@@ -1,0 +1,42 @@
+---
+permalink: solaris/concept_snapdrive_for_unix_reports_an_error_if_iscsi_is_not_running.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, error, iscsi, error 
+summary: Linux ホスト上で実行されている SnapDrive for UNIX は、「 HBA assistant not found 」というエラーメッセージを返します。 
+---
+= iSCSI が実行されていない場合、 SnapDrive for UNIX からエラーが報告されます
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Linux ホスト上で実行されている SnapDrive for UNIX は 'HBA assistant not found` というエラー・メッセージを返します
+
+これは、次のいずれかの状況が発生した後に発生します。
+
+* iSCSI の停止が発生しました。
+* テイクオーバーが発生しましたが、 iSCSI サービスはまだ開始されていません。
+* ギブバックを実行中です。 iSCSI サービスはまだ開始されていません。
+
+
+SnapDrive for UNIX を実行するには、 iSCSI サービスが実行されている必要があります。サービスが停止されると、 SnapDrive for UNIX はエラーメッセージを返します。たとえば 'iSCSI サービスが実行されていないときに SnapDrive storage show コマンドを実行すると ' 次のような出力が表示されます # SnapDrive storage show -dg toaster1 0001-877 Admin error ： HBA assistant not foundLUN を含むコマンドは失敗します
+
+
+
+== 回避策
+
+iSCSI サービスが実行されていることを確認します。ストレージシステムでテイクオーバーやギブバックの処理が開始されるまで待ちます。ストレージ・システムが通常の実行モードになっている場合は 'iSCSI サービスを再起動してから 'snapmirror drived restart コマンドを実行して SnapDrive for UNIX デーモンを再起動しますサービスが実行されたら、 SnapDrive storage show コマンドを再発行します。今回は、次のような出力が表示されます。
+
+[listing]
+----
+# snapdrive storage show -dg toaster1
+dg: toaster1 dgtype lvm
+hostvol: /dev/mapper/toaster1-lvol1 state: AVAIL
+hostvol: /dev/mapper/toaster1-lvol2 state: AVAIL
+fs: /dev/mapper/toaster1-lvol1 mount point: /mnt/um1 (nonpersistent)
+fstype ext3
+fs: /dev/mapper/toaster1-lvol2 mount point: NOT MOUNTED
+device filename adapter path size proto state clone lun path backing snapshot
+/dev/sde - P 64m iscsi online No gin:/vol/vol1/Lun1
+/dev/sdf - P 64m iscsi online No gin:/vol/vol1/Lun2
+----

@@ -1,0 +1,27 @@
+---
+permalink: solaris/concept_multipath_access_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, multipath, access, support 
+summary: SnapDrive for UNIX は、標準のマルチパスソフトウェア解決策を使用した、ストレージシステムへの FC マルチパスアクセスをサポートしています。マルチパスを使用すると、ホストとストレージシステム間に複数のネットワークパスを設定できます。 
+---
+= SnapDrive for UNIX でマルチパスアクセスがサポートされるようになりました
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX は、標準のマルチパスソフトウェア解決策を使用した、ストレージシステムへの FC マルチパスアクセスをサポートしています。マルチパスを使用すると、ホストとストレージシステム間に複数のネットワークパスを設定できます。
+
+|===
+| プラットフォーム | マルチパス解決策 
+
+
+ a| 
+Solaris の場合
+ a| 
+* MPxIO
+* DMP
+
+
+|===
+1 つのパスで障害が発生した場合、 FC トラフィックは残りのパスで続行されます。ホストに LUN への複数のパスがある場合、マルチパスが必要です。また、基盤となるパスがユーザに対して透過的に機能します。SnapDrive for UNIX の処理用の構成ファイルで指定されたマルチパス解決策が設定されてサポートされている場合、 SnapDrive for UNIX では指定されたマルチパス解決策を使用します。

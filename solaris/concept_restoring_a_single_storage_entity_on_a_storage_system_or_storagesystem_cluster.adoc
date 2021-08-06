@@ -1,0 +1,15 @@
+---
+permalink: solaris/concept_restoring_a_single_storage_entity_on_a_storage_system_or_storagesystem_cluster.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, snapshot, copy, ha, storage, pair 
+summary: 単一のストレージエンティティを含む Snapshot コピーをリストアできます。 
+---
+= ストレージシステムまたはストレージシステムの HA ペア上の単一のストレージエンティティのリストア
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+単一のストレージエンティティを含む Snapshot コピーをリストアできます。
+
+ストレージシステムまたはストレージシステム HA ペア上にある単一のストレージエンティティを含む Snapshot コピーをリストアできます。デスティネーションストレージシステム上のボリュームの名前は、ソースストレージシステム上のボリュームの名前と一致している必要があります。

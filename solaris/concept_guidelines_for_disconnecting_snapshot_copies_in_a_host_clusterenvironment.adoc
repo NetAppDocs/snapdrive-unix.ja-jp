@@ -1,0 +1,25 @@
+---
+permalink: solaris/concept_guidelines_for_disconnecting_snapshot_copies_in_a_host_clusterenvironment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, snapshot, copy, host, cluster 
+summary: NFS エンティティの Snapshot コピーを切断すると、 SnapDrive for UNIX によってファイルシステムがアンマウントされ、ファイルシステム内のマウントエントリが削除され、マウントポイントが削除されます。 
+---
+= ホストクラスタ環境での Snapshot コピーの切断に関するガイドライン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NFS エンティティの Snapshot コピーを切断すると、 SnapDrive for UNIX によってファイルシステムがアンマウントされ、ファイルシステム内のマウントエントリが削除され、マウントポイントが削除されます。
+
+* SnapDrive snap disconnect コマンドは、ホストクラスタ内の任意のノードから実行できます。
+* Snapshot の切断処理を成功させるには、次のいずれかの条件を満たす必要があります。
++
+** ストレージエンティティは、ホストクラスタ内のすべてのノードで共有する必要があります。
+** LUN はホストクラスタ内のすべてのノードにマッピングする必要があります。
+
+
+* --deviceType dedicated または 'hared' オプションを使用すると ' 特定のノードからストレージエンティティを切断できます専用モードのストレージエンティティを切断する場合は、デフォルト値が dedicated であるため、コマンドライン構文から「 -deviceType 」オプションを省略できます。
+* 共有ストレージ・エンティティまたは LUN が「 d edicated 」オプションで切断された場合、または専用のストレージ・エンティティまたは LUN が共有オプションで切断された場合、 lun snap disconnect コマンドはエラーを表示します。 SnapDrive
+* SnapDrive for UNIX は ' マスター・ノード上で SnapDrive snap disconnect コマンドを実行しますストレージエンティティを削除して、すべての非マスターノード上の LUN を切断し、ホストクラスタ内のマスターノードから LUN を切断します。エラーが発生すると、 Snapshot の切断処理が失敗します。
+

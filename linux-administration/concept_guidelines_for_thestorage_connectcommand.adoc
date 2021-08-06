@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/concept_guidelines_for_thestorage_connectcommand.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, connect, command, guidelines, lvm 
+summary: SnapDrive storage connect コマンドを使用する際は、次のガイドラインに従う必要があります。 
+---
+= storage connect コマンドに関するガイドラインを示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive storage connect コマンドを使用するには ' いくつかのガイドラインに従う必要があります
+
+LVM エンティティを含むストレージには特別な要件があります。SnapDrive storage connect` コマンドを使用して LVM エンティティを接続するには、ストレージ階層内の各エンティティに次のエンティティのインスタンスが 1 つだけ含まれるようにストレージを作成する必要があります。たとえば、 SnapDrive storage connect コマンドを使用して、 1 つのディスクグループ (dg1) と 1 つのホストボリューム (hostvol1) および 1 つのファイルシステム (fs1) を持つストレージ階層を接続できます。ただし、 SnapDrive storage connect` コマンドを使用して、 1 つのディスクグループ (dg1) と 2 つのホストボリューム (hostvol1 と host21) および 2 つのファイルシステム (fs1 と fs2) を持つ階層を接続することはできません。
+
+Linux ホスト SnapDrive では 'LUN 上に直接作成されたファイル・システムは ' 基盤となる LUN がパーティション化されている場合にのみ 'LUN 上に直接接続されます
+
+
+NOTE: SLES10 Update 2 では、 SnapDrive for UNIX SnapDrive storage connect および SnapDrive storage create コマンドによって、 LUN 上に直接ファイルシステムが作成されます。SnapDrive for UNIX では、 raw デバイスにファイルシステムを作成してからマウントします。

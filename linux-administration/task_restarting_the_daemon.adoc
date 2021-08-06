@@ -1,0 +1,24 @@
+---
+permalink: linux-administration/task_restarting_the_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restart, daemon, command, configuration 
+summary: 構成ファイルまたは他のモジュールに加えた変更を有効にするには、デーモンを停止したあとに再起動する必要があります。SnapDrive for UNIX デーモンは、実行中およびキューに登録されているすべてのコマンドを完了したあとにのみ再起動されます。再起動要求を受信すると、新しいコマンドは実行されません。 
+---
+= デーモンを再起動しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+構成ファイルまたは他のモジュールに加えた変更を有効にするには、デーモンを停止したあとに再起動する必要があります。SnapDrive for UNIX デーモンは、実行中およびキューに登録されているすべてのコマンドを完了したあとにのみ再起動されます。再起動要求を受信すると、新しいコマンドは実行されません。
+
+* root ユーザとしてログインしていることを確認します。
+* 同じホスト上で他のセッションが並行して実行されていないことを確認します。このような状況では 'napdrived restart' コマンドを実行すると ' システムがハングアップします
+
+
+.手順
+. 次のコマンドを入力してデーモンを再起動します。
++
+「 * snapdrived restart * 」というメッセージが表示されます
+
+

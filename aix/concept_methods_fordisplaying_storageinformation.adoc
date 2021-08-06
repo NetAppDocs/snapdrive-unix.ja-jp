@@ -1,0 +1,26 @@
+---
+permalink: aix/concept_methods_fordisplaying_storageinformation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, method, display, storage, information 
+summary: ストレージに関する情報の表示を簡単にするために、 SnapDrive for UNIX では、 SnapDrive storage show コマンドのいくつかの形式を使用できます。 
+---
+= ストレージ情報の表示方法
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージに関する情報の表示を容易にするために、 SnapDrive for UNIX には、 SnapDrive storage show コマンドの複数の形式が用意されています。
+
+storage show の処理の一般的なカテゴリは次のとおりです。
+
+* 特定の LUN に関する情報を表示する
+* 特定のストレージシステムまたはストレージシステムボリュームに使用できる LUN に関する情報のリスト。
+* 指定した引数に関連付けられている LUN に関する情報を表示する
++
+これらの引数には、 NFS エンティティ、ファイルシステム、ホストボリューム、またはディスクグループを指定できます。コマンド・プロンプトで -verbose オプションを指定すると、 SnapDrive for UNIX により、バッキング LUN を含むストレージ階層の表示など、詳細な出力が表示されます。
+
+* ホストが認識しているデバイスに関する情報を表示する。
+* ホストが認識しているすべてのデバイスと LVM エンティティに関する情報を表示する
+* リソースのステータスを共有または専用として表示する。
+

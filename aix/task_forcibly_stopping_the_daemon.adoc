@@ -1,0 +1,22 @@
+---
+permalink: aix/task_forcibly_stopping_the_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, daemon, stop, daemon 
+summary: すべてのコマンドの実行が完了しないようにするには、デーモンを強制的に停止します。デーモンを強制的に停止する要求が受信されると、 SnapDrive for UNIX デーモンは実行中またはキューにあるすべてのコマンドをキャンセルします。デーモンを強制的に停止すると、システムの状態が undefined になることがあります。この方法は推奨されません。 
+---
+= デーモンを強制的に停止します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+すべてのコマンドの実行が完了しないようにするには、デーモンを強制的に停止します。デーモンを強制的に停止する要求が受信されると、 SnapDrive for UNIX デーモンは実行中またはキューにあるすべてのコマンドをキャンセルします。デーモンを強制的に停止すると、システムの状態が undefined になることがあります。この方法は推奨されません。
+
+root ユーザとしてログインする必要があります。
+
+.手順
+. デーモンを強制的に停止します。
++
+`*snapdrived-force stop*`
+
+

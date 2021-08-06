@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_common_error_messages.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, common, error, message 
+summary: SnapDrive for UNIX には、一般的なエラーメッセージがいくつかあります。一般的なエラーメッセージの一覧を表示します。 
+---
+= 一般的なエラーメッセージです
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX には、一般的なエラーメッセージがいくつかあります。一般的なエラーメッセージの一覧を表示します。

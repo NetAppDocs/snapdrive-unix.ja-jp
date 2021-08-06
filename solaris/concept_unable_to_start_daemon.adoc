@@ -1,0 +1,25 @@
+---
+permalink: solaris/concept_unable_to_start_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restart, daemon, host, communivation, storage 
+summary: ホストが設定されたどのストレージシステムとも通信できない場合、デーモンを開始できません。 
+---
+= ホストがストレージシステムと通信できない場合、デーモンを再起動できません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストが設定されたどのストレージシステムとも通信できない場合、デーモンを開始できません。
+
+この状況でデーモンを再起動しようとすると、デーモンは開始されず、次のエラーメッセージが表示されます。
+
+[listing]
+----
+Unable to start daemon...check daemon log file for more details
+----
+主に、ストレージシステムに対して ping コマンドを実行して、ホストがストレージシステムと通信しているかどうかを確認する必要があります。それでもホストがストレージシステムと通信できない場合は、次のオプションを使用します。
+
+* ホストと通信していないストレージシステムを削除してから、デーモンを再起動してください。
+* その場合、ホストに設定されているストレージ・システムを削除しないで、「 napdrive.conf 」ファイルのオプション「 _autosupport-enabled 」を「 _off_ 」に無効にして、エラー・メッセージが表示されないようにします。
+

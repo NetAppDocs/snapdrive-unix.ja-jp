@@ -1,0 +1,19 @@
+---
+permalink: linux-administration/concept_guidelines_fordeleting_snapshotcopies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, snapshot, copy, storage, command 
+summary: 使用中の Snapshot コピー、または Snapshot コピーが複数のストレージシステムボリュームに分散している Snapshot コピーは削除できません。 
+---
+= Snapshot コピーを削除する場合のガイドラインを次に示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用中の Snapshot コピー、または Snapshot コピーが複数のストレージシステムボリュームに分散している Snapshot コピーは削除できません。
+
+SnapDrive snap delete コマンドを使用する場合は、次のガイドラインに従ってください。
+
+* 削除する Snapshot コピーが使用中であるか、 SnapDrive for UNIX で作成されていない場合、 Snapshot の削除処理は失敗します。SnapDrive snap delete コマンドに「 -force 」オプションを指定すると、この動作を無効にできます。
+* 複数のストレージ・システム・ボリュームにまたがる Snapshot コピーがある場合は、各ボリューム上の Snapshot コピーを手動で削除する必要があります。
+

@@ -1,0 +1,47 @@
+---
+permalink: aix/concept_migrating_to_new_vserver_name.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, vserver, migrating, name, new 
+summary: 古い SVM を新しい SVM に移行した場合は、その SVM で SnapDrive 処理を実行するために、ホストシステムで新しい SVM 名を設定する必要があります。 
+---
+= 新しい SVM 名に移行しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+古い SVM を新しい SVM に移行した場合は、その SVM で SnapDrive 処理を実行するために、ホストシステムで新しい SVM 名を設定する必要があります。
+
+新しい SVM 名に移行する場合は、ホストシステムで次の手順を実行する必要があります。
+
+.手順
+. 次のコマンドを使用して、設定された古い SVM 名を削除します。
++
+'*SnapDrive config delete_apply_name_*
+
++
+設定されていた古い SVM 名がホストシステムから削除されます。
+
+. 次のコマンドを使用して、設定済みの古い SVM に割り当てられているポートセットを削除します。
++
+`*SnapDrive portset delete_filername_[_filername..._]*`
+
+. 次のコマンドを使用して、新しい SVM 名を設定します。
++
+`* SnapDrive config set_vsadmin filername [filername...]_*`
+
+. 次のコマンドを使用してポートセットを割り当てます。
++
+`*SnapDrive portset add_portset_name_filername[_filername..._]*`
+
+. 次のコマンドを使用して、新しい SVM 名を移行します。
++
+'*SnapDrive config migrate set_old_entry new_entry_*
+
+
+
+新しい SVM に移行したら、ホストシステムでこの新しい SVM 名に対して SnapDrive 処理を実行できます。
+
+* 関連情報 *
+
+xref:task_migrating_from_old_host_name_to_new_host_name.adoc[古いストレージシステムから新しいストレージシステムへの移行]

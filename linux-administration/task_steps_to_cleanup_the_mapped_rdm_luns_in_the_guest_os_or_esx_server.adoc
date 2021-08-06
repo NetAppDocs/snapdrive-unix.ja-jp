@@ -1,0 +1,155 @@
+---
+permalink: linux-administration/task_steps_to_cleanup_the_mapped_rdm_luns_in_the_guest_os_or_esx_server.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rdm, lun, esx, server, clean 
+summary: ゲストオペレーティングシステムおよび ESX サーバで RDM LUN をクリーンアップする必要があります。 
+---
+= ゲストオペレーティングシステムおよび ESX サーバ内のマッピングされた RDM LUN をクリーンアップしています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ゲストオペレーティングシステムおよび ESX サーバで RDM LUN をクリーンアップする必要があります。
+
+
+
+== ゲストオペレーティングシステム内のマッピングされた RDM LUN をクリーンアップしています
+
+[role="lead"]
+次の手順は、ゲストオペレーティングシステムで実行する必要があります。
+
+.手順
+. [* vCenter* ] ナビゲーションペインで、 RDM マッピングを実行する仮想マシンを選択します。
+. 仮想マシンを右クリックし、ゲスト OS をオフにします。
+. 仮想マシンを右クリックし、 * 設定の編集 * を選択します。
++
+仮想マシンのプロパティ * （ * virtual machine properties * ）ダイアログボックスが表示されます。
+
+. 仮想マシンのプロパティ * （ * virtual machine properties * ）ダイアログボックスで、 * ハードウェア * （ * Hardware * ）タブを選択します。
++
+RDM のすべてのエントリについて、 RDM マッピングされたエントリ全体がマッピングされた raw LUN として表示されます。
+
+. RDM マッピングされたエントリを選択し、 * 削除 * をクリックします。
++
+右側のペインに「削除オプション」 * が表示されます。
+
+. [ 削除オプション * ] で、 [ 仮想マシンから削除し、ディスクからファイルを削除する ] を選択します。
+. [OK] をクリックします。
++
+RDM でマッピングされたすべてのエントリがゲストオペレーティングシステムから削除されます。
+
++
+ゲストオペレーティングシステムから RDM LUN エントリを削除したら、 ESX サーバから削除する必要があります。
+
+
+
+
+
+== ESX サーバでマッピングされた RDM LUN をクリーンアップしています
+
+[role="lead"]
+次の手順は、 ESX サーバ管理者のみが ESX サーバ内のすべての RDM LUN エントリを完全にクリーンアップするために実行する必要があります。
+
+仮想マシンのディレクトリを操作する前に、仮想マシンをオフにします。
+
+.手順
+. 仮想マシンのディレクトリに移動します。
+. ディレクトリ「 cd /vmfs/volumes/Data store path 」に変更します。
++
+[listing]
+----
+# ls -l
+total 1024
+drwxr-xr-t 1 root root 1540 Apr 19 23:54 4bc702de-fa7ec190-992b-001a6496f353
+lrwxr-xr-x 1 root root   35 May 11 07:56 local_storage (1) -> 4bc702de-fa7ec190-992b-001a6496f353
+----
++
+すべてのファイルとディレクトリがここに表示されます。
+
+. 仮想マシンが配置されている適切なデータストアを選択します。
+. ディレクトリをデータストアに変更します。
++
+仮想マシンのディレクトリが表示されます。
+
+. RDM LUN マッピングをクリーンアップする仮想マシンにディレクトリを変更します。
++
+すべてのファイルが仮想マシンのディレクトリに表示されます。
+
+. SMVI 文字列が埋め込まれているすべての「 vmdk 」ファイルを削除します。また 'LUN 名を使用して 'vmdk' ファイルを指定することもできます
++
+また 'LUN 名を使用して 'vmdk' ファイルを指定することもできます
+
++
+LUN 名の「 vmdk 」ファイルが「 _rdm1_」 の場合は、「 _rhel4u8-141-2 smvi _smvi _vol_esx3u5_drmm1-rdmp.vmdk 」および「 _rhel4u8-141-232_smvi _vol_esx3u5_drdfm1 」ファイルのみを削除します。
+
++
+「 _vmlnx5U4-197-23_SMVI_10.72.197.93_C4koV4XzK2HT_22-rdmp.vmdk 」および「 _vmlnx5U4-1972.197.93_Cv4XzK2HT_220.vmd4X95u72.197.93.vmdk_4XzK2HT_10.72.197.93.vmdk_10.72.197.93.vmd4XD_ ファイルを削除します。
+
+. 仮想マシン構成ファイル (`vmx') から 'vmdk` ファイルのエントリも削除します
++
+次に 'vmx' ファイルから 'vmdk' ファイルエントリを削除する例を示します
+
++
+|===
+| * 名前 * | * 概要 * 
+
+
+ a| 
+「 _rhel4u8-141-232_` 」のようになります
+ a| 
+仮想マシンの名前
+
+
+
+ a| 
+`_SMVI_`
+ a| 
+この vmdk ファイルが、仮想インフラストラクチャサーバの SnapManager によって作成されることを示します
+
+
+
+ a| 
+「 _vol_esx3u5_ 」
+ a| 
+LUN が作成されたボリュームの名前
+
+
+
+ a| 
+「 _rdm1_` 」
+ a| 
+LUN の名前
+
+
+
+ a| 
+「 _RDmp_` 」
+ a| 
+これが物理的に互換性のある RDM LUN であることを示します
+
+
+
+ a| 
+「 _vmdk_` 」
+ a| 
+仮想マシンディスクファイル
+
+|===
++
+[listing]
+----
+[root@ rhel4u8-141-232]# vi rhel4u8-141-232.vmx
+		:
+		:
+scsi3:1.fileName = "rhel4u8-141-232_SMVI__vol_esx3u5_rdm1.vmdk"
+scsi3:1.mode = "independent-persistent"
+scsi3:1.ctkEnabled = "FALSE"
+scsi3:1.deviceType = "scsi-hardDisk"
+scsi3:1.present = "TRUE"
+scsi3:1.redo = ""
+----
+. 前の例で指定したエントリを削除します引用符とカンマを除き '_scsi3:1.present _' エントリを削除しますこのエントリは '_TRUE_' から '_FALSE_' に変更する必要があります
+. ファイルを保存して終了します。
+. 仮想マシンをオンにします。
+

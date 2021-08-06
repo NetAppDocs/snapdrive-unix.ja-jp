@@ -1,0 +1,17 @@
+---
+permalink: linux-installation-cmode/reference_supported_configurations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configurations, supported, interoperability, tool 
+summary: SnapDrive for UNIX をインストールする前に、ネットアップの Interoperability Matrix Tool （ IMT ）を使用して、お使いの構成が SnapDrive でサポートされるかどうかを確認する必要があります。 
+---
+= サポートされている構成
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX をインストールする前に、ネットアップの Interoperability Matrix Tool （ IMT ）を使用して、お使いの構成が SnapDrive でサポートされるかどうかを確認する必要があります。
+
+* 関連情報 *
+
+http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"]

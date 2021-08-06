@@ -1,0 +1,40 @@
+---
+permalink: linux-administration/concept_guidelines_for_thestorage_createoperation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, create, operation, lun, guidelines 
+summary: ストレージ作成処理に SnapDrive storage create コマンドを使用する場合は、一定のガイドラインに従う必要があります。 
+---
+= ストレージ作成処理のガイドラインを次に示します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+storage create 処理に SnapDrive storage create コマンドを使用する場合は、一定のガイドラインに従う必要があります。
+
+* 別のストレージ・システム・ボリュームの LUN を -lun オプションを指定して一覧表示する場合は ' コマンド・プロンプトに -ddg-dg-'hostvol'`-fs` オプションを指定することはできません
+* --nolvm' オプションは ' ホスト LVM をアクティブ化せずに LUN 上に直接ファイルシステムを作成します
++
+このオプションを使用する場合は、ホストボリュームまたはディスクグループを指定できません。
+
+* NFS ファイルまたはディレクトリツリーでは、 UNIX ストレージプロビジョニングコマンドに SnapDrive を使用できません。
+* lun storage create コマンドを使用 SnapDrive して 'LUN 上に直接ファイル・システムを作成する場合は ' 複数の LUN を指定できません
++
+SnapDrive for UNIX では、このコマンド形式を使用する場合、常に新しい LUN が作成されます。
+
+* 一部のオペレーティングシステムでは、作成できる LUN の数に制限があります。
++
+ホスト SnapDrive がこれらのいずれかのオペレーティング・システムを実行している場合は、 lun config check luns コマンドを実行することを推奨します。
+
+* DMP マルチパスを使用する raw LUN でのファイルシステムの作成がサポートされています。
+* enable-mount-with -netdev' パラメータを使用すると '_netdev' ファイル・システム・オプションを /etc/fstab ファイルに含めることができます
++
+値が off （デフォルト値）に設定されている場合は、 SnapDrive storage create コマンドで「 -mntopts_netdev 」を手動で指定する必要があります。ただし ' 値を on に変更すると '-mntopts_netdev' は SnapDrive storage create コマンドを実行するときに自動的に実行されます
+
+
+
+* 関連情報 *
+
+xref:concept_snapdrive_create_comand_fails_while_discovering_mapped_devices.adoc[マッピングされた一部のデバイスの検出中に SnapDrive for UNIX storage create コマンドが失敗する]
+
+xref:concept_configuration_options_and_their_default_values.adoc[構成オプションとそのデフォルト値]

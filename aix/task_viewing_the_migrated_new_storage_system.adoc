@@ -1,0 +1,27 @@
+---
+permalink: aix/task_viewing_the_migrated_new_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, view, migrate, new, storage 
+summary: 移行したストレージシステムがホストシステムに含まれているかどうかを確認するには、 SnapDrive config migrate list コマンドを実行します。 
+---
+= 移行された新しいストレージシステムの表示
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+移行したストレージ・システムがホスト・システムに含まれているかどうかを確認するには、 SnapDrive config migrate list' コマンドを実行します。
+
+.手順
+. 次のコマンドを入力します。
++
+'*SnapDrive config migrate list*
+
++
+[listing]
+----
+New Entry            Old Entry
+------------------------------------------------
+roaster              tuffleskin
+----
+

@@ -1,0 +1,180 @@
+---
+permalink: linux-administration/concept_supported_partition_devices.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, support, storage, partitioning, multipathing 
+summary: SnapDrive for UNIX 5.0 以降では、マルチパス環境および非マルチパス環境用に Linux でストレージパーティショニングを提供します。 
+---
+= サポートされているパーティションデバイス
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX 5.0 以降では、マルチパス環境および非マルチパス環境用に Linux でストレージパーティショニングを提供します。
+
+SnapDrive for UNIX を使用してストレージ・デバイスをパーティション分割するには、ガイドラインに従う必要があります。
+
+Linux で論理ボリュームマネージャを使用する場合は、パーティショニングされていない LUN を使用する必要があります。
+
+次の表に、パーティション情報と、各オペレーティングシステムで有効にする方法を示します。
+
+|===
+| オペレーティングシステム | シングルパーティション | 複数のパーティション | パーティション化されていないデバイス | ファイルシステムまたは raw デバイス 
+
+
+ a| 
+Red Hat Enterprise Linux 5x
+
+または
+
+Oracle Enterprise Linux 5x
+ a| 
+はい。
+ a| 
+いいえ
+ a| 
+いいえ
+ a| 
+ext3 *
+
+
+
+ a| 
+Red Hat Enterprise Linux 6x
+
+または
+
+Oracle Enterprise Linux 6x
+ a| 
+はい。
+ a| 
+いいえ
+ a| 
+いいえ
+ a| 
+ext3 または ext4 *
+
+
+
+ a| 
+SUSE Linux Enterprise Server 11
+ a| 
+はい。
+ a| 
+いいえ
+ a| 
+いいえ
+ a| 
+ext3 *
+
+
+
+ a| 
+SUSE Linux Enterprise Server 10
+ a| 
+いいえ
+ a| 
+いいえ
+ a| 
+はい。
+ a| 
+ext3 ***
+
+
+
+ a| 
+Red Hat Enterprise Linux 5x 以降
+
+または
+
+Oracle Enterprise Linux 5x 以降
+ a| 
+はい。
+ a| 
+いいえ
+ a| 
+はい。
+ a| 
+ASMlib を使用した ASM **
+
+
+
+ a| 
+SUSE Linux Enterprise Server 10 SP4
+
+または
+
+SUSE Linux Enterprise Server 11
+ a| 
+はい。
+ a| 
+いいえ
+ a| 
+はい。
+ a| 
+ASMlib を使用した ASM **
+
+
+
+ a| 
+SUSE Linux Enterprise Server 10 SP4 以降
+
+または
+
+SUSE Linux Enterprise Server 11
+ a| 
+はい。
+ a| 
+いいえ
+ a| 
+いいえ
+ a| 
+ASMlib なしの ASM ****
+
+
+
+ a| 
+*
+
+MPIO 以外の環境の場合は、次のコマンドを入力します。「 * sfdisk-us-f -L -q /dev/_device_name _ * 」
+
+MPIO 環境の場合は、次のコマンドを入力します。
+
+* 「 * sfdisk-us-f-L-q /dev/_device_name _ * 」を参照してください
+* *kpartx - a -p /dev/mapper/_device_name _*
+
+
+
+
+ a| 
+**
+
+MPIO 以外の環境の場合は ' 次のコマンドを入力します *fdisk /dev/_device_name *
+
+MPIO 環境の場合は、次のコマンドを入力します。
+
+* *fdisk /dev/mapper/_device_name *
+* *kpartx - a -p /dev/mapper/_device_name _*
+
+
+
+
+ a| 
+\ ***
+
+該当なし。
+
+
+
+ a| 
+\****
+
+MPIO 環境の場合は、次のコマンドを入力します。
+
+* `*kpartx-a -p /dev/$kernel*`
+
+
+|===
+* 一般的な考慮事項 *
+
+SnapDrive for UNIX 4.2 で作成される Snapshot コピーは、パーティショニングされたデバイスに基づいています。これらの Snapshot コピーは、 UNIX 5.0 以降のバージョンの SnapDrive でリストア、接続、およびサポートされています。

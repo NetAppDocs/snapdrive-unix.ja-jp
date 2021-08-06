@@ -1,0 +1,39 @@
+---
+permalink: aix/task_configuring_management_and_data_interfaces_for_a_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configure, data, interface, storage, system 
+summary: NFS 環境では、 1 つの管理インターフェイスに対して複数のデータインターフェイスを設定して、ストレージシステム上のデータトラフィックから管理トラフィックを分離できます。 
+---
+= ストレージシステムの管理インターフェイスとデータインターフェイスの設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NFS 環境では、 1 つの管理インターフェイスに対して複数のデータインターフェイスを設定して、ストレージシステム上のデータトラフィックから管理トラフィックを分離できます。
+
+.手順
+. 新しい管理インターフェイスを設定します。
++
+「 * SnapDrive config set root * 」と入力します
+
++
+[listing]
+----
+# snapdrive config set root f3050-197-91
+Password for root:
+Retype password:
+----
+. 新しい管理インターフェイスのデータインターフェイスを設定します。
++
+「 * SnapDrive config set * 」と入力します
+
++
+[listing]
+----
+# snapdrive config set -mgmtpath f3050-197-91 f3050-220-91#
+----
++
+上記のコマンドでは、「 f3050-197-191 」は管理インターフェイス、「 f3050-220-91 」はデータインターフェイスです。
+
+

@@ -1,0 +1,96 @@
+---
+permalink: aix/concept_informationrequired_forusing_the_snapdrive_storageresize_command.html 
+sidebar: sidebar 
+keywords: snapdrive, snap, information, required, storage, resize, command 
+summary: SnapDrive storage resize コマンドを使用するには、いくつかの情報を指定する必要があります。この情報は、コマンドを正しく使用する場合に役立ちます。 
+---
+= SnapDrive storage resize コマンドを使用するために必要な情報
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive storage resize コマンドを使用するには、いくつかの情報を入力する必要があります。この情報は、コマンドを正しく使用する場合に役立ちます。
+
+|===
+| 要件 | 引数 
+
+
+ a| 
+ディスクまたはボリュームグループのサイズを拡張するかどうかを決定し、該当する引数を使用してそのエンティティの名前を入力します。
+
+
+
+ a| 
+ディスク・グループ（ -dg file-spec ）またはボリューム・グループ（ -vg file-spec ）
+ a| 
+_name には、ディスクまたはボリュームグループの名前を指定します
+
+
+
+ a| 
+ストレージサイズを拡張する方法を決定します。このコマンドを使用するときは、次の点に注意してください。
+
+* size 引数に指定されたバイト数だけエンティティサイズを大きくするには '-growby オプションを使用します
+* 新しい合計サイズが `_size_` 引数で指定されたバイト数になるように ' エンティティサイズを大きくするには '-growto オプションを使用します
+* 内部で生成された新しい LUN を基盤となるディスク・グループに追加することにより ' エンティティ・サイズを増やすには '-addlun オプションを使用しますこの引数を使用しない場合 '-dgrowby オプションまたは -growto オプションで指定されたバイト・サイズを満たすように SnapDrive for UNIX によってディスク・グループの最後の LUN のサイズが増加します
+
+
+
+
+ a| 
+ストレージの拡張に使用するバイト数を指定します (`-growby_size_`)
+ a| 
+「 _ バイト数 _ 」
+
+
+
+ a| 
+ストレージが到達するサイズをバイト単位で指定します（「 -growto _size_` ）
+ a| 
+「 _ バイト数 _ 」
+
+
+
+ a| 
+ディスク・グループに新しい LUN を追加することにより 'UNIX 用 SnapDrive にサイズを拡張させる（ -addlun ）
+ a| 
+
+
+
+ a| 
+SnapDrive for UNIX に、スペースリザベーション「 -reserve 」を作成するかどうかに関係なく、サイズを大きくするよう指示します
+ a| 
+
+
+
+ a| 
+* オプション： * igroup 名を指定する代わりに、デフォルトの igroup を使用することを推奨します。
+
+
+
+ a| 
+igroup 名（「 -igroup 」）
+ a| 
+`_ig_name_`
+
+
+
+ a| 
+「 -fstype 」を入力します
+ a| 
+「 _TYPE_` 」
+
+
+
+ a| 
+「 -vmtype 」と入力します
+ a| 
+「 _TYPE_` 」
+
+
+
+ a| 
+* オプション： SnapDrive for UNIX 操作に使用するファイルシステムとボリュームマネージャのタイプを指定します。
+
+|===

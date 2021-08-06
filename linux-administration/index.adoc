@@ -1,0 +1,15 @@
+---
+permalink: linux-administration/index.html 
+sidebar: sidebar 
+keywords: index, snap, snapdrive, administration, guide 
+summary: このガイドでは、導入完了後に Linux 環境で SnapDrive for UNIX を管理する方法について説明します。 
+---
+= 『 Administration Guide for Linux ® 』を参照してください
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このガイドでは、導入の完了後に Linux 環境で SnapDrive 5.3.2 for UNIX を管理する方法について説明します。
+
+製品の設定方法、 Snapshot コピーを作成およびクローニングする方法、製品をアップグレードおよびアンインストールする方法、 CLI コマンドについて説明するトピックが含まれます。

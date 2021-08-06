@@ -1,0 +1,39 @@
+---
+permalink: linux-administration/concept_storage_provisioning_for_rdm_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, vmware, vmotion, connect, lun, rdm, storage 
+summary: SnapDrive for UNIX を使用すると、 VMware VMotion の前後に RDM LUN を切断して接続することができます。VMotion 処理が完了したら、ストレージシステムに必要なストレージ操作を実行できます。 
+---
+= SnapDrive for UNIX での VMware VMotion のサポート
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を使用すると、 VMware VMotion の前後に RDM LUN を切断して接続することができます。VMotion 処理が完了したら、ストレージシステムに必要なストレージ操作を実行できます。
+
+* VMware VMotion について： *
+
+VMware VMotion を使用すると、ゲストシステムを ESX サーバから別の ESX サーバに移動できます。
+
+SnapDrive for UNIX では、次の処理を実行して RDM LUN の切断と接続を行う必要があります。
+
+* VMotion の前 *
+
+SnapDrive storage disconnect コマンドを使用して、 RDM LUN のマッピングを削除する必要があります。次の構文を使用します。
+
+`* SnapDrive storage disconnect - lun_long_lun_name [lun_name ...]_*`
+
+* VMotion 後 *
+
+VMotion が完了したら、 SnapDrive storage connect コマンドを使用して RDM LUN を接続する必要があります。次の構文を使用します。
+
+`* SnapDrive storage connect -lun_long_lun_name [lun_name ...]_*`
+
+* 関連情報 *
+
+xref:concept_limitations_of_rdm_luns_managed_by_snapdrive.adoc[SnapDrive で管理される RDM LUN の制限事項]
+
+xref:task_configuring_virtual_storage_console_in_snapdrive_for_unix.adoc[Virtual Storage Console for SnapDrive for UNIX を設定しています]
+
+xref:task_considerations_for_provisioning_rdm_luns.adoc[RDM LUN のプロビジョニングに関する考慮事項]

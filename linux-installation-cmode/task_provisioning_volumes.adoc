@@ -1,0 +1,17 @@
+---
+permalink: linux-installation-cmode/task_provisioning_volumes.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, provision, volume, storage 
+summary: Data ONTAP では、ストレージシステム上にボリュームを作成し、 NFS プロトコルを有効にしてそのボリュームをホストにマウントすることで、ストレージをプロビジョニングできます。 
+---
+= ボリュームのプロビジョニング
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Data ONTAP では、ストレージシステム上にボリュームを作成し、 NFS プロトコルを有効にしてそのボリュームをホストにマウントすることで、ストレージをプロビジョニングできます。
+
+* 関連情報 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1368859["『 Data ONTAP 8.2 Storage Management Guide for 7-Mode 』"]

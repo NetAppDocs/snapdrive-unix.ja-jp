@@ -1,0 +1,35 @@
+---
+permalink: solaris/concept_verification_of_storage_system_readiness_and_licenses.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, licenses, verfiy 
+summary: SnapDrive for UNIX をインストールする前に、ストレージシステムの準備状況を確認し、特定のソフトウェアのライセンスを確認する必要があります。 
+---
+= ストレージシステムの準備状況とライセンスの検証
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX をインストールする前に、ストレージシステムの準備状況を確認し、特定のソフトウェアのライセンスを確認する必要があります。
+
+次の条件が満たされていることを確認する必要があります。
+
+* ストレージシステムはオンラインです。
+* ストレージシステムが SnapDrive for UNIX の最小システム要件を満たしている。
+* ストレージシステムの HBA または Network Interface Card （ NIC ；ネットワークインターフェイスカード）がホストオペレーティングシステムの要件を満たしている必要があります。
++
+HBA カードの詳細については、 Interoperability Matrix を参照してください。
+
+* ホストとストレージシステムは、インターネットプロトコル（ IP ）を使用して通信できます。
+* 有効なライセンスは次のとおりです。
++
+** SnapRestore
+** MultiStore ソフトウェア
+** ストレージシステムへの HTTP アクセスを保護する
+
+
+
+
+* 関連情報 *
+
+https://mysupport.netapp.com/NOW/products/interoperability["ネットアップの相互運用性"]

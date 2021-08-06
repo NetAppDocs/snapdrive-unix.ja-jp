@@ -1,0 +1,15 @@
+---
+permalink: aix/concept_information_about_luns_mapped_to_local_or_remote_hosts.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lun, mapped, local, remote, hosts 
+summary: ボリュームベースの SnapRestore の実行中にボリュームから SnapDrive for UNIX に使用できるマッピング情報は、 LUN のイニシエータグループ情報のみです。ユーザが使用するイニシエータグループが常に SnapDrive for UNIX で作成される場合、ホストの完全修飾ドメイン名は igroup 名の一部となります。 
+---
+= ローカルホストまたはリモートホストにマッピングされた LUN に関する情報
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリュームベースの SnapRestore の実行中にボリュームから SnapDrive for UNIX に使用できるマッピング情報は、 LUN のイニシエータグループ情報のみです。ユーザが使用するイニシエータグループが常に SnapDrive for UNIX で作成される場合、ホストの完全修飾ドメイン名は igroup 名の一部となります。
+
+SnapDrive for UNIX の管理者が '-igroup CLI オプションを指定している場合 ' または手動で作成したイニシエータ・グループを使用している場合 'igroup' 名には必ずしもホスト名が含まれている必要はありませんこれまでの理由から、 SnapDrive for UNIX では、 LUN のローカルバインドまたはリモートバインドを確実に検出できません。そのため、 SnapDrive for UNIX では、ボリュームベースの SnapRestore の一部として LUN のイニシエータグループとイニシエータのすべての情報が表示されます。

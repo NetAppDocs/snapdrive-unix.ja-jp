@@ -1,0 +1,29 @@
+---
+permalink: solaris/concept_manual_pages_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, man, page, install 
+summary: SnapDrive for UNIX では、マニュアルページに複数の形式が用意されています。 
+---
+= SnapDrive for UNIX によってインストールされるマニュアルページ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX では、マニュアルページに複数の形式が用意されています。
+
+マニュアルページは次の場所から入手できます。
+
+* /opt/NTAPsnapdrive/docs/snapdrive.1
+* /opt/NTAPsnapdrive/docs/snapdrived.1
+* /opt/NTAPsnapdrive/docs/snapdrive.1.html`
+* /opt/NTAPsnapdrive/docs/snapdrived.1.html`
+* /opt/NTAPsnapdrive/docs/solaris_info.1'
+* /opt/NTAPsnapdrive/docs/brocade_info.1
+* /opt/NTAPsnapdrive/docs/McDATA 情報 .1
+* /opt/NTAPsnapdrive/docs/cisco_info.1'
+* /opt/NTAPsnapdrive/docs/filer_info.1'
+* /opt/NTAPsnapdrive/docs/snapdrive.dc.1
+
+
+SnapDrive for UNIX を疎ルート・ゾーンにインストールすると '/usr/share/man/`/usr/share/man/` に man ページは追加されませんこれは '/usr/share/man/` が読み取り専用ファイル・システムとしてマウントされているからですスパース・ルート・ゾーンのマニュアル・ページを抽出するには 'pkgtrans NTAPsnapdrive.pkg /tmp` コマンドを実行しますこのコマンドを実行すると ' マニュアル・ページは /tmp/NTAPsnapdrive/root/opt/NTAPsnapdrive/docs' に抽出されます

@@ -1,0 +1,21 @@
+---
+permalink: solaris/concept_snap_restore_operation_fails_nfsv3_and_nfsv4_versions_enabled_in_host_and_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, fail, nfsv3, nfsv4, host, storage, version 
+summary: ホストおよびストレージシステムで NFSv3 および NFSv4 のバージョンが有効になっている場合、 snap restore 処理が失敗します。 
+---
+= ホストおよびストレージシステムで NFSv3 および NFSv4 のバージョンが有効になっていると、 snap restore 処理が失敗します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストおよびストレージシステムで NFSv3 および NFSv4 のバージョンが有効になっている場合、 snap restore 処理が失敗します。
+
+ホストおよびストレージ・システムで NFSv3 および NFSv4 バージョンを有効にしていて、 -o vers' オプションを指定せずにホストにボリュームをマウントした場合、 nobody ：ファイルおよびディレクトリに所有権が設定されます。
+
+
+
+== 回避策
+
+NFS ボリュームをマウントするときに '-o vers' オプションを使用するか 'NFS のデフォルト・オプションをホスト上の適切な値にチェックすることをお勧めします

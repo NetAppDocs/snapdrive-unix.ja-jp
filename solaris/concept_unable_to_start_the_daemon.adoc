@@ -1,0 +1,31 @@
+---
+permalink: solaris/concept_unable_to_start_the_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, start, daemon, error 
+summary: SnapDrive プロセスで古いエントリがいくつか検出された場合、デーモンを開始できません。 
+---
+= デーモンを開始できません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive プロセスで古いエントリがいくつか検出された場合、デーモンを開始できません。
+
+デーモンが開始または再起動されると、次のエラーメッセージが表示されます。
+
+[listing]
+----
+Starting snapdrive daemon: snapdrive daemon port 4094 is in use ...
+snapdrive daemon port 4094 is in use ...
+snapdrive daemon port 4094 is in use ...
+snapdrive daemon port 4094 is in use ...
+Unable to start daemon...check daemon log file for more details
+----
+デーモンの再起動 / 起動処理中に、スター化された SnapDrive プロセスのエントリを検出すると、デーモンが失敗します。
+
+この問題の回避策では、次のコマンドを実行します。
+
+* SnapDrive プロセスの古いエントリを手動で削除します。
+* ホストで使用可能な空きポートを探します。次に 'napdrive.conf ファイルで '_contact-http-port -sdu-daemon_` オプションでポートを指定します
+

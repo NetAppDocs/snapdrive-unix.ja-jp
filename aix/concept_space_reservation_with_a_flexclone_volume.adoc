@@ -1,0 +1,23 @@
+---
+permalink: aix/concept_space_reservation_with_a_flexclone_volume.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, space, reservation, flexclone, volume 
+summary: スペースリザベーション処理は、制限付きと無制限の両方の種類の FlexClone ボリュームに対して実行できます。デフォルトでは、 FlexClone ボリュームには書き込み予約はありません。 
+---
+= FlexClone ボリュームによるスペースリザベーション
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+スペースリザベーション処理は、制限付きと無制限の両方の種類の FlexClone ボリュームに対して実行できます。デフォルトでは、 FlexClone ボリュームには書き込み予約はありません。
+
+FlexClone の無制限および制限付き FlexClone ボリューム用のスペースリザベーション設定は次のとおりです。
+
+* 無制限 FlexClone ボリューム： * CLI で「 -reserve 」オプションを指定した場合、または「 FlexClone.conf 」の「 FlexClone-writereserve 」が「 on 」になっている場合、 FlexClone 上でスペースリザベーションが「 volume 」に設定されます。それ以外の場合、スペースリザベーションは「 volume 」に設定されます。この設定では、アグリゲートに使用可能なスペースが足りない場合、 SnapDrive for UNIX にエラーメッセージが表示されます。
+
+* 制限付き FlexClone ボリューム： *
+
+* ボリュームレベルのスペースリザベーション設定は常に無効になります。つまり、スペースリザベーションが none に設定されます。
+* CLI で「 -reserve 」または「 -noreserve 」オプションを指定した場合、ホスト・ファイル・スペシフィケーションに属する LUN では、それぞれスペース・リザベーションが有効または無効になります。それ以外の場合、 FlexClone のホストファイル仕様に関連する LUN は、親ボリュームの LUN のスペースリザベーションを継承します。
+

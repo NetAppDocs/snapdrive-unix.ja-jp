@@ -1,0 +1,45 @@
+---
+permalink: linux-administration/task_restoring_asnapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, snapshot, command 
+summary: SnapDrive snap restore コマンドを使用して、 Snapshot コピーをリストアできます。リストア処理には、リストアするデータの種類や量に応じて、数分かかることがあります。 
+---
+= Snapshot コピーをリストアしています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive snap restore コマンドを使用すると、 Snapshot コピーをリストアできます。リストア処理には、リストアするデータの種類や量に応じて、数分かかることがあります。
+
+.手順
+. 次のコマンドを入力して、 Snapshot コピーをリストアします。
++
+`* SnapDrive snap restore -snapname_{-lun|-dd|-fs|-hostvol|-file }_file_spec_[_file_name | -fs|-hostvol|-file } _spec_[_file_spec_[_[_file_spec...] [-force-[-nose] [-nof] オプション
+
+
+
+SnapDrive for UNIX では、 lun snap restore コマンド・ラインに指定した SnapDrive の内容が、指定した Snapshot コピー内の LUN の内容に置き換えられます。この処理には数分かかることがあります。この処理が完了すると、 UNIX 用 SnapDrive に「 snap restore <filespec list> succeeded 」というようなメッセージが表示されます
+
+次の例では、ファイルシステム 1 （ fs1 ）はストレージシステム 1 に、ファイルシステム 2 （ fs2 ）はストレージシステム 1 に、またパートナーストレージシステムであるストレージシステム 2 にそれぞれ存在します。ファイルシステム 3 （ fs3 ）は、 HA ペアの一部ではないストレージシステム 1 、パートナーストレージシステム 2 、およびストレージシステム 3 に配置されます。追加のファイル・システム fs4 は ' すべてストレージ・システム 4 上に存在します
+
+次のコマンドは 'fs1''fs2'fs3'fs4` の Snapshot コピーを作成します
+
+[listing]
+----
+# snapdrive snap create -fs /mnt/fs1 /mnt/fs2 /mnt/fs3 /mnt/fs4
+-snapname fs_all_snap
+----
+次のコマンドは ' デスティネーション・ストレージ・システムの fs1 と fs2 をリストアしますfs1 と fs2 の両方が HA ペア上に存在するので、次のコマンドを 1 つ実行して復元できます。
+
+[listing]
+----
+# snapdrive snap restore -fs /mnt/fs1 /mt/fs2 -snapname fs_all_snap
+----
+次のコマンドは fs4 をリストアします。
+
+[listing]
+----
+snapdrive snap restore -fs /mnt/fs4 -snapname fs_all_snap
+----
+このファイルシステムはストレージシステム 1 、ストレージシステム 2 、およびストレージシステム 3 に存在するため、 SnapDrive for UNIX はデスティネーションストレージシステム上の fs3 をリストアできません。

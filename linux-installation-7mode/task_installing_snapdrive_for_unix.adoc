@@ -1,0 +1,33 @@
+---
+permalink: linux-installation-7mode/task_installing_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, linux 
+summary: Linux ホストに SnapDrive for UNIX をインストールするには、コマンドラインインターフェイスを使用します。 
+---
+= SnapDrive for UNIX をインストールしています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Linux ホストに SnapDrive for UNIX をインストールするには、コマンドラインインターフェイスを使用します。
+
+.手順
+. ネットアップサポートサイトから SnapDrive for UNIX for Linux インストーラをダウンロードします http://mysupport.netapp.com/NOW/cgi-bin/software["ネットアップのダウンロード：ソフトウェア"] をクリックし、ファイルを Linux ホストにコピーします。
+. root ユーザとしてホストシステムにログインします。
++
+インストーラファイルをリモートで実行していて、システム設定で root ユーザとしてログインできない場合は、「 su 」コマンドを使用して root ユーザとしてログインします。
+
+. インストーラをコピーした Linux ホストのディレクトリに移動します。
+. SnapDrive for UNIX のインストール：
++
+'*rpm -ivh_installer_file_name *'
+
+
+
+SnapDrive デーモンは、インストール後に自動的に開始されます。
+
+[listing]
+----
+Starting snapdrive daemon: Successfully started daemon
+----

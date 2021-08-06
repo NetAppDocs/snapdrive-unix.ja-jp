@@ -1,0 +1,18 @@
+---
+permalink: solaris/concept_guidelines_for_thesnapdrive_storagedisconnectcommand.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, strorage, disconnect, command 
+summary: SnapDrive storage disconnect コマンドを使用する場合は、次のガイドラインに従います。 
+---
+= SnapDrive storage disconnect コマンドのガイドラインです
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive storage disconnect コマンドを使用する場合は、次のガイドラインに従ってください。
+
+* ファイルシステムを切断すると、 SnapDrive for UNIX では必ずマウントポイントが削除されます。
+* -lun' オプションを使用して ' ホスト・ディスク・グループまたはファイル・システムのいずれかのメンバーである LUN の名前を指定すると ' SnapDrive storage disconnect コマンドは失敗します
+* -lun' オプションを使用 SnapDrive して ' ホスト上のマルチパス・ソフトウェアによって検出されない LUN の名前を指定すると 'lun disconnect コマンドは失敗します
+

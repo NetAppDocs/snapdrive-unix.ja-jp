@@ -1,0 +1,58 @@
+---
+permalink: linux-installation-7mode/reference_linux_host_requirements.html 
+sidebar: sidebar 
+keywords: snapdrive, snap, host, linux, requirements 
+summary: SnapDrive for UNIX をインストールする前に、 Linux ホストを準備する必要があります。 
+---
+= Linux ホストの要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX をインストールする前に、 Linux ホストを準備する必要があります。
+
+* FC プロトコルまたは iSCSI プロトコルを使用している場合は、ネットアップサポートサイトから Linux Host Utilities をダウンロードしてインストールする必要があります。
++
+http://mysupport.netapp.com/NOW/cgi-bin/software["ネットアップのダウンロード：ソフトウェア"]
+
++
+「 lun version 」コマンドを使用して、 Linux Host Utilities が正常にインストールされていることを確認する必要があります。
+
+* SnapDrive for UNIX コマンドが正しく機能するように 'g3_utils' パッケージをすべての Linux システムにインストールする必要があります
++
+
+NOTE: Red Hat Enterprise Linux （ RHEL ）および Oracle Enterprise Linux （ OEL ）では、「 g3_utils 」および「 g3_utils-libs 」ライブラリが利用可能であることを確認する必要があります。「 G3_utils 」ライブラリは、 SUSE Linux Enterprise Server （ SLES ） 10 以前の「 CSI * 」パッケージおよび SLES 11 以降の「 G3_utils * 」パッケージで利用できます。
+
+* ホストが 64 ビットの Linux オペレーティングシステムで、 32 ビットの SnapDrive for UNIX をインストールする場合は、これらのライブラリまたはバイナリパッケージをダウンロードしてインストールする必要があります。
++
+** 32 ビット版の glib`, `libnl`, `libhba`, `libgcc` パッケージは _Red Hat Enterprise Linux site_. から入手できます
++
+http://www.redhat.com["Red Hat Enterprise Linux のサイト"]
+
++
+SnapDrive for UNIX のインストールは ' ホスト・システムに 32 ビット・バージョンの glibc パッケージがないと失敗します
+
+** _QLogic サイト _ からの QConvergeConsoleCLI' パッケージの 32 ビットバイナリホストが 64 ビットの Linux オペレーティング・システムであり 'Emulex OnCommand Manager パッケージの 32 ビットのバイナリをインストールする場合は 'QLogic HBA の /etc/hba.conf ファイルで qla2xxx64/usr/libqlsdm.so' を qla2xx/usr/lib/libqlsdm.so に変更する必要があります
++
+http://support.qlogic.com/["QLogic サイト"]
+
+** トランスポート・プロトコルが SnapDrive for UNIX の FC の場合 ' ホスト上で動作するには 'libHBAAPI' パッケージまたはベンダー固有のパッケージをインストールする必要があります
+
+
+* SnapDrive for UNIX をインストールする前に、サポートされるホストサービスパックをホストにインストールする必要があります。
++
+サポートされているサービスパックの詳細については、 Interoperability Matrix Tool を参照してください。
+
++
+http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"]
+
+
+
+* 関連情報 *
+
+http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"]
+
+http://mysupport.netapp.com["ネットアップサポート"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["『 Linux Unified Host Utilities 7.1 Installation Guide 』"]

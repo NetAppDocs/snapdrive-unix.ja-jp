@@ -1,0 +1,52 @@
+---
+permalink: solaris/reference_limitations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, limitations 
+summary: SnapDrive for UNIX を使用する場合、環境に影響する可能性がある一定の制限事項について理解しておく必要があります。 
+---
+= 制限
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を使用する場合、環境に影響する可能性がある一定の制限事項について理解しておく必要があります。
+
+
+
+== 一般的な制限事項
+
+* SnapDrive for UNIX では、 SnapManager for Virtual Infrastructure （ SMVI ）のブート時に VM で BIOS を使用する必要があります。Unified Extensible Firmware Interface （ UEFI ）の使用はサポートされていません。
+* Virtual Storage Console （ VSC ）では MetroCluster 構成がサポートされないため、 MetroCluster for UNIX では、ゲストオペレーティングシステムの RDM （ raw デバイスマッピング）環境での SnapDrive 構成はサポートされません。
+* SnapDrive for UNIX では、 Kerberos セキュリティ認証タイプ krb5 、 krb5i 、または krb5p を使用してボリュームをエクスポートした場合に、 NFS マウントポイントでの Snapshot 処理はサポートされません。
+* Snapshot コピーに作成されたエンティティとは別のエンティティをマウントしているマウントポイントでスナップリストア処理を実行すると、 Snapshot 処理に一貫性がなくなることがあります。
+* SnapDrive for UNIX では、ファイル仕様や LUN が Data ONTAP 7-Mode と clustered Data ONTAP のストレージシステムにまたがって配置されている場合、それらの処理はサポートされません。
+* clustered Data ONTAP を使用して SnapDrive for UNIX で Storage Virtual Machine （ SVM ）を設定する場合は、 SVM の LIF の IP アドレスが DNS または /etc/hosts ファイル内の SVM 名にマッピングされていることを確認してください。
++
+また、 SnapDrive config set_vsadmin Vserver name_` コマンドを使用して、 SnapDrive for UNIX で SVM 名が設定されていることを確認する必要があります。
+
+* SnapDrive for UNIX は、 VBSR 処理後に、ルート以外のユーザから qtree のルートユーザにマウントポイントの権限を変更します。
+* SnapDrive for UNIX では、英語以外の言語環境はサポートされません。
+* スナップリストア処理は、 LUN が別のボリュームに移動される前に作成された Snapshot コピーからリストアされる場合には失敗します。
+* ONTAP 8.2 以降を使用している場合、実行中のクローニング処理で同じ Snapshot コピーが使用されていると、 Snapshot コピーに対する Snapshot 処理が失敗することがあります。
++
+あとで処理を再試行する必要があります。
+
+* OnCommand Unified Manager 6.0 以降では、 clustered Data ONTAP の Protection Manager はサポートされていません。そのため、 OnCommand Unified Manager 6.0 以降と SnapDrive for UNIX の統合はサポートされず、 SnapDrive for UNIX の次の機能はサポートされません。
++
+** OnCommand での ONTAP Unified Manager 6.0 以降とのロールベースアクセス制御（ RBAC ）の統合
+** Protection Manager と ONTAP 上の OnCommand Unified Manager 6.0 以降との統合
+
+
+* SVM ボリュームを含むアグリゲートを SVM のアグリゲートリストに割り当て、 SnapDrive for UNIX 処理を実行する必要があります。
+* SnapDrive for UNIX 原因 SnapDrive は自動マウントをサポートしていません。 UNIX 操作が失敗する可能性があるため、任意のタイプの自動マウントを使用します。
+
+
+
+
+== Solaris の制限事項
+
+* ストレージ管理イニシアチブ（ SMI ）ラベルが付いた 1TB を超える LUN はサポートされません。
+* 同じディスクグループ内の EFI （ Extensible Firmware Interface ） LUN と SMI LUN はサポートされていません。
+* SnapDrive lun fixpaths コマンドは、ゲスト・オペレーティング・システムではサポートされていません。
+

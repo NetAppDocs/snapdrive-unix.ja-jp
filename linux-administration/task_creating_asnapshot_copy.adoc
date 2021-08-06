@@ -1,0 +1,41 @@
+---
+permalink: linux-administration/task_creating_asnapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, create, command 
+summary: Snapshot コピーを作成するには、 SnapDrive snap create コマンドを実行します。 
+---
+= Snapshot コピーを作成します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+スナップショット・コピーを作成するには、 SnapDrive snap create コマンドを実行します。
+
+この構文を実行する前に、このコマンドのオプション、キーワード、引数について理解しておく必要があります。
+
+.手順
+. 次のコマンド構文を入力して、 Snapshot コピーを作成します。
++
+`* SnapDrive snap create ｛ -lun | -dg | -fs | -hostvol ｝ _file_spec [file_spec … ]_[{-lun | -dg | -fs | -hostvol ｝ file_spec [file_spec...] -snapname_[-force [-noprompe] [-unrelated ] [-nofilerfence] [-fstype_type_]] [-vmtype_type_] *`
+
+
+
+「 file_dspec 」引数は、 1 つ以上のストレージシステム上の一連のストレージエンティティを表します。Snapshot の作成処理では、これらのエンティティを含むストレージ・システム・ボリュームの Snapshot コピーが作成され、「 nap_name 」引数で指定した名前が付けられます。
+
+この例では、 Linux ホスト用に複数のボリュームの Snapshot コピーを作成します。この Snapshot コピーには、ホスト・ボリューム lvol1 および lvol2 を含む、 vgmultivol というディスク・グループが含まれています。
+
+[listing]
+----
+# snapdrive snap create -vg vgmultivol -snapname snapmultivol
+Successfully created snapshot snapmultivol on 2 filer volumes:
+toaster:/vol/vol1
+toaster:/vol/vol2
+snapshot snapmultivol contains:
+disk group vgmultivol containing host volumes
+lvol1
+lvol2
+----
+* 関連情報 *
+
+xref:concept_creating_snapshotcopies_of_unrelatedentities.adoc[関連のないエンティティの Snapshot コピーの作成]

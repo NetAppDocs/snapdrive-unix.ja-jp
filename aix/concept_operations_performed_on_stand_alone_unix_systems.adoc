@@ -1,0 +1,23 @@
+---
+permalink: aix/concept_operations_performed_on_stand_alone_unix_systems.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, operation, stand, alone 
+summary: スタンドアロン UNIX システム上の SnapDrive for UNIX では、ストレージを作成し、 LUN 、ファイルシステム、論理ボリューム、およびディスクグループの Snapshot コピーを管理できます。 
+---
+= スタンドアロン UNIX システム上で実行される操作
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+スタンドアロン UNIX システム上の SnapDrive for UNIX では、ストレージを作成し、 LUN 、ファイルシステム、論理ボリューム、およびディスクグループの Snapshot コピーを管理できます。
+
+* LUN 、ファイルシステム、論理ボリューム、およびディスクグループを含むストレージを作成します。
++
+ストレージの作成後、ストレージ容量を拡張または縮小したり、ストレージをホストに接続したり、切断したりできます。また、ストレージに関する設定情報を表示することもできます。
+
+* ストレージシステム上の 1 つ以上のボリュームグループの Snapshot コピーを作成する。
++
+Snapshot コピーには、ファイルシステム、論理ボリューム、ディスクグループ、 LUN 、および NFS ディレクトリツリーを含めることができます。Snapshot コピーの作成後に、 Snapshot コピーの名前変更、リストア、または削除を行うことができます。同じホストまたは別のホストの別の場所に Snapshot コピーを接続することもできます。Snapshot コピーの接続が完了したら、コンテンツを表示および変更したり、接続を解除したりできます。作成した Snapshot コピーに関する情報も表示できます。
+
+

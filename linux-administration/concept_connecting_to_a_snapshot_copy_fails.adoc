@@ -1,0 +1,35 @@
+---
+permalink: linux-administration/concept_connecting_to_a_snapshot_copy_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, fails 
+summary: SnapDrive for UNIX の処理中に Linux ホストがリブートすると、 SnapDrive for UNIX は Snapshot コピーへの接続に失敗します。 
+---
+= Snapshot コピーへの接続が失敗する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX の処理中に Linux ホストがリブートすると、 SnapDrive for UNIX は Snapshot コピーへの接続に失敗します。
+
+これは、 SnapDrive for UNIX の処理中にリブートする元のホストでのスナップ接続処理中に Linux LVM2 で発生します。
+
+[listing]
+----
+Volume manager configuration file has tags that are added by SnapDrive for UNIX. Clean the file manually.
+----
+
+
+== 回避策
+
+. ディスクグループに関連付けられているデバイスの LUN クローンがホストにマッピングされていないことを確認します。ホストにマッピングされている場合は、マッピングを解除して削除します。以前に失敗した SnapDrive 処理から検出された可能性があります。
+. 以下のように 'lvm.configfile` (/etc/lvm/`) を編集します
++
+.. 接尾辞「 ##SDUTEMP' 」の付いたすべての行を削除します。
+.. コメントタグ「 #SDUEXISTING 」の前にあるすべての行を復元します。
++
+上記のいずれかで問題が解決しない場合は、ネットアップテクニカルサポートにお問い合わせください。
+
+
+
+

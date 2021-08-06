@@ -1,0 +1,102 @@
+---
+permalink: solaris/concept_after_rebooting_the_host_os_and_cluster_services_fail_to_start.html 
+sidebar: sidebar 
+keywords: reboot, host, os, cluster, fail, start 
+summary: Solaris 10 ホストでは ' 再起動後にファイルシステムをマウントできない場合 'OS とクラスタは起動しません 
+---
+= ホストのリブート後、 OS およびクラスタサービスを開始できません
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Solaris 10 ホストでは ' 再起動後にファイルシステムをマウントできない場合 'OS とクラスタは起動しません
+
+Solaris 10 ホストを再起動した後 ' サービスの vc ： /system/filesystem/local' が次のいずれかのファイルシステムをマウントできない場合 ' 依存する OS またはクラスタサービスは起動しません
+
+* ローカルファイルシステム
+* 共有ファイルシステム
+
+
+
+NOTE: 上記のファイルシステムを SnapDrive for UNIX で作成する必要があります。
+
+
+
+== 回避策
+
+. 次のコマンドを使用して、リブート後に開始できなかったサービスを検索します。
++
+'vcs-vx/network/inetd
+
++
+* 例： *
+
++
+[listing]
+----
+# svcs -vx /network/inetd
+svc:/network/inetd:default (inetd)
+State: offline since Fri 25 May 2008 04:06:59 PM IST
+Reason: Service svc:/system/filesystem/local:default
+is not running because a method failed.
+----
+. 「 service-system/filesystem/local: default 」が失敗した場合、次のコマンドを使用してマウントに失敗した永続的ファイルシステムを検索します。
++
+tail /var/svc/log/system-filesystem -local: default.log
+
++
+* 例： *
+
++
+[listing]
+----
+# tail /var/svc/log/system-filesystem-local:default.log
+[ May 25 15:58:35 Method "start" exited with status 95 ]
+[ May 25 16:07:17 Executing start method
+("/lib/svc/method/fs-local") ]
+UX:vxfs fsck: ERROR: V-3-20693: cannot access device
+/dev/vx/rdsk/dg2/fs1_SdHv:
+UX:vxfs mount: ERROR: V-3-20003: Cannot open
+/dev/vx/dsk/dg2/fs1_SdHv: No such device or address
+UX:vxfs mount: ERROR: V-3-24996: Unable to get disk
+layout version
+WARNING: /sbin/mountall -l failed: exit status 1
+[ May 25 16:07:18 Method "start" exited with status 95 ]
+----
+. ホストの再起動後にマウントに失敗したファイル・システムについて '/etc/vfstab のエントリーにコメントを付けます
+. 次のコマンドを実行して、 OS サービスを再起動します。 `vc ： /system/filesystem/local: default'
++
+.. 「 vcadm disable 」
++
+'vc ： /system/filesystem/local: デフォルト
+
+.. 「 vcadm enable 」
++
+'vc ： /system/filesystem/local: デフォルト
+
+
+
++
+OS およびクラスタサービスが開始されます。
+
+. マウントできなかったローカルファイルシステムについては、次の手順を実行します。
++
+.. ファイルシステムを手動でマウントします。
+.. /etc/vfstab エントリのコメントを解除します
+
+
+. クラスタサービスの場合は、次の手順を実行します。
++
+.. 「 cfsmount」 コマンドを使用して、共有ファイルシステムが正しくマウントされているかどうかを確認します。
+.. このファイル・システムのすべてのクラスタ・ノード上の /etc/vfstab エントリーのコメントを解除します
++
+「 vcadm enable 」
+
++
+'vc ： /system/filesystem/local: デフォルト
+
+
+
+. 上記の手順を完了してもローカルファイルシステムまたはクラスタファイルシステムのマウントに失敗する場合は、ネットアップテクニカルサポートにお問い合わせください。
+

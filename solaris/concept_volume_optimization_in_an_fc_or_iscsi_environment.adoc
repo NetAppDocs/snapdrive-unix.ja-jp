@@ -1,0 +1,19 @@
+---
+permalink: solaris/concept_volume_optimization_in_an_fc_or_iscsi_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, colume, fc, iscsi, optimization 
+summary: FC および Internet Small Computer System Interface （ iSCSI ）環境では、同じボリューム上にホスト固有の論理ユニット番号（ LUN ）を設定することで、ボリューム使用量を最適化できます。 
+---
+= FC 環境または iSCSI 環境でのボリュームの最適化
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FC および Internet Small Computer System Interface （ iSCSI ）環境では、ホスト固有の Logical Unit Number （ LUN ；論理ユニット番号）を同じボリュームに設定することによって、ボリュームの使用量を最適化できます。
+
+これ以外にも、いくつかのタスクを実行してボリュームを最適化することができます。
+
+* 複数のホストが同じストレージシステムを共有する場合は、各ホストに、そのホストに接続されたすべての LUN を格納する専用のストレージシステムボリュームをそれぞれ用意する必要があります。
+* 1 つのストレージシステムボリュームに複数の LUN が存在する場合は、 1 つのホストの LUN のみを含むように LUN を配置する専用ボリュームが最適です。他のファイルやディレクトリを含んでいない。
+

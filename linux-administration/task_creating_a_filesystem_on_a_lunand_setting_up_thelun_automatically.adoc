@@ -1,0 +1,60 @@
+---
+permalink: linux-administration/task_creating_a_filesystem_on_a_lunand_setting_up_thelun_automatically.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lun, create, file 
+summary: SnapDrive for UNIX を使用して、 LUN 上にファイルシステムを作成できます。SnapDrive for UNIX では、関連付けられた LUN が自動的に作成されます。 
+---
+= LUN 上にファイルシステムを作成し、 LUN を自動的にセットアップする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を使用して、 LUN 上にファイルシステムを作成できます。SnapDrive for UNIX では、関連付けられた LUN が自動的に作成されます。
+
+.手順
+. コマンドラインで、次のコマンドを入力します。
++
+`* SnapDrive storage create -fs_file_spec_-nolvm [-fstype type] [-fsopts options] [-mntopts options] [-novist] -fileervol_long_filer_path_lunsize [-igroup _ig_name [ig_name...] _[{-reserve | -noleserve *
+
++
+SnapDrive for UNIX を使用すると、指定したファイルシステムが作成され、指定したストレージシステム上に LUN が作成されます。LUN のホストの準備と検出に関連するすべてのタスクのほか、 LUN をホストエンティティにマッピングして接続します。
+
+
+
+
+
+== 例
+
+* LUN 上に 100 MB のファイルシステムを直接作成する場合： *
+
+[listing]
+----
+# snapdrive storage create -fs /mnt/acct1 -filervol acctfiler:/vol/vol1 -lunsize 100m -nolvm
+----
+* ボリューム・マネージャを使用せずに raw LUN 上にファイル・システムを作成： *
+
+[listing]
+----
+# snapdrive storage create -fs /mnt/vxfs2 -fstype vxfs -lun
+snoopy:/vol/vol1/lunVxvm2 -lunsize 50m -nolvm
+LUN snoopy:/vol/vol1/lunVxvm2 ... created
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+LUN to device file mappings:
+- snoopy:/vol/vol1/lunVxvm2 => /dev/vx/dmp/Disk_1
+file system /mnt/vxfs2 created
+----
+* ボリュームマネージャを使用しない RDM LUN でのファイルシステムの作成： *
+
+[listing]
+----
+# snapdrive storage create -fs /mnt/fs -fstype ext3 -lun
+lech:/vol/vol_1/lun1 -lunsize 50m -nolvm
+LUN lech:/vol/vol1/lun1 ... created
+exporting new lun(s) to Guest OS ... done
+discovering new lun(s) ... done
+LUN to device file mappings:
+- lech:/vol/vol1/lun1 => /dev/sdb
+file system /mnt/fs created
+----

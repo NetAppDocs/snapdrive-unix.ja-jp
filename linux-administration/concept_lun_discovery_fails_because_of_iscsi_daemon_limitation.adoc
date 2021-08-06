@@ -1,0 +1,88 @@
+---
+permalink: linux-administration/concept_lun_discovery_fails_because_of_iscsi_daemon_limitation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lun, discovery, fail, iscsi, daemon, limitation 
+summary: SnapDrive for UNIX のコマンドで、繰り返し処理が複数あると LUN が検出されないことがあります。 
+---
+= iSCSI デーモンの制限により、 LUN の検出が失敗します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX のコマンドで、繰り返し処理が複数あると LUN が検出されないことがあります。
+
+次のエラーメッセージが表示される場合があります。
+
+[listing]
+----
+0000-001 Admin error: iscsi transport protocol has dropped sessions in the host. Please ensure the connection and the service in the storage system.
+----
+これは、次のホストでの iSCSI デーモンの制限が原因で発生します。
+
+* Red Hat Enterprise Linux 4.0
+* Oracle Enterprise Linux 4.0
+
+
+
+
+== 回避策
+
+[listing]
+----
+Before modifying the following system parameters, contact the OS vendor.
+----
+. 「 /etc/sysctl.conf ファイルに '*fs.file-max * 」パラメータを追加します。
++
+次に、コマンドラインの例を示します。
+
++
+[listing]
+----
+# sysctl -w fs.file-max=65536
+----
++
+
+NOTE: パラメータ値は 65536 に設定することをお勧めしますが、ホスト上のアプリケーションに応じて値を設定することもできます。
+
+. `*fs.file-max*` パラメータに '65536 を割り当てます
+. root ユーザの UNIX アカウントのデフォルトシェルの「スタートアップ」ファイルを更新します。
++
+** Bourne, Bash, または Korn シェルの場合は ' 次のコマンドを実行して '/etc/profile' ファイルに次の行を追加します
++
+[listing]
+----
+cat >> /etc/profile <<EOF
+if [ \$USER = "root" ]; then
+if [ \$SHELL = "/bin/ksh" ]; then
+ulimit -p 16384
+ulimit -n 65536
+else
+ulimit -u 16384 -n 65536
+fi
+umask 022
+fi
+EOF
+----
+** C シェル (csh または tcsh) の場合は ' 次のコマンドを実行して '/etc/csh.login' ファイルに次の行を追加します
++
+[listing]
+----
+cat >> /etc/csh.login <<EOF
+if ( \$USER == "root" ) then
+limit maxproc 16384
+limit descriptors 65536
+endif
+EOF
+----
+
+
+. 次のコマンドを実行して '/etc/security/limits.conf' ファイルに次のパラメータを追加します
++
+[listing]
+----
+root soft nofile 65536
+root hard nofile 65536
+----
+. 次のコマンドを実行して、システムのカーネルパラメータをすべてアクティブにします。 'ysctl-p
+

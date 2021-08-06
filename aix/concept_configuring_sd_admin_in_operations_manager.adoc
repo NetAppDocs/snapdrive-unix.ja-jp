@@ -1,0 +1,20 @@
+---
+permalink: aix/concept_configuring_sd_admin_in_operations_manager.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configure, sd, admin, operations, manager, console 
+summary: Operations Manager コンソール管理者は、 SD-admin ユーザを作成できます。 
+---
+= Operations Manager コンソールでの SD-admin の設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Operations Manager コンソール管理者は、 SD-admin ユーザを作成できます。
+
+Operations Manager コンソール管理者は、グローバルグループ（グローバル「 FM/Core.AccessCheck 」）でコアアクセスチェックを実行する機能を持つ、 SD-admin という名前のユーザを作成します。Operations Manager コンソール管理者が SD-admin ユーザを設定したら、 SnapDrive for UNIX 管理者に手動でクレデンシャル情報を送信する必要があります。Operations Manager コンソールを使用してユーザーとロールを設定する方法の詳細については、『 Operations Manager Console Administration guide 』およびオンラインヘルプを参照してください。
+
+
+NOTE: SD-admin の代わりに任意の名前を使用できますが、 SD-admin を使用することをお勧めします。
+
+Operations Manager コンソールでロールを作成するには、 * Setup * > * Roles * を選択します。SD-admin 設定ページでは、 Operations Manager コンソール管理者はグローバルグループの「 DFM-Database.Write 」機能を SD-admin-role に割り当てる必要があります。これにより、 SnapDrive for UNIX が Operations Manager コンソールでストレージエンティティを更新できるようになります。

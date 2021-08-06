@@ -1,0 +1,15 @@
+---
+permalink: linux-administration/concept_what_the_trace_log_file_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, trace, log, file, troubelshoot, problem, issue 
+summary: テクニカルサポートは、トレースログファイルを使用して問題のトラブルシューティングを行います。 
+---
+= トレースログファイルとは
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+テクニカルサポートは、トレースログファイルを使用して問題のトラブルシューティングを行います。
+
+トレースログファイルを有効にしても、システムパフォーマンスには影響しません。デフォルトでは、このファイルは有効になっています。「 napdrive.conftrace -enabled 」変数を「 off 」に設定すると、無効にできます。

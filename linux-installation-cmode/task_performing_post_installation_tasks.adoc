@@ -1,0 +1,33 @@
+---
+permalink: linux-installation-cmode/task_performing_post_installation_tasks.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, installation, task, perform, configure, install 
+summary: インストールが完了したら、追加の機能を設定する必要があります。ストレージシステムおよびデーモンサービスとのセキュアな接続を使用するには、サーバ証明書をインストールし、 SnapDrive for UNIX を設定する必要があります。 
+---
+= インストール後のタスクの実行
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+インストールが完了したら、追加の機能を設定する必要があります。ストレージシステムおよびデーモンサービスとのセキュアな接続を使用するには、サーバ証明書をインストールし、 SnapDrive for UNIX を設定する必要があります。
+
+.手順
+. ストレージ・システムおよびデーモン・サービスとのセキュアな接続を使用している場合は、 SnapDrive for UNIX によって使用されるサーバ証明書を、「 du -demoncertificate-path=/opt/NetApp/snapDrive/snapDrive.pem' 」の場所にインストールします。
++
+証明書パスは 'napdrive.conf ファイルの 'du -demoncertificate-path' 構成変数で定義されます
+
+. ストレージ・システムおよびデーモン・サービスとのセキュアな接続に HTTPS を使用するには 'napdrive.conf ファイルで `_use-https-to-SDdu-daemon=on_ を設定します
++
+
+NOTE: SnapDrive 5.0 for UNIX 以降のバージョンでは、デーモン通信用に HTTPS がサポートされています。デフォルトでは、このオプションパラメータは無効になっています。
+
+. SnapDrive デーモンサービスを再起動します。
++
+`*snapdrived start*`
+
++
+
+NOTE: 構成ファイルを手動で変更するたびに、 SnapDrive デーモンを再起動する必要があります。
+
+

@@ -1,0 +1,52 @@
+---
+permalink: linux-installation-cmode/task_connecting_linux_host_to_the_storage_system.html 
+sidebar: sidebar 
+keywords: snapdrive, snap, connect, hosts, storage, system 
+summary: SnapDrive for UNIX の処理を成功させるには、 Storage Virtual Machine （ SVM 、旧 Vserver ）をセットアップする必要があります。 
+---
+= Linux ホストをストレージシステムに接続します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX の処理を成功させるには、 Storage Virtual Machine （ SVM 、旧 Vserver ）をセットアップする必要があります。
+
+* SnapDrive for UNIX の処理を実行するためには、ボリュームを含むアグリゲートを SVM アグリゲートリストに割り当てておく必要があります。
+* クラスタからデータを提供するために、 SVM を 1 つ以上作成しておく必要があります。
++
+SVM 管理論理インターフェイス（ LIF ）の IP アドレスは、ドメインネームサービス（ DNS ）または「 /etc/hosts 」ファイルに SVM 名とマッピングする必要があります。
+
+
+
+.手順
+. ONTAP 8.2.2 以前を実行している場合は、クラスタ管理サーバで adminSVM ： + とも呼ばれるユーザを作成します
++
+'*SnapDrive config set -cserver_csadmin_name cserver_name_*
+
++
+ONTAP 8.2.3 以降を実行している場合は、この手順を省略します。
+
+. データ SVM にユーザを作成します。
++
+「 * SnapDrive config set * 」と入力します
+
++
+'_vsadmin _ 名 Vserver_name Vserver_name _
+
+. SnapDrive for UNIX で SVM が設定されていることを確認します。
++
+「 * SnapDrive config list * 」
+
++
+コマンドは、クラスタ管理サーバとデータ SVM のユーザ名と IP アドレスを表示します。
+
+. SVM のデータインターフェイスパスに対する管理インターフェイスのパスを変更します。
++
+'*SnapDrive config set-mgmtpath_management_interface_path data_interface_path_*
+
+. すべてのデータインターフェイスと管理インターフェイスが適切に設定されていることを確認します。
++
+'*SnapDrive config list-mgmtpath*'
+
+

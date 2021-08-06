@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_multipathing_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, multipathing 
+summary: SnapDrive for UNIX はマルチパスをサポートしています。SnapDrive for UNIX では、 mknod コマンドや rendev コマンドを使用して作成されたデバイスにエイリアスを使用することはできません。 
+---
+= SnapDrive for UNIX のマルチパス
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX はマルチパスをサポートしています。SnapDrive for UNIX では ' 「 m nod 」コマンドまたは「 re ndev 」コマンドを使用して作成されたデバイスのエイリアスの使用はサポートされていません

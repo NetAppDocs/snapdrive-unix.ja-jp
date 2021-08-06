@@ -1,0 +1,23 @@
+---
+permalink: linux-administration/task_adding_sd_hostname_to_the_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, sd, hostname, storage, manager, operations, administrator 
+summary: Operations Manager コンソールの管理者は、 Operations Manager コンソールを使用して、ストレージシステムに SD-hostname ユーザを作成できます。手順の完了後、 Operations Manager コンソール管理者は手動で SnapDrive for UNIX 管理者にクレデンシャルを送信する必要があります。SD-hostname の代わりに任意の名前を使用できますが、 SD-hostname を使用することをお勧めします。 
+---
+= ストレージシステムに SD-hostname を追加しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Operations Manager コンソールの管理者は、 Operations Manager コンソールを使用して、ストレージシステムに SD-hostname ユーザを作成できます。手順の完了後、 Operations Manager コンソール管理者は手動で SnapDrive for UNIX 管理者にクレデンシャルを送信する必要があります。SD-hostname の代わりに任意の名前を使用できますが、 SD-hostname を使用することをお勧めします。
+
+. ストレージ・システムの root パスワードを取得し、パスワードを保管します。
++
+ストレージ・システムのパスワードを追加するには、 * Management * > * Storage System * を選択します。
+
+. UNIX システムごとに SD-hostname ユーザーを作成します。
+. 機能「 api- * 」と「 login- * 」を、 SD- ロールなどのロールに割り当てます。
+. このロール（ sd-role ）を、 sd-usergroup などの新しいユーザグループに含めます。
+. このユーザグループ（ sd-usergroup ）をストレージシステム上の sd-hostname ユーザに関連付けます。
+

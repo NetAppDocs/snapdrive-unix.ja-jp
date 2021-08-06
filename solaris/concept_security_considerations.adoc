@@ -1,0 +1,17 @@
+---
+permalink: solaris/concept_security_considerations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, security 
+summary: SnapDrive for UNIX を有効にして、ホストに接続されたストレージシステムにアクセスできます。また、ストレージシステムに割り当てられたログイン名とパスワードを使用するようにホストを設定する必要があります。この情報を指定しないと、 SnapDrive for UNIX はストレージ・システムと通信できません。 
+---
+= セキュリティに関する考慮事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を有効にして、ホストに接続されたストレージシステムにアクセスできます。また、ストレージシステムに割り当てられたログイン名とパスワードを使用するようにホストを設定する必要があります。この情報を指定しないと、 SnapDrive for UNIX はストレージ・システムと通信できません。
+
+root ユーザは、割り当てられたロールに応じて、他のユーザに特定のコマンドの実行を許可できます。ストレージおよびスナップ管理操作を実行するために root ユーザである必要はありません。
+
+Solaris SFRAC 4.1 ホスト・クラスタ環境では ' ホスト・クラスタ内のすべてのノードに対して 'rsh' または 'sh access-without -password prompt-for -root' を設定する必要があります

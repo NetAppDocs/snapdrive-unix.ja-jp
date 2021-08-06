@@ -1,0 +1,35 @@
+---
+permalink: solaris/task_setting_up_http.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, http, configure 
+summary: ホストプラットフォームに HTTP を使用するように SnapDrive for UNIX を設定できます。 
+---
+= HTTP をセットアップしています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストプラットフォームに HTTP を使用するように SnapDrive for UNIX を設定できます。
+
+root ユーザとしてログインしていることを確認します。
+
+.手順
+. 「 snapdrive.conf 」ファイルのバックアップを作成します。
+. テキストエディタで 'napdrive.conf ファイルを開きます
+. 「 _use-https-to-filer_」 変数の値を「 off 」に変更します。
++
+「 napdrive.conf 」ファイルを変更する場合は、次の手順を実行することをお勧めします。
+
++
+.. 変更する行をコメントとして指定します。
+.. コメント指定した行をコピーします。
+.. コピーしたテキストのコメントを解除するには、シャープ（ # ）記号を削除します。
+.. 値を修正します。
+
+
+. 変更を行ったらファイルを保存します。
++
+SnapDrive for UNIX では、起動するたびにこのファイルが自動的にチェックされます。変更を有効にするには、 SnapDrive for UNIX デーモンを再起動する必要があります。
+
+

@@ -1,0 +1,21 @@
+---
+permalink: linux-administration/concept_hba_setup.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, hba, setup, install 
+summary: HBA セットアップは、適切な HBA カードとサポートされているドライバを Linux ホストにインストールするプロセスです。 
+---
+= HBA セットアップ
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+HBA セットアップは、適切な HBA カードとサポートされているドライバを Linux ホストにインストールするプロセスです。
+
+Linux MPIO 構成でサポートされている HBA カードは次のとおりです。
+
+* QLogic
+* Emulex 社
+
+
+これらの HBA カードは、 FC Host Utilities Linux Attach Kit 3.0 以降（ RHEL4 Update 6 以降）でサポートされています。

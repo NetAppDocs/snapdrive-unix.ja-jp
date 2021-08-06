@@ -1,0 +1,29 @@
+---
+permalink: solaris/task_creating_a_filesystem_on_a_lunand_specifying_thelun.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, file, lun, specify 
+summary: LUN 上にファイルシステムを作成し、 LUN の一部として作成する LUN を指定できます。 
+---
+= LUN 上にファイルシステムを作成し、 LUN を指定する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+LUN 上にファイルシステムを作成し、 LUN の一部として作成する LUN を指定できます。
+
+.手順
+. この処理を完了するには、次のコマンド形式を使用します。
++
+`* SnapDrive storage create -fs_file_spec_-nolvm [-fstype_type_type_][-vmtype type][-fsopts_][-mntopts_options_][-nosist][-lun_long_lun_name_-lunsize ig_name_[_fig_name_nolvm] -reserve*-nores*reserve|-nose]|-nose.ts_opts_options_opts_opts_options_[-nopersist
+
++
+SnapDrive for UNIX を使用すると、指定したストレージ・システム、ボリューム、および LUN 上にファイルシステムが作成されます。LUN のホストの準備と検出に関連するすべてのタスクのほか、 LUN をホストエンティティにマッピングして接続します。
+
+
+
+
+
+== 例： acctfiler ： /vol/vol1/vol1 の Luna に 100MB のファイルシステムを作成する
+
+「 # SnapDrive storage create -fs/mnt/acct1 -lun acctfiler ： /vol/vol1/lunsize 100m-nolvm

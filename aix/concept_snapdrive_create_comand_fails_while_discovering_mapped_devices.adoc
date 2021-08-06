@@ -1,0 +1,27 @@
+---
+permalink: aix/concept_snapdrive_create_comand_fails_while_discovering_mapped_devices.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, create, command, fail, mapped, device 
+summary: SnapDrive for UNIX で storage create コマンドを実行すると、検出段階で、マッピングされた一部のデバイスの検出が拒否され、コマンドが失敗します。 
+---
+= マッピングされた一部のデバイスの検出中に SnapDrive for UNIX storage create コマンドが失敗する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX で「 storage create 」コマンドを実行すると、検出段階で、マッピングされた一部のデバイスの検出が拒否され、コマンドが失敗します。
+
+
+
+== 回避策
+
+すべてのデバイスを受け入れるには、 /etc/lvm/lvm.conf ファイルの filter セクションを編集します。
+
+[listing]
+----
+filter = [ "a/.*/" ]
+----
+* 関連情報 *
+
+xref:concept_guidelines_for_thestorage_createoperation.adoc[ストレージ作成処理のガイドラインを次に示します]

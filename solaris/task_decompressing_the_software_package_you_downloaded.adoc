@@ -1,0 +1,50 @@
+---
+permalink: solaris/task_decompressing_the_software_package_you_downloaded.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, download, decompress, software, package 
+summary: SnapDrive を Solaris ホストにインストールするには 'NTAPsnapdrive_sun_x86_5.2.tar.Z または NTAPsnapdrive_sun_sparc_5.2.tar.Z パッケージをダウンロードして解凍する必要がありますこのソフトウェアパッケージは 'x86 プラットフォームで Solaris を使用しているか 'SPARC プラットフォームで使用しているかによって異なります 
+---
+= ソフトウェアパッケージをダウンロードして解凍します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive を Solaris ホストにインストールするには 'NTAPsnapdrive_sun_x86_5.2.tar.Z または NTAPsnapdrive_sun_sparc_5.2.tar.Z パッケージをダウンロードして解凍する必要がありますこのソフトウェアパッケージは 'x86 プラットフォームで Solaris を使用しているか 'SPARC プラットフォームで使用しているかによって異なります
+
+.手順
+. Solaris を x86 と SPARC のどちらで使用しているかに応じて、ネットアップサポートサイトから NTAPsnapdrive_sun_x86_5.2.tar.Z または NTAPsnapdrive_sun_sparc_5.2.tar.Z ソフトウェアパッケージをダウンロードします。
+. 圧縮ファイルをダウンロードしたディレクトリにアクセスします。
++
+たとえば、 /tmp ディレクトリにアクセスするには、次のコマンドを入力します。
+
++
+'*#cd/tmp *
+
+. x86 版 Solaris のソフトウェアパッケージを解凍するには、次のコマンドを入力します。
++
+`*#uncompressNTAPsnapdrive_sun_x86_5.2.tar.Z*`
+
++
+SPARC 上の Solaris の場合 ' 次のコマンドを入力します
+
++
+`*NTAPsnapdrive_sun_sparc_5.2.tar.Z*`
+
+. x86 上の Solaris のファイルを抽出するには、次のコマンドを入力します。
++
+`*# tar -xvf NTAPsnapdrive_sun_x86_5.2.tar*`
+
++
+SPARC 上の Solaris の場合 ' 次のコマンドを入力します
+
++
+*tar -xvf NTAPsnapdrive_sun_sparc_5.2.tar *`
+
+
+
+* 関連情報 *
+
+http://mysupport.netapp.com["ネットアップサポート"]
+
+https://mysupport.netapp.com/NOW/products/interoperability["ネットアップの相互運用性"]

@@ -1,0 +1,73 @@
+---
+permalink: aix/concept_managing_snapshot_copy_using_a_wizard.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, wizard, manage 
+summary: ウィザードを使用して Snapshot コピーを管理できます。このウィザードでは、一連の質問を実行し、スナップ接続、スナップリストア、およびスナップ切断操作を実行できます。 
+---
+= ウィザードを使用した Snapshot コピーの管理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ウィザードを使用して Snapshot コピーを管理できます。このウィザードでは、一連の質問を実行し、スナップ接続、スナップリストア、およびスナップ切断操作を実行できます。
+
+ウィザードは、 SnapDrive snap wizard コマンドを使用して実行できます。
+
+次の表に、各種の処理と、ウィザードを実行するための対応するコマンドを示します。ウィザードを起動したら、アプリケーションウィンドウの手順に従います。
+
+|===
+| 操作 | コマンドを実行します 
+
+
+ a| 
+Snapshot リストア
+ a| 
+SnapDrive スナップ・ウィザード・リストア
+
+
+
+ a| 
+Snapshot 接続
+ a| 
+SnapDrive スナップ・ウィザードは接続します
+
+
+
+ a| 
+ストレージシステムボリュームを含むファイルシステムの Snapshot 接続処理
+
+
+
+ a| 
+ディスクグループの Snapshot 接続
+
+
+
+ a| 
+LUN の Snapshot 切断
+ a| 
+SnapDrive スナップ・ウィザードは切断されます
+
+
+
+ a| 
+ディスクグループのスナップショット切断
+
+
+
+ a| 
+ホストボリュームの Snapshot の切断
+
+
+
+ a| 
+ファイルシステムのスナップショット切断
+
+|===
+* 制限事項 :* SnapDrive for UNIX 4.1 以降では、 SnapDrive snap wizard コマンドには次の制限があります。
+
+* ボリューム・ベースの SnapRestore は 'snap wizard restore' コマンドではサポートされていません
+* FlexClone ® ボリュームは 'snap wizard connect' コマンドではサポートされていません
+* 応答しないファイル指定に対する操作は 'snap wizard' コマンドではサポートされません
+

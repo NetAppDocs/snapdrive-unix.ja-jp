@@ -1,0 +1,61 @@
+---
+permalink: solaris/task_estimating_the_storage_space_to_split_a_volume_clone.html 
+sidebar: sidebar 
+keywords: clone, split, estimate, snap, snapdrive, volume 
+summary: クローンスプリットの推定によって、ボリュームクローンをスプリットするために必要なストレージスペースを見積もることができます。SnapDrive for UNIX が提供するクローンスプリットの見積もりに応じて、ボリュームクローンをスプリットするためのスペース可用性を判断できます。 
+---
+= ボリュームクローンをスプリットするためのストレージスペースの見積もり
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+クローンスプリットの推定によって、ボリュームクローンをスプリットするために必要なストレージスペース（ MB ）を見積もることができます。SnapDrive for UNIX が提供するクローンスプリットの見積もりに応じて、ボリュームクローンをスプリットするためのスペース可用性を判断できます。
+
+.手順
+. 次のコマンドを入力して、ボリュームクローンをスプリットするために必要なストレージスペースを見積もります。
++
+`* SnapDrive クローン・スプリットの見積もり [-lun]_long_lun_name_[long_lun_name___ … ] | [ ｛ -dg | -vg | -fs|-hostvol | -lvol ｝ _file_spec_[_file_spec..._]] | [-snapname_long_snap_name _] ｛ volclone | -lunclone ｝ ] [-v|-verbose ] [-dump | -dumpall] * `
+
++
+この処理では、次の情報が表示されます。
+
++
+** リソース名
+** Container - FlexClone のアグリゲート
+** Required Space - ボリュームクローンをスプリットするために必要なスペースです
+** 使用可能なスペース - コンテナで使用可能なスペース
+** Storage Status - ボリュームクローンスプリットに使用できるスペースを示します
+** Owned Space - ボリュームクローンが占有しているスペースです
+** 親と一緒にボリュームクローンが占有するスペースの共有
+
+
++
+「 -verbose( 冗長 ) 」オプションを使用すると、「 Owned Space ( 所有スペース ) 」と「 hared Space ( 共有スペース ) 」が表示されます。
+
+
+
+次の例は、ボリュームクローンをスプリットするためのストレージスペースを見積もります。
+
+[listing]
+----
+# snapdrive clone split estimate -fs /mnt/my_mnt1 -fs /mnt/my_mnt2
+Resource     Container  Required Available  Storage
+                        Space(MB) Space(MB) Status
+/mnt/my_mnt1  f3050-220  400      61500    AVAILABLE
+              -111:aggr0
+/mnt/my_mnt2  f3050-220  3292     1129     NOT AVAILABLE
+              -112:aggr1
+----
+すべてのファイル仕様について、 SnapDrive for UNIX が、ボリュームクローンをスプリットするためにストレージシステムで使用できる必要なスペースを決定します。ここでは '/mnt/my_mnt1' ファイル仕様には分割に必要な領域があるため ' ストレージ・ステータスは使用可能として表示されます一方 '/mnt/my_mnt2' ファイル指定には ' 分割に必要な領域がないため ' ストレージ・ステータスは Not Available と表示されます
+
+次に '-verbose オプションの使用例を示しますまたは '-v オプションを使用することもできます
+
+[listing]
+----
+# snapdrive clone split estimate -fs /mnt/my_mnt1 -verbose
+Resource    Container Owned    Shared   Required Available Storage
+                      Space(MB)Space(MB)Space(MB)Space(MB) Status
+/mnt/my_mnt1 f3050-220 32365  403      403     55875 AVAILABLE
+             -111:aggr0
+----

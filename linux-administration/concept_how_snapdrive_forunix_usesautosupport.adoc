@@ -1,0 +1,23 @@
+---
+permalink: linux-administration/concept_how_snapdrive_forunix_usesautosupport.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, autosupport, storage, ems 
+summary: snapdrive.conf ファイルで autosupport-enabled オプションを on に設定すると、 AutoSupport メッセージがストレージシステムの EMS ログビューに記録されます。デフォルトでは、 snapdrive.conf ファイルのこのオプションは on に設定されています。SnapDrive for UNIX は、 AutoSupport メッセージをストレージシステムに送信し、ここにメッセージがイベント管理システム \ （ EMS \ ）に記録されます。 
+---
+= SnapDrive for UNIX での AutoSupport の使用方法
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+「 snapdrive.conf 」ファイルの「 autosupport-enabled 」オプションが on に設定されている場合、 AutoSupport メッセージはストレージシステムの EMS ログビューに記録されます。デフォルトでは ' このオプションは 'napdrive.conf ファイルの 'on ' に設定されていますSnapDrive for UNIX は、 AutoSupport メッセージをストレージシステムに送信し、そのメッセージを Event Management System （ EMS ；イベント管理システム）に記録します。
+
+次のいずれかの場合、 AutoSupport メッセージが送信されます。
+
+* 運用上の障害により処理が停止されると、その処理が失敗したストレージシステムに AutoSupport メッセージが送信されます。
+* 複数のストレージシステムがホストに接続されていて、複数のストレージシステムで動作障害が発生した場合、 SnapDrive for UNIX は、その処理が失敗した特定のストレージシステムに AutoSupport メッセージを送信します。
+* SnapDrive config set <username><filername>_ を使用して新しいストレージ・コントローラを追加すると、 SnapDrive for UNIX は指定されたストレージ・システムに AutoSupport メッセージを送信します。
+* SnapDrive デーモンが再起動または開始されると、設定されたストレージシステムに AutoSupport メッセージが送信されます。
+* SnapDrive storage show `-all コマンドが実行されると、設定されているすべてのストレージ・システムに AutoSupport メッセージが送信されます。
+* snap create 処理が成功すると、 AutoSupport メッセージがストレージシステムに送信されます。
+

@@ -1,0 +1,58 @@
+---
+permalink: linux-administration/task_creating_an_lvm_a_vxvmentity_andspecifying_the_lun.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lvm, lun, logical, disk, host 
+summary: ファイルシステム、論理ボリューム、ディスクグループなどのホストエンティティを作成し、作成する LUN を指定することができます。 
+---
+= LVM エンティティを作成し、 LUN を指定します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ファイルシステム、論理ボリューム、ディスクグループなどのホストエンティティを作成し、作成する LUN を指定することができます。
+
+.手順
+. コマンドラインで、次のコマンドを入力します。
++
+「 * SnapDrive storage create _ -host_lvm_fspec _ -lun_long_lun_name [lun_name...] _ -lunsize_[-igroup_ig_name_[_ig_name..._]] [{-reserve | -noreserve }] * 」
+
++
+この例では、ホストに応じてファイルシステムが設定された /mnt/acctfs ファイルシステムを作成します。ストレージ・システム acctfiler に 3 つの LUN をセットアップする各 LUN のサイズは 10GB です。
+
++
+`#SnapDrive storage create -fs/mnt/acctfs -fstype JFS2 -LUN acctfiler: /vol/vol1/Luna lunB lunc-lunsize 10g*`
+
++
+[listing]
+----
+LUN acctfiler:/vol/vol1/lunA ... created
+LUN acctfiler:/vol/vol1/lunB ... created
+LUN acctfiler:/vol/vol1/lunC ... created
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+LUN to device file mappings:
+- acctfiler:/vol/vol1/lunA => hdisk2
+- acctfiler:/vol/vol1/lunB => hdisk3
+- acctfiler:/vol/vol1/lunC => hdisk4
+disk group acctfs_SdDg created
+host volume acctfs_SdHv created
+file system /mnt/acctfs created
+----
++
+[listing]
+----
+LUN acctfiler:/vol/vol1/lunA ... created
+LUN acctfiler:/vol/vol1/lunB ... created
+LUN acctfiler:/vol/vol1/lunC ... created
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+LUN to device file mappings:
+- acctfiler:/vol/vol1/lunA => /dev/vx/rdmp/c4t0d3s2
+- acctfiler:/vol/vol1/lunB => /dev/vx/rdmp/c4t0d7s2
+- acctfiler:/vol/vol1/lunC => /dev/vx/rdmp/c4t0d8s2
+disk group acctfsvg created
+host volume acctfshv created
+file system /mnt/acctfs created
+----
+

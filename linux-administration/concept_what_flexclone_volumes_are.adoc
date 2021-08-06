@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/concept_what_flexclone_volumes_are.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, flexcone, volume, parent, clone 
+summary: フレキシブルボリュームクローン FlexClone は、親フレキシブルボリュームのポイントインタイムコピーです。FlexClone ボリュームは、クローン作成後に親フレキシブルボリュームに加えられた変更を継承しません。 
+---
+= FlexClone ボリュームとは
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+フレキシブルボリュームクローン FlexClone は、親フレキシブルボリュームのポイントインタイムコピーです。FlexClone ボリュームは、クローン作成後に親フレキシブルボリュームに加えられた変更を継承しません。
+
+Data ONTAP FlexClone テクノロジを使用すると、データボリュームを瞬時にレプリケーションできます。作成時にストレージスペースを追加する必要はありません。各クローンボリュームは透過的な仮想コピーであり、製品やシステムの開発テスト、バグ修正、アップグレードチェックなど、さまざまな処理に使用できます。
+
+FlexClone テクノロジは、オーバーヘッドを最小限に抑えてスペースを大幅に削減します。このテクノロジを使用すると、より多くのデータセットの組み合わせを、より短時間で、より少ないリスクで管理できます。FlexClone ボリュームでは、デフォルトで書き込み予約は行われません。SnapDrive 4.1 for UNIX は、 NFS 環境と SAN 環境で FlexClone テクノロジを使用します。
+
+
+NOTE: FlexClone ボリュームは Data ONTAP 7.0.x 以降でサポートされていますが、 Data ONTAP 7.2 以前を実行しているストレージシステム上の vFiler ユニットではサポートされていません。

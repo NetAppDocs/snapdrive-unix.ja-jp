@@ -1,0 +1,17 @@
+---
+permalink: linux-administration/concept_storagecreation_with_snapdrive_forunix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, create, lun, host, volume, file 
+summary: SnapDrive for UNIX を使用すると、 LUN 、 LUN 上に直接作成されたファイルシステム、ディスクグループ、ホストボリューム、およびファイルシステムを作成できます。 
+---
+= SnapDrive for UNIX を使用したストレージ作成
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を使用すると、 LUN 、 LUN 上に直接作成されたファイルシステム、ディスクグループ、ホストボリューム、およびファイルシステムを作成できます。
+
+SnapDrive for UNIX は、ホストの準備、検出マッピングの実行、エンティティの作成、作成したエンティティへの接続など、これらのエンティティに関連付けられている LUN のセットアップに必要なすべてのタスクを自動的に処理します。SnapDrive for UNIX が要求したエンティティにストレージを提供するために使用する LUN を指定することもできます。
+
+LUN とストレージエンティティを同時に作成する必要はありません。LUN を個別に作成する場合は、あとで既存の LUN を使用してストレージエンティティを作成できます。

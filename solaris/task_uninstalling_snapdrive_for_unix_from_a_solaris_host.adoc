@@ -1,0 +1,41 @@
+---
+permalink: solaris/task_uninstalling_snapdrive_for_unix_from_a_solaris_host.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, solaris, host, uninstall 
+summary: Solaris システムから SnapDrive for UNIX をアンインストールするには、 uninstall コマンドを使用する必要があります。 
+---
+= Solaris ホストからの SnapDrive for UNIX のアンインストール
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を Solaris システムからアンインストールするには 'uninstall' コマンドを使用する必要があります
+
+root ユーザとしてログインしていることを確認します。
+
+スパースルートゾーンで SnapDrive for UNIX をアンインストールした場合、アンインストールプロセスでは、 UNIX 用の SnapDrive のシンボリックリンクが /usr/bin' および /usr/sbin' 内で削除されません。これは、シンボリックリンクがスパースルートゾーン内の読み取り専用ファイルシステムとしてマウントされているためです。これらのシンボリックリンクを大域ゾーンから削除する必要がありますシンボリックリンクを削除する前に、スパースルートゾーンが SnapDrive for UNIX を使用していないことを確認してください。
+
+「 rm /usr/sbin/snapdrive 」と入力します
+
+「 rm /usr/sbin/snapdrived 」と入力します
+
+「 rm /usr/bin/snapdrive 」と入力します
+
+.手順
+. 次のコマンドを使用してソフトウェアを削除します。
++
+'*uninstall*'
+
+. 回答 y （または yes ） - このコマンドで、アタッチキットを削除してよいかどうかを確認するメッセージが表示されます。
++
+回答 n （または no ）を使用している場合、このコマンドは Attach Kit をアンインストールしません。
+
++
+確認クエリが表示されないようにするには './uninstall コマンドに '-f オプションを指定して入力しますこれにより ' アンインストール・スクリプトが対話型モードで実行されなくなります
+
++
+
+NOTE: UNIX サービス用のすべての SnapDrive を確実に停止させるには 'UNIX 用 SnapDrive アンインストール・スクリプトを使用します pkgrm のようなオペレーティングシステム・ツールは使用しないでください
+
+

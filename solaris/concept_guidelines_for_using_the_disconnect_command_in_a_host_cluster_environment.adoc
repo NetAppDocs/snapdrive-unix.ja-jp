@@ -1,0 +1,25 @@
+---
+permalink: solaris/concept_guidelines_for_using_the_disconnect_command_in_a_host_cluster_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, command, host, cluster 
+summary: ホストクラスタ環境で SnapDrive storage disconnect コマンドを使用する場合のガイドラインを次に示します。 
+---
+= ホストクラスタ環境で disconnect コマンドを使用する場合のガイドラインです
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホスト・クラスタ環境で SnapDrive storage disconnect コマンドを使用する場合のガイドラインを次に示します
+
+* SnapDrive storage disconnect コマンドは ' ホストクラスタ内の任意のノードから実行できます
+* ストレージ切断処理を成功させるには、次のいずれかの条件を満たす必要があります。
++
+** ストレージエンティティは、ホストクラスタ内のすべてのノードで共有する必要があります。
+** LUN はホストクラスタ内のすべてのノードにマッピングする必要があります。
+
+
+* デフォルト値は Dedicated であるため ' ストレージ・エンティティを特定のノードから切断するには '-deviceType dedicated オプションを使用するか ' コマンド内の -deviceType オプションを省略します
+* 共有ストレージエンティティまたは SnapDrive が「 d edicated 」オプションで切断された場合、または専用ストレージエンティティまたは LUN が「 hared 」オプションで切断された場合、 lun storage disconnect コマンドでエラーが発生します。
+* SnapDrive for UNIX は ' マスター・ノード上で SnapDrive storage disconnect コマンドを実行しますストレージエンティティを削除して、すべての非マスターノード上の LUN を切断し、ホストクラスタ内のマスターノードから LUN を切断します。このシーケンス中にエラーメッセージが表示されると、ストレージ切断処理が失敗します。
+

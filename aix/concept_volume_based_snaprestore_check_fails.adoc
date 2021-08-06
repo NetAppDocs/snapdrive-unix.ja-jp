@@ -1,0 +1,15 @@
+---
+permalink: aix/concept_volume_based_snaprestore_check_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snaprestore, volume, based, check, fail 
+summary: ボリュームベースの SnapRestore （ Vbsr\ ）チェックが失敗します。 \ （ NFS が外部ホストがないリストをエクスポートしようとした場合）クライアントマシン \ （ SLES 11\ ）の /etc/hosts ファイル内のホスト名に対して 2 つの異なる IP を持ちます。 
+---
+= ボリュームベースの SnapRestore チェックが失敗する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリューム・ベースの SnapRestore (Vbsr) チェックが失敗します (NFS が外部ホストを持たないリストをエクスポートしようとした場合 ) このクライアント・マシン (SLES11) で '/etc/hosts ファイル内のホスト名に対して 2 つの異なる IP が設定されています
+
+この問題を解決するには '/etc/hosts ファイルにホスト名の IP を 1 つだけ含める必要があります

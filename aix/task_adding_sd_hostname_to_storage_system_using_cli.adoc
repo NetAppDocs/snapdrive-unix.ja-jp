@@ -1,0 +1,53 @@
+---
+permalink: aix/task_adding_sd_hostname_to_storage_system_using_cli.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, add, cli, storage, system, hostname 
+summary: ストレージシステム管理者は、 useradmin コマンドを使用して SD-hostname ユーザを作成し、設定できます。 
+---
+= CLI を使用してストレージシステムに SD-hostname を追加
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージシステム管理者は、 useradmin コマンドを使用して SD-hostname ユーザを作成し、設定できます。
+
+.手順
+. ストレージを追加します
++
+[listing]
+----
+# dfm host add storage_array1
+Added host storage_array1.lab.eng.btc.xyz.in
+----
+. ホストのパスワードを設定します。
++
+[listing]
+----
+# dfm host password save -u root -p xxxxxxxx storage_array1
+Changed login for host storage_array1.lab.eng.btc.xyz.in to root.
+Changed Password for host storage_array1.lab.eng.xyz.netapp
+.in
+----
+. ホストにロールを作成します。
++
+[listing]
+----
+# dfm host role create -h storage_array1 -c "api-*,login-*" sd-unixhost-role
+Created role sd-unixhost-role on storage_array1
+----
+. ユーザグループを作成します。
++
+[listing]
+----
+# dfm host usergroup create -h storage_array1 -r sd-unixhost-role sd-unixhost-ug
+Created usergroup sd-unixhost-ug(44) on storage_array1
+----
+. ローカルユーザを作成します。
++
+[listing]
+----
+# dfm host user create -h storage_array1 -p xxxxxxxx -g sd-unixhost-ug sd-unixhost
+Created local user sd-unixhost on storage_array1
+----
+

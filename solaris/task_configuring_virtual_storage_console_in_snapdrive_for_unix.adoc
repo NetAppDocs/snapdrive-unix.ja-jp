@@ -1,0 +1,44 @@
+---
+permalink: solaris/task_configuring_virtual_storage_console_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configure, virtual, storage, console 
+summary: ストレージシステムにアクセスできるように Virtual Storage Console を設定し、ストレージシステムに割り当てられたログイン名とパスワードを使用する必要があります。 
+---
+= Virtual Storage Console for SnapDrive for UNIX を設定しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ストレージシステムにアクセスできるように Virtual Storage Console を設定し、ストレージシステムに割り当てられたログイン名とパスワードを使用する必要があります。
+
+VMware vCenter が配置されている Windows システムに Virtual Storage Console がインストールされていることを確認します。
+
+.手順
+. * vCenter Home * ビューの * Solutions and Applications * で、 * NetApp Virtual Console * 画面で * NetApp * をクリックします。
+. Backup and Recovery * をクリックし、 * Setup * をクリックしてストレージ・システムのエントリを表示します。
+. ストレージシステムのエントリがない場合は、 * Add * をクリックして、必要なストレージシステムを Virtual Storage Console に追加します。
++
+[Add Storage System*] ダイアログ・ボックスが表示されます
+
+. Add Storage System* （ストレージ・システムの追加）ウィンドウで、ストレージ・システムの IP アドレス、ユーザー名、パスワードを入力します。次に、 [OK] をクリックします。
++
+これで、ストレージシステムが Virtual Storage Console と通信できるようになります。
+
+
+
+* 関連情報 *
+
+xref:task_verifying_virtual_storage_console.adoc[Virtual Storage Console のログイン情報を確認しています]
+
+xref:task_deleting_a_user_login_for_a_virtual_storage_console.adoc[Virtual Storage Console のユーザログインを削除する]
+
+xref:concept_storage_provisioning_for_rdm_luns.adoc[SnapDrive for UNIX での VMware VMotion のサポート]
+
+xref:concept_configuration_options_and_their_default_values.adoc[構成オプションとそのデフォルト値]
+
+xref:task_considerations_for_provisioning_rdm_luns.adoc[RDM LUN のプロビジョニングに関する考慮事項]
+
+xref:concept_limitations_of_rdm_luns_managed_by_snapdrive.adoc[SnapDrive で管理される RDM LUN の制限事項]
+
+xref:concept_guest_os_preparation_for_installing_sdu.adoc[SnapDrive for UNIX をインストールするためのゲスト OS の準備]

@@ -1,0 +1,18 @@
+---
+permalink: aix/concept_guidelines_fordisconnectingsnapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, guidelines, disconnect, snapshot, copy 
+summary: LUN 、ストレージエンティティ、または NFS ディレクトリの Snapshot コピーを切断する際のガイドラインを次に示します。 
+---
+= Snapshot コピーの切断に関するガイドライン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+LUN 、ストレージエンティティ、または NFS ディレクトリの Snapshot コピーを切断する際のガイドラインを次に示します。
+
+* ファイルシステムを切断すると、 SnapDrive for UNIX では必ずマウントポイントが削除されます。
+* Snapshot の接続処理の影響を取り消すには、 Snapshot の切断コマンドを使用します。
+* スナップショット接続操作中に '_enable-split-clone_' 構成変数の値を 'ON' または 'sync' に設定し ' スナップショット切断操作中に off' に設定した場合 'UNIX 用 SnapDrive は ' スナップショット・コピーに存在する元のボリュームまたは LUN を削除しません
+

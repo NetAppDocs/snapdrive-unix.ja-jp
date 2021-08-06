@@ -1,0 +1,33 @@
+---
+permalink: aix/concept_executing_the_data_collection_utility.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, data, collection, utility, executing 
+summary: データ収集ユーティリティを実行するには、いくつかの手順を実行する必要があります。 
+---
+= データ収集ユーティリティを実行しています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+データ収集ユーティリティを実行するには、いくつかの手順を実行する必要があります。
+
+root ユーザとしてログインしていることを確認します。
+
+.手順
+. SnapDrive for UNIX 診断ディレクトリに移動します。パスは 'install_directory/diag` です
++
+「 install_directory 」は ' ホスト・オペレーティング・システム用の SnapDrive for UNIX インストール・ディレクトリですこのディレクトリは、ホストオペレーティングシステムによって異なります。
+
+. コマンドプロンプトで、次のコマンドを入力します。
++
+`* snapd.dc [-d directory] [-n file_name [-f] *`
+
++
+-d directory は ' このユーティリティが作成する圧縮ファイルの場所ですデフォルトの場所は '/tmp/NetApp' です
+
++
+「 -n file_name 」は、ディレクトリおよび圧縮された出力ファイルの名前に含める文字列を指定します。この引数に値を指定すると 'napdrive.dc' ユーティリティは 'ntap_snapdrive_name' というディレクトリと 'ntap_snapdrive_name.tar.Z' という名前のファイル名を作成しますデフォルトのパス名は '/tmp/NetApp/ntap_snapdrive_info.tar.Z' です
+
+. 「ディレクトリ /ntap_snaps_name.tar.Z 」をネットアップテクニカルサポートに送信して、分析を依頼します。
+

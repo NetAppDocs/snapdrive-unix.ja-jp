@@ -1,0 +1,22 @@
+---
+permalink: aix/concept_operations_performed_using_wizards.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, operations, wizard 
+summary: さまざまなウィザードを使用してストレージエンティティを作成し、 SnapDrive for UNIX を効率的に操作できます。 
+---
+= ウィザードを使用して実行された処理
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+さまざまなウィザードを使用してストレージエンティティを作成し、 SnapDrive for UNIX を効率的に操作できます。
+
+次の SnapDrive for UNIX コマンドには、処理を実行するためのウィザードが用意されています。
+
+* 「ストレージの作成」
+* 「 storage delete 」をクリックします
+* 'snap restore ( スナップ復元
+* 'snap connect`
+* 'Snap disconnect' （スナップ切断
+

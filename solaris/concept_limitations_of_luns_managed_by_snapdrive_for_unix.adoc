@@ -1,0 +1,24 @@
+---
+permalink: solaris/concept_limitations_of_luns_managed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, limitations, lun 
+summary: SnapDrive を使用する場合は、 LUN に関する制限事項を確認しておく必要があります。 
+---
+= SnapDrive で管理される LUN の制限事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive を使用する場合は、 LUN に関する制限事項を確認しておく必要があります。
+
+* SnapDrive で管理される LUN は、ブートディスクまたはシステムディスクとして使用できません。
+* Solaris ホストには、作成可能な LUN の数に制限があります。
++
+これらのホスト上で SnapDrive を作成するときに、 lun config check luns コマンドを実行できます。このコマンドを使用すると、作成可能な LUN の数を確認できます。
+
+* SnapDrive では、 LUN 名や Snapshot コピー名の長い形式でコロン（：）はサポートされません。
++
+長い Snapshot コピー名のコンポーネント間、またはストレージシステム名と LUN のストレージシステムボリューム名の間にコロンを使用できます。たとえば、「 toaster ： /vol/vol1/vol1: snap1 」は一般的な長い Snapshot 名ですが、「 toaster ： /vol/vol1/Luna 」は一般的な長い LUN 名です。
+
+

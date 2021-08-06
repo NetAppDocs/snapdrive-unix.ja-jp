@@ -1,0 +1,33 @@
+---
+permalink: aix/concept_snap_connect_procedure.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, procedure 
+summary: snap connect 手順は、 Data ONTAP 7.2 以降に対して有効であり、スナップ接続処理の手順を説明します。 
+---
+= Snap connect 手順の略
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+snap connect 手順は、 Data ONTAP 7.2 以降に対して有効であり、スナップ接続処理の手順を説明します。
+
+次の手順は、 snap connect 手順を示しています。
+
+.手順
+. SnapDrive for UNIX は、 snap connect CLI からファイル仕様名と Snapshot 名を取得します。次に、 Snapshot が存在する元のストレージ・システム・ボリュームを検出します。
+. SnapDrive for UNIX では、 CLI 設定オプションに基づいて、ストレージシステムエンティティに適切なクローニング方法が選択されます。
++
+
+NOTE: CLI オプションを指定した場合は、必ず「 snapdrive.conf 」ファイルオプションよりも優先されます。
+
++
+.. CLI で -clone lunclone オプションを指定した場合 ' または 'napdrive.conf ファイルの 'lunclone-method=lunclone' オプションを指定した場合 'UNIX 用 SnapDrive は ' 指定したスナップショットから同じボリュームに LUN クローンを作成します
+.. CLI で -clone unrestricted オプションを指定した場合 ' または 'napdrive.conf ファイルの 'ser-clone-method=unrestricted オプションを指定した場合 'UNIX 用 SnapDrive は ' 指定されたスナップショットからすべての目的の FlexClone を作成または再利用します
+.. CLI で -clone optimal オプションを指定した場合 ' または 'napdrive.conf ファイルの -clone-method=optimal オプションを指定した場合は ' ストレージ・システムの構成に基づいて SnapDrive for UNIX は制限付き FlexClone と LUN クローンの間で自動的に選択します
+
+
+
+
+
+NOTE: デフォルトでは、 SnapDrive for UNIX で作成されるクローンはバックアップクローンです。

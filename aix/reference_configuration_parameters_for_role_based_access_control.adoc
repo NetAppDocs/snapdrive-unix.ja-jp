@@ -1,0 +1,67 @@
+---
+permalink: aix/reference_configuration_parameters_for_role_based_access_control.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, variable, rbac, access, control 
+summary: Role-Based Access Control に関連するさまざまな設定変数を snapdrive.conf ファイルで設定する必要があります。 
+---
+= ロールベースアクセス制御の設定変数
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ロールベースのアクセス制御に関連するさまざまな構成変数は 'napdrive.conf ファイルで設定する必要があります
+
+|===
+| 変数（ Variable ） | 説明 
+
+
+ a| 
+`_contact-http-dfm -port=808080_`
+ a| 
+Operations Manager コンソールサーバとの通信に使用する HTTP ポートを指定します。デフォルト値は 8088. です。
+
+
+
+ a| 
+`_contact-ssl-dfm -port=8488_`
+ a| 
+Operations Manager コンソールサーバとの通信に使用する SSL ポートを指定します。デフォルト値は 8488. です。
+
+
+
+ a| 
+`_rbac - method=dfm_`
+ a| 
+アクセス制御方式を指定します。指定できる値は「 native 」と「 d fm 」です。
+
+値が「 native 」の場合、アクセスチェックにはアクセス制御ファイル「 /vol/vol0/sdprbac/sdhost-name.prbac 」が使用されます。
+
+値が「 d fm 」に設定されている場合、 Operations Manager コンソールが前提条件となります。この場合、 SnapDrive for UNIX は Operations Manager コンソールにアクセスチェックを送信します。
+
+
+
+ a| 
+`_rbac キャッシュ =on_`
+ a| 
+SnapDrive for UNIX では、アクセスチェッククエリのキャッシュとそれに対応する結果が保持されます。SnapDrive for UNIX では、設定されているすべての Operations Manager コンソールサーバが停止した場合にのみ、このキャッシュを使用します。
+
+この値を「オン」に設定してキャッシュを有効にするか、「オフ」に設定して無効にすることができます。デフォルト値は off で、 SnapDrive for UNIX で Operations Manager コンソールを使用し、「 RBAC メソッド」の設定変数を「 d fm 」に設定することができます。
+
+
+
+ a| 
+`_rbac キャッシュ -timeout_`
+ a| 
+RBAC キャッシュのタイムアウト時間を指定しますこれは '_rbac キャッシュが有効になっている場合にのみ適用されますデフォルト値は「 24 」時間です。
+
+SnapDrive for UNIX では、設定されているすべての Operations Manager コンソールサーバが停止した場合にのみ、このキャッシュを使用します。
+
+
+
+ a| 
+`_use-https-to-dfM=on_`
+ a| 
+この変数を使用すると、 SnapDrive for UNIX が Operations Manager コンソールと通信するときに SSL 暗号化（ HTTPS ）を使用するように設定できます。デフォルト値は「オン」です。
+
+|===

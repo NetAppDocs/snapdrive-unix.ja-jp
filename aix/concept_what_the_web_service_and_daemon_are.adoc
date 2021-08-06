@@ -1,0 +1,33 @@
+---
+permalink: aix/concept_what_the_web_service_and_daemon_are.html 
+sidebar: sidebar 
+keywords: snap snapdrive, daemon, web, service 
+summary: SnapDrive for UNIX Web サービスは、ネットアップのすべての SnapManager 製品とサードパーティ製品を統一したインターフェイスで、 SnapDrive for UNIX とシームレスに統合します。SnapDrive for UNIX でコマンドラインインターフェイス \ （ CLI\ ）コマンドを使用するには、デーモンを開始する必要があります。 
+---
+= Web サービスおよびデーモンとは
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX Web サービスは、ネットアップのすべての SnapManager 製品とサードパーティ製品を統一したインターフェイスで、 SnapDrive for UNIX とシームレスに統合します。SnapDrive for UNIX でコマンドラインインターフェイス（ CLI ）コマンドを使用するには、デーモンを開始する必要があります。
+
+各種のネットアップ SnapManager 製品は、コマンドラインインターフェイス（ CLI ）を使用して SnapDrive for UNIX と通信します。CLI を使用すると、 SnapManager および SnapDrive for UNIX のパフォーマンスと管理性に制約があります。SnapDrive for UNIX デーモンを使用する場合、すべてのコマンドは一意のプロセスとして機能します。デーモンサービスは、 SnapDrive for UNIX コマンドの使用方法には影響しません。
+
+SnapDrive for UNIX Web サービスを使用すると、サードパーティ製アプリケーションを SnapDrive for UNIX とシームレスに統合できます。API を使用して SnapDrive for UNIX と連携します。
+
+デーモンを開始すると、 SnapDrive for UNIX デーモンは最初にそのデーモンが実行されているかどうかを確認します。デーモンが実行されていない場合は、デーモンが開始されます。デーモンがすでに実行されている場合に起動しようとすると、 SnapDrive for UNIX のメッセージが表示されます。
+
+SnapDrive デーモンはすでに実行されています
+
+デーモンのステータスを確認して、 SnapDrive for UNIX が実行されているかどうかを確認できます。デーモンを開始するかどうかを決定する前に、ステータスを確認する必要があります。root ユーザ以外のユーザがステータスの確認を試みると、 SnapDrive for UNIX はユーザのクレデンシャルをチェックし、というメッセージを表示します。
+
+SnapDrive デーモンのステータスは root ユーザのみが表示できます
+
+デーモンを停止しようとすると、 SnapDrive for UNIX はクレデンシャルをチェックします。root ユーザ以外のユーザの場合は、 SnapDrive for UNIX のメッセージが表示されます
+
+SnapDrive デーモンを停止できるのは root ユーザのみです
+
+デーモンを停止したら、 SnapDrive for UNIX デーモンを再起動して、構成ファイルまたは任意のモジュールへの変更を有効にする必要があります。root ユーザ以外のユーザが SnapDrive for UNIX デーモンを再起動しようとすると、 SnapDrive for UNIX はユーザのクレデンシャルをチェックし、メッセージを表示します
+
+SnapDrive デーモンは root ユーザによってのみ再起動できます

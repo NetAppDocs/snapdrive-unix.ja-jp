@@ -1,0 +1,24 @@
+---
+permalink: solaris/concept_command_to_use_todisplay_snapshotcopy_information.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, display, snapshot, copy 
+summary: SnapDrive snap show \ （または list\ ）コマンドを使用して、 Snapshot コピーに関する情報を表示します。 
+---
+= Snapshot コピー情報を表示するために使用するコマンド
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive の Snapshot コピーに関する情報を表示するには、 lun snap show （または「 list 」）コマンドを使用します。
+
+SnapDrive snap show （または「 list 」）コマンドを使用すると、 SnapDrive for UNIX で作成された各 Snapshot コピーの情報を表示できます。このコマンドを使用すると、次の情報を表示できます。
+
+* ストレージシステム
+* ストレージシステム上のボリューム
+* NFS ファイルおよびディレクトリツリー、ボリュームグループ、ディスクグループ、ファイルシステム、論理ボリュームなどのストレージエンティティ、 およびホストボリュームが含まれます
+* Snapshot コピー
+
+
+
+NOTE: このコマンドの 'how ’と 'list' 形式は同義ですSnapDrive 2.0 for UNIX 以降では、 Snapshot コピーに関する情報を表示するときに、長い形式の Snapshot コピー名を使用する必要があります。

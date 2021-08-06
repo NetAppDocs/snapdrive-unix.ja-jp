@@ -1,0 +1,97 @@
+---
+permalink: linux-administration/concept_informationrequired_forusing_the_snapdrive_snapdisconnect_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, disconnect, lun, disk, file 
+summary: Snapshot コピーを切断するには、 LUN 、ディスクグループ、ファイルシステムなど、使用するストレージエンティティのタイプを指定します。 またはホストボリュームを指定します。 
+---
+= SnapDrive snap disconnect コマンドの使用に必要な情報
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Snapshot コピーを切断するには、 LUN 、ディスクグループ、ファイルシステムなど、使用するストレージエンティティのタイプを指定します。 またはホストボリュームを指定します。
+
+次の表に、 SnapDrive snap disconnect コマンドを使用する場合に提供する必要がある情報を示します。
+
+|===
+| 要件 / オプション | 引数 
+
+
+ a| 
+LUN （ `-lun_file_spec_` ）
+ a| 
+LUN の名前。Filer 、ボリューム、および LUN の名前を含めます。 _
+
+
+
+ a| 
+ディスク・グループ（ dg_file_spec_` ）またはボリューム・グループ（ g-vg_file_spec_` ）
+ a| 
+_name には、ディスクまたはボリュームグループの名前を指定します
+
+
+
+ a| 
+ファイルシステム (`-fs_file_spec_`)
+ a| 
+`_filesystem_name_`
+
+
+
+ a| 
+ホスト・ボリューム (`-hostvol_file_spec_`) または論理ボリューム (`-lvol_file_spec_`)
+ a| 
+_ ホスト名または論理ボリューム _
+
+
+
+ a| 
+Snapshot コピーの切断に使用するストレージエンティティのタイプを指定し、そのエンティティの名前を適切な引数で指定します。
+
+これは '`_file_spec_` 引数の値です
+
+
+
+ a| 
+「 -full` 」
+ a| 
+~
+
+
+
+ a| 
+コマンドライン上のホスト側のエンティティ（ホストボリュームが 1 つ以上あるディスクグループなど）が他のエンティティにもある場合でも、 SnapDrive for UNIX で Snapshot コピーからオブジェクトを切断するには、コマンドラインに -full-option を指定します。このオプションを指定しない場合は、空のホスト側エンティティのみを指定する必要があります。
+
+
+
+ a| 
+「 -fstype 」を入力します
+ a| 
+「 _TYPE_` 」
+
+
+
+ a| 
+「 -vmtype 」と入力します
+ a| 
+「 _TYPE_` 」
+
+
+
+ a| 
+オプション：使用するファイルシステムとボリュームマネージャのタイプを指定します。
+
+
+
+ a| 
+「 -split` 」
+ a| 
+~
+
+
+
+ a| 
+Snapshot 接続処理と Snapshot 切断処理の際に、クローンボリュームまたは LUN をスプリットできます。
+
+|===

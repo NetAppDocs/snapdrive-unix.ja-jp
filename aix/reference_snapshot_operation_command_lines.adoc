@@ -1,0 +1,103 @@
+---
+permalink: aix/reference_snapshot_operation_command_lines.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, command, operation, line 
+summary: SnapDrive for UNIX コマンドは、 Snapshot 処理に使用されます。 
+---
+= スナップショット操作コマンドライン
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX コマンドは、 Snapshot 処理に使用されます。
+
+次の表に、 Snapshot 処理のさまざまなコマンドラインオプションを示します。
+
+|===
+| 操作 | コマンドラインオプション 
+
+
+ a| 
+作成
+ a| 
+SnapDrive snap create [-lun | -dg | -vg | -hostvol | -lvol | -fs] _file_spec_[file_spec...] [{-lun | -dg | -vg | -vg | -hostvol | -lvol | -fs ｝ _file_spec_[file_spec...] ... ] -snapname_[-force [-noprompe] [-unrelated ] [-fstype type] [-vmtype type] `
+
+
+
+ a| 
+表示 / 一覧表示
+ a| 
+SnapDrive snap ｛ show | list ｝ -filervol_filervol_[_ filervol..._][-verbose ]
+
+
+
+ a| 
+SnapDrive snap ｛ show | list ｝ [-verbose] ｛ -vg | -dg | -fs | -lvol | -hostvol ｝ _file_spec_[_file_spec_...] [-fstype type] [-vmtype type]`
+
+
+
+ a| 
+SnapDrive snap [-verbose] [-snapname] _long_snap_name_[snap_name...]
+
+
+
+ a| 
+SnapDrive snap ｛ show | list ｝ [-verbose] [-lun | -vg | -dg | -fs | -lvol | -hostvol] _file_spec_[file_spec...]
+
+
+
+ a| 
+つながる
+ a| 
+SnapDrive snap connect -lun_s_lun_name d_lun_name d_[[-lun-]_s_lun_name d_lun_name _...] -snapname_long_snap_name_[-split] [-clone ｛ lunclone | optimal | unrestricted ｝ ] [-prefixfvstr prefix] [-verbose]
+
+
+NOTE: SnapDrive snap connect コマンドでは 'LUN 名は 'LUN_name' または 'qtree_name/LUN_name' の形式で指定する必要があります
+
+
+
+ a| 
+SnapDrive snap connect_fspec_set_[_fspec_set..._] -snapname_[-autodomexp] [-autorename] [-mptes options] [-mntopts options] [{-reserve | -noreserve }] [-readonly] [-split ] [-prefix{ lunclone | unrestricted | str] 詳細設定 [fv
+
+[NOTE]
+====
+fspec_set 引数の形式は次のとおりです
+
+`[-vg | -dg | -fs|-lvol | -hostvol]_src_file_dspec_[_ddest_file_dspec_][{-ddest-dd|-destvg ｝ dgname][{-ddestlv | -desv ｝ lvname]``
+
+====
+
+
+ a| 
+名前を変更する
+ a| 
+SnapDrive snap rename - [snapname] _old_long_snap_namenew_snap_name_[-force [-nopromp]
+
+
+
+ a| 
+リストア
+ a| 
+SnapDrive snap restore [-lun | -dg | -vg | -hostvol | -lvol | -fs | -file]_file_spec_[file_spec...] [{-lun | -dg | -vg | -vg | -hostvol | -lvol | -fs | -file ｝ _file_spec _ [file_spec...] ... ] snapname_snap_name_[-force [-noprompt]] [-mntopts options] [{-reserve | -noreserve }] [-vbsr [preview | execute] `
+
+
+
+ a| 
+切断します
+ a| 
+SnapDrive snap disconnect - lun_long_lun_name_[_ LUN_name ..._][-fstype type][-vmtype type][-split]]
+
+
+
+ a| 
+SnapDrive snap disconnect ｛ -dg | -vg | -hostvol | -lvol | -fs ｝ _file_spec_[file_spec...] [ ｛ -dg | -vg | -hostvol | -lvol | -fs ｝ _file_spec_[file_spec...] ... ] [-full] [-fstype type] [-vmtype type] [-split]
+
+
+
+ a| 
+削除
+ a| 
+SnapDrive snap delete [-snapname] _long_snap_name _[_snap_name..._][-verbose [-force [-nopromp] `
+
+|===

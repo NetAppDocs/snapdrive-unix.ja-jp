@@ -1,0 +1,27 @@
+---
+permalink: solaris/task_adding_a_node_to_a_host_cluster.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, node, host, cluster 
+summary: ホストクラスタに新しいノードを追加するには 'Veritas Cluster Server Installation Guide for Solaris の手順に従いますLow Latency Transport \ （ LLT \ ）および Global Atomic Broadcast \ （ GAB \ ）を設定したら、いくつかの追加手順を実行する必要があります。ホストクラスタが正しくセットアップされたことを確認するには、 SnapDrive for UNIX のいずれかのコマンドを使用する前に、 SnapDrive の config check cluster オプションを使用する必要があります。 
+---
+= ホストクラスタへのノードの追加
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ホストクラスタに新しいノードを追加するには '_Veritas Cluster Server Installation Guide for Solaris_ の手順に従いますLow Latency Transport （ LLT ）および Global Atomic Broadcast （ GAB ）を設定したら、いくつかの追加手順を実行する必要があります。ホスト・クラスタが正しく設定されていることを確認するには、 SnapDrive for UNIX コマンドを使用する前に、 SnapDrive config check cluster オプションを使用する必要があります。
+
+.手順
+. 次のコマンドを使用して、ホストクラスタ内のすべての共有ディスクグループのすべての LUN をマッピングします。
++
+「 * SnapDrive storage connect * 」を参照してください
+
+. 新しいノードで Cluster Volume Manager （ CVM ）を起動します。
++
+手順については '_Veritas Cluster Server Installation Guide for Solaris_ を参照してください
+
++
+共有ディスクグループとファイルシステムは、新しいノードで自動的に認識されます。
+
+

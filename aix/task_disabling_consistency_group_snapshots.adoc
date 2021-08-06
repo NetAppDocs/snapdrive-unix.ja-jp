@@ -1,0 +1,23 @@
+---
+permalink: aix/task_disabling_consistency_group_snapshots.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disable, snapshot, copy, consistency, group 
+summary: SnapDrive for UNIX を設定して、整合グループの Snapshot コピーを無効にすることができます。 
+---
+= 整合グループの Snapshot コピーを無効にしています
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX を設定して、整合グループの Snapshot コピーを無効にすることができます。
+
+.手順
+. 入力するコマンド
++
+`* SnapDrive snap create -fs/mnt/fs3_- snapname_nfs_snap_-nofilerfence_*`
+
++
+整合グループの Snapshot コピーが無効になりました。
+
+

@@ -1,0 +1,29 @@
+---
+permalink: linux-installation-7mode/task_preparing_for_deployment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, deployment, prepare, hosts 
+summary: SnapDrive for UNIX をインストールするホストは、ソフトウェア、ハードウェア、ブラウザ、データベース、およびオペレーティングシステムの特定の要件を満たしている必要があります。要件の詳細については、 Interoperability Matrix Tool を参照してください。 
+---
+= 導入の準備
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX をインストールするホストは、ソフトウェア、ハードウェア、ブラウザ、データベース、およびオペレーティングシステムの特定の要件を満たしている必要があります。要件の詳細については、 Interoperability Matrix Tool を参照してください。
+
+.手順
+. 必要なライセンスがあることを確認します。
+. 構成に対する SnapDrive のサポートを確認します。
+. Linux ホストが SnapDrive の要件を満たしていることを確認します。
+
+
+* 関連情報 *
+
+xref:reference_snapdrive_licensing.adoc[SnapDrive for UNIX のライセンス要件]
+
+xref:reference_supported_configurations.adoc[サポートされている構成]
+
+xref:reference_linux_host_requirements.adoc[Linux ホストの要件]
+
+http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix Tool で確認できます"]

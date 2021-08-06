@@ -1,0 +1,73 @@
+---
+permalink: solaris/concept_volume_based_snaprestore_for_space_reservation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, colume, snaprestore, space, reservation 
+summary: ボリュームベースのスナップリザーブを使用するスペースリザベーションの場合は、 snapdrive.conf ファイルで space-reservation-volume-enabled オプションを設定する必要があります。 
+---
+= ボリュームベースの SnapRestore ：スペースリザベーションに使用します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ボリューム・ベースのスナップ・リザーブを使用したスペース・リザベーションの場合は 'napdrive.conf ファイルのオプション _space-reservation-volume-enabled_' を設定する必要があります
+
+「 _space-reservation-volume -enabled _ 」オプションは、ボリュームのスペース・ギャランティ・ポリシーを設定するために使用され、次の 3 つの値を使用できます。
+
+* * スナップショット * ：これがデフォルト値です。ボリュームのスペースギャランティは変更されません。
+* * volume * ：ボリュームのスペースギャランティはボリュームレベルです。
+* * none * ：スペースギャランティは none に設定されています。
+
+
+次の表に、スペースリザベーションでのボリュームベースのスナップリザーブの動作を示します。
+
+|===
+| スペース予約 CLI オプションは使用されません。「 -vbsr execute 」が指定されています | space-reservations -volume-enabled= | 結果 
+
+
+ a| 
+なし
+ a| 
+スナップショット
+ a| 
+ボリュームのスペースギャランティは変更されません。
+
+
+
+ a| 
+なし
+ a| 
+なし
+ a| 
+ボリュームのスペース・ギャランティを「 none 」に設定します。
+
+
+
+ a| 
+「 -reserve 」をクリックします
+ a| 
+設定値が上書きされました
+ a| 
+ボリュームのスペースギャランティを「 volume 」に設定します。
+
+
+
+ a| 
+「 -noreserve 」を適用します
+ a| 
+設定値が上書きされました
+ a| 
+ボリュームのスペースギャランティを「 none 」に設定します。
+
+
+
+ a| 
+なし
+ a| 
+ボリューム
+ a| 
+ボリュームのスペースギャランティを「 volume 」に設定します。
+
+|===
+
+NOTE: 「 -vbsr preview 」では、スペース予約オプションは確認されません。

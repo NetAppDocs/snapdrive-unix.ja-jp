@@ -1,0 +1,19 @@
+---
+permalink: solaris/reference_snapdrive_for_unix_does_not_accept_environment_variables_set_using_command_shells.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, fail, shell, variable 
+summary: SnapDrive for UNIX コマンドを実行できません。これは、コマンドシェルで設定した環境変数が SnapDrive for UNIX では使用できず、 $LD_LIBRARY_PATH パラメータと snapcreate -check-ers-persine-nfs パラメータが off に設定されているためです。 
+---
+= 環境変数がコマンドシェルで設定されていると、 SnapDrive for UNIX コマンドが失敗します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX コマンドの SnapDrive は実行できませんこれは ' コマンド・シェルで設定された環境変数が SnapDrive for UNIX では受け入れられず '`*$LD_LIBRARY_PATH*' および `*snapcreate -check-ers' ノンパーシステント NFS*' パラメータが off に設定されているためです
+
+
+
+== 回避策
+
+SnapDrive for UNIX バイナリのラッパースクリプトを使用して、バイナリで表示される環境変数を設定します。
