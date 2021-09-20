@@ -55,9 +55,7 @@ NOTE: 「 Common Name 」の値は _localhost_ である必要があります。
 
 . メタデータを抽出します（オプション）。
 +
-....
-$ openssl x509 -noout -fingerprint -text < host.cert > host.info
-....
+ $ openssl x509 -noout -fingerprint -text < host.cert > host.info
 +
 証明書のメタデータは、あとで簡単に参照できるように保存できます。
 

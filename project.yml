@@ -1,5 +1,5 @@
+---
 sidebar:
-  
   entries:
   - title: ホーム
     url: "/index.html"
@@ -484,8 +484,8 @@ sidebar:
           url: "/linux-administration/concept_storage_creation_for_lvm_vxvm_entities.html"
         - title: LUN 上にあるファイルシステムのストレージ作成
           url: "/linux-administration/concept_storage_creation_for_a_file_system_that_resides_on_a_lun.html"
-        - title: Red Hat Enterprise Linux （ RHEL ）および SUSE Linux Enterprise Server （
-            SLES ）のストレージパーティショニングスキーム
+        - title: Red Hat Enterprise Linux （ RHEL ）および SUSE Linux Enterprise Server
+            （ SLES ）のストレージパーティショニングスキーム
           url: "/linux-administration/concept_support_for_partitioned_or_non_partitioned_devices_in_rhel_and_suse.html"
           entries:
           - title: サポートされているパーティションデバイス
@@ -836,8 +836,8 @@ sidebar:
         url: "/linux-administration/task_receiving_error_iscsi64_snapdrive_0001_666_fatal_error.html"
       - title: SnapDrive for UNIX は、ドル記号を正しく解釈しません
         url: "/linux-administration/concept_snapdrive_for_unix_incorrectly_interprets_the_dollar_sign_symbol.html"
-      - title: SUSE Linux Enterprise Server をバージョン 10 から 11 にアップグレードすると、 SnapDrive for
-          UNIX にエラーメッセージが表示されます
+      - title: SUSE Linux Enterprise Server をバージョン 10 から 11 にアップグレードすると、 SnapDrive
+          for UNIX にエラーメッセージが表示されます
         url: "/linux-administration/concept_snapdrive_for_unix_faces_issue_after_sles_upgrade_from_version_10_to_11.html"
       - title: マッピングされた一部のデバイスの検出中に SnapDrive for UNIX storage create コマンドが失敗する
         url: "/linux-administration/concept_snapdrive_create_comand_fails_while_discovering_mapped_devices.html"

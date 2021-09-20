@@ -25,9 +25,7 @@ root ユーザとしてログインしておく必要があります。
  a| 
 * ログファイルを有効にします *
  a| 
-....
-Specify a file name as the value in the name-value pair of the log file you want to enable. SnapDrive for UNIX only writes log files if it has the name of a file to write to. The default names for the log files are as follows:
-....
+ Specify a file name as the value in the name-value pair of the log file you want to enable. SnapDrive for UNIX only writes log files if it has the name of a file to write to. The default names for the log files are as follows:
 ** 監査ログ : 'daudit.log
 ** リカバリログ : 'd-recovery.log
 ** トレースログ : 'd-ctrace-log
@@ -41,9 +39,7 @@ NOTE: これらのファイルへのパスは、ホストオペレーティン�
  a| 
 * ログファイルを無効にします *
  a| 
-....
-Do not enter a value for the log file name parameter. If you do not supply a value, there is no file name to which SnapDrive for UNIX can write the log information.
-....
+ Do not enter a value for the log file name parameter. If you do not supply a value, there is no file name to which SnapDrive for UNIX can write the log information.
 * 例 * この例は、監査ログファイルを無効にします。'audit-log-file=""
 
 |===
