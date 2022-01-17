@@ -157,7 +157,12 @@
     gtag('config', 'UA-81697994-3');
   }
   </script>
+  <script src='/ja-jp/snapdrive-unix/js/version-dropdown.js'></script>
   <script src='/ja-jp/snapdrive-unix/js/product-family.js'></script>
+  <script src='/ja-jp/snapdrive-unix/js/FileSaver.min.js'></script>
+  <script src='/ja-jp/snapdrive-unix/js/jszip-utils.min.js'></script>
+  <script src='/ja-jp/snapdrive-unix/js/jszip.min.js'></script>
+  <script src='/ja-jp/snapdrive-unix/js/pdf-ux.js'></script>
 </head>
 
 
@@ -273,9 +278,6 @@
       </div>
       <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
         <div class="n-language-selector-menu">
-          <div class="n-language-selector-menu__header">
-            <span class="n-language-selector-menu__title">言語を選択</span>
-          </div>
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
@@ -287,10 +289,6 @@
                 </li></ul>
             </li>
           </ul>
-          <div class="menu__footer">
-            <p>選択中の言語: 日本語
-            </p>
-          </div>
         </div>
       </div>
     </div><!-- End Language Selector -->
@@ -327,31 +325,6 @@
   <!-- End property bar -->
 </header>
 
-        <div class="ie-utility">
-  <div class="ie-menu">
-    <div class="n-breadcrumb">
-      <ul class="n-breadcrumb__list">
-        <li class="n-breadcrumb__list-item">
-          <a href="https://www.netapp.com">ホーム</a>
-        </li>
-        <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com">ドキュメント</a>
-        </li>
-        
-
-        <li class="n-breadcrumb__list-item">
-          <a href="/ja-jp/snapdrive-unix/">Snapdrive&nbsp;for&nbsp;Unix</a>
-        </li>
-        <li class="n-breadcrumb__list-item">
-          SnapDrive 設定ウィザードを使用する
-        </li>
-      </ul>
-    </div>
-
-    <div style="clear: both"></div><!-- Main needs to have height -->
-  </div>
-</div>
-
 
         <main id="n-main-content" class="n-main-content">
           <!-- Start Documentation Content -->
@@ -360,44 +333,31 @@
   
   <div class="col-md-3" >
       <div class="n-pdf-header">
-  <a id="toggleButtonPdf" class="n-pdf-button" type="button">PDF<span>
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>利用可能なPDF<span>
     </span>
   </a>
 </div>
-<ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><div class="n-pdf-section">
-      <span class="n-pdf-section-title">サイト</span>
-    </div>
-    <li>
-      <a target="_blank" href="/ja-jp/snapdrive-unix/pdfs/fullsite-sidebar/__SnapDrive_for_UNIX_5_3_2_Documentation__を参照してください.pdf" >
-        <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
-        『 SnapDrive for UNIX 5.3.2 Documentation 』を参照してください
-      </a>
-    </li>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        <a target="_blank" href="/ja-jp/snapdrive-unix/pdfs/fullsite-sidebar/__SnapDrive_for_UNIX_5_3_2_Documentation__を参照してください.pdf" >
+          <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>このドキュメントサイトのPDF</a>
 
 
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              セクション
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Linux_for_clustered_Data_ONTAP_をインストールし_セットアップする.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Linux for clustered Data ONTAP をインストールし、セットアップする
           </a>
-        </li>
-        <span>
           
 
 
@@ -405,31 +365,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/導入の準備.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             導入の準備
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -437,29 +393,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_をインストールしています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX をインストールしています
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -467,29 +419,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/設定チェッカーツールを使用した_Linux_ホスト構成の確認.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             設定チェッカーツールを使用した Linux ホスト構成の確認
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -497,29 +445,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ストレージのプロビジョニング.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ストレージのプロビジョニング
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -529,29 +473,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーを作成しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーを作成しています
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -560,10 +500,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -571,25 +510,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              セクション
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Linux_for_Data_ONTAP_7_Mode_のインストールとセットアップ.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Linux for Data ONTAP 7-Mode のインストールとセットアップ
           </a>
-        </li>
-        <span>
           
 
 
@@ -597,31 +527,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/導入の準備.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             導入の準備
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -629,29 +555,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_をインストールしています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX をインストールしています
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -659,29 +581,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/設定チェッカーツールを使用した_Linux_ホスト構成の確認.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             設定チェッカーツールを使用した Linux ホスト構成の確認
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -689,29 +607,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ストレージのプロビジョニング.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ストレージのプロビジョニング
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -721,29 +635,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーを作成しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーを作成しています
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -752,10 +662,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -763,41 +672,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              セクション
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Linux_の管理.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Linux の管理
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/製品の概要.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             製品の概要
           </a>
-        </li>
-        <span>
           
 
 
@@ -807,27 +704,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ボリューム移行のサポート.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ボリューム移行のサポート
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -839,29 +732,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/LVM_と_raw_エンティティの管理.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             LVM と raw エンティティの管理
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -892,10 +781,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -905,19 +793,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_デーモンについて.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX デーモンについて
           </a>
-        </li>
-        <span>
           
 
 
@@ -929,29 +814,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/デーモンを停止しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             デーモンを停止しています
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -968,10 +849,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -979,35 +859,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ストレージシステム名の変更がサポートされます.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ストレージシステム名の変更がサポートされます
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1015,57 +891,50 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_構成.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX 構成
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_を設定しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX を設定しています
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1073,33 +942,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_のゲストオペレーティングシステムの設定情報.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX のゲストオペレーティングシステムの設定情報
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1107,33 +972,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SVM_の設定情報.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SVM の設定情報
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1141,31 +1002,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/LUN_を追加するためのホストの準備.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             LUN を追加するためのホストの準備
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1173,19 +1030,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_における監査_リカバリ_トレースロギング.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX における監査、リカバリ、トレースロギング
           </a>
-        </li>
-        <span>
           
 
 
@@ -1203,37 +1057,32 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/トレースログファイルとは.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             トレースログファイルとは
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1241,31 +1090,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/AutoSupport_とは.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             AutoSupport とは
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1273,61 +1118,53 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でマルチパスアクセスがサポートされるようになりました.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でマルチパスアクセスがサポートされるようになりました
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/マルチパスセットアップ.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             マルチパスセットアップ
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1335,29 +1172,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_のシンプロビジョニング.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX のシンプロビジョニング
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1365,37 +1198,33 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/複数サブネット構成.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             複数サブネット構成
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1405,33 +1234,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_ウィザードとは.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive ウィザードとは
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1439,33 +1264,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でポートセットを使用する.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でポートセットを使用する
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1473,31 +1294,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/igroup_を設定しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             igroup を設定しています
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1507,19 +1324,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_の_FlexClone_ボリューム.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX の FlexClone ボリューム
           </a>
-        </li>
-        <span>
           
 
 
@@ -1529,61 +1343,55 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/FlexClone_ボリュームに対する_SnapDrive_for_UNIX_の処理.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             FlexClone ボリュームに対する SnapDrive for UNIX の処理
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1591,51 +1399,44 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_のセキュリティ機能.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX のセキュリティ機能
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でのアクセス制御.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でのアクセス制御
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1643,31 +1444,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ストレージシステムのログイン情報.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ストレージシステムのログイン情報
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1676,10 +1473,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1687,19 +1483,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でのロールベースアクセス制御.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でのロールベースアクセス制御
           </a>
-        </li>
-        <span>
           
 
 
@@ -1707,43 +1500,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でのロールベースアクセス制御の設定.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でのロールベースアクセス制御の設定
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Operations_Manager_コンソールでの_SD_admin_の設定.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Operations Manager コンソールでの SD-admin の設定
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1751,27 +1537,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ストレージシステムに_SD_hostname_を追加しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ストレージシステムに SD-hostname を追加しています
           </a>
+          
+
+
+
+          
         </li>
-        <span>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
           
-
-
-
-
-          
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1785,65 +1582,44 @@
 
 
 
-          
-        </span>
-      </span>
-    
-
-  
-
-
-
-
-
-
-
-
-
-
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/RBAC_とストレージ処理の例.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             RBAC とストレージ処理の例
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1851,49 +1627,42 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でのストレージプロビジョニング.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でのストレージプロビジョニング
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でのストレージ処理.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でのストレージ処理
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1901,19 +1670,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_を使用したストレージ作成.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX を使用したストレージ作成
           </a>
-        </li>
-        <span>
           
 
 
@@ -1927,27 +1693,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Red_Hat_Enterprise_Linux___RHEL__および_SUSE_Linux_Enterprise_Server___SLES__のストレージパーティショニングスキーム.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Red Hat Enterprise Linux （ RHEL ）および SUSE Linux Enterprise Server （ SLES ）のストレージパーティショニングスキーム
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -1964,10 +1726,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -1975,27 +1736,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/使用可能なストレージの表示に使用するコマンド.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             使用可能なストレージの表示に使用するコマンド
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2003,33 +1760,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_を使用してストレージサイズを拡張します.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX を使用してストレージサイズを拡張します
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2037,33 +1790,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/storage_connect_コマンドを使用します.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             storage connect コマンドを使用します
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2071,39 +1820,35 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/storage_disconnect_コマンド.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             storage disconnect コマンド
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2111,39 +1856,34 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/storage_delete_コマンドを使用します.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             storage delete コマンドを使用します
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2151,43 +1891,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_で_Snapshot_コピーを作成して使用する.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX で Snapshot コピーを作成して使用する
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_の_Snapshot_処理とは.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX の Snapshot 処理とは
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2195,49 +1928,42 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピー処理.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピー処理
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/crash_consistent_Snapshot_コピー.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             crash-consistent Snapshot コピー
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2256,10 +1982,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2267,39 +1992,35 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーの情報が表示されます.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーの情報が表示されます
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2307,33 +2028,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーの名前変更.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーの名前変更
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2341,45 +2058,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーをリストアしています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーをリストアしています
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/デスティネーションストレージシステムでの_Snapshot_コピーのリストア.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             デスティネーションストレージシステムでの Snapshot コピーのリストア
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2395,51 +2105,46 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ボリュームベース_SnapRestore.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ボリュームベース SnapRestore
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2447,45 +2152,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーへの接続.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーへの接続
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ミラーリングされたストレージシステム上の_Snapshot_コピーを接続します.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ミラーリングされたストレージシステム上の Snapshot コピーを接続します
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2504,10 +2202,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2515,39 +2212,35 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ボリュームクローンまたは_LUN_クローンをスプリットします.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ボリュームクローンまたは LUN クローンをスプリットします
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2555,35 +2248,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーを削除しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーを削除しています
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2591,45 +2280,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーを切断しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーを切断しています
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーの切断に関するガイドライン.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーの切断に関するガイドライン
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2644,20 +2326,18 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2665,33 +2345,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/データ収集ユーティリティ.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             データ収集ユーティリティ
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2699,71 +2375,60 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/トラブルシューティング.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             トラブルシューティング
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/エラーメッセージについて.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             エラーメッセージについて
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/エラーメッセージの形式.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             エラーメッセージの形式
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2771,31 +2436,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/一般的なエラーメッセージです.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             一般的なエラーメッセージです
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2845,33 +2506,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/標準終了ステータス値.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             標準終了ステータス値
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2924,10 +2581,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -2935,45 +2591,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/コマンドリファレンス.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             コマンドリファレンス
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_コマンドで必要な情報を収集する.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX コマンドで必要な情報を収集する
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -2981,49 +2630,42 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_コマンドの概要.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX コマンドの概要
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/コマンドの概要.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             コマンドの概要
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3031,63 +2673,56 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_のオプション_キーワード_引数.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX のオプション、キーワード、引数
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3095,41 +2730,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              セクション
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Solaris_のインストールと管理.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Solaris のインストールと管理
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_の概要.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX の概要
           </a>
-        </li>
-        <span>
           
 
 
@@ -3151,29 +2774,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/VxVM_と_raw_エンティティの管理.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             VxVM と raw エンティティの管理
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3201,27 +2820,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ボリューム移行のサポート.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ボリューム移行のサポート
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3238,10 +2853,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3249,45 +2863,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_のインストール準備をしています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX のインストール準備をしています
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ハードウェアとソフトウェアの設定.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ハードウェアとソフトウェアの設定
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3295,19 +2902,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ストレージシステムを準備する.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ストレージシステムを準備する
           </a>
-        </li>
-        <span>
           
 
 
@@ -3321,39 +2925,34 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/スナップリザーブオプションをリセットしています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             スナップリザーブオプションをリセットしています
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3361,29 +2960,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_をインストールするためのホストの準備.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX をインストールするためのホストの準備
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3391,39 +2986,34 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_をインストールするためのゲスト_OS_の準備.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX をインストールするためのゲスト OS の準備
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3431,19 +3021,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_をインストールまたはアップグレードします.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX をインストールまたはアップグレードします
           </a>
-        </li>
-        <span>
           
 
 
@@ -3463,35 +3050,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_によってインストールされるファイル.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX によってインストールされるファイル
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3500,10 +3083,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3511,19 +3093,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_デーモンについて.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX デーモンについて
           </a>
-        </li>
-        <span>
           
 
 
@@ -3535,29 +3114,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/デーモンを停止しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             デーモンを停止しています
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3574,10 +3149,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3585,31 +3159,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/サポートされている構成の確認.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             サポートされている構成の確認
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3617,35 +3187,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ストレージシステム名の変更がサポートされます.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ストレージシステム名の変更がサポートされます
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3653,33 +3219,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でポートセットを使用する.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でポートセットを使用する
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3687,31 +3249,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/igroup_を設定しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             igroup を設定しています
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3721,35 +3279,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_構成.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX 構成
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_を設定しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX を設定しています
           </a>
-        </li>
-        <span>
           
 
 
@@ -3761,20 +3313,15 @@
 
 
 
-    <div class="n-pdf-section">
-  <span class="n-pdf-section-title">このページ</span>
-</div>
-
-<li class="active">
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
   <a target="_blank" href="/ja-jp/snapdrive-unix/pdfs/pages/solaris/task_snapdrive_configuration_wizard_in_nfs_san_and_mixed_environment.pdf" >
-    <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
-    SnapDrive 設定ウィザードを使用する
+    <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+    PDF of this page
   </a>
 </li>
 
-
+</ul>
   
-
 
 
 
@@ -3783,8 +3330,8 @@
 
 
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3792,33 +3339,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_のゲストオペレーティングシステムの設定情報.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX のゲストオペレーティングシステムの設定情報
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3826,33 +3369,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SVM_の設定情報.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SVM の設定情報
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3860,29 +3399,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/LUN_を追加するためのホストの準備.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             LUN を追加するためのホストの準備
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3890,19 +3425,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_における監査_リカバリ_トレースロギング.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX における監査、リカバリ、トレースロギング
           </a>
-        </li>
-        <span>
           
 
 
@@ -3920,37 +3452,32 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/トレースログファイルとは.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             トレースログファイルとは
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -3958,31 +3485,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/AutoSupport_とは.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             AutoSupport とは
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -3990,29 +3513,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でマルチパスアクセスがサポートされるようになりました.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でマルチパスアクセスがサポートされるようになりました
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4020,29 +3539,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_のシンプロビジョニング.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX のシンプロビジョニング
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4050,37 +3565,33 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/複数サブネット構成.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             複数サブネット構成
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4090,43 +3601,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_ウィザードとは.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive ウィザードとは
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4134,51 +3640,44 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_のセキュリティ機能.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX のセキュリティ機能
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でのアクセス制御.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でのアクセス制御
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4186,31 +3685,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ストレージシステムのログイン情報.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ストレージシステムのログイン情報
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4219,10 +3714,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4230,19 +3724,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でのロールベースアクセス制御.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でのロールベースアクセス制御
           </a>
-        </li>
-        <span>
           
 
 
@@ -4250,43 +3741,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でのロールベースアクセス制御の設定.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でのロールベースアクセス制御の設定
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Operations_Manager_コンソールでの_SD_admin_の設定.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Operations Manager コンソールでの SD-admin の設定
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4294,27 +3778,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ストレージシステムに_SD_hostname_を追加しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ストレージシステムに SD-hostname を追加しています
           </a>
+          
+
+
+
+          
         </li>
-        <span>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
           
-
-
-
-
-          
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4328,65 +3823,44 @@
 
 
 
-          
-        </span>
-      </span>
-    
-
-  
-
-
-
-
-
-
-
-
-
-
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/RBAC_とストレージ処理の例.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             RBAC とストレージ処理の例
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4394,19 +3868,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_の_FlexClone_ボリューム.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX の FlexClone ボリューム
           </a>
-        </li>
-        <span>
           
 
 
@@ -4416,51 +3887,46 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/FlexClone_ボリュームに対する_SnapDrive_for_UNIX_の処理.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             FlexClone ボリュームに対する SnapDrive for UNIX の処理
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4468,49 +3934,42 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でのストレージプロビジョニング.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でのストレージプロビジョニング
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でのストレージ処理.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でのストレージ処理
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4518,45 +3977,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_を使用したストレージ作成.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX を使用したストレージ作成
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ストレージ作成処理のガイドラインを次に示します.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ストレージ作成処理のガイドラインを次に示します
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4579,10 +4031,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4590,27 +4041,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/使用可能なストレージの表示に使用するコマンド.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             使用可能なストレージの表示に使用するコマンド
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4618,33 +4065,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_を使用してストレージサイズを拡張します.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX を使用してストレージサイズを拡張します
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4652,35 +4095,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/storage_connect_コマンドを使用します.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             storage connect コマンドを使用します
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4688,45 +4127,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/storage_disconnect_コマンド.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             storage disconnect コマンド
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_storage_disconnect_コマンドのガイドラインです.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive storage disconnect コマンドのガイドラインです
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4745,10 +4177,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4756,43 +4187,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/storage_delete_コマンドを使用します.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             storage delete コマンドを使用します
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/storage_delete_コマンドの使用に関するガイドラインを次に示します.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             storage delete コマンドの使用に関するガイドラインを次に示します
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4801,20 +4225,18 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4822,43 +4244,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_で_Snapshot_コピーを作成して使用する.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX で Snapshot コピーを作成して使用する
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_の_Snapshot_処理とは.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX の Snapshot 処理とは
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4866,49 +4281,42 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピー処理.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピー処理
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/crash_consistent_Snapshot_コピー.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             crash-consistent Snapshot コピー
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4922,27 +4330,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーの作成については_ガイドラインに従ってください.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーの作成については、ガイドラインに従ってください
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -4953,10 +4357,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -4964,39 +4367,35 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーの情報が表示されます.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーの情報が表示されます
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5004,33 +4403,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーの名前変更.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーの名前変更
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5038,49 +4433,42 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーをリストアしています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーをリストアしています
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/デスティネーションストレージシステムでの_Snapshot_コピーのリストア.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             デスティネーションストレージシステムでの Snapshot コピーのリストア
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5096,51 +4484,46 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ボリュームベース_SnapRestore.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ボリュームベース SnapRestore
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -5148,47 +4531,40 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーへの接続.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーへの接続
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ミラーリングされたストレージシステム上の_Snapshot_コピーを接続します.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ミラーリングされたストレージシステム上の Snapshot コピーを接続します
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5198,27 +4574,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーを接続する場合のガイドラインを次に示します.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーを接続する場合のガイドラインを次に示します
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5233,10 +4605,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -5244,39 +4615,35 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ボリュームクローンまたは_LUN_クローンをスプリットします.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ボリュームクローンまたは LUN クローンをスプリットします
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5284,35 +4651,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーを削除しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーを削除しています
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5320,47 +4683,40 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーを切断しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーを切断しています
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーの切断に関するガイドライン.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーの切断に関するガイドライン
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5375,20 +4731,18 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -5396,33 +4750,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/データ収集ユーティリティ.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             データ収集ユーティリティ
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5430,71 +4780,60 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/トラブルシューティング.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             トラブルシューティング
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/エラーメッセージについて.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             エラーメッセージについて
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/エラーメッセージの形式.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             エラーメッセージの形式
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -5502,31 +4841,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/一般的なエラーメッセージです.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             一般的なエラーメッセージです
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5558,33 +4893,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/標準終了ステータス値.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             標準終了ステータス値
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5635,10 +4966,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -5646,45 +4976,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/コマンドリファレンス.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             コマンドリファレンス
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_コマンドで必要な情報を収集する.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX コマンドで必要な情報を収集する
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5692,49 +5015,42 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_コマンドの概要.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX コマンドの概要
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/コマンドの概要.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             コマンドの概要
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5742,63 +5058,56 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_のオプション_キーワード_引数.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX のオプション、キーワード、引数
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -5806,41 +5115,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-          <div class="n-pdf-section">
-            <span class="n-pdf-section-title">
-              セクション
-            </span>
-          </div>
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/IBM_AIX_のインストールと管理.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             IBM AIX のインストールと管理
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_の概要.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX の概要
           </a>
-        </li>
-        <span>
           
 
 
@@ -5856,29 +5153,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/LVM_と_raw_エンティティの管理.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             LVM と raw エンティティの管理
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5904,27 +5197,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ボリューム移行のサポート.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ボリューム移行のサポート
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5941,10 +5230,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -5952,45 +5240,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_のインストール準備をしています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX のインストール準備をしています
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ハードウェアとソフトウェアの設定.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ハードウェアとソフトウェアの設定
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -5998,19 +5279,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ストレージシステムを準備する.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ストレージシステムを準備する
           </a>
-        </li>
-        <span>
           
 
 
@@ -6024,39 +5302,34 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/スナップリザーブオプションをリセットしています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             スナップリザーブオプションをリセットしています
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -6064,39 +5337,34 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_をインストールするためのホストの準備.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX をインストールするためのホストの準備
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -6104,19 +5372,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_をインストールまたはアップグレードします.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX をインストールまたはアップグレードします
           </a>
-        </li>
-        <span>
           
 
 
@@ -6128,33 +5393,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_によってインストールされるファイル.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX によってインストールされるファイル
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -6163,10 +5424,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -6174,19 +5434,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_デーモンについて.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX デーモンについて
           </a>
-        </li>
-        <span>
           
 
 
@@ -6198,29 +5455,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/デーモンを停止しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             デーモンを停止しています
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -6237,10 +5490,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -6248,31 +5500,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/サポートされている構成の確認.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             サポートされている構成の確認
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -6280,35 +5528,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ストレージシステム名の変更がサポートされます.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ストレージシステム名の変更がサポートされます
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -6316,33 +5560,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でポートセットを使用する.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でポートセットを使用する
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -6350,31 +5590,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/igroup_を設定しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             igroup を設定しています
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -6384,57 +5620,50 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_構成.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX 構成
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_を設定しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX を設定しています
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -6442,33 +5671,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SVM_の設定情報.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SVM の設定情報
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -6476,19 +5701,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_における監査_リカバリ_トレースロギング.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX における監査、リカバリ、トレースロギング
           </a>
-        </li>
-        <span>
           
 
 
@@ -6506,37 +5728,32 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/トレースログファイルとは.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             トレースログファイルとは
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -6544,31 +5761,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/AutoSupport_とは.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             AutoSupport とは
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -6576,29 +5789,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でマルチパスアクセスがサポートされるようになりました.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でマルチパスアクセスがサポートされるようになりました
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -6606,29 +5815,25 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_のシンプロビジョニング.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX のシンプロビジョニング
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -6636,37 +5841,33 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/複数サブネット構成.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             複数サブネット構成
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -6676,43 +5877,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_ウィザードとは.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive ウィザードとは
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -6720,51 +5916,44 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_のセキュリティ機能.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX のセキュリティ機能
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でのアクセス制御.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でのアクセス制御
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -6772,31 +5961,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ストレージシステムのログイン情報.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ストレージシステムのログイン情報
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -6805,10 +5990,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -6816,19 +6000,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でのロールベースアクセス制御.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でのロールベースアクセス制御
           </a>
-        </li>
-        <span>
           
 
 
@@ -6836,43 +6017,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でのロールベースアクセス制御の設定.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でのロールベースアクセス制御の設定
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Operations_Manager_コンソールでの_SD_admin_の設定.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Operations Manager コンソールでの SD-admin の設定
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -6880,27 +6054,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ストレージシステムに_SD_hostname_を追加しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ストレージシステムに SD-hostname を追加しています
           </a>
+          
+
+
+
+          
         </li>
-        <span>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
           
-
-
-
-
-          
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -6914,65 +6099,44 @@
 
 
 
-          
-        </span>
-      </span>
-    
-
-  
-
-
-
-
-
-
-
-
-
-
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/RBAC_とストレージ処理の例.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             RBAC とストレージ処理の例
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -6980,19 +6144,16 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_の_FlexClone_ボリューム.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX の FlexClone ボリューム
           </a>
-        </li>
-        <span>
           
 
 
@@ -7002,51 +6163,46 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/FlexClone_ボリュームに対する_SnapDrive_for_UNIX_の処理.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             FlexClone ボリュームに対する SnapDrive for UNIX の処理
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -7054,45 +6210,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でのストレージプロビジョニング.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でのストレージプロビジョニング
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_でのストレージ処理.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX でのストレージ処理
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7100,45 +6249,41 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_を使用したストレージ作成.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX を使用したストレージ作成
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7146,27 +6291,23 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/使用可能なストレージの表示に使用するコマンド.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             使用可能なストレージの表示に使用するコマンド
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7174,33 +6315,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_を使用してストレージサイズを拡張します.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX を使用してストレージサイズを拡張します
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7208,33 +6345,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/storage_connect_コマンドを使用します.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             storage connect コマンドを使用します
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7242,39 +6375,35 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/storage_disconnect_コマンド.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             storage disconnect コマンド
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7282,39 +6411,34 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/storage_delete_コマンドを使用します.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             storage delete コマンドを使用します
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -7322,43 +6446,36 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_で_Snapshot_コピーを作成して使用する.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX で Snapshot コピーを作成して使用する
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_の_Snapshot_処理とは.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX の Snapshot 処理とは
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7366,49 +6483,42 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピー処理.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピー処理
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/crash_consistent_Snapshot_コピー.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             crash-consistent Snapshot コピー
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7427,10 +6537,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -7438,39 +6547,35 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーの情報が表示されます.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーの情報が表示されます
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7478,33 +6583,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーの名前変更.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーの名前変更
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7512,45 +6613,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーをリストアしています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーをリストアしています
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/デスティネーションストレージシステムでの_Snapshot_コピーのリストア.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             デスティネーションストレージシステムでの Snapshot コピーのリストア
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7566,51 +6660,46 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ボリュームベース_SnapRestore.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ボリュームベース SnapRestore
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -7618,45 +6707,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーへの接続.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーへの接続
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ミラーリングされたストレージシステム上の_Snapshot_コピーを接続します.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ミラーリングされたストレージシステム上の Snapshot コピーを接続します
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7675,10 +6757,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -7686,39 +6767,35 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/ボリュームクローンまたは_LUN_クローンをスプリットします.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             ボリュームクローンまたは LUN クローンをスプリットします
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7726,35 +6803,31 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーを削除しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーを削除しています
           </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7762,45 +6835,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーを切断しています.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーを切断しています
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/Snapshot_コピーの切断に関するガイドライン.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             Snapshot コピーの切断に関するガイドライン
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7815,20 +6881,18 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -7836,33 +6900,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/データ収集ユーティリティ.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             データ収集ユーティリティ
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7870,71 +6930,60 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/トラブルシューティング.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             トラブルシューティング
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/エラーメッセージについて.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             エラーメッセージについて
           </a>
-        </li>
-        <span>
           
 
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/エラーメッセージの形式.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             エラーメッセージの形式
           </a>
+          
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -7942,31 +6991,27 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/一般的なエラーメッセージです.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             一般的なエラーメッセージです
           </a>
+          
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -7990,33 +7035,29 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/標準終了ステータス値.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             標準終了ステータス値
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -8065,10 +7106,9 @@
 
 
 
-
           
-        </span>
-      </span>
+        </li>
+      </ul>
     
 
   
@@ -8076,45 +7116,38 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/コマンドリファレンス.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             コマンドリファレンス
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_コマンドで必要な情報を収集する.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX コマンドで必要な情報を収集する
           </a>
+          
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -8122,49 +7155,42 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_コマンドの概要.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX コマンドの概要
           </a>
-        </li>
-        <span>
           
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/コマンドの概要.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             コマンドの概要
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
-
-
-
-
-
-
-
-
-
-
-          
-        </span>
-      </span>
+      </ul>
     
 
   
@@ -8172,33 +7198,56 @@
 
 
     
-      <span class="subfolders" style="display:none;">
-        
-        <li>
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
           <a target="_blank" 
             
               href="/ja-jp/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_のオプション_キーワード_引数.pdf" 
             
           >
-            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>
+            <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="16" height="16"/>
             SnapDrive for UNIX のオプション、キーワード、引数
           </a>
+          
+
+
+
+
+
+
+
+
+
+          
         </li>
-        <span>
-          
+      </ul>
+    
 
-
-
-
-
-
-
+  
 
 
 
           
-        </span>
-      </span>
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
     
 
   
@@ -8206,45 +7255,44 @@
 
 
 
-          
-        </span>
-      </span>
-    
-
-  
-
-
-
-
-          
-        </span>
-      </span>
-    
-
-  
-
-
-
-
-          
-        </span>
-      </span>
-    
-
-  
-
-
-
-
-</ul>
-
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/ja-jp/snapdrive-unix/images/pdf-zip.png" width="16" height="16"/>
+      <pre>個別のPDFドキュメントのコレクション<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
 <script>
-  $("#toggleContainerPdf li.active").parents('li').toggle('display');
-  $("#toggleContainerPdf li.active").parents('span.subfolders').toggle('display');
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
   $("#toggleButtonPdf").click(function () {
     $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapdrive-unix/index.html">
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapdrive-unix/index.html">
         ホーム
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapdrive-unix/releasenotes.html">
         リリースノート
@@ -10798,7 +9846,7 @@
       </a></li></ul></li></ul></li></ul></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/snapdrive-unix/reference_legal_notices.html">
         法的通知
       </a></li></ul>
-
+</div>
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
 <script>$("li.active").parents('li').toggleClass("active");</script>
 
@@ -10808,6 +9856,30 @@
   <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
     <!-- Begin of page container -->
     <article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">ホーム</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">ドキュメント</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/ja-jp/snapdrive-unix/">Snapdrive&nbsp;for&nbsp;Unix</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          SnapDrive 設定ウィザードを使用する
+        </li>
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
       <div class="ie-nmt-disclaimer">
   <span>
     <div class="ie-nmt-disclaimer-container">
@@ -10830,26 +9902,12 @@
 <p class="page-details">
   
     
-    <time datetime="2021-08-06 03:14:14 +0000">08/06/2021</time>
+    <time datetime="2022-01-17 14:13:52 +0000">01/17/2022</time>
     
   
 
 <span>寄稿者
-  <a target="_blank" href="https://github.com/netapp-ivanad">
-    <img  class="avatar avatar-small"
-          alt="netapp-ivanad"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/76115643?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
 </span>
-
-
-  <span>
-    <a target="_blank" href="/ja-jp/snapdrive-unix/pdfs/pages/solaris/task_snapdrive_configuration_wizard_in_nfs_san_and_mixed_environment.pdf" role="button">
-      <img src="/ja-jp/snapdrive-unix/images/pdf.png" width="20" height="20"/>このページの PDF をダウンロード</a>
-  </span>
 
 
 </p>
@@ -11253,11 +10311,11 @@ SMVI を設定するこの手順では、転送プロトコルが FCP でホス�
   
   <!-- Start Page Toolbar -->
   <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
     <div class="page-nav-contribute"  >
-      <div class="page-nav-contribute-title">寄稿する</div>
-      <a target="_blank" href="https://github.com/NetAppDocs/snapdrive-unix/blob/main/solaris/task_snapdrive_configuration_wizard_in_nfs_san_and_mixed_environment.adoc" class="btn btn-default githubEditButton" role="button"><img src="/ja-jp/snapdrive-unix/images/github.png" class="github-icon" />このページを編集する</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/snapdrive-unix/issues/new?body=Page%3A%20[SnapDrive 設定ウィザードを使用する](https://docs.netapp.com/ja-jp/snapdrive-unix/solaris/task_snapdrive_configuration_wizard_in_nfs_san_and_mixed_environment.html)" class="btn btn-default githubEditButton" role="button"><img src="/ja-jp/snapdrive-unix/images/github.png" class="github-icon" />ドキュメントの変更をリクエストする</a>
-      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >貢献する方法を学ぶ</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/snapdrive-unix/issues/new?body=Page%3A%20[SnapDrive 設定ウィザードを使用する](https://docs.netapp.com/ja-jp/snapdrive-unix/solaris/task_snapdrive_configuration_wizard_in_nfs_san_and_mixed_environment.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/snapdrive-unix/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/snapdrive-unix/blob/main/solaris/task_snapdrive_configuration_wizard_in_nfs_san_and_mixed_environment.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/snapdrive-unix/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/snapdrive-unix/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a>
     </div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
@@ -11282,7 +10340,7 @@ SMVI を設定するこの手順では、転送プロトコルが FCP でホス�
         <div class="n-footer__copyright">
           <ul class="n-footer__copyright-list">
             <li class="n-footer__copyright-link">
-            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2021 NetApp, Inc.</a>
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
             </li>
 
 </ul>
