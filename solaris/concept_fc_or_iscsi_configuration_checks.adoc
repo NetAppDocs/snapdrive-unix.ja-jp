@@ -2,7 +2,7 @@
 permalink: solaris/concept_fc_or_iscsi_configuration_checks.html 
 sidebar: sidebar 
 keywords: snap, snapdrive, fc, iscsi, configuration 
-summary: ファイバチャネルプロトコル (FCP\) と Internet Small Computer System Interface\ (iSCSI\) は、以前は独立したユーティリティとして配布されていましたが、 FCP と iSCSI の両方の構成サポートは Solaris Host Utilities で利用できます。 
+summary: 'ファイバチャネルプロトコル (FCP\) と Internet Small Computer System Interface\ (iSCSI\) は、以前は独立したユーティリティとして配布されていましたが、 FCP と iSCSI の両方の構成サポートは Solaris Host Utilities で利用できます。' 
 ---
 = FC または iSCSI の設定チェック
 :icons: font

@@ -2,7 +2,7 @@
 permalink: solaris/task_resetting_the_snap_reserve_option_on_the_storage_system.html 
 sidebar: sidebar 
 keywords: snap, snapdrive, reset, reserve, option, storage, system 
-summary: Fibre Channel 環境または Internet Small Computer System Interface （ iSCSI ）環境で Data ONTAP を使用する場合は、ボリュームを最適化するために、ストレージシステムのスナップリザーブオプションを 0% にリセットする必要があります。 
+summary: 'Fibre Channel 環境または Internet Small Computer System Interface （ iSCSI ）環境で Data ONTAP を使用する場合は、ボリュームを最適化するために、ストレージシステムのスナップリザーブオプションを 0% にリセットする必要があります。' 
 ---
 = ストレージ・システムの snap reserve オプションをリセットします
 :icons: font

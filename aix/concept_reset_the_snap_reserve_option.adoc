@@ -2,7 +2,7 @@
 permalink: aix/concept_reset_the_snap_reserve_option.html 
 sidebar: sidebar 
 keywords: reset, snap, snapdrive, reserve, option 
-summary: ファイバチャネル環境（ FC ）または Internet Small Computer System Interface （ iSCSI ）環境で Data ONTAP を使用する場合は、 SnapDrive for UNIX LUN を含むすべてのストレージシステムボリュームで、 snap reserve オプションを 0% にリセットする必要があります。 
+summary: 'ファイバチャネル環境（ FC ）または Internet Small Computer System Interface （ iSCSI ）環境で Data ONTAP を使用する場合は、 SnapDrive for UNIX LUN を含むすべてのストレージシステムボリュームで、 snap reserve オプションを 0% にリセットする必要があります。' 
 ---
 = スナップリザーブオプションをリセットしています
 :icons: font
