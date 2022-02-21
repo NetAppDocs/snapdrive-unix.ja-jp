@@ -2,7 +2,7 @@
 permalink: solaris/concept_after_rebooting_the_host_os_and_cluster_services_fail_to_start.html 
 sidebar: sidebar 
 keywords: reboot, host, os, cluster, fail, start 
-summary: Solaris 10 ホストでは ' 再起動後にファイルシステムをマウントできない場合 'OS とクラスタは起動しません 
+summary: 'Solaris 10 ホストでは " 再起動後にファイルシステムをマウントできない場合 "OS とクラスタは起動しません' 
 ---
 = ホストのリブート後、 OS およびクラスタサービスを開始できません
 :icons: font

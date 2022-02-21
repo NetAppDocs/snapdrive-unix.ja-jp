@@ -2,7 +2,7 @@
 permalink: aix/reference_understanding_exit_status_values_of_error_messages.html 
 sidebar: sidebar 
 keywords: snap, snapdrive, exit, status, value, error, message 
-summary: SnapDrive for UNIX の各エラーメッセージには、終了ステータスの値が関連付けられています。終了ステータスの値には ' エラーの原因と ' タイプ - 警告 ' コマンド ' 管理者 ' 致命的 
+summary: 'SnapDrive for UNIX の各エラーメッセージには、終了ステータスの値が関連付けられています。終了ステータスの値には " エラーの原因と " タイプ - 警告 " コマンド " 管理者 " 致命的' 
 ---
 = エラーメッセージの終了ステータスの値について
 :icons: font

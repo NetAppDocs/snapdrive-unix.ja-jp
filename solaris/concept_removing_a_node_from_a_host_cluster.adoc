@@ -2,7 +2,7 @@
 permalink: solaris/concept_removing_a_node_from_a_host_cluster.html 
 sidebar: sidebar 
 keywords: snap, snapdrive, remove, node, host, cluster 
-summary: ホストクラスタから新しいノードを削除するには 'Veritas Cluster Server Installation Guide for Solaris の手順に従いますLLT および GAB を設定したら、 SnapDrive storage disconnect コマンドを使用して、ホストクラスタ内のすべての共有ストレージエンティティについて、すべての LUN のマッピングを解除する必要があります。 
+summary: 'ホストクラスタから新しいノードを削除するには "Veritas Cluster Server Installation Guide for Solaris の手順に従いますLLT および GAB を設定したら、 SnapDrive storage disconnect コマンドを使用して、ホストクラスタ内のすべての共有ストレージエンティティについて、すべての LUN のマッピングを解除する必要があります。' 
 ---
 = ホストクラスタからのノードの削除
 :icons: font

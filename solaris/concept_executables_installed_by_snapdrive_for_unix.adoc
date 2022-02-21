@@ -2,7 +2,7 @@
 permalink: solaris/concept_executables_installed_by_snapdrive_for_unix.html 
 sidebar: sidebar 
 keywords: snap, snapdrive, executable, install, unix 
-summary: SnapDrive for UNIX は 'Solaris オペレーティングシステム用の実行可能ファイルをインストールします 
+summary: 'SnapDrive for UNIX は "Solaris オペレーティングシステム用の実行可能ファイルをインストールします' 
 ---
 = SnapDrive for UNIX によってインストールされた実行可能ファイル
 :icons: font

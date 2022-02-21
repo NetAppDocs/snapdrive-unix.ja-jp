@@ -2,7 +2,7 @@
 permalink: solaris/concept_creating_a_file_system_directly_on_a_lun_fails.html 
 sidebar: sidebar 
 keywords: snap, snapdrive, lun, fail, create, file, system 
-summary: Solaris ホストでは 'UFS ファイルシステムを LUN 上に直接作成することはできません 
+summary: 'Solaris ホストでは "UFS ファイルシステムを LUN 上に直接作成することはできません' 
 ---
 = LUN 上でファイルシステムを直接作成すると失敗します
 :icons: font
