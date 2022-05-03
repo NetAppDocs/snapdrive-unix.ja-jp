@@ -5,6 +5,7 @@ keywords: snap, snapshot, data, collection, utility, troubleshoot
 summary: SnapDrive データ収集ユーティリティは、問題を診断するために情報を収集するトラブルシューティングツールです。 
 ---
 = データ収集ユーティリティ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

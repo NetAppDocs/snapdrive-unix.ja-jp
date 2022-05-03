@@ -5,6 +5,7 @@ keywords: snap, snapdrive, remove, portset, delete, command, port, set
 summary: SnapDrive で設定されているポートセットを削除するには、 SnapDrive portset delete コマンドを使用します。 
 ---
 = SnapDrive からポートセットを削除しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

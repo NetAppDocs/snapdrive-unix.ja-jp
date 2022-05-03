@@ -5,6 +5,7 @@ keywords: snap, snapdrive, support, storage, standard, multipath, multiple, netw
 summary: SnapDrive for UNIX は、標準のマルチパスソフトウェア解決策を使用した、ストレージシステムへの FC マルチパスアクセスをサポートしています。マルチパスを使用すると、ホストとストレージシステム間に複数のネットワークパスを設定できます。 
 ---
 = SnapDrive for UNIX でマルチパスアクセスがサポートされるようになりました
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

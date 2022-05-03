@@ -5,6 +5,7 @@ keywords: snap, snapdrive, exit, status, value
 summary: 終了ステータスの値は、 SnapDrive for UNIX コマンドの成功または失敗を判別するスクリプトで使用されます。 
 ---
 = 終了ステータス値を使用する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

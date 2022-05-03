@@ -5,6 +5,7 @@ keywords: snap, snapdrive, rbac, access, control, role
 summary: RBAC を使用すると、 SnapDrive 管理者は、さまざまな SnapDrive 操作によってストレージシステムへのアクセスを制限できます。ストレージ処理に関するこの制限アクセスまたはフルアクセスは、ユーザに割り当てられたロールによって異なります。 
 ---
 = SnapDrive for UNIX の Role-Based Access Control （ RBAC ；ロールベースアクセス制御）とは何ですか
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

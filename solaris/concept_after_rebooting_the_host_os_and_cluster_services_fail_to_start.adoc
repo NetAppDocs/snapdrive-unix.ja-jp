@@ -5,6 +5,7 @@ keywords: reboot, host, os, cluster, fail, start
 summary: 'Solaris 10 ホストでは " 再起動後にファイルシステムをマウントできない場合 "OS とクラスタは起動しません' 
 ---
 = ホストのリブート後、 OS およびクラスタサービスを開始できません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

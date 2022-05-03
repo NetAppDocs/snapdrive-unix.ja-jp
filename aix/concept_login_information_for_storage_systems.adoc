@@ -5,6 +5,7 @@ keywords: login, information, storage, system, snap, snapdrive
 summary: SnapDrive for UNIX が各ストレージ・システムにアクセスできるように、ユーザ名またはパスワードを設定します。また、 root としてログインしているだけでなく、 SnapDrive for UNIX を実行しているユーザーが、プロンプトが表示されたときに正しいユーザー名またはパスワードを入力する必要があるため、セキュリティが確保されます。ログインが侵害された場合は、ログインを削除して、新しいユーザログインを設定できます。 
 ---
 = ストレージシステムのログイン情報
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

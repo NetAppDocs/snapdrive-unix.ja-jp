@@ -5,6 +5,7 @@ keywords: snap, snapdrive, recovery, log
 summary: リカバリログは、システム状態が一貫していない理由をトレースするのに役立ちます。一部の処理が停止すると、 SnapDrive for UNIX によってこのファイルが生成されます。 
 ---
 = リカバリログの内容
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

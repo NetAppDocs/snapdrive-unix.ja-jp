@@ -5,6 +5,7 @@ keywords: snap, snapdrive, daemon, stop, force, cancel, undefined
 summary: すべてのコマンドの実行が完了しないようにするには、デーモンを強制的に停止します。デーモンを強制的に停止する要求が受信されると、 SnapDrive for UNIX デーモンは実行中またはキューにあるすべてのコマンドをキャンセルします。デーモンを強制的に停止すると、システムの状態が undefined になることがあります。この方法は推奨されません。 
 ---
 = デーモンを強制的に停止します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

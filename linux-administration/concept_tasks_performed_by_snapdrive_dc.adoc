@@ -5,6 +5,7 @@ keywords: snap, snapdrive, diagnostic, copy, log, file, data, utility
 summary: データ収集ユーティリティは、ネットアップの診断ユーティリティを実行し、 SnapDrive for UNIX のログファイルをコピーして、分析に使用する圧縮ファイルを作成します。 
 ---
 = SnapDrive DC によって実行されるタスク
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

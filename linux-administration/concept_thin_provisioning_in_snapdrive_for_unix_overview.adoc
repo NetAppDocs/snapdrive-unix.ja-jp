@@ -5,6 +5,7 @@ keywords: snap, snapdrive, thin, provisioning, fractional, reserve, value, ontap
 summary: フラクショナルリザーブの値を設定することはできません。また、 SnapDrive for UNIX では、自動削除やオートサイズなどの Data ONTAP 機能と統合されません。SnapDrive for UNIX では Data ONTAP 機能を安全に使用できますが、 SnapDrive for UNIX では自動削除イベントやオートサイズイベントは登録されません。 
 ---
 = SnapDrive for UNIX のシンプロビジョニング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

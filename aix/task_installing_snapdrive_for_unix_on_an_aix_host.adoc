@@ -5,6 +5,7 @@ keywords: snap, snapdrive, install, aix, host, unix
 summary: システム管理インターフェイスツール（ SMIT ）を使用して、 AIX ホストに SnapDrive for UNIX をインストールできます。 
 ---
 = AIX ホストに SnapDrive for UNIX をインストールしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

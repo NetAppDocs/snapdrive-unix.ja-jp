@@ -5,6 +5,7 @@ keywords: snap, snapdrive, automatic, storage, update, operations, manager, cons
 summary: Operations Manager コンソールでは、ネットワークでサポートされているストレージシステムを検出できます。検出されたストレージシステムから定期的に収集されたデータを監視します。データは設定された間隔で更新されます。Operations Manager コンソール管理者は、更新間隔を設定できます。 
 ---
 = Operations Manager コンソールでのストレージシステムの自動更新
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

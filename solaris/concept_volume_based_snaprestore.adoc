@@ -5,6 +5,7 @@ keywords: snap, snapdrive, volume, snaprestore
 summary: SnapDrive 4.0 for UNIX 以降では、 Snapshot リストア機能がボリューム・レベルで提供されています。ここでは、ボリュームベースの Snapshot リストアを使用して実行できるさまざまなストレージ処理について説明します。 
 ---
 = ボリュームベース SnapRestore
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, unix, error, iscsi, takeover, giveback
 summary: Linux ホスト上で実行されている SnapDrive for UNIX は、「 HBA assistant not found 」というエラーメッセージを返します。 
 ---
 = iSCSI が実行されていない場合、 SnapDrive for UNIX からエラーが報告されます
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

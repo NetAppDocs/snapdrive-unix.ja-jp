@@ -5,6 +5,7 @@ keywords: snap, snapdrive, sfrac, fencing, environment, storage
 summary: SnapDrive for UNIX では、ストレージプロビジョニングと Snapshot 管理のオプションを使用して、 SFRAC 環境でホストクラスタ全体の共有ディスクグループとノードローカルディスクグループ、およびファイルシステムを管理できます。 
 ---
 = ストレージシステム上で SFRAC I/O フェンシング環境をセットアップする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

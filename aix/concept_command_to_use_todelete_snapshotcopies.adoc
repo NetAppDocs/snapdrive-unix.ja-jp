@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, delete, snapshot, copy
 summary: SnapDrive snap delete コマンドを使用して、 Snapshot コピーを削除します。 
 ---
 = Snapshot コピーの削除に使用するコマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

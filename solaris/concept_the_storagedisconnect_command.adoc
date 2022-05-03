@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, disconnect, command
 summary: SnapDrive storage create SnapDrive コマンドまたは lun storage connect コマンドを使用して、ホストにマッピングされていた LUN またはストレージエンティティを削除します。 
 ---
 = storage disconnect コマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

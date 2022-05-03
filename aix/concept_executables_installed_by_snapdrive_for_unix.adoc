@@ -5,6 +5,7 @@ keywords: snap, snapdrive, executables, install, unix
 summary: 'SnapDrive for UNIX は "AIX オペレーティング・システム用の実行可能ファイルをインストールします' 
 ---
 = SnapDrive for UNIX によってインストールされた実行可能ファイル
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

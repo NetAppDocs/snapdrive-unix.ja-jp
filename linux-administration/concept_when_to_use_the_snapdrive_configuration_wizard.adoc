@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configuration, wizard, update
 summary: SnapDrive 設定ウィザードを使用して、設定変数を更新します。設定ウィザードはいつでも実行でき、 SnapDrive の設定変更を変更できます。 
 ---
 = SnapDrive 設定ウィザード
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, uninstall, aix, host, unix
 summary: System Management Interface Tool\ （ SMIT \ ）を使用して、 AIX システムから SnapDrive for UNIX をアンインストールできます。 
 ---
 = AIX ホストからの SnapDrive for UNIX のアンインストール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

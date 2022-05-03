@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, provision, lvm, logical, manager
 summary: SnapDrive for UNIX は、エンドツーエンドのストレージ管理機能を提供します。ホストからストレージシステムにストレージをプロビジョニングし、ホストの論理ボリュームマネージャ \ （ LVM \ ）を使用するかどうかに関係なく、そのストレージを管理できます。 
 ---
 = SnapDrive for UNIX でのストレージ処理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

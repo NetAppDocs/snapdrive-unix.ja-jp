@@ -5,6 +5,7 @@ keywords: snap, snapdrive, create, storage, command, lun
 summary: SnapDrive for UNIX では、ストレージを簡単に作成できるように、 SnapDrive storage create コマンドの基本的な形式をいくつか提供しています。ストレージ作成処理は、さまざまな一般カテゴリに分類されます。 
 ---
 = ストレージを作成する方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

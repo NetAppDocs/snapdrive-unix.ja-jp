@@ -5,6 +5,7 @@ keywords: snap, snapdrive, download, decompress, software, package
 summary: 'SnapDrive を Solaris ホストにインストールするには "NTAPsnapdrive_sun_x86_5.2.tar.Z または NTAPsnapdrive_sun_sparc_5.2.tar.Z パッケージをダウンロードして解凍する必要がありますこのソフトウェアパッケージは "x86 プラットフォームで Solaris を使用しているか "SPARC プラットフォームで使用しているかによって異なります' 
 ---
 = ソフトウェアパッケージをダウンロードして解凍します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

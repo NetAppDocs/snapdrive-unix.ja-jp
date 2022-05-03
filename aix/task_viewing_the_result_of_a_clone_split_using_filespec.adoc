@@ -5,6 +5,7 @@ keywords: snap, snapdrive, view, result, clone, split, job, id, filespec, operat
 summary: ジョブ ID またはファイル仕様を使用して、完了したクローンスプリット処理の結果を表示できます。 
 ---
 = ジョブ ID またはファイル仕様を使用したクローンスプリット処理の結果の表示
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

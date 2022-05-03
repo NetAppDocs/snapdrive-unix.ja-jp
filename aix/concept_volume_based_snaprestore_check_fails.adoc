@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snaprestore, volume, based, check, fail
 summary: ボリュームベースの SnapRestore （ Vbsr\ ）チェックが失敗します。 \ （ NFS が外部ホストがないリストをエクスポートしようとした場合）クライアントマシン \ （ SLES 11\ ）の /etc/hosts ファイル内のホスト名に対して 2 つの異なる IP を持ちます。 
 ---
 = ボリュームベースの SnapRestore チェックが失敗する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

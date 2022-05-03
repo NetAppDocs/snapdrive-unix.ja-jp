@@ -5,6 +5,7 @@ keywords: snap, snapdrive, mapped, rdm, lun, guest, esx, server, system
 summary: ゲストオペレーティングシステムおよび ESX サーバで RDM LUN をクリーンアップする必要があります。 
 ---
 = ゲストオペレーティングシステムおよび ESX サーバ内のマッピングされた RDM LUN をクリーンアップしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, considerations, snapshot, copy
 summary: Snapshot コピーを使用する場合に注意すべき点はいくつかあります。たとえば、 SnapDrive for UNIX が作成した Snapshot コピーのみで機能する点や、ストレージシステムからホストに Snapshot コピーが自動的にレプリケートされる点などです。 
 ---
 = Snapshot コピーを使用する場合の考慮事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

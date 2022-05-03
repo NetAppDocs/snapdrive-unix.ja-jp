@@ -5,6 +5,7 @@ keywords: snap, snapdrive, method, disconnect, storage
 summary: ストレージの切断を簡単にするため、 SnapDrive for UNIX では、 SnapDrive storage disconnect コマンド用にいくつかの形式を提供しています。 
 ---
 = ストレージを切断する方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

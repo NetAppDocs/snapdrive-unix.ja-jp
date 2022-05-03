@@ -5,6 +5,7 @@ keywords: snap, snapdrive, sample, error, message
 summary: これは、 SnapDrive for UNIX のエラーメッセージです。 
 ---
 = サンプルのエラーメッセージです
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

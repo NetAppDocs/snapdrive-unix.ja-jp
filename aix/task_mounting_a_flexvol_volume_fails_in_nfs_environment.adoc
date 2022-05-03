@@ -5,6 +5,7 @@ keywords: snap, snapdrive, mount, flexclone, fail, volume, nfs
 summary: FlexVol ボリュームをマウントすると、 /etc/exports ファイルにエントリが追加されます。NFS 環境では、 SnapDrive for UNIX が失敗し、エラー・メッセージが生成されます。 
 ---
 = NFS 環境で FlexVol ボリュームのマウントが失敗する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

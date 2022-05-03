@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, disconnect, command
 summary: 一部のオペレーティングシステムで SnapDrive storage disconnect コマンドを使用すると、ホストボリューム名、ファイルシステムマウントポイント、ストレージシステムボリューム名、 LUN の名前などの情報が失われます。この情報がなければ、あとでストレージに接続することは困難です。 
 ---
 = storage disconnect コマンドの使用に関するヒント
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

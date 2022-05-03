@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, delete, host, cluster
 summary: ホストクラスタ環境で napdrive storage delete コマンドを使用する際には、注意が必要です。 
 ---
 = ホストクラスタ環境でのストレージ削除に関するガイドライン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

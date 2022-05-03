@@ -5,6 +5,7 @@ keywords: snap, snapdrive, colume, snaprestore, space, reservation
 summary: ボリュームベースのスナップリザーブを使用するスペースリザベーションの場合は、 snapdrive.conf ファイルで space-reservation-volume-enabled オプションを設定する必要があります。 
 ---
 = ボリュームベースの SnapRestore ：スペースリザベーションに使用します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

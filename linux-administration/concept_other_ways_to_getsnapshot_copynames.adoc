@@ -5,6 +5,7 @@ keywords: snap, snapdrive, list, command, snapshot, copy, name
 summary: SnapDrive snap list コマンドを使用して、 Snapshot コピー名を表示します。 
 ---
 = Snapshot コピー名の取得方法は他にもあります
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

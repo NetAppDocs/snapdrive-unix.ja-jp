@@ -5,6 +5,7 @@ keywords: snap, snapdrive, verify, installation, install
 summary: SnapDrive for UNIX のインストール後、インストールが正常に完了したことを確認する必要があります。SnapDrive for UNIX では、実行可能ファイル、構成ファイル、アンインストールファイル、診断ファイルなどの複数のファイルがホストにインストールされます。 とマニュアルページです。 
 ---
 = インストールの確認
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

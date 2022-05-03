@@ -5,6 +5,7 @@ keywords: snap, snapdrive, check, post, installation
 summary: インストールが完了したら、 SnapDrive for UNIX が正常にインストールされるように、いくつかのタスクを実行する必要があります。 
 ---
 = インストール後のチェックの実行
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

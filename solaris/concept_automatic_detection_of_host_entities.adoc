@@ -5,6 +5,7 @@ keywords: snap, snapdrive, automatic, detection, host
 summary: SnapDrive for UNIX では、一部のコマンドについて、ホストエンティティの設定が自動的に検出されます。いくつかの snap storage コマンドで必要になるのは、ホストエンティティの名前だけです。その場合、ホストエンティティのタイプを指定する必要はありません。 
 ---
 = ホストエンティティの自動検出
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

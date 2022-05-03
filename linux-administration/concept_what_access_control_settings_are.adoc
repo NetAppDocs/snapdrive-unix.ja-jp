@@ -5,6 +5,7 @@ keywords: access, control, settings, snap, snapdrive, user, storage, files
 summary: ユーザアクセスを判別するために、 SnapDrive for UNIX は、ストレージシステムのルートボリューム内の 2 つのうちの 1 つのアクセス権ファイルをチェックします。アクセス制御を評価するには、対象のファイルに設定されているルールを確認する必要があります。 
 ---
 = アクセス制御の設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

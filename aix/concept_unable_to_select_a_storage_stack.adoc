@@ -5,6 +5,7 @@ keywords: snap, snapshot, select, storage, stack, unable
 summary: snapdrive.conf ファイルで指定されている値が適切でないため、ストレージスタックを選択できません。 
 ---
 = ストレージスタックを選択できません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

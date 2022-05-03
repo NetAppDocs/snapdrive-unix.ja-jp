@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, mounting, modify, file
 summary: 特定の SnapDrive for UNIX コマンドを使用すると、原因ファイルシステムをマウントまたはアンマウントできます。コマンドがファイルシステムをマウントする操作を実行すると、 SnapDrive for UNIX によって、ホストプラットフォームの標準システムファイルにファイルシステムの名前が追加されます。処理によってファイルシステムがアンマウントされた場合、 SnapDrive for UNIX はシステムファイルからその名前を削除します。これは問題にならないはずですが、システムファイルがいつ変更されるかを知ると便利です。 
 ---
 = SnapDrive コマンドを使用すると、ファイルシステムのマウントやアンマウント、およびシステムファイルの変更が行われる場合があります
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

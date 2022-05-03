@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, igroup
 summary: ストレージシステムに対して設定されている igroup は削除できますが、これは不要です。 
 ---
 = igroup を削除する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, copy, snapshot, crash, consistent
 summary: ファイルシステムまたはディスクグループの crash-consistent Snapshot コピーの作成が必要になる場合があります。SnapDrive for UNIX では、エンティティで指定されたすべてのストレージシステムボリュームのイメージを含む Snapshot コピーが作成されます。 
 ---
 = crash-consistent Snapshot コピー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

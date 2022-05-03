@@ -5,6 +5,7 @@ keywords: snap, snapdrive, verify, copy
 summary: データをリストアして Snapshot コピーを検証できます。 
 ---
 = Snapshot コピーを検証しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

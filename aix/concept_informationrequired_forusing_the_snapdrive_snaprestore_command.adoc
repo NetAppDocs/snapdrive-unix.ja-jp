@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, command, information, required
 summary: Snapshot コピーをリストアするには、リストアするストレージエンティティを決定し、 Snapshot コピーの名前を指定します。 
 ---
 = SnapDrive snap restore コマンドの使用に必要な情報
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

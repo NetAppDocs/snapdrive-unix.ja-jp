@@ -5,6 +5,7 @@ keywords: snap, snapdrive, management, configure, data, interface, nfs, traffic
 summary: NFS 環境では、 1 つの管理インターフェイスに対して複数のデータインターフェイスを設定して、ストレージシステム上のデータトラフィックから管理トラフィックを分離できます。 
 ---
 = ストレージシステムの管理インターフェイスとデータインターフェイスの設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, snapshot, copy
 summary: 単一のストレージエンティティまたは複数のストレージエンティティの Snapshot コピーをリストアできます。 
 ---
 = Snapshot コピーをリストアしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

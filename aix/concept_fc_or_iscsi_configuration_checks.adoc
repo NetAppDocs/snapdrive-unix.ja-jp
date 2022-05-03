@@ -5,6 +5,7 @@ keywords: snap, snapdrive, fc, iscsi, configuration, check
 summary: ファイバチャネルプロトコル（ FCP ）および Internet Small Computer System Interface （ iSCSI ）は、以前は独立したユーティリティとして配布されていましたが、 AIX Host Utilities で利用できる FCP と iSCSI の両方の構成サポートを確認できます。 
 ---
 = FC または iSCSI の設定チェック
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

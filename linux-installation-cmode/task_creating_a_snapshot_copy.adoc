@@ -5,6 +5,7 @@ keywords: snap, snapdrive, create, snapshot, copy
 summary: 複数のファイルシステム、ホストボリューム、 LUN 、またはディスクグループの Snapshot コピーを作成するには、ネットワーク接続型ストレージでストレージエリアネットワーク（ SAN ）および NFS ボリューム（ NAS ）を使用している間に 1 つのコマンドを実行します。 
 ---
 = Snapshot コピーを作成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

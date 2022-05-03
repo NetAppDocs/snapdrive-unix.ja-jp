@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configure, operations, console, manager, sd
 summary: Operations Manager コンソール管理者は、 SD-admin ユーザを作成できます。 
 ---
 = Operations Manager コンソールでの SD-admin の設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

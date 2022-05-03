@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, fail, lun, snapshot, host
 summary: 元にならないホストで Snapshot 接続処理を実行すると、 raw LUN 上のファイルシステムの Snapshot リストア処理が失敗する。 
 ---
 = Snapshot のリストア処理で、 raw LUN 上のファイルシステムのリストアに失敗する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

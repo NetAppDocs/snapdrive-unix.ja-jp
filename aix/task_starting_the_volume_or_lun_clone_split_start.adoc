@@ -5,6 +5,7 @@ keywords: snap, snapdrive, start, volume, clone, lun, split
 summary: ボリュームクローンまたは LUN クローンスプリット処理を開始できます。 
 ---
 = ボリュームクローンまたは LUN クローンスプリットを開始しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

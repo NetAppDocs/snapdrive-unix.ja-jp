@@ -5,6 +5,7 @@ keywords: snap, snapdrive, commands, fail, shell, snapcreate
 summary: SnapDrive for UNIX コマンドを実行できません。これは、コマンドシェルで設定した環境変数が SnapDrive for UNIX では使用できず、 $LD_LIBRARY_PATH パラメータと snapcreate -check-ers-persine-nfs パラメータが off に設定されているためです。 
 ---
 = 環境変数がコマンドシェルで設定されていると、 SnapDrive for UNIX コマンドが失敗します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

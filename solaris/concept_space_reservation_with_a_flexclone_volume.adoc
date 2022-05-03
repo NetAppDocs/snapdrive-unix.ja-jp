@@ -5,6 +5,7 @@ keywords: snapdrive, snap, space, flexclone, volume, reservation
 summary: スペースリザベーション処理は、制限付きと無制限の両方の種類の FlexClone ボリュームに対して実行できます。デフォルトでは、 FlexClone ボリュームには書き込み予約はありません。 
 ---
 = FlexClone ボリュームによるスペースリザベーション
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

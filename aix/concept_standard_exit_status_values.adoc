@@ -5,6 +5,7 @@ keywords: snap, snapdrive, standard, exit, status, value
 summary: SnapDrive for UNIX のエラーメッセージ ID には、終了ステータス値が関連付けられています。終了ステータスの値を使用して、 SnapDrive for UNIX コマンドの成功または失敗を判断できます。 
 ---
 = 標準終了ステータス値
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

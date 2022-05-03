@@ -5,6 +5,7 @@ keywords: snap, snapdrive, strorage, disconnect, command
 summary: SnapDrive storage disconnect コマンドを使用する場合は、次のガイドラインに従います。 
 ---
 = SnapDrive storage disconnect コマンドのガイドラインです
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

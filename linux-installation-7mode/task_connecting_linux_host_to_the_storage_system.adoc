@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, linux, host, storage, system
 summary: SnapDrive for UNIX の処理を成功させるには、ストレージシステムを Linux ホストに接続する前にセットアップする必要があります。 
 ---
 = Linux ホストをストレージシステムに接続します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, command, fail, discover, create, mapped, rej
 summary: SnapDrive for UNIX で storage create コマンドを実行すると、検出段階で、マッピングされた一部のデバイスの検出が拒否され、コマンドが失敗します。 
 ---
 = マッピングされた一部のデバイスの検出中に SnapDrive for UNIX storage create コマンドが失敗する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

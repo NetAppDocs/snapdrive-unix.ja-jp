@@ -5,6 +5,7 @@ keywords: snap, snapdrive, disconnect, operation, fail, delete, clone, volume
 summary: 場合によっては、 SnapDrive snap disconnect 処理でクローンボリュームの削除に失敗し、「 does not look snapdrive -generated 」というエラーメッセージが表示されることがあります。 
 ---
 = スナップ切断処理でクローンボリュームの削除に失敗する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

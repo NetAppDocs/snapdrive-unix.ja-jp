@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, create, lvm, file, ext4, ext3
 summary: SnapDrive for UNIX を使用して LVM を使用して論理ボリュームまたはファイルシステムを作成すると、 SnapDrive for UNIX によって必要なディスクグループが自動的に作成されます。SnapDrive for UNIX では、ホストボリュームマネージャでサポートされているタイプに基づいてファイルシステムが作成されます。Linux の場合は ext4 または ext3 が含まれます。 
 ---
 = LVM エンティティのストレージ作成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

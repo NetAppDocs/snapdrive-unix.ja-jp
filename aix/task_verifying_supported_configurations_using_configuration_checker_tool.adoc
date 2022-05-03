@@ -5,6 +5,7 @@ keywords: snap, snapdrive, verify, supported, configuration
 summary: SnapDrive for UNIX の設定チェックツールを使用すると、 SnapDrive for UNIX の実行でサポートされる設定を特定して確認できます。 
 ---
 = サポートされている構成の確認
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

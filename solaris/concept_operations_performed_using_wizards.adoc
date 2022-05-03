@@ -5,6 +5,7 @@ keywords: snap, snapdrive, wizards, operations
 summary: さまざまなウィザードを使用してストレージエンティティを作成し、 SnapDrive for UNIX を効率的に操作できます。 
 ---
 = ウィザードを使用して実行された処理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

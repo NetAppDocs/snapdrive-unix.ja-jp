@@ -5,6 +5,7 @@ keywords: snap, snapdrive, console, servers, operations, manager, multiple
 summary: SnapDrive for UNIX は、複数の Operations Manager コンソールサーバをサポートしています。この機能は、ストレージシステムのグループが複数の Operations Manager コンソールサーバで管理されている場合に必要です。SnapDrive for UNIX は、 Operations Manager コンソールサーバが SnapDrive for UNIX で設定されているのと同じ順序で、 Operations Manager コンソールサーバにアクセスします。SnapDrive config list コマンドを実行して、設定順序を取得できます。 
 ---
 = 複数の Operations Manager コンソールサーバ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

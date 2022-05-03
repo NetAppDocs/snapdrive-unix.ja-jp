@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, snapshot, copy, list
 summary: SnapDrive snap show \ （または list\ ）コマンドを使用して、 Snapshot コピーに関する情報を表示します。 
 ---
 = Snapshot コピー情報を表示するために使用するコマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, limitations, rdm, lun
 summary: SnapDrive には、 RDM LUN のプロビジョニングに関するいくつかの制限事項があります。環境に影響する可能性がある制限事項を確認しておく必要があります。 
 ---
 = SnapDrive で管理される RDM LUN の制限事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, lvm, nfs, raw, device
 summary: SnapDrive コマンドを使用して、 LVM 、 raw デバイス、および NFS エンティティの Snapshot コピーを作成、リストア、および管理できます。 
 ---
 = LVM 、 raw デバイス、および NFS エンティティの Snapshot コピーを管理する方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

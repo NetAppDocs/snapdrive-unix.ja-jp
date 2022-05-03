@@ -5,6 +5,7 @@ keywords: snap, snapdrive, access, permissions, storage, system
 summary: アクセス権限は、ホストが特定の Snapshot コピーおよびストレージ処理を実行できるかどうかを示します。アクセス権限は、 SnapDrive storage show 処理や storage list 処理には影響しません。SnapDrive を使用すると、ストレージシステム上のファイル内の各ホストのアクセス権限を指定できます。 
 ---
 = ストレージシステムのアクセス権限
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

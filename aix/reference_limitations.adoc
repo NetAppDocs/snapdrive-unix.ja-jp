@@ -5,6 +5,7 @@ keywords: snap, snapdrive, limitation, aix,
 summary: SnapDrive for UNIX を使用する場合、環境に影響する可能性がある一定の制限事項について理解しておく必要があります。 
 ---
 = 制限
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

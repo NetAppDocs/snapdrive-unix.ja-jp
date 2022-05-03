@@ -5,6 +5,7 @@ keywords: snap, snapdrive, error, message, location
 summary: SnapDrive for UNIX では、コマンド出力および各種ログファイルとしてのエラーメッセージに関する情報が提供されます。 
 ---
 = エラーメッセージの場所
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

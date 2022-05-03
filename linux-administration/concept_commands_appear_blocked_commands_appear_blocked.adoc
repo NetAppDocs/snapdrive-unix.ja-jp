@@ -5,6 +5,7 @@ keywords: snap, snapdrive, commands, blocked
 summary: SnapDrive for UNIX コマンドは 10 分以上ブロックされているように見えるため、実行できません。コマンドが完了するまで待つ必要があります。 
 ---
 = コマンドはブロックされたように表示
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

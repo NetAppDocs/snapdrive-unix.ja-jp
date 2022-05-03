@@ -5,6 +5,7 @@ keywords: snap, snapdrive, nfs, configuration, check
 summary: Network File System \ （ NFS\ ）を使用する構成の場合、ホストおよびストレージシステムをセットアップする前に、 NFS クライアントが正しく動作していることを確認する必要があります。 
 ---
 = NFS 設定チェック
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -16,7 +17,7 @@ NFS を使用する構成の場合、次の作業を実行する必要があり�
 
 * NFS クライアントが正しく動作していることを確認します。
 +
-NFS プロトコルの管理の詳細については、を参照してください link:https://library.netapp.com/ecm/ecm_download_file/ECMP1401220["『 7-Mode ファイルアクセスおよびプロトコル管理ガイド』"] Data ONTAP 7-Mode を使用している場合は、を参照してください  clustered Data ONTAP を使用している場合。
+NFS プロトコルの管理の詳細については、を参照してください link:https://library.netapp.com/ecm/ecm_download_file/ECMP1401220["『 7-Mode ファイルアクセスおよびプロトコル管理ガイド』"] Data ONTAP 7-Mode を使用している場合は、を参照してください link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.cdot-famg-nfs/home.html["『 File Access Management Guide for NFS 』を参照してください"] clustered Data ONTAP を使用している場合。
 
 * ホストおよびストレージシステムをセットアップする。
 +

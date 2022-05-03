@@ -5,6 +5,7 @@ keywords: snap, snapdrive, multiple, subnet, configuration, data, traffic, netwo
 summary: 管理トラフィックとデータトラフィックを分離したい環境では、複数のサブネットを使用すると便利です。この分離によって、ネットワークトラフィックを管理するためのよりセキュアな環境が実現します。このような環境でサーバ上で実行されている SnapDrive 4.1.1 for UNIX 以降のバージョンでは、スタンドアロン環境とホストおよび HA ペア環境で使用可能なすべての SnapDrive 操作がサポートされています。 
 ---
 = 複数サブネット構成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

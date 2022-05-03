@@ -5,6 +5,7 @@ keywords: snap, snapdrive, volume, support, migration
 summary: SnapDrive for UNIX では、ボリューム移行がサポートされます。ボリューム移行を使用すると、容量利用率やパフォーマンスの向上、およびサービスレベル契約を満たすために、同じコントローラ内のアグリゲート間でボリュームを無停止で移動できます。SAN 環境では、システムを停止せずに、 FlexVol ボリュームとボリューム内の LUN をアグリゲート間で移動できます。 
 ---
 = ボリューム移行のサポート
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

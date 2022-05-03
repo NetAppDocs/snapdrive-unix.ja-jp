@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, interface, management, config, nfs, command
 summary: SnapDrive 環境で特定の管理インターフェイスに関連付けられているデータインターフェイスエントリを削除するには、 nfs config delete mgmtpath コマンドを使用します。 
 ---
 = 管理インターフェイスのデータインターフェイスエントリを削除する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

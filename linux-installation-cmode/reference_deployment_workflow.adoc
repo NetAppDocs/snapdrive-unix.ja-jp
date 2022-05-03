@@ -5,6 +5,7 @@ keywords: snap, snapdrive, deployment, workflow, install, provision
 summary: SnapDrive で Snapshot コピーを作成する前に、 Linux Host Utilities \ （ FC または iSCSI プロトコルを使用する場合）、 SnapDrive for UNIX をインストールし、 SnapDrive でサポートされる構成を確認し、ストレージをプロビジョニングし、 Linux ホストからネットアップストレージシステムへの接続をセットアップする必要があります。 
 ---
 = 導入のワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

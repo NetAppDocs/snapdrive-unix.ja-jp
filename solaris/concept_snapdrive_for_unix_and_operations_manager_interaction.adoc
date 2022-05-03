@@ -5,6 +5,7 @@ keywords: snap, snapdrive, manager, console, operations
 summary: ロールベースアクセス制御（ RBAC ）の使用は、 Operations Manager コンソールインフラによって異なります。Operations Manager コンソール管理者は、 UNIX 用の SnapDrive のユーザ名を作成する必要があります。すべてのストレージ操作要求は、最初に Operations Manager コンソールに送信されてアクセスチェックが行われます。Operations Manager コンソールで特定の SnapDrive ユーザのストレージ操作が検証されると、処理が完了します。 
 ---
 = SnapDrive for UNIX と Operations Manager コンソールの連携
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

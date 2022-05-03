@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, system, name, host, configure
 summary: 新しいストレージシステムを使用して SnapDrive 処理を実行するには、ホストシステムに新しいストレージシステム名を設定する必要があります。 
 ---
 = ホスト・システムに新しいストレージ・システム名を設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

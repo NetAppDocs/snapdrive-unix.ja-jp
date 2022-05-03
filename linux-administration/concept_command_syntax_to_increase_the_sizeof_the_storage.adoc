@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, syntax, size, storage, increase
 summary: ストレージのサイズを拡張するには、使用する正しい構文を確認しておく必要があります。 
 ---
 = ストレージのサイズを拡張するコマンド構文
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

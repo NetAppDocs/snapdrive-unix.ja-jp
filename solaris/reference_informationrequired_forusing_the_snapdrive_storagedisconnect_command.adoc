@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, disconenct, command, information, required
 summary: 次の表に、 SnapDrive storage disconnect コマンドを使用する場合、入力する必要がある情報を示します。 
 ---
 = SnapDrive storage disconnect コマンドを使用するために必要な情報
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

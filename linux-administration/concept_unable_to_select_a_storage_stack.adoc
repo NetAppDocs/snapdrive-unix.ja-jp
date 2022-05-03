@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, stack, value, incorrect, wrong, select, inap
 summary: snapdrive.conf ファイルで指定されている値が適切でないため、ストレージスタックを選択できません。 
 ---
 = ストレージスタックを選択できません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

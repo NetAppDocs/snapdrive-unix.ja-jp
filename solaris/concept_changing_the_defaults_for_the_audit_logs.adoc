@@ -5,6 +5,7 @@ keywords: snap, snapdrive, audit, log, default
 summary: snapdrive.conf ファイルを使用すると、監査ログファイルの最大サイズ、古い監査ファイルの最大数などのロギングパラメータを変更できます。 
 ---
 = 監査ログのデフォルトを変更する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

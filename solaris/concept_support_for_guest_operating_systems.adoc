@@ -5,6 +5,7 @@ keywords: snap, snapdrive, support, guest, operating, system
 summary: SnapDrive for UNIX では、ゲストオペレーティングシステムをサポートしており、 LUN 、ファイルシステム、論理ボリューム、およびディスクグループのストレージを作成し、 Snapshot コピーを管理できます。RDM LUN をプロビジョニングする場合は、 snapdrive.conf ファイルで Fibre Channel （ FC ；ファイバチャネル）プロトコルを指定する必要があります。 
 ---
 = ゲストオペレーティングシステムのサポート
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

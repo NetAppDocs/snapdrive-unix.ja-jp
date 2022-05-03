@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, line, argument
 summary: SnapDrive for UNIX は、特定の形式の引数を取ります。 
 ---
 = コマンドライン引数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, login, information, virtual, console, storage, specif
 summary: ゲストオペレーティングシステムで RDM LUN をプロビジョニングするには、 SnapDrive for UNIX で Virtual Storage Console を設定する必要があります。ただし、 SnapDrive for UNIX から Virtual Storage Console にアクセスするためのユーザ名とパスワードもあります。Virtual Storage Console でこれらのログインクレデンシャルが認証されません。 
 ---
 = Virtual Storage Console のログイン情報を指定しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

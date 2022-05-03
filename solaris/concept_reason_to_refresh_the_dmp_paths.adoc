@@ -5,6 +5,7 @@ keywords: snap, snapdrive, refresh, dmp, path
 summary: FC 構成および DMP 構成のホストでは、 SnapDrive storage delete-lun コマンドがハングすることがあります。 
 ---
 = DMP パスを更新する理由
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

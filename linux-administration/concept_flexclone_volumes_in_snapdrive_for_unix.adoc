@@ -5,6 +5,7 @@ keywords: snap, snapdrive, flexicone, volumes, ontap, lun
 summary: SnapDrive for UNIX は、 Data ONTAP の FlexClone テクノロジに基づいた FlexClone ボリュームをサポートしています。FlexClone ボリュームは、親フレキシブルボリュームのポイントインタイムコピーです。FlexClone ボリュームは、 LUN クローンよりも高速で、データの複数のコピーを柔軟に作成できます。 
 ---
 = SnapDrive for UNIX の FlexClone ボリューム
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

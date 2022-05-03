@@ -5,6 +5,7 @@ keywords: snap, snapdrive, hba, setup, install
 summary: HBA セットアップは、適切な HBA カードとサポートされているドライバを Linux ホストにインストールするプロセスです。 
 ---
 = HBA セットアップ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

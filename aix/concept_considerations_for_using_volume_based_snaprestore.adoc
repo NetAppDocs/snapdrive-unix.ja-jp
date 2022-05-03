@@ -5,6 +5,7 @@ keywords: snap, snapdrive, considerations, volume, snaprestore
 summary: ボリュームベース SnapRestore （ VBSR ）を使用でき、ポイントが少なくて済みます。これらの点を念頭に置くことで、 VBSR 機能を安全に使用できます。 
 ---
 = ボリュームベース SnapRestore を使用する場合の考慮事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

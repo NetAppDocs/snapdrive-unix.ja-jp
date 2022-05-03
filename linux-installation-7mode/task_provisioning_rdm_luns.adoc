@@ -5,6 +5,7 @@ keywords: snap, snapdrive, rdm, lun, provision, create
 summary: SnapDrive for UNIX では、 VMware 仮想環境内のゲストオペレーティングシステムで FC プロトコルを有効にして、 RDM LUN を作成およびプロビジョニングできます。ONTAP を使用して RDM LUN をプロビジョニングすることもできます。 
 ---
 = RDM LUN のプロビジョニング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

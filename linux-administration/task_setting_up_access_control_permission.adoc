@@ -5,6 +5,7 @@ keywords: snap, snapdrive, access, control, permission, directory
 summary: SnapDrive for UNIX でアクセス制御権限を設定するには、ストレージシステムのルートボリュームに特別なディレクトリとファイルを作成します。 
 ---
 = アクセス制御権限を設定しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

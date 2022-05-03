@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, connect, command, host, lun
 summary: SnapDrive の storage connect コマンドを使用して、ストレージエンティティをホストに接続します。このコマンドを使用して、 LUN とストレージエンティティをホストに接続できます 
 ---
 = storage connect コマンドを使用します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

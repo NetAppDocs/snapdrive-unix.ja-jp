@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configuration, unix
 summary: SnapDrive for UNIX の設定オプションを確認し、 SnapDrive for UNIX の使用方法を理解しておく必要があります。 
 ---
 = SnapDrive for UNIX 構成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

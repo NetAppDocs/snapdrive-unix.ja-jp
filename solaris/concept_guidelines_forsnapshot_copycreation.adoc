@@ -5,6 +5,7 @@ keywords: snap, snapshot, snapdrive, copy, create
 summary: SnapDrive for UNIX を使用して Snapshot コピーを作成するときは、次の点を考慮してください。Snapshot コピーはボリュームあたり最大 255 個まで保持できます。 SnapDrive for UNIX では、作成された Snapshot コピーのみがサポートされます。ルートディスクグループの Snapshot コピーは作成できません。また、ブートデバイスまたはスワップデバイスも作成できません。また、 SnapDrive for UNIX では、クラッシュの整合性を保つためにフリーズ処理が必要になります。 
 ---
 = Snapshot コピーの作成については、ガイドラインに従ってください
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

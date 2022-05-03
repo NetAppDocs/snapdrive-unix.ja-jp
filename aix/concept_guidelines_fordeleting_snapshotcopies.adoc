@@ -5,6 +5,7 @@ keywords: snap, snapdrive, guidelines, delete, snapshot, copy
 summary: 使用中の Snapshot コピー、または Snapshot コピーが複数のストレージシステムボリュームに分散している Snapshot コピーは削除できません。 
 ---
 = Snapshot コピーを削除する場合のガイドラインを次に示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

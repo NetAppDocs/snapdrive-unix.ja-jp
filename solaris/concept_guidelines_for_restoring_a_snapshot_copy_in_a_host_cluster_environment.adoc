@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, copy, host, restore
 summary: Snapshot コピーのリストア時には、次のガイドラインに従ってください。 
 ---
 = ホストクラスタ環境での Snapshot コピーのリストアに関するガイドラインを参照してください
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, exit, status, value
 summary: 各終了ステータス値には、エラー名と、それに関連付けられたタイプがあります。テーブルを表示して、終了ステータス値、エラー名、タイプ、および概要について確認します。 
 ---
 = 終了ステータスの値
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

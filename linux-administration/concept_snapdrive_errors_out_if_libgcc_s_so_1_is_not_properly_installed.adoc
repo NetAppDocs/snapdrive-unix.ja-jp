@@ -5,6 +5,7 @@ keywords: snap, snapdrive, error, install, red, enterprise, oracle
 summary: 64 ビットの Red Hat Enterprise Linux 4 ホストと Oracle Enterprise Linux 4 ホストに /lib/libgcc_so.1 パスがインストールされていない場合、 SnapDrive for UNIX エラーが発生します。 
 ---
 = libgcc_so.1 がインストールされていない場合、 SnapDrive エラーが発生します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, flexclone, volume
 summary: フレキシブルボリュームクローン FlexClone は、親フレキシブルボリュームのポイントインタイムコピーです。FlexClone ボリュームは、クローン作成後に親フレキシブルボリュームに加えられた変更を継承しません。 
 ---
 = FlexClone ボリュームとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

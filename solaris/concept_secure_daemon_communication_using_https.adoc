@@ -5,6 +5,7 @@ keywords: snap, snapdrive, secure, daemon, communication, https
 summary: HTTPS を使用して、セキュアな Web サービスやデーモン通信を行うことができます。セキュアな通信を実現するには、 snapdrive.conf ファイルに設定するいくつかの設定変数を設定し、自己署名証明書または CA 署名証明書を生成してインストールします。 
 ---
 = HTTPS を使用したセキュアなデーモン通信
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

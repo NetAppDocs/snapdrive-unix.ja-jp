@@ -5,6 +5,7 @@ keywords: snap, snapdrive, migrate, old, new, storage, system
 summary: SnapDrive config migrate set コマンドを使用して、古いストレージ・システムから新しいストレージ・システムに移行することができます。移行後、新しいストレージシステムを使用して、ホストシステムですべての SnapDrive 処理を実行できます。 
 ---
 = 古いストレージシステムから新しいストレージシステムへの移行
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

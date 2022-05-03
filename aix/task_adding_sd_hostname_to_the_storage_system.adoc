@@ -5,6 +5,7 @@ keywords: snap, snapdrive, hostname, storage, system
 summary: Operations Manager コンソールの管理者は、 Operations Manager コンソールを使用して、ストレージシステムに SD-hostname ユーザを作成できます。手順の完了後、 Operations Manager コンソール管理者は手動で SnapDrive for UNIX 管理者にクレデンシャルを送信する必要があります。SD-hostname の代わりに任意の名前を使用できますが、 SD-hostname を使用することをお勧めします。 
 ---
 = ストレージシステムに SD-hostname を追加しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

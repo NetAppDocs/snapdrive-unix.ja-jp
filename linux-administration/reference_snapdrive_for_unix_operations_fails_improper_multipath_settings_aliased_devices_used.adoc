@@ -5,6 +5,7 @@ keywords: snap, snapdrive, unix, fail, multipath, settings, device, error, sdu, 
 summary: RHEL 5.11 で storage show コマンドまたは snap create コマンドを実行すると、次のエラーメッセージが表示されます。ホスト LVM が関与していない場合、 SDU デーモンへのステータスコールに失敗し、 -sles11sp3 ホストに– nolvm オプションを指定して実行します。 
 ---
 = エイリアス設定されたデバイスを使用している場合、 SnapDrive for UNIX の処理が適切でないマルチパス設定により失敗します。
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

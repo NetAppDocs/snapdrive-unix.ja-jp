@@ -5,6 +5,7 @@ keywords: snap, snapdrive, stop, volume, clone, split, operation
 summary: ジョブ ID またはファイル仕様を使用して、ボリュームクローンまたは LUN クローンのクローンスプリットを停止できます。 
 ---
 = ボリュームクローンまたは LUN クローンスプリット処理を停止します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, operations, manager, access, check, console, unavaila
 summary: SnapDrive for UNIX のアクセスチェックには、 Operations Manager コンソールが必要です。Operations Manager コンソールサーバを使用できない理由はさまざまです。 
 ---
 = Operations Manager コンソールを使用できません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

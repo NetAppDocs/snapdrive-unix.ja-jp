@@ -5,6 +5,7 @@ keywords: snap, snapdrive, ca, certificate, daemon, communication
 summary: SnapDrive for UNIX デーモンサービスでデーモン通信を成功させるには、 CA 署名証明書を生成する必要があります。CA 署名証明書は、 snapdrive.conf ファイルで指定されたパスに指定する必要があります。 
 ---
 = CA 署名証明書を生成する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

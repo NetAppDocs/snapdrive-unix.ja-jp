@@ -5,6 +5,7 @@ keywords: snap, snapdrive, commands, rbac, role, access, control
 summary: ロールベースアクセス制御（ RBAC ）では、各処理を成功させるために特定の機能が必要です。ユーザがストレージ操作を実行するには、適切な機能セットを割り当てられている必要があります。 
 ---
 = SnapDrive のコマンドと機能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

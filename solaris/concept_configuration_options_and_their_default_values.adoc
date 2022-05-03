@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configuration, default, value
 summary: 現在の設定可能な変数とその設定を確認するには、 SnapDrive config show コマンドを実行します。 
 ---
 = 構成オプションとそのデフォルト値
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

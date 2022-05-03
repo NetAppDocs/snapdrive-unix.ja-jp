@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, fail, nfsv3, nfsv4, host, storage, version
 summary: ホストおよびストレージシステムで NFSv3 および NFSv4 のバージョンが有効になっている場合、 snap restore 処理が失敗します。 
 ---
 = ホストおよびストレージシステムで NFSv3 および NFSv4 のバージョンが有効になっていると、 snap restore 処理が失敗します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

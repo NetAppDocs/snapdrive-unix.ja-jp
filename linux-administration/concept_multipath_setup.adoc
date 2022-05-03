@@ -5,6 +5,7 @@ keywords: snap, snapdrive, multipath, steup, host, hba, driver, lvm, multipath
 summary: Linux MPIO は、ホストのセットアップが完了していれば機能します。ホストのセットアップは、 HBA のセットアップ、 HBA ドライバのパラメータセットアップ、マルチパスセットアップ、 LVM のセットアップ、および SnapDrive for UNIX のセットアップに大きく分類されます。 
 ---
 = マルチパスセットアップ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

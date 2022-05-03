@@ -5,6 +5,7 @@ keywords: snap, snapdrive, audit, trace, logging, recovery
 summary: SnapDrive for UNIX では、監査、リカバリ、トレース・ログ・ファイルなど、さまざまなタイプのログ・ファイルを管理できます。これらのログファイルは、あとでトラブルシューティングに使用します。 
 ---
 = SnapDrive for UNIX における監査、リカバリ、トレースロギング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

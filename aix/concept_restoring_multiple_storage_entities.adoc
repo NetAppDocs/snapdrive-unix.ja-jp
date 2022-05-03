@@ -5,6 +5,7 @@ keywords: restore, multiple, storage, entities, snap, snapdrive
 summary: 複数のストレージエンティティを含む Snapshot コピーをリストアできます。 
 ---
 = 複数のストレージエンティティのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

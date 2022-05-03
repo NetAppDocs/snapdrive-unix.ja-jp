@@ -5,6 +5,7 @@ keywords: clone, split, snap, snapdrive, volume, estimate
 summary: クローンスプリットの推定によって、ボリュームクローンをスプリットするために必要なストレージスペースを見積もることができます。SnapDrive for UNIX が提供するクローンスプリットの見積もりに応じて、ボリュームクローンをスプリットするためのスペース可用性を判断できます。 
 ---
 = ボリュームクローンをスプリットするためのストレージスペースの見積もり
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

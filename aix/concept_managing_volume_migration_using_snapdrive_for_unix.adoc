@@ -5,6 +5,7 @@ keywords: snap, snapdrive, volume, migration
 summary: ボリューム移行中に SnapDrive 処理を実行できます。 
 ---
 = SnapDrive for UNIX でのボリューム移行
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, lvm, lun, specify, create
 summary: ファイルシステム、論理ボリューム、ディスクグループなどのホストエンティティを作成し、作成する LUN を指定することができます。 
 ---
 = LVM エンティティを作成し、 LUN を指定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, lun, fail, create, file, system
 summary: 'Solaris ホストでは "UFS ファイルシステムを LUN 上に直接作成することはできません' 
 ---
 = LUN 上でファイルシステムを直接作成すると失敗します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, data, interface, management, config, nfs
 summary: NFS 環境で SnapDrive config list コマンドを使用すると、管理インターフェイスのすべてのデータインターフェイスを表示できます。 
 ---
 = 管理インターフェイスのすべてのデータインターフェイスを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

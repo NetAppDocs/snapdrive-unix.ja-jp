@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snaprestore, snapconnect, migration, multipathing, op
 summary: マルチパスタイプを移行すると、 SnapRestore 処理と SnapConnect 処理は機能しません。 
 ---
 = マルチパスタイプの移行後、 Linux で SnapRestore 処理と Snapconnect 処理は機能しません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

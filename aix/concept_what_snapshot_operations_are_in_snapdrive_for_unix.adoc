@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, operation, ontap, data, host
 summary: SnapDrive for UNIX では、 Data ONTAP の Snapshot テクノロジを使用して、ストレージシステムに格納されているホストデータのイメージ（ Snapshot コピー）を作成できます。 
 ---
 = SnapDrive for UNIX の Snapshot 処理とは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, install, solaris, host, utility
 summary: Solaris Host Utilities が必要な構成の場合は、インストールしてシステムが正しくセットアップされていることを確認する必要があります。 
 ---
 = Solaris Host Utilities をインストールしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

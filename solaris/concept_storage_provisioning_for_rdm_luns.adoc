@@ -5,6 +5,7 @@ keywords: snap, snapdrive, vmware, vmotion, support, unix
 summary: SnapDrive for UNIX を使用すると、 VMware VMotion の前後に RDM LUN を切断して接続することができます。VMotion 処理が完了したら、ストレージシステムに必要なストレージ操作を実行できます。 
 ---
 = SnapDrive for UNIX での VMware VMotion のサポート
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

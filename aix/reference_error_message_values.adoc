@@ -5,6 +5,7 @@ keywords: snap, snapdrive, error, message, value
 summary: SnapDrive for UNIX を使用しているときに表示される一般的なエラーメッセージとその対処方法を理解しておくと役立ちます。 
 ---
 = エラーメッセージの値
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

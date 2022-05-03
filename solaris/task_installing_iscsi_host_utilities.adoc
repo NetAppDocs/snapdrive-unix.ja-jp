@@ -5,6 +5,7 @@ keywords: snap, snapdrive, install, solaris, host, utility
 summary: SnapDrive for UNIX をインストールする前に、 Solaris Host Utilities をインストールする必要があります。 
 ---
 = Solaris Host Utilities をインストールしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, trace, log, file, troubelshoot, problem, issue
 summary: テクニカルサポートは、トレースログファイルを使用して問題のトラブルシューティングを行います。 
 ---
 = トレースログファイルとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

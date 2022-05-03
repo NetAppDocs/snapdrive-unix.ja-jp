@@ -5,6 +5,7 @@ keywords: snap, snapdrive, create, snapshot, copy, host, data
 summary: SnapDrive for UNIX を使用すると、ホストデータの Snapshot コピーを作成できます。 
 ---
 = SnapDrive for UNIX で Snapshot コピーを作成して使用する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

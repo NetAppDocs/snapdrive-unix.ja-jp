@@ -5,6 +5,7 @@ keywords: snap, snapdrive, lun, limit
 summary: SnapDrive for UNIX では、制限を超えずにホストに作成できる LUN の数を指定できます。 
 ---
 = 作成可能な LUN 数の決定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

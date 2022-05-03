@@ -5,6 +5,7 @@ keywords: snap, snapdrive, guidelines, snapshot, copy
 summary: Snapshot コピーの名前を変更するときは、 2 つの Snapshot コピーの名前が同じにならないようにしてください。 
 ---
 = Snapshot コピーの名前変更に関するガイドライン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

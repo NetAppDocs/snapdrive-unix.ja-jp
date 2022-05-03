@@ -5,6 +5,7 @@ keywords: snap, snapdrive, pure, nfs, environment
 summary: 複数のサブネットに対してシステムを設定し、 1 つ以上の NFS ボリュームを管理インターフェイス経由でマウントする場合は、常に最初のデータインターフェイスを管理インターフェイスとして設定する必要があります。 
 ---
 = 純粋な NFS 環境
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

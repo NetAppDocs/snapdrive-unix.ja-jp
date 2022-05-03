@@ -5,6 +5,7 @@ keywords: snap, snapdrive, host, preparation, lun, add
 summary: LUN を追加するホストの準備を行う必要があります。 
 ---
 = LUN を追加するためのホストの準備
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

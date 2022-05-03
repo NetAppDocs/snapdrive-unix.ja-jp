@@ -5,6 +5,7 @@ keywords: snap, snapdrive, troubleshoot
 summary: SnapDrive for UNIX のトラブルシューティングツールを使用すると、問題の解決に加えて情報も確認できます。 
 ---
 = トラブルシューティング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

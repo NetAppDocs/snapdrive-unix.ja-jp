@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, storage, mapping, host, information
 summary: ホストシステムからストレージシステムのマッピング情報を削除できます。 
 ---
 = ホストシステムからストレージシステムのマッピング情報を削除する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

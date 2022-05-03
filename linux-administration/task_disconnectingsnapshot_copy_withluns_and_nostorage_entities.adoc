@@ -5,6 +5,7 @@ keywords: snap, snapdrive, disconnect, lun, snapshot, command
 summary: SnapDrive snap disconnect コマンドを使用すると、ストレージエンティティのない LUN を含む Snapshot コピーを切断できます。 
 ---
 = LUN を含むストレージエンティティのない Snapshot コピーを切断しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapshot, command, restore, snapshot, copy
 summary: SnapDrive snap restore コマンドを使用して、 Snapshot コピーをリストアします。 
 ---
 = Snapshot コピーのリストアに使用するコマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

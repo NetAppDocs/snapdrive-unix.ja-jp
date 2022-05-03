@@ -5,6 +5,7 @@ keywords: snap, snapdrive, lun, discovery, fail, iscsi, daemon, limitation
 summary: SnapDrive for UNIX のコマンドで、繰り返し処理が複数あると LUN が検出されないことがあります。 
 ---
 = iSCSI デーモンの制限により、 LUN の検出が失敗します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

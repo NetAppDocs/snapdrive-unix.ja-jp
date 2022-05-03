@@ -5,6 +5,7 @@ keywords: snap, snapdrive, lun, local, remote, host, snaprestore, initiator
 summary: ボリュームベースの SnapRestore の実行中にボリュームから SnapDrive for UNIX に使用できるマッピング情報は、 LUN のイニシエータグループ情報のみです。ユーザが使用するイニシエータグループが常に SnapDrive for UNIX で作成される場合、ホストの完全修飾ドメイン名は igroup 名の一部となります。 
 ---
 = ローカルホストまたはリモートホストにマッピングされた LUN に関する情報
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

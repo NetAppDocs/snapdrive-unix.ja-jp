@@ -5,6 +5,7 @@ keywords: snap, snapdrive, summary, command, management, storage
 summary: SnapDrive for UNIX コマンドは、構成、ストレージプロビジョニング、ホスト側の管理、および Snapshot の処理に使用されます。 
 ---
 = SnapDrive for UNIX コマンドの概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

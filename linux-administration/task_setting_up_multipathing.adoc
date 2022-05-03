@@ -5,6 +5,7 @@ keywords: snap, snapdrive, multipathing, configure
 summary: マルチパスを設定することで、ホストとストレージシステムの間に複数のネットワークパスを設定できます。SnapDrive for UNIX は、マルチパス環境でのエイリアスの使用をサポートしています。マッパーデバイスの正しいエイリアス名が /etc/multipath.conf ファイルに設定されていることを確認する必要があります。 
 ---
 = マルチパスを設定しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

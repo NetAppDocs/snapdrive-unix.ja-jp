@@ -5,6 +5,7 @@ keywords: snap, snapdrive, igroups, configure, host
 summary: ホストで設定されているすべての igroup を表示できます。 
 ---
 = igroup のリストを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

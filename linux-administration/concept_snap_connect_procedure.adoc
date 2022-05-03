@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, procedure, ontap, operation
 summary: snap connect 手順は、 Data ONTAP 7.2 以降に対して有効であり、スナップ接続処理の手順を説明します。 
 ---
 = Snap connect 手順の略
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, daemon, commands, web
 summary: SnapDrive for UNIX コマンドを実行する前に、 Web サービスおよびデーモンとその使用方法について理解しておく必要があります。SnapDrive for UNIX のすべてのコマンドは、デーモン・サービスを使用して機能します。Linux ホストで SnapDrive for UNIX を使用する前に、デーモンを開始して、 SnapDrive for UNIX を他のネットアップ製品や他社製品とシームレスかつセキュアに統合できるようにする必要があります。 
 ---
 = SnapDrive for UNIX デーモンについて
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

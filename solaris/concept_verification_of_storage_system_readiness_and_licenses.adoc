@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, licenses, verfiy
 summary: SnapDrive for UNIX をインストールする前に、ストレージシステムの準備状況を確認し、特定のソフトウェアのライセンスを確認する必要があります。 
 ---
 = ストレージシステムの準備状況とライセンスの検証
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

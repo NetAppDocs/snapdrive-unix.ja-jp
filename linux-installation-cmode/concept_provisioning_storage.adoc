@@ -5,6 +5,7 @@ keywords: snap, snapdrive, provision, storage, system
 summary: SnapDrive for UNIX では、ホストからコマンドラインオプションを使用して、ストレージをプロビジョニングし、既存のストレージシステムに接続できます。Data ONTAP を使用してストレージをプロビジョニングすることもできます。 
 ---
 = ストレージのプロビジョニング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

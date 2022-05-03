@@ -5,6 +5,7 @@ keywords: snap, snapdrive, data, collection, utility, installation
 summary: データ収集ユーティリティを実行するには、いくつかの手順を実行する必要があります。 
 ---
 = データ収集ユーティリティを実行しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

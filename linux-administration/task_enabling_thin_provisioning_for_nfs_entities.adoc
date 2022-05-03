@@ -5,6 +5,7 @@ keywords: snap, snapdrive, enable, thin, provisioning, nfs, space, reservation
 summary: SnapDrive for UNIX を使用して、ストレージシステム上の NFS エンティティに対してシンプロビジョニングを実行できます。シンプロビジョニングはスペースリザベーションと呼ばれます。 
 ---
 = NFS エンティティのシンプロビジョニングの有効化
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

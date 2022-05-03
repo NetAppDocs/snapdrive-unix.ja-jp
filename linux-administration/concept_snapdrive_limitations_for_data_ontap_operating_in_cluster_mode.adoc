@@ -5,6 +5,7 @@ keywords: snap, snapdrive, clustered, ontap, limitations, operations
 summary: SnapDrive の一部の機能や処理は、 clustered Data ONTAP ではサポートされません。 
 ---
 = clustered Data ONTAP での SnapDrive の制限事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

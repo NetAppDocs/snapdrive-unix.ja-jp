@@ -5,6 +5,7 @@ keywords: snap, snapdrive, hardware, software, configuration
 summary: ストレージシステムに応じて、 NFS ディレクトリツリーを使用する Fibre Channel （ FC ；ファイバチャネル）、 Internet Small Computer System Interface （ iSCSI ）、または Network File System （ NFS ；ネットワークファイルシステム）の構成を設定できます。 
 ---
 = ハードウェアとソフトウェアの設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

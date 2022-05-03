@@ -5,6 +5,7 @@ keywords: snap, snapdrive, copy, application
 summary: アプリケーションと整合性のある Snapshot コピーを作成するには、 Snapshot 処理の前にアプリケーションを停止する必要があります。 
 ---
 = アプリケーションと整合性のある Snapshot コピー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

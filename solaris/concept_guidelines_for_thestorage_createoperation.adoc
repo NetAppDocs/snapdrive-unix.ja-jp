@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, create
 summary: ストレージ作成処理に SnapDrive storage create コマンドを使用する場合は、一定のガイドラインに従う必要があります。 
 ---
 = ストレージ作成処理のガイドラインを次に示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

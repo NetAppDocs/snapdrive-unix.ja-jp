@@ -5,6 +5,7 @@ keywords: snap, snapdrive, verify, veritas, stack, configuration
 summary: Veritas スタック構成を確認するには、 SnapDrive storage connect コマンドと vxdisk list コマンドを実行する必要があります。 
 ---
 = Veritas スタック構成の確認
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

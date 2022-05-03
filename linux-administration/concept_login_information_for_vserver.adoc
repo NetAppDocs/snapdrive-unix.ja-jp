@@ -5,6 +5,7 @@ keywords: snap, snapdrive, login, vserver, security
 summary: SnapDrive for UNIX がユーザ名およびパスワードを使用して SVM にアクセスできるようにします。また、 vsadmin としてログインするだけでなく、 SnapDrive for UNIX を実行し、プロンプトが表示されたら正しいユーザ名とパスワードを指定する必要があるため、セキュリティも確保されます。 
 ---
 = SVM のログイン情報を指定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

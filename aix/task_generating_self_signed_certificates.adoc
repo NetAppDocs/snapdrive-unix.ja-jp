@@ -5,6 +5,7 @@ keywords: snap, snapdrive, generate, certificate, self, signed
 summary: SnapDrive for UNIX デーモンサービスでは、認証用の自己署名証明書を生成する必要があります。この認証は、 CLI との通信時に必要になります。 
 ---
 = 自己署名証明書の生成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, disconnect, file, specification, filespec
 summary: ファイル仕様を切断できます。次の例は、この処理を完了する方法を示しています。 
 ---
 = ファイル仕様を切断しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

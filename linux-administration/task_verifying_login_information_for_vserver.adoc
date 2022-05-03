@@ -5,6 +5,7 @@ keywords: snap, snapdrive, login, vserver, verify, config, command
 summary: SnapDrive の config list コマンドを使用して、 SnapDrive for UNIX で SVM が設定されているかどうかを確認できます。 
 ---
 = SVM のログイン情報を確認しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

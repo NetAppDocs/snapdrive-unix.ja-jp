@@ -5,6 +5,7 @@ keywords: snap, snapdrive, nfs, directory, tree, limitations
 summary: SnapDrive には、 NFS ファイルまたはディレクトリツリーに対するストレージプロビジョニングコマンドはありません。SnapDrive で SnapDrive snap create コマンドと SnapDrive snap restore コマンドがサポートされるのは、 Data ONTAP 7.3.5 以降を使用している場合のみです。 
 ---
 = NFS ファイルまたはディレクトリツリーの制限事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

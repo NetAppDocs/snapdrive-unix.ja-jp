@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, display, check, access, error
 summary: SnapDrive for UNIX で、ストレージオブジェクトに対する適切な書き込みアクセスが許可されていないと、エラーが表示されることがあります。 
 ---
 = SnapDrive for UNIX コマンドを実行しても、アクセスエラーを確認できませんでした
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, unix
 summary: SnapDrive for UNIX を使用すると、ストレージ管理タスクが簡易化されます。SnapDrive for UNIX は、 Snapshot テクノロジを使用して、共有または非共有のストレージシステムに格納されたデータのイメージを作成します。SnapDrive はストレージプロビジョニングにも役立ちます。 
 ---
 = SnapDrive for UNIX の機能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

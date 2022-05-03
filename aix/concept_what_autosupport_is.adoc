@@ -5,6 +5,7 @@ keywords: snap, snapdrive, autosupport
 summary: AutoSupport を使用すると、 SnapDrive によって発生した運用エラーが、 SnapDrive for UNIX から /etc/log/ems ファイルに含まれるストレージシステムの EMS ログビューに送信されます。 
 ---
 = AutoSupport とは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

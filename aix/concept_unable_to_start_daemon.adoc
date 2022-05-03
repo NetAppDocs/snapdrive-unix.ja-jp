@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restart, daemon, storage, system, host
 summary: ホストが設定されたどのストレージシステムとも通信できない場合、デーモンを開始できません。 
 ---
 = ホストがストレージシステムと通信できない場合、デーモンを再起動できません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, decompress, download, software
 summary: ネットアップサポートサイトから SnapDrive for UNIX ソフトウェアパッケージをダウンロードしたら、ファイルを解凍してインストール用のソフトウェアを展開する必要があります。 
 ---
 = ダウンロードしたソフトウェアを解凍します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

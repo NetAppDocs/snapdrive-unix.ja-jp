@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, display, storage, directory, file
 summary: SnapDrive storage show または SnapDrive storage list には、 1 つ以上のストレージエンティティの基盤となる LUN または NFS ディレクトリツリーが表示されます。SnapDrive storage show コマンドを使用すると、ディスクグループ、ホストボリューム、ファイルシステム、または NFS ディレクトリツリーの Snapshot コピーの内容を確認できます。 
 ---
 = 使用可能なストレージの表示に使用するコマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snapdrive, snap, information, required, storage, resize, command
 summary: SnapDrive storage resize コマンドを使用するには、いくつかの情報を指定する必要があります。この情報は、コマンドを正しく使用する場合に役立ちます。 
 ---
 = SnapDrive storage resize コマンドを使用するために必要な情報
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

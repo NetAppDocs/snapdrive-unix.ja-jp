@@ -5,6 +5,7 @@ keywords: snap, snapdrive, vserver, name, migrate, host, operations
 summary: 古い SVM を新しい SVM に移行した場合は、その SVM で SnapDrive 処理を実行するために、ホストシステムで新しい SVM 名を設定する必要があります。 
 ---
 = 新しい SVM 名に移行しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

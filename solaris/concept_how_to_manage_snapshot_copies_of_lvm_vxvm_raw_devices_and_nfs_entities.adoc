@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, vxvm, raw, nfs, device, copy
 summary: SnapDrive コマンドを使用して、 VxVM 、 raw デバイス、 NFS エンティティの Snapshot コピーを作成、リストア、管理できます。 
 ---
 = VxVM 、 raw デバイス、 NFS エンティティの Snapshot コピーを管理する方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

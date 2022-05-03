@@ -5,6 +5,7 @@ keywords: snap, snapdrive, view, migrate, storage, system
 summary: 移行したストレージシステムがホストシステムに含まれているかどうかを確認するには、 SnapDrive config migrate list コマンドを実行します。 
 ---
 = 移行された新しいストレージシステムの表示
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

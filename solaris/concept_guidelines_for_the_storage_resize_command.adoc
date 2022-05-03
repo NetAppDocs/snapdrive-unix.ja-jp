@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, resize, command
 summary: SnapDrive storage resize コマンドを使用する場合は、いくつかのガイドラインに従う必要があります。 
 ---
 = storage resize コマンドのガイドラインを参照してください
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

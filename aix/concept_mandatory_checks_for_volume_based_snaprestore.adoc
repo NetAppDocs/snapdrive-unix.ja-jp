@@ -5,6 +5,7 @@ keywords: snap, snapdrive, check, colume, snaprestore, mandatory
 summary: ボリュームベースの SnapRestore を実行する前に、 SnapDrive for UNIX でシステムに対していくつかの必須チェックが実行されます。これらのチェックは、ボリュームベースの SnapRestore を安全に使用するために必要です。必須チェックは、ユーザーが上書きすることはできません。 
 ---
 = ボリュームベース SnapRestore の必須チェック項目です
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

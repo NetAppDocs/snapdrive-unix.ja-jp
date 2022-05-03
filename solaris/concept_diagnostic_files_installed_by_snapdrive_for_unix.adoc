@@ -5,6 +5,7 @@ keywords: snap, snaprive, diagnostic, file
 summary: SnapDrive for UNIX を使用すると、 SnapDrive for UNIX で問題を検出するのに役立つ診断ファイルがインストールされます。 
 ---
 = SnapDrive for UNIX によってインストールされる診断ファイル
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

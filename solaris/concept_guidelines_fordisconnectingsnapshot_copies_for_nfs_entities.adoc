@@ -5,6 +5,7 @@ keywords: snap, snapdrive, disconnect, copy, nfs
 summary: Snapshot コピーの切断処理は、ホストクラスタ環境内の任意のノードから実行できます。コマンドオプションを使用して、ストレージエンティティを特定のノードから切断します。 
 ---
 = NFS エンティティの Snapshot コピーを切断する際のガイドラインを次に示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

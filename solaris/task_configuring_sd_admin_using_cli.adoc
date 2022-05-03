@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configure, sd, admin, command, line, interface
 summary: ストレージシステム管理者は、コマンドラインインターフェイスを使用して SD-admin ユーザを設定できます。 
 ---
 = コマンドラインインターフェイスを使用した SD-admin の設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

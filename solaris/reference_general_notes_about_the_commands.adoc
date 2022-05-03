@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, dg, vg, hostvol, lvol
 summary: SnapDrive for UNIX のコマンドには、 -dg 、 -vg 、 -lvol 、 -hostvol などのオプションがあります。 
 ---
 = コマンドに関する一般的な注意事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

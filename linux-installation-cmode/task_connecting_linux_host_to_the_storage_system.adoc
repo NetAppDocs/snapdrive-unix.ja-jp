@@ -5,6 +5,7 @@ keywords: snapdrive, snap, connect, hosts, storage, system
 summary: SnapDrive for UNIX の処理を成功させるには、 Storage Virtual Machine （ SVM 、旧 Vserver ）をセットアップする必要があります。 
 ---
 = Linux ホストをストレージシステムに接続します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

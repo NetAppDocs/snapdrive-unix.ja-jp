@@ -5,6 +5,7 @@ keywords: snap, snapshot, restore, connect, operation
 summary: Snapshot コピーは、 Snapshot コピーへの接続時に情報のクローンを作成します。 
 ---
 = Snapshot 接続および Snapshot のリストア処理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

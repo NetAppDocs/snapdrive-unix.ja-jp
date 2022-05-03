@@ -5,6 +5,7 @@ keywords: snap, snapdrive, verify, storage, name, user
 summary: SnapDrive の config list コマンドを実行すると、 UNIX のユーザ名 SnapDrive がストレージシステムに関連付けられているかどうかを確認できます。 
 ---
 = SnapDrive for UNIX に関連付けられているストレージシステムのユーザ名の確認
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

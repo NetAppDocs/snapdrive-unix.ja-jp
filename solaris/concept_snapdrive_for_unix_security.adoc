@@ -5,6 +5,7 @@ keywords: snap, snapdrive, security, feature
 summary: SnapDrive for UNIX を使用する前に、 UNIX のセキュリティ機能について理解し、その機能へのアクセス方法を習得しておく必要があります。 
 ---
 = SnapDrive for UNIX のセキュリティ機能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

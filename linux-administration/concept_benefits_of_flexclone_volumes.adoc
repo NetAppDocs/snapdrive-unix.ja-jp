@@ -5,6 +5,7 @@ keywords: snap, snapdrive, flexclone, volumes
 summary: FlexClone ボリュームを使用すると、データ管理とパフォーマンスを向上させることができます。 
 ---
 = FlexClone ボリュームの利点
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

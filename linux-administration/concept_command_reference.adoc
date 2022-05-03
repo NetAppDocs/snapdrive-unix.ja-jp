@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, reference
 summary: SnapDrive for UNIX では、さまざまなコマンドがサポートされます。これらのコマンドリファレンスは、コマンド、オプション、キーワード、引数について学習する際に役立ちます。 
 ---
 = コマンドリファレンス
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

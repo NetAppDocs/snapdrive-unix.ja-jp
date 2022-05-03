@@ -5,6 +5,7 @@ keywords: snap, snapdrive, install, components, identify
 summary: SnapDrive for UNIX 構成チェッカーツールを使用して、ホストプラットフォームにインストールされているコンポーネントを特定できます。 
 ---
 = インストールされているコンポーネントを特定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

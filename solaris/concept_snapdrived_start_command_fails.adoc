@@ -5,6 +5,7 @@ keywords: snap, snapdrive, start, command, fail
 summary: いくつかの条件で、 snapdrived start コマンドが失敗する場合があります。この問題を解決するには、いくつかのトラブルシューティング手順を実行します。 
 ---
 = snapdrived start コマンドが失敗しました
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

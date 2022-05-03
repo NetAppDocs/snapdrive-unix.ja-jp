@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, user, vserver
 summary: SnapDrive config delete コマンドを実行すると、 SVM からログイン情報を削除できます。 
 ---
 = SVM からユーザを削除する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

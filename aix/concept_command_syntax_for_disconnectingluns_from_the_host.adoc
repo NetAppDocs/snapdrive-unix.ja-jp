@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, syntax, lun, disconnect, host
 summary: SnapDrive storage disconnect コマンドを使用して、指定した LUN のマッピングを削除するには、次の構文を使用します。 
 ---
 = ホストから LUN を切断するコマンドの構文
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

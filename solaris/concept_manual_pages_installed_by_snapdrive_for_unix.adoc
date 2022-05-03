@@ -5,6 +5,7 @@ keywords: snap, snapdrive, man, page, install
 summary: SnapDrive for UNIX では、マニュアルページに複数の形式が用意されています。 
 ---
 = SnapDrive for UNIX によってインストールされるマニュアルページ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

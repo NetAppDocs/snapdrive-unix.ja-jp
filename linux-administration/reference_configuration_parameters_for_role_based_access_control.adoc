@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configuration, role, access, control, rbac
 summary: Role-Based Access Control に関連するさまざまな設定変数を snapdrive.conf ファイルで設定する必要があります。 
 ---
 = ロールベースアクセス制御の設定変数
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

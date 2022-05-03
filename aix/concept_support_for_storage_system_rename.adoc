@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, system, rename, support
 summary: SnapDrive では、ストレージシステムの名前を変更できます。Snapshot コピーが作成され、コピーの作成後にストレージシステムの名前が変更された場合、すべてのクライアントが再認証されていれば、 SnapDrive で Snapshot 処理を実行できます（ hosts ）。 
 ---
 = ストレージシステム名の変更がサポートされます
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

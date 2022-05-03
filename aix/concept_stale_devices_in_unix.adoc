@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, lun, clone, stale, device
 summary: LUN とクローンを削除すると、 UNIX で古いデバイスが残る可能性があります。また、これらの古いデバイスを削除しても、 SnapDrive for UNIX では実行されないことがあります。 
 ---
 = LUN およびクローンを削除すると、 UNIX では古いデバイスが残ります
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

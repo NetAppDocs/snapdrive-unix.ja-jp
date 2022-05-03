@@ -5,6 +5,7 @@ keywords: snap, snapdrive, enable, thin, provisioning, lun
 summary: SnapDrive for UNIX を使用して、ストレージシステムのシンプロビジョニングを実行できます。シンプロビジョニングは、スペースリザベーションとも呼ばれます。 
 ---
 = LUN のシンプロビジョニングを有効化
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, port, set
 summary: ポートセットは、 SAN データポートまたはインターフェイスのグループであり、 SAN データポートまたはインターフェイスをグループ化することによってホストで使用できるパスを制御するために使用されます。 
 ---
 = SnapDrive for UNIX でポートセットを使用する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

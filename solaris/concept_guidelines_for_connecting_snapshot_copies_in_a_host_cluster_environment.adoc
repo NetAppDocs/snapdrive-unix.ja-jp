@@ -5,6 +5,7 @@ keywords: snap, snapdrive, guideline, connect, copy, host, cluster, snapshot
 summary: Snapshot コピーはホストクラスタ内の任意のノードから接続できます。ガイドラインに従って Snapshot コピーに接続します。 
 ---
 = ホストクラスタ環境での Snapshot コピーの接続に関するガイドラインを参照してください
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

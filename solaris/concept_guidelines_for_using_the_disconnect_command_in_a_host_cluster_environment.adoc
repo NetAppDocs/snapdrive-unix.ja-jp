@@ -5,6 +5,7 @@ keywords: snap, snapdrive, disconnect, command, host, cluster
 summary: ホストクラスタ環境で SnapDrive storage disconnect コマンドを使用する場合のガイドラインを次に示します。 
 ---
 = ホストクラスタ環境で disconnect コマンドを使用する場合のガイドラインです
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

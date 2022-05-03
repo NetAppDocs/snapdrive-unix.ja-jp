@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, snapshot, copy
 summary: Snapshot コピーに接続するときは、次のガイドラインに従ってください。 
 ---
 = Snapshot コピーを接続する場合のガイドラインを次に示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

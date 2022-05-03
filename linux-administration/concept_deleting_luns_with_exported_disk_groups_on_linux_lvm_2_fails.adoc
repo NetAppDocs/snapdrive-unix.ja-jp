@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, exported, disk, group, lvm2, fail, lun
 summary: SnapDrive for UNIX では、 Linux LVM2 でディスクグループをエクスポートした LUN は削除されません。 
 ---
 = Linux LVM2 でエクスポートされたディスクグループを持つ LUN を削除すると失敗します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

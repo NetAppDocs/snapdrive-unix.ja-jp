@@ -5,6 +5,7 @@ keywords: snap, snapdrive, force, restart, daemon, stop
 summary: デーモンを強制的に再起動できます。デーモンを強制的に再起動すると、実行中のすべてのコマンドの実行が停止します。 
 ---
 = デーモンを強制的に再起動して
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

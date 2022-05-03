@@ -5,6 +5,7 @@ keywords: snap, snapdrive, view, list, port, set
 summary: SnapDrive の portset list コマンドを使用して、ホストの SnapDrive で設定されているポートセットをすべて表示できます。 
 ---
 = ポートセットのリストを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

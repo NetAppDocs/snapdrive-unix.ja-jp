@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, snapshot, copy
 summary: あるホストから別のホストに Snapshot コピーを接続できます。 
 ---
 = Snapshot コピーへの接続
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

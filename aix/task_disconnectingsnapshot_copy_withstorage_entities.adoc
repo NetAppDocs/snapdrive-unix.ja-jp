@@ -5,6 +5,7 @@ keywords: snap, snapdrive, disconnect, command, snapshot, storage
 summary: SnapDrive snap disconnect コマンドを使用すると、ストレージエンティティを含む Snapshot コピーを切断できます。 
 ---
 = ストレージエンティティを含む Snapshot コピーを切断しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

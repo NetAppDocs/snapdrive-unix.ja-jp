@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, snapshot, storage, copy, destination
 summary: Snapshot コピーの作成元のストレージシステムにリストアできます。 
 ---
 = デスティネーションストレージシステムでの Snapshot コピーのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snpadrive, support, host, cluster
 summary: ホスト clustered UNIX システム上の SnapDrive for UNIX では、ストレージを作成し、ホストクラスタ全体の共有ストレージ上で Snapshot 処理を実行できます。 
 ---
 = ホストクラスタ UNIX システムでサポートされている操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

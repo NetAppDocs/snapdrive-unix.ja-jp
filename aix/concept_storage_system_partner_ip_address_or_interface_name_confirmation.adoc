@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, system, ip, interface, name, address
 summary: ストレージシステムで setup プログラムを実行すると、フェイルオーバー時に使用するパートナーストレージシステムの IP アドレスまたはインターフェイス名の入力を求められます。このパラメータを指定しないと、 SnapDrive for UNIX では、テイクオーバーしたストレージシステム上のストレージエンティティを検索できません。 
 ---
 = ストレージシステムパートナーの IP アドレスまたはインターフェイス名の確認
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

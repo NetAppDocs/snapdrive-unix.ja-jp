@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, command
 summary: Snapshot コピーに接続するには、ストレージエンティティの種類を確認し、 NFS ディレクトリツリーを使用して Snapshot コピーを Data ONTAP 7.3 構成に接続します。 
 ---
 = SnapDrive snap connect コマンドの使用に必要な情報
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

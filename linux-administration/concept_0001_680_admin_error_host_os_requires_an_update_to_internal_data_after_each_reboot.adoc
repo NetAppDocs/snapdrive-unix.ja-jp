@@ -5,6 +5,7 @@ keywords: snap, snapdrive, reboot, error, update, connect, admin, administration
 summary: Red Hat Enterprise Linux 4 および Oracle Enterprise Linux 4 ホストでは、リブートのたびに Snapshot 接続処理とストレージ作成処理でエラーメッセージが表示されます。 
 ---
 = 各リブート後、スナップ接続で「 0001-680 Admin error ：ホスト OS は内部データを更新する必要があります」となります。
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

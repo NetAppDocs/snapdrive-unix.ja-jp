@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, operation
 summary: ストレージコマンドに関するいくつかの考慮事項に留意する必要があります。 
 ---
 = ストレージの処理に関する考慮事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, wizard, manage, restore, disconnect
 summary: ウィザードを使用して Snapshot コピーを管理できます。このウィザードでは、一連の質問を実行し、スナップ接続、スナップリストア、およびスナップ切断操作を実行できます。 
 ---
 = ウィザードを使用した Snapshot コピーの管理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

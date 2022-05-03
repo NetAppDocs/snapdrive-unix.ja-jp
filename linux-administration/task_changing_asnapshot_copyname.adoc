@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, rename, command, source, name
 summary: SnapDrive snap rename コマンドを使用すると、 Snapshot コピーの名前を変更できます。Snapshot の名前変更処理を実行すると、ソース Snapshot コピーの名前がターゲット引数で指定された名前に変更されます。 
 ---
 = Snapshot コピーの名前を変更する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, security, access, storage, host, configure, password,
 summary: SnapDrive for UNIX を有効にして、ホストに接続されたストレージシステムにアクセスできます。また、ストレージシステムに割り当てられたログイン名とパスワードを使用するようにホストを設定する必要があります。この情報を指定しないと、 SnapDrive for UNIX はストレージ・システムと通信できません。 
 ---
 = セキュリティに関する考慮事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

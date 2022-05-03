@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, command
 summary: SnapDrive snap connect コマンドを使用すると、指定したエンティティのストレージのクローンが作成され、ホストにインポートされます。 
 ---
 = SnapDrive snap connect コマンドの仕組み
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

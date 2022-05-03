@@ -5,6 +5,7 @@ keywords: snap, snapdrive, disconnect, cli
 summary: このセクションでは、スナップ切断のための手順について説明します。 
 ---
 = 手順のスナップ切断
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

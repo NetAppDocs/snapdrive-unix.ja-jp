@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, lun, shared, resource
 summary: 共有ディスクグループまたはファイルシステムを使用するホストクラスタ構成に新しいノードを追加する場合は、別の構文に従う必要があります。 
 ---
 = 共有リソースを使用して既存の LUN を接続する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

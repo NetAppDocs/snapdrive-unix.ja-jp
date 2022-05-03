@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, wildcard, copy
 summary: ワイルドカードを使用して Snapshot コピーを表示できます。特定のオブジェクトに存在するすべての Snapshot コピーを表示できます。 
 ---
 = Snapshot コピーの表示に関するガイドライン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

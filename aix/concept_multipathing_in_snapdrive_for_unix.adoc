@@ -5,6 +5,7 @@ keywords: snap, snapdrive, multipathing
 summary: SnapDrive for UNIX はマルチパスをサポートしています。SnapDrive for UNIX では、 mknod コマンドや rendev コマンドを使用して作成されたデバイスにエイリアスを使用することはできません。 
 ---
 = SnapDrive for UNIX のマルチパス
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

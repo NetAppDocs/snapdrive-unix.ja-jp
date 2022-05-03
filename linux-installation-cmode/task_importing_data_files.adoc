@@ -5,6 +5,7 @@ keywords: snap, snapdrive, import, data, file, configuration, checker, tool
 summary: SnapDrive for UNIX でサポートされている最新の構成がツールに表示されるように、サポートマトリックスの最新データをダウンロードして構成チェッカーツールを更新できます。更新されたデータファイルを使用した構成チェックツールでは、 SnapDrive for UNIX でサポートされる構成がチェックされ、システム内のサポートされるすべてのコンポーネントがリストされます。 
 ---
 = データファイルをインポートする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

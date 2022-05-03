@@ -5,6 +5,7 @@ keywords: snap, snapdrive, error, message, format
 summary: エラーメッセージの形式は、エラーの原因を特定するのに役立ちます。 
 ---
 = エラーメッセージの形式
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

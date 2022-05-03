@@ -5,6 +5,7 @@ keywords: snap, snapdrve, guest, os, install, prepare
 summary: SnapDrive for UNIX をシステムにインストールする前に、ゲストシステムを準備する必要があります。ゲスト準備の一環として、 Solaris Host Utilities をインストールする必要があります。 
 ---
 = SnapDrive for UNIX をインストールするためのゲスト OS の準備
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

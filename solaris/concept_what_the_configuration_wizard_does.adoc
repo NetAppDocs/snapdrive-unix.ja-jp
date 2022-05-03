@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configuration, wizard
 summary: SnapDrive 設定ウィザードでは、環境に応じて、 SnapDrive for UNIX および NFS または SAN を設定できます。また、 snapdrive.conf ファイルを開き、構成変数を編集することもできます。 
 ---
 = SnapDrive 設定ウィザードの機能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

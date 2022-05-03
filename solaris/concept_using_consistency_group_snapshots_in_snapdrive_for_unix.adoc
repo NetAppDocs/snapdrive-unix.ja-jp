@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, copy, group, consistency
 summary: 整合グループ Snapshot は、複数の SVM またはクラスタのノードにまたがる一連のボリュームの Snapshot コピーであり、単一のエンティティとして管理されます。 
 ---
 = SnapDrive for UNIX の整合グループ Snapshot コピー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

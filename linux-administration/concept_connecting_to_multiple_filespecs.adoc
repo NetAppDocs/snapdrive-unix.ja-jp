@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, filespec, multiple
 summary: ボリュームに存在する複数のファイル指定に接続できます。次の例は、この処理を完了する方法を示しています。 
 ---
 = 複数のファイル指定に接続しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

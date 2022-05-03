@@ -5,6 +5,7 @@ keywords: snap, snapdrive, stack, host, nfs, manager, ontap, multistore, utiliti
 summary: SnapDrive for UNIX には、ホストオペレーティングシステム、ホストファイルシステム、 NFS 、ボリュームマネージャ、 FC または iSCSI ホストユーティリティ、ストレージシステムのライセンス、 ONTAP ソフトウェア、 MultiStore ソフトウェア、およびインターネットプロトコル（ IP\ ）アクセスが必要です。SnapDrive for UNIX には、満たす必要がある特定のスタック要件もあります。 
 ---
 = スタックの要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

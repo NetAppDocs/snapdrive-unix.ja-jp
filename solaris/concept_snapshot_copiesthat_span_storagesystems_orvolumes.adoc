@@ -5,6 +5,7 @@ keywords: snap, snapdrive, copy, storage, volume
 summary: SnapDrive for UNIX を使用すると、同一または異なるストレージ・システム上の複数のストレージ・システム・ボリュームにある Snapshot コピーを作成できます。 
 ---
 = 複数のストレージシステムまたはボリュームにまたがる Snapshot コピー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, create, snapshot, copy
 summary: スタンドアロン製品として導入した SnapDrive for UNIX では、ネットアップの Snapshot テクノロジを使用します。これにより、ホストデータの Snapshot コピーを作成および管理できます。Snapshot コピーを使用してデータをリストアできます。 
 ---
 = Snapshot コピーを作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, provisioning, command, line
 summary: ストレージのプロビジョニングには、一部の SnapDrive for UNIX コマンドを使用します。 
 ---
 = ストレージプロビジョニングのコマンドライン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

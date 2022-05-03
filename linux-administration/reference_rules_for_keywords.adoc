@@ -5,6 +5,7 @@ keywords: snap, snapdrive, rules, keywords, unix
 summary: SnapDrive for UNIX では、 UNIX 操作の SnapDrive のターゲットを指定するために、キーワードを使用します。 
 ---
 = キーワードのルール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, fc, iscsi, nfs, support, ha, host, cluster
 summary: SnapDrive for UNIX は、ホストクラスタおよび HA ペアのトポロジをサポートします。FC 構成または iSCSI 構成では、 FC Host Utilities または iSCSI Host Utilities でサポートされているのと同じホストクラスタおよび HA ペア構成がサポートされます。 
 ---
 = サポートされる FC 、 iSCSI または NFS 構成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

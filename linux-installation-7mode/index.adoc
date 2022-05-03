@@ -5,6 +5,7 @@ keywords: guide, documentation, installation, setup, linux, ontap, 7-mode
 summary: Linux 環境で Data ONTAP for UNIX with SnapDrive 7-Mode を導入するために最初に実行する必要のあるタスクについて説明します。 
 ---
 = 『 Installation and Setup Guide for Linux ® for Data ONTAP Operating in 7-Mode 』
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

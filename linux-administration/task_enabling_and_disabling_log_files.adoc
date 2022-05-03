@@ -5,6 +5,7 @@ keywords: snap, snapdrive, enable, disable, log, file, name
 summary: ログファイルを有効にする場合は、有効にするログファイルの名前と値のペアの値としてファイル名を指定します。ファイルを無効にする場合は、ログファイル名パラメータの値を入力しないでください。 
 ---
 = ログファイルを有効または無効にします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

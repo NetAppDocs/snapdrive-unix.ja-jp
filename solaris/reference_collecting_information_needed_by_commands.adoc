@@ -5,6 +5,7 @@ keywords: snap, snapdrive, collect, command, information
 summary: SnapDrive for UNIX のコマンドは、という形式に従い、キーワードを関連付けます。コマンドにはオプションと引数があり、ユーザが値を入力する必要があります。 
 ---
 = コマンドで必要な情報を収集する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

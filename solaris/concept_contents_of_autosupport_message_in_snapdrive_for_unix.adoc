@@ -5,6 +5,7 @@ keywords: snap, snapdrive, autosupport, message
 summary: AutoSupport メッセージには次の情報が含まれています。 
 ---
 = AutoSupport メッセージの内容
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

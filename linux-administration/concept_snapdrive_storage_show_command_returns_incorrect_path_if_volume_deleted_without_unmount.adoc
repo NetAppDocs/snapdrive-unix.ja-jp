@@ -5,6 +5,7 @@ keywords: snap, snapdrive, volume, delete, vserver, unmounting, host, storage, i
 summary: ホストシステムにボリュームをアンマウントせずに SVM でボリュームを削除した場合、および SnapDrive storage show -v コマンドを実行した場合は、実際のパスが正しくありません。 
 ---
 = ホストシステムにボリュームをアンマウントせずに SVM でボリュームを削除した場合、 SnapDrive storage show コマンドで間違った実際のパスが表示されます
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

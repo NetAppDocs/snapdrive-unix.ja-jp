@@ -5,6 +5,7 @@ keywords: snap, snapdrive, product, overview, summary
 summary: SnapDrive for UNIX は、 UNIX 環境向けのホストベースのストレージおよびデータ管理解決策です。SnapDrive for UNIX は、ストレージのプロビジョニングを簡易化し、ファイルシステムと整合性のある Snapshot コピーを作成することで、データ管理を簡易化し、データの可用性を高め、アプリケーションデータの信頼性を向上させます。 
 ---
 = 製品の概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, igroup, storage, configure
 summary: SnapDrive for UNIX では、ストレージシステム上に存在する igroup を設定できます。設定された igroup を使用して、ストレージシステム上の LUN がマッピングされます。 
 ---
 = igroup を設定しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, create, command, san, multipathing, fail
 summary: 複数の SAN パスが存在するが、マルチパスが無効になっている場合、 san storage create コマンドは失敗します。 SnapDrive 
 ---
 = 複数の SAN パスが存在するが、マルチパスが無効になっている場合に、 SnapDrive storage create コマンドが失敗します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

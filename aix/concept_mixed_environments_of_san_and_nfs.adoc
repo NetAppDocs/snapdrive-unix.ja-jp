@@ -5,6 +5,7 @@ keywords: snap, snapdrive, mixed, san, nfs, environment
 summary: SAN と NFS が混在する環境では、管理インターフェイスとデータインターフェイスをマッピングして、最初のデータインターフェイスが管理インターフェイスと同じになるようにする必要があります。 
 ---
 = SAN と NFS が混在する環境で
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, log, type, troubleshoot
 summary: SnapDrive for UNIX では、さまざまなタイプのログファイルがサポートされます。これは、 SnapDrive for UNIX が想定どおりに機能しない場合のトラブルシューティングに役立ちます。 
 ---
 = ログのタイプ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

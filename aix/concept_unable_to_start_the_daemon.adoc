@@ -5,6 +5,7 @@ keywords: snap, snapdrive, daemon, start, error
 summary: SnapDrive プロセスで古いエントリがいくつか検出された場合、デーモンを開始できません。 
 ---
 = デーモンを開始できません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, connect
 summary: 複数のストレージエンティティを含む Snapshot コピーを接続することができます。 
 ---
 = 複数のストレージエンティティを接続する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

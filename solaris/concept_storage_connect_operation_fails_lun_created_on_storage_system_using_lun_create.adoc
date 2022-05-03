@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, storage, fail, lun, create, command
 summary: lun create コマンドを使用してストレージシステム上に作成された LUN 、または System Manager を使用して作成された LUN は、 lun connect コマンドで失敗します。 SnapDrive 
 ---
 = ストレージ接続処理で、 lun create コマンドを使用してストレージシステムに作成された LUN に接続できません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

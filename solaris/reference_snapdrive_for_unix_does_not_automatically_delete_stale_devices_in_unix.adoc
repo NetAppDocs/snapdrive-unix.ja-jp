@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, stale, devices
 summary: SnapDrive for UNIX の処理が設定の問題で失敗した場合、 Fibre Channel over Ethernet \ （ FCoE \ ）環境で古いデバイスが使用されることがあります。これらの古いデバイスは自動的には削除されないため、回避策を把握しておく必要があります。 
 ---
 = SnapDrive for UNIX では、 UNIX の古いデバイスは自動的には削除されません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

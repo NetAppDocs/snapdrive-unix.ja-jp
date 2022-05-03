@@ -5,6 +5,7 @@ keywords: snap, snapdrive, provision, volume, storage
 summary: Data ONTAP では、ストレージシステム上にボリュームを作成し、 NFS プロトコルを有効にしてそのボリュームをホストにマウントすることで、ストレージをプロビジョニングできます。 
 ---
 = ボリュームのプロビジョニング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

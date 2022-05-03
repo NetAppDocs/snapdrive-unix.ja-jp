@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, delay, failover, storage, cluster
 summary: SnapDrive for UNIX コマンド： LUN の作成、接続、削除、または切断は、クラスタ化されたストレージシステムのいずれかが停止している場合に、 Solaris ホストで完了するまでに数分かかります。 
 ---
 = 一部のコマンドは、ストレージクラスタがフェイルオーバーモードのときに遅延が発生します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

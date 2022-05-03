@@ -5,6 +5,7 @@ keywords: snap, snapdrive, after, configure, create, copy
 summary: SnapDrive for UNIX を設定して Snapshot コピーを作成したら、リストア処理、 Snapshot コピーの接続、クローンの作成を実行できます。ロールベースアクセス制御（ RBAC ）、拡張クローンスプリット、ボリュームベース SnapRestore など、 SnapDrive のその他の重要な機能についても確認できます。 
 ---
 = 次の手順
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

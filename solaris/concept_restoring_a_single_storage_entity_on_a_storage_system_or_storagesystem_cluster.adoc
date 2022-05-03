@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, snapshot, copy, ha, storage, pair
 summary: 単一のストレージエンティティを含む Snapshot コピーをリストアできます。 
 ---
 = ストレージシステムまたはストレージシステムの HA ペア上の単一のストレージエンティティのリストア
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

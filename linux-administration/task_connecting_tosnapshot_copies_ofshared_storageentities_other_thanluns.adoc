@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, storage, lun, command, connect
 summary: lun snap connect コマンドを使用すると、 SnapDrive 以外の共有ストレージエンティティの Snapshot コピーに接続できます。 
 ---
 = LUN 以外の共有ストレージエンティティの Snapshot コピーへの接続
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

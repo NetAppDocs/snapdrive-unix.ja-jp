@@ -5,6 +5,7 @@ keywords: snap, snapdrive, install, aix, patch, default
 summary: 'SnapDrive for UNIX パッチ・リリースは "System Management Interface Tool\ （ SMIT ）を使用してデフォルトで AIX にインストールすることはできません' 
 ---
 = SnapDrive for UNIX のパッチを AIX にデフォルトでインストールすることはできません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

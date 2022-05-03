@@ -5,6 +5,7 @@ keywords: snap, snapdrive, error, suse, upgrade, file, base, device
 summary: SUSE Linux Enterprise Server\ （ SLES\ ）をバージョン 10 から 11 にアップグレードすると、 SnapDrive for UNIX でエラーが表示されます。ベースデバイス名を作成し、ファイルシステムをマウントする必要があります。 
 ---
 = SUSE Linux Enterprise Server をバージョン 10 から 11 にアップグレードすると、 SnapDrive for UNIX にエラーメッセージが表示されます
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, multipathing, enable, hba
 summary: 'SnapDrive for UNIX でマルチパスを使用するには、 HBA のインストールと起動を含む手順を完了する必要があります。NetApp 以外のマルチパス解決策を使用している場合は "HBA ベンダーの Web サイトからソフトウェアとアプリケーションのパッケージをダウンロードする必要があります' 
 ---
 = マルチパスの有効化
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
@@ -92,7 +93,7 @@ filer:        lun-pathname device filename adapter protocol lun size lun state
 f960-221-167: /vol/vol1/lun1 /dev/sdd host5 FCP 100m (104857600)      GOOD
 f960-221-167: /vol/vol1/lun1 /dev/sdc host6 FCP 100m (104857600)      GOOD
 ----
-. SnapDrive for UNIX または Host Utilities で他社製マルチパス解決策がサポートされている場合は、 HBA ベンダーの Web サイトから HBA ドライバのソフトウェアパッケージとアプリケーションパッケージをダウンロードします。 * QLogic* ： QLogic HBA の場合は、に進みます http://support.qlogic.com/[]。OEM モデルから、ネットアップを選択します。サポートマトリックスに記載されているバージョンのドライバを探してダウンロードします。* Emulex ： * Emulex HBA の場合は、に進みます。Downloads （ダウンロード）で、 NetApp （ネットアップ）を選択サポートマトリックスに記載されているバージョンのドライバを探してダウンロードします。同じ場所から Emulex アプリケーションパッケージもダウンロードします。
+. SnapDrive for UNIX または Host Utilities で他社製マルチパス解決策がサポートされている場合は、 HBA ベンダーの Web サイトから HBA ドライバのソフトウェアパッケージとアプリケーションパッケージをダウンロードします。 * QLogic* ： QLogic HBA の場合は、に進みます http://support.qlogic.com/[]。OEM モデルから、ネットアップを選択します。サポートマトリックスに記載されているバージョンのドライバを探してダウンロードします。* Emulex ： * Emulex HBA の場合は、に進みます http://www.emulex.com/ts/index.html[]。Downloads （ダウンロード）で、 NetApp （ネットアップ）を選択サポートマトリックスに記載されているバージョンのドライバを探してダウンロードします。同じ場所から Emulex アプリケーションパッケージもダウンロードします。
 +
 FC 接続で QLogic アダプタを使用している場合は 'QLogic の Web サイトから QLogic 再スキャンスクリプトをダウンロードして '/root' パスにコピーします ( 例 : ルート / ダイナミック LUN-rescan.sh`)ユーザの確認を求める QLogic 再スキャンスクリプトが表示されます。 SnapDrive for UNIX はこの確認段階で無期限に停止する可能性があります。この確認を回避するには ' スクリプト内で変数 '_QL_DISABLE_WARNING_' を 1' に設定します
 

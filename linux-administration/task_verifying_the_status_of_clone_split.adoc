@@ -5,6 +5,7 @@ keywords: snap, snapdrive, status, clone, split, specification
 summary: ジョブ ID またはファイル仕様を使用して、クローンスプリットのステータスを照会できます。SnapDrive for UNIX は、クローン・スプリットの現在のステータスを、実行中、失敗、または完了として示します。 
 ---
 = ボリュームクローンまたは LUN クローンスプリットのステータスを表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

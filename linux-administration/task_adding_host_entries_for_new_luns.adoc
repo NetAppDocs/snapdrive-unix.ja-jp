@@ -5,6 +5,7 @@ keywords: snap, snapdrive, host, entries, lun, command
 summary: SnapDrive for UNIX を使用して、特定の数の新しい LUN を作成できます。SnapDrive for UNIX には、この目的のための固有のコマンドが用意されています 
 ---
 = 新しい LUN のホストエントリを追加しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, wizard
 summary: SnapDrive には、特定の SnapDrive 処理を対話型で実行するために役立つさまざまなウィザードが用意されています。 
 ---
 = SnapDrive ウィザードとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

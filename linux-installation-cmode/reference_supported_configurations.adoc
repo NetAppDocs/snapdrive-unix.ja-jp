@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configurations, supported, interoperability, tool
 summary: SnapDrive for UNIX をインストールする前に、ネットアップの Interoperability Matrix Tool （ IMT ）を使用して、お使いの構成が SnapDrive でサポートされるかどうかを確認する必要があります。 
 ---
 = サポートされている構成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, rdm, lun, provisioning
 summary: SnapDrive for UNIX では、 RDM LUN のプロビジョニングに関するいくつかの考慮事項があります。 
 ---
 = RDM LUN のプロビジョニングに関する考慮事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

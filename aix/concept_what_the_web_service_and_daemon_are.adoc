@@ -5,6 +5,7 @@ keywords: snap snapdrive, daemon, web, service
 summary: SnapDrive for UNIX Web サービスは、ネットアップのすべての SnapManager 製品とサードパーティ製品を統一したインターフェイスで、 SnapDrive for UNIX とシームレスに統合します。SnapDrive for UNIX でコマンドラインインターフェイス \ （ CLI\ ）コマンドを使用するには、デーモンを開始する必要があります。 
 ---
 = Web サービスおよびデーモンとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, default, value, trace, log, file
 summary: トレースログファイルでは、さまざまなパラメータを設定したり、変更したりできます。これらのパラメータは snapdrive.conf ファイルで設定する必要があります。 
 ---
 = トレースログファイルのデフォルト値
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: index, snap, snapdrive, administration, guide
 summary: このガイドでは、導入完了後に Linux 環境で SnapDrive for UNIX を管理する方法について説明します。 
 ---
 = 『 Administration Guide for Linux ® 』を参照してください
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

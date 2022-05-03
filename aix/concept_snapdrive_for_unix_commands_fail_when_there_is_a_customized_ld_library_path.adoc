@@ -5,6 +5,7 @@ keywords: snap, snapdrive, fail, ld, library, path, command
 summary: カスタマイズした LD_LIBRARY_PATH がある場合や、 snapcreate -check-check-ason_nfs が off に設定されている場合、 SnapDrive for UNIX コマンドは失敗します。 
 ---
 = カスタマイズした LD_LIBRARY_PATH で SnapDrive for UNIX コマンドが失敗する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

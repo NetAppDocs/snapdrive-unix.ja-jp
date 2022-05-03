@@ -5,6 +5,7 @@ keywords: snap, snapshot, storage, create, host cluster
 summary: ホストクラスタ環境でストレージを作成する場合は、一定のガイドラインに従う必要があります。 
 ---
 = ホストクラスタ環境でのストレージ作成処理に関するガイドラインを確認してください
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

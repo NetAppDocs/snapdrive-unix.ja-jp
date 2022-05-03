@@ -5,6 +5,7 @@ keywords: snap, snapdrive, vfiler, datamotion, fail, support, netappdatamotion
 summary: SnapDrive for UNIX は DataMotion for vFiler をサポートしています。DataMotion for vFiler を実行すると、カットオーバーフェーズ中に一部の SnapDrive for UNIX 処理が失敗する場合があります。 
 ---
 = NetApp DataMotion for vFiler のサポート
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

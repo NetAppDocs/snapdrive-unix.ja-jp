@@ -5,6 +5,7 @@ keywords: snap, snapdrive, error, connect, command, fatal, iscsi64
 summary: SnapDrive の snap connect コマンドが iscsi64 SnapDrive 0001-666 致命的エラーで失敗した場合は、次の回避策を参照してください。 
 ---
 = エラー iscsi64 SnapDrive ： 0001-666 fatal error を受信しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

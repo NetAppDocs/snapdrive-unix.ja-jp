@@ -5,6 +5,7 @@ keywords: snap, snapdrive, information, required, disconect, command
 summary: Snapshot コピーを切断するには、 LUN 、ディスクグループ、ファイルシステムなど、使用するストレージエンティティのタイプを指定します。 またはホストボリュームを指定します。 
 ---
 = SnapDrive snap disconnect コマンドの使用に必要な情報
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

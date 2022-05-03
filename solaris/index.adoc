@@ -5,6 +5,7 @@ keywords: documentation, guide, installation, administration, solaris
 summary: 'Solaris プラットフォームで SnapDrive for UNIX をインストール " 設定 " および使用する方法について説明します' 
 ---
 = 『 Installation and Administration Guide for Solaris 』を参照してください
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

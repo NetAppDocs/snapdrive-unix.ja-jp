@@ -5,6 +5,7 @@ keywords: guide, documentation, installation, setup, linux, clustered, data, ont
 summary: Linux 環境に clustered Data ONTAP を搭載した SnapDrive for UNIX を導入するために最初に実行する必要のあるタスクについて説明します。 
 ---
 = 『 Installation and Setup Guide for Linux ® for clustered Data ONTAP 』
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, data, lun, volume, group, disappear
 summary: 既存の LUN をボリュームグループに追加すると、 LUN 上のデータは消去されます。 
 ---
 = ボリュームグループに LUN を追加するとデータが消去されます
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, disable, snapshot, copy, consistency, group
 summary: SnapDrive for UNIX を設定して、整合グループの Snapshot コピーを無効にすることができます。 
 ---
 = 整合グループの Snapshot コピーを無効にしています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

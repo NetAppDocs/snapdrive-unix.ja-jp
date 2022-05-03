@@ -5,6 +5,7 @@ keywords: snap, snapdrive, lun, host, create
 summary: SnapDrive for UNIX コマンドを使用して、ストレージシステム上に LUN を作成することにより、ストレージをプロビジョニングできます。 
 ---
 = ホストエンティティなしの LUN を作成しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

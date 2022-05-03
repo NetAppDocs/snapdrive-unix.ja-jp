@@ -5,6 +5,7 @@ keywords: snap, snapdrive, exit, error, status, warning, admin, command, fatal
 summary: 'SnapDrive for UNIX の各エラーメッセージには、終了ステータスの値が関連付けられています。終了ステータスの値には " エラーの原因と " タイプ - 警告 " コマンド " 管理者 " 致命的' 
 ---
 = エラーメッセージの終了ステータスの値について
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

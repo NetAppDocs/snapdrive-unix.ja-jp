@@ -5,6 +5,7 @@ keywords: snap, snapdrive, vfiler, unit, support, issue
 summary: SnapDrive for UNIX は、 FlexVol ボリューム上に作成された vFiler ユニット上での SnapDrive 処理をサポートします。ただし、ファイバチャネル \ （ FC \ ）を使用している場合、 SnapDrive for UNIX では vFiler ユニットはサポートされません。 
 ---
 = vFiler ユニットでサポートの問題が発生しました
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, snapshot, copy
 summary: SnapDrive snap restore コマンドによる Snapshot コピーのリストア機能に影響する条件は、次のとおりです。 
 ---
 = Snapshot コピーをリストアできません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

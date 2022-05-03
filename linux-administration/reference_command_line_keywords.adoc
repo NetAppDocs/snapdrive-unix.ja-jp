@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, keywords, host, destination, flexcone, nfs, 
 summary: SnapDrive for UNIX では、キーワードを使用して、ホストディスクグループ、デスティネーショングループ、ボリューム、または FlexClone 、 NFS ファイル、 ストレージシステムなど。 
 ---
 = コマンドラインキーワード
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

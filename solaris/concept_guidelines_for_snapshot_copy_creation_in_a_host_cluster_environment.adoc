@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, copy, create, host, cluster
 summary: 一部の環境では、 SnapDrive for UNIX を使用した Snapshot コピーの作成がサポートされますが、一部の環境ではサポートされません。詳細については、ガイドラインを参照してください。 
 ---
 = ホストクラスタ環境での Snapshot コピーの作成に関するガイドラインを次に示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

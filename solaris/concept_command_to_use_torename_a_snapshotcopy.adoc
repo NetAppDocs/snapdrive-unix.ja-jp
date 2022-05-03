@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, rename, snapshot, copy
 summary: snapshot snap rename コマンドを使用して、 Snapshot コピーの名前を変更します。 
 ---
 = Snapshot コピーの名前を変更するために使用するコマンド
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

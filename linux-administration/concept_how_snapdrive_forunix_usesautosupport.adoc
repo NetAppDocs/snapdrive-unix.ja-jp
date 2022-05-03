@@ -5,6 +5,7 @@ keywords: snap, snapdrive, autosupport, storage, ems
 summary: snapdrive.conf ファイルで autosupport-enabled オプションを on に設定すると、 AutoSupport メッセージがストレージシステムの EMS ログビューに記録されます。デフォルトでは、 snapdrive.conf ファイルのこのオプションは on に設定されています。SnapDrive for UNIX は、 AutoSupport メッセージをストレージシステムに送信し、ここにメッセージがイベント管理システム \ （ EMS \ ）に記録されます。 
 ---
 = SnapDrive for UNIX での AutoSupport の使用方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, lun, selective, map, path, ha, data, clustered, slm
 summary: clustered Data ONTAP 8.3 以降では、すべての新しい LUN マップで選択的 LUN マップ（ SLM ）がデフォルトで有効になります。新しい LUN マップを作成すると、その LUN を所有するノードとその HA パートナーにあるパス経由でのみ LUN にアクセスできます。 
 ---
 = SnapDrive for UNIX で選択的 LUN マップを使用する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

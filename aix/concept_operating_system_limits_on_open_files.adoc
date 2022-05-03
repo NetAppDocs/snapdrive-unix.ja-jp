@@ -5,6 +5,7 @@ keywords: snap, snapdrive, operating, system, limit, open, files
 summary: SnapDrive for UNIX は、同時に開かれたファイル数をチェックします。制限を超えた場合、 SnapDrive for UNIX はエラーをスローします。 
 ---
 = オペレーティングシステムで開いているファイル数の制限
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

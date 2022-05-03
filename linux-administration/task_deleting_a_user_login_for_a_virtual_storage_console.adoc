@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, login, user, virtual, console, storage
 summary: 仮想インターフェイスのユーザログインを削除するには、 SnapDrive config delete コマンドを実行します。 
 ---
 = Virtual Storage Console のユーザログインを削除する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

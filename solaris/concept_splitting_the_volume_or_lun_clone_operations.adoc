@@ -5,6 +5,7 @@ keywords: snap, snapdrive, split, volume, clone, lun
 summary: SnapDrive for UNIX では、ボリュームクローンまたは LUN クローンをスプリットできます。クローンスプリットが完了すると、親ボリュームとクローンの関係が破棄され、両方のエンティティが相互に独立していて、それぞれのストレージスペースがあります。 
 ---
 = ボリュームクローンまたは LUN クローンをスプリットします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

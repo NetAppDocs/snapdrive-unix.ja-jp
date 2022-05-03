@@ -5,6 +5,7 @@ keywords: snap, snapdrive, version, check, command
 summary: SnapDrive for UNIX のバージョンを確認するには、 SnapDrive version コマンドを入力します。 
 ---
 = SnapDrive for UNIX のバージョンを確認しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

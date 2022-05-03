@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configuration, checker, tool
 summary: SnapDrive 設定チェッカーツールを使用すると、 SnapDrive for UNIX でサポートされる構成を特定して確認できます。 
 ---
 = 構成チェックとは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

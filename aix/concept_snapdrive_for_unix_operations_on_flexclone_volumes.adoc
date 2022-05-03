@@ -5,6 +5,7 @@ keywords: snap, snapdrive, flexcone, volume, operation
 summary: SnapDrive for UNIX を使用して、 FlexClone ボリュームに対してさまざまな操作を実行できます。 
 ---
 = FlexClone ボリュームに対する SnapDrive for UNIX の処理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, operation, stand, alone
 summary: スタンドアロン UNIX システム上の SnapDrive for UNIX では、ストレージを作成し、 LUN 、ファイルシステム、論理ボリューム、およびディスクグループの Snapshot コピーを管理できます。 
 ---
 = スタンドアロン UNIX システム上で実行される操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

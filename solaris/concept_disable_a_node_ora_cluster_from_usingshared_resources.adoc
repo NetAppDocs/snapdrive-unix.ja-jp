@@ -5,6 +5,7 @@ keywords: snap, snapdrive, disable, node, cluster, resource
 summary: 'ノードが共有リソースを使用できないようにするには、 /etc/VRTSvcs/conf/config/main.cf ファイルを変更する必要があります。main.cf ファイルの詳細については "Veritas Cluster Server Installation Guide for Solaris を参照してください' 
 ---
 = ノードまたはクラスタが共有リソースを使用できないようにします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

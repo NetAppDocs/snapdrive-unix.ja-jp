@@ -5,6 +5,7 @@ keywords: snap, snapdrive, rbac, access, control, flexclone, volume
 summary: Operations Manager がシステムに設定されている場合、 Operations Manager 管理者は、 FlexClone ボリュームに対してストレージ操作を実行するために必要な機能をユーザに付与する必要があります。 
 ---
 = FlexClone ボリューム処理に対するロールベースアクセス制御
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

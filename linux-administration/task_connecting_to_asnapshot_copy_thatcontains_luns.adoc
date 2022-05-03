@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, lun, connect, command
 summary: SnapDrive を含む Snapshot コピーに接続するには、 lun snap connect コマンドを使用します。 
 ---
 = LUN を含む Snapshot コピーへの接続
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

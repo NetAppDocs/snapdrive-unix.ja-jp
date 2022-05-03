@@ -5,6 +5,7 @@ keywords: snap, snapdrive, access, control, permission, config, command
 summary: アクセス制御権限を表示するには、 SnapDrive config access show コマンドを実行します。 
 ---
 = アクセス制御権限を表示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

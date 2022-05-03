@@ -5,6 +5,7 @@ keywords: snap, snapdrive, supported, features
 summary: 機能とサポートされる構成に関する情報については、 SnapDrive for UNIX を参照してください。 
 ---
 = SnapDrive for UNIX でサポートされる機能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

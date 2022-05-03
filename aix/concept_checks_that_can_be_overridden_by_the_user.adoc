@@ -5,6 +5,7 @@ keywords: snap, snapdrive, check, override, user
 summary: ボリュームベースの SnapRestore を実行する前に、 SnapDrive for UNIX では、 -force オプションを使用してユーザが上書きできるチェックがいくつか実行されます。これらのチェックは、ボリュームベースの SnapRestore を安全に使用するために必要です。 
 ---
 = ユーザーがオーバーライドできるチェック
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

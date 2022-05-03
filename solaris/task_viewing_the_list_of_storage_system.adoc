@@ -5,6 +5,7 @@ keywords: snap, snapdrive, view, list, storage, system
 summary: ホストシステムで SnapDrive config list コマンドを使用すると、すべてのストレージシステムを表示できます。 
 ---
 = ストレージシステムのリストの表示
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

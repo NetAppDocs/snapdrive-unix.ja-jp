@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, command, operation, line
 summary: SnapDrive for UNIX コマンドは、 Snapshot 処理に使用されます。 
 ---
 = スナップショット操作コマンドライン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

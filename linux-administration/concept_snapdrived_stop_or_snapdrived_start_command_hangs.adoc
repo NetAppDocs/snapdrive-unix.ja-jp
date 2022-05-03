@@ -5,6 +5,7 @@ keywords: snap, snapdrive, stop, start, command, hangs
 summary: snapdrived stop コマンドまたは snapdrived start コマンドは、場合によってはハングすることがあります。 
 ---
 = snapdrived stop コマンドまたは snapdrived start コマンドを実行するとハングします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

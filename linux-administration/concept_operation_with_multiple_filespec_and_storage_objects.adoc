@@ -5,6 +5,7 @@ keywords: snap, snapdrive, filespec, storage, objects, operation, multiple
 summary: 次の例は、特定の操作を実行する権限を持つユーザーでない場合に表示されるエラーメッセージを示しています。 
 ---
 = 複数のファイル仕様およびストレージ・オブジェクトを使用する場合
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, crash, consistency, data, ontap
 summary: SnapDrive for UNIX では、 Data ONTAP 7.2 以降のバージョンで提供されている整合グループがサポートされているため、複数のボリュームにまたがるすべての Snapshot コピーが crash-consistent になります。 
 ---
 = Data ONTAP 7.2 以降とのクラッシュ整合性
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

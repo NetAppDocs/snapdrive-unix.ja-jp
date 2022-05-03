@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, why, snapshot, copy, old, space
 summary: ストレージシステムボリュームの空きスペースを増やす場合や Snapshot コピーを減らす場合は、古い Snapshot コピーを削除してください。 
 ---
 = Snapshot コピーを削除する理由
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

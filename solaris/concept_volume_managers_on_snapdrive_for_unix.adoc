@@ -5,6 +5,7 @@ keywords: snap, snapdrive, volume, manager, unix
 summary: Solaris プラットフォームでは、 VxVM または Solaris Volume Manager\ （ SVM\ ）を使用できます。SVM は Solaris OS にバンドルされています。 
 ---
 = SnapDrive for UNIX のボリューム・マネージャ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

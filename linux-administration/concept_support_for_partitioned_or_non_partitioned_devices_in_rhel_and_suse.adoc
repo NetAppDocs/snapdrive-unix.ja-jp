@@ -5,6 +5,7 @@ keywords: snap, snapdrive, suse, server, sles, partitioning, scheme, rhel, red, 
 summary: RHEL の SnapDrive for UNIX では、ホストストレージエンティティをプロビジョニングするためにディスクをパーティショニングします。ただし、 SnapDrive for UNIX では、 SLES 11 上のパーティショニングデバイスと非パーティショニングデバイスの両方、および SLES 10 上の非パーティショニングデバイスのみに対して、 SnapDrive 操作のプロビジョニングと管理を行うことができます。 
 ---
 = Red Hat Enterprise Linux （ RHEL ）および SUSE Linux Enterprise Server （ SLES ）のストレージパーティショニングスキーム
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, wizard, storage
 summary: ストレージ削除ウィザードを使用して、特定の削除処理を実行できます。 
 ---
 = ウィザードを使用してストレージを削除する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, command, fail, mount, file
 summary: Solaris 上の SFRAC 5.0 では、 snap restore コマンドと snap connect コマンドを実行してもファイルシステムをマウントできません。 
 ---
 = snap restore コマンドを実行すると、ファイルシステムがマウントされません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

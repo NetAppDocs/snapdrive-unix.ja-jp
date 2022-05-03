@@ -5,6 +5,7 @@ keywords: snap, snapdrive, vserver, port, storage, set
 summary: ストレージシステムにポートセットを追加して SVM と通信できます。これは 1 回限りのアクティビティであり、ストレージシステムを使用する前に行う必要があります。 
 ---
 = SnapDrive にポートセットを追加する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

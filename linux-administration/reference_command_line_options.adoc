@@ -5,6 +5,7 @@ keywords: snap, snapdrive, commands, unix, command, options
 summary: SnapDrive for UNIX コマンドでは、さまざまなオプションを使用できます。 
 ---
 = コマンドラインオプション
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

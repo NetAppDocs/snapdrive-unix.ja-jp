@@ -5,6 +5,7 @@ keywords: snap, snapdrive, unix, host, cluster
 summary: SnapDrive for UNIX では、ストレージのプロビジョニングと、クラスタ全体のストレージを管理するための Snapshot 管理オプションをサポートしています。ホストクラスタ全体の共有ストレージには、 Solaris ホストの SFRAC 環境でディスクグループとファイルシステムが含まれます。ホストクラスタ内の任意のノードからすべての処理を実行できます。 
 ---
 = ホストの clustered UNIX システムでの SnapDrive for UNIX の動作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

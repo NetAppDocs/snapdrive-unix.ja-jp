@@ -5,6 +5,7 @@ keywords: snap, snapdrive, rename, copy, snapshot, storage, volume
 summary: 複数のストレージシステムまたはストレージシステムボリュームをまたぐ Snapshot コピーの場合、関連するすべての Snapshot コピーの名前を変更します。 
 ---
 = ストレージシステムまたはボリュームにまたがる Snapshot コピーの名前変更
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

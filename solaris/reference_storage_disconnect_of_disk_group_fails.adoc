@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, disconnect, disk, group, fail
 summary: 'Solaris バージョン 10 以降を使用するストレージ・システムでは "-full-option なしで SnapDrive for UNIX コマンドを実行してディスク・グループを削除および切断できませんホストボリュームが完全に切断または削除されていないため、 delete コマンドと disconnect コマンドは失敗します。' 
 ---
 = ディスクグループのストレージ切断に失敗しました
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

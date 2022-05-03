@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configure
 summary: SnapDrive の .conf ファイルを編集できます。このファイルには、 SnapDrive for UNIX で使用されるすべての設定変数とオプションが含まれており、要件に応じてオプションを有効または無効にすることができます。また、変数を追加してホスト固有の使用方法を作成することもできます。 
 ---
 = SnapDrive for UNIX を設定しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

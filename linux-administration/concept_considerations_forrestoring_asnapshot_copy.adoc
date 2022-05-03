@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, snapshot, copy
 summary: Snapshot コピーをリストアする前に、ファイルシステムを使用していないこと、およびリストアプロセスを中断しないことを確認してください。 
 ---
 = Snapshot コピーのリストアに関する考慮事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

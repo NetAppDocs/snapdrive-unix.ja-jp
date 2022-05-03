@@ -5,6 +5,7 @@ keywords: snap, snapdrive, data, ontap, clustered
 summary: SnapDrive for UNIX 5.0 以降のバージョンでは、 clustered Data ONTAP の一部の機能がサポートされます。 
 ---
 = SnapDrive for UNIX で使用できる clustered Data ONTAP の機能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

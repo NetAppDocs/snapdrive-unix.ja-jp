@@ -5,6 +5,7 @@ keywords: snap, snapdrive, filespec, single, storage, object
 summary: 指定したボリューム上でファイル仕様を作成する権限を持つユーザでない場合、 SnapDrive for UNIX でエラー・メッセージが表示されます。 
 ---
 = 1 つのストレージオブジェクトに対して 1 つのファイル仕様を使用する処理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

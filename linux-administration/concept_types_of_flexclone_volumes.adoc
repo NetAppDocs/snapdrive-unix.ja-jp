@@ -5,6 +5,7 @@ keywords: snap, snapdrive, flexcone, volume, temporary, restricted, unrestricted
 summary: FlexClone ボリュームは、 SnapDrive for UNIX での使用方法に応じて、一時的またはすべての用途に分類できます。 
 ---
 = FlexClone ボリュームのタイプ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

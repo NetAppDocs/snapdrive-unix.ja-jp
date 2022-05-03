@@ -5,6 +5,7 @@ keywords: snap, snapdrive, cluster, message, snaprestore, restore
 summary: SnapDrive Any 環境 for UNIX host operating system with host cluster monitoring という一般的なメッセージが表示されます。ホストクラスタの監視機能がない場合やオフになっている場合でも表示されます。 
 ---
 = SnapRestore の実行中にクラスタリングメッセージが表示されます
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

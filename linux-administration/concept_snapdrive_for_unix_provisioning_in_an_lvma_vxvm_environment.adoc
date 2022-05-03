@@ -5,6 +5,7 @@ keywords: snap, snapdrive, lvm, objects, storage, commands
 summary: SnapDrive for UNIX storage コマンドは、 LVM オブジェクトを作成して LVM エンティティをプロビジョニングします。 
 ---
 = LVM 環境での SnapDrive for UNIX プロビジョニング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

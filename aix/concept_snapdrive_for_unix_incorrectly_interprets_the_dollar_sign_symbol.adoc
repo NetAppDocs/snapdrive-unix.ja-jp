@@ -5,6 +5,7 @@ keywords: snap, snapdrive, dollar, sign, incorrect, interpret
 summary: SnapDrive for UNIX では、設定値の一部として特殊文字が指定されている場合、ドル記号 \ （ $ \ ）とすべての特殊文字が正しく解釈されません。 
 ---
 = SnapDrive for UNIX は、ドル記号を正しく解釈しません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

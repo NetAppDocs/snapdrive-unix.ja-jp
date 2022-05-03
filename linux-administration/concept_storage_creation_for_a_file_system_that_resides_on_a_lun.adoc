@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, create, file, lun, host, lvm
 summary: SnapDrive for UNIX を使用して LUN 上に直接常駐するファイルシステムを作成すると、 SnapDrive for UNIX によって LUN が作成されてマッピングされ、ホスト LVM を使用せずにファイルシステムが作成されてマウントされます。 
 ---
 = LUN 上にあるファイルシステムのストレージ作成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

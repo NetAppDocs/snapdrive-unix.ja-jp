@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, delete, command, required
 summary: SnapDrive storage delete コマンドを使用するには、いくつかの情報を指定する必要があります。この情報は、コマンドを正しく使用する場合に役立ちます。 
 ---
 = SnapDrive storage delete コマンドを使用するために必要な情報を示します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

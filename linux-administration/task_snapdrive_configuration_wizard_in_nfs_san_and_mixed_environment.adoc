@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configure, wizard, nfs, san, mixed
 summary: 設定ウィザードでは、 NFS 、 SAN 、混在の環境でを設定できます。 
 ---
 = SnapDrive 設定ウィザードを使用する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

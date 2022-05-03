@@ -5,6 +5,7 @@ keywords: snap, snapdrive, verify, configuration
 summary: SnapDrive for UNIX でサポートされる構成を確認するには、ホストシステム内のコンポーネント（オペレーティングシステム、ホストにインストールされているソフトウェアのバージョン、プロトコル、ホスト上のファイルシステムなど）および snapdrive.conf ファイルの各構成パラメータに指定されている値を調べます。 
 ---
 = サポートされている構成の確認
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

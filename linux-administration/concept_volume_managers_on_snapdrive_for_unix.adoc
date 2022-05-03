@@ -5,6 +5,7 @@ keywords: snap, snapdrive, volume, manager, native, lvm2
 summary: Linux では、ボリュームマネージャはネイティブ LVM2 です。 
 ---
 = SnapDrive for UNIX のボリューム・マネージャ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

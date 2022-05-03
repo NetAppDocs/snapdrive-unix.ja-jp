@@ -3,6 +3,7 @@ permalink: index.html
 sidebar: sidebar 
 ---
 = 『 SnapDrive for UNIX 5.3.2 Documentation 』を参照してください
+:allow-uri-read: 
 
 
 SnapDrive for UNIX の情報ライブラリへようこそ。ここでは、 Linux 、 Solaris 、および AIX 用の SnapDrive のインストール、設定、使用、および管理方法を含む、 SnapDrive for UNIX ソフトウェア用 5.3.2 のドキュメントを示します。

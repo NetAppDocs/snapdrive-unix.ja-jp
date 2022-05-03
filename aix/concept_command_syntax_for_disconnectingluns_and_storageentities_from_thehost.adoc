@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, syntax, disconnect, lun, storage, host, enti
 summary: SnapDrive storage disconnect コマンドを使用して、ストレージエンティティを含む LUN のマッピングを削除するには、次の構文を使用します。 
 ---
 = ホストから LUN とストレージエンティティを切断するコマンドの構文
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

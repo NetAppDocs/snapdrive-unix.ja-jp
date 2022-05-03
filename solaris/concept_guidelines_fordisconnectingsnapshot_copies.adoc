@@ -5,6 +5,7 @@ keywords: snap, snapdrive, disconnect, snapshot, copy
 summary: LUN 、ストレージエンティティ、または NFS ディレクトリの Snapshot コピーを切断する際のガイドラインを次に示します。 
 ---
 = Snapshot コピーの切断に関するガイドライン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

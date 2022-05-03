@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restart, daemon
 summary: 構成ファイルまたは他のモジュールに加えた変更を有効にするには、デーモンを停止したあとに再起動する必要があります。SnapDrive for UNIX デーモンは、実行中およびキューに登録されているすべてのコマンドを完了したあとにのみ再起動されます。再起動要求を受信すると、新しいコマンドは実行されません。 
 ---
 = デーモンを再起動しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

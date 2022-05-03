@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, snapshot, copy, mirrored, storage
 summary: ミラーリングされたストレージシステム上の Snapshot コピーの場合、ソースストレージシステムとデスティネーションシステムの Snapshot コピーを接続できます。 
 ---
 = ミラーリングされたストレージシステム上の Snapshot コピーを接続します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

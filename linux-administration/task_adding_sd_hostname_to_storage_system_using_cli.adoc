@@ -5,6 +5,7 @@ keywords: snap, snapdrive, sd, hostname, storage, cli, useradmin, command, admin
 summary: ストレージシステム管理者は、 useradmin コマンドを使用して SD-hostname ユーザを作成し、設定できます。 
 ---
 = CLI を使用してストレージシステムに SD-hostname を追加
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

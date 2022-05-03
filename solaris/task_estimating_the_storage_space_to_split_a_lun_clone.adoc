@@ -5,6 +5,7 @@ keywords: snap, snapdrive, estimate, storage, split, lun, clone
 summary: クローンスプリットの推定によって、 LUN クローンをスプリットするために必要なストレージスペース（ MB ）を見積もることができます。SnapDrive for UNIX が提供するクローンスプリットの推定に応じて、 LUN クローンをスプリットできるスペースを判断できます。 
 ---
 = LUN クローンをスプリットするためのストレージスペースの見積もり
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

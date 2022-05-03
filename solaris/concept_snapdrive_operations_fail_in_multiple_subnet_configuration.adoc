@@ -5,6 +5,7 @@ keywords: snap, snapdrive, fail, multiple, subnet, configuration
 summary: インターネット制御メッセージプロトコル（ ICMP\ ）アクセスが無効になっているか、ホストとストレージシステムのネットワーク間で ICMP パケットが破棄されている場合、複数のサブネット構成で SnapDrive 処理が失敗します。 
 ---
 = 複数サブネット構成で SnapDrive 処理が失敗する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, syntax, lun, host, file system
 summary: lun storage disconnect コマンドを使用して、 SnapDrive 上で直接作成されたファイルシステムを削除するには、次の構文を使用します。 
 ---
 = LUN 上に作成されたファイルシステムをホストから切断するためのコマンド構文
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

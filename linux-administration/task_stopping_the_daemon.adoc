@@ -5,6 +5,7 @@ keywords: snap, snapdrive, daemon, configuration
 summary: SnapDrive for UNIX の構成ファイルを変更した場合は、デーモンを停止して再起動する必要があります。デーモンを強制的または強制的に停止できます。 
 ---
 = デーモンを停止しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

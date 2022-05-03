@@ -5,6 +5,7 @@ keywords: snap, snapdrive, check, daemon, status, command
 summary: デーモンのステータスをチェックして、デーモンが実行されているかどうかを確認できます。デーモンがすでに実行されている場合は、 SnapDrive for UNIX 構成ファイルが更新されるまで、デーモンを再起動する必要はありません。 
 ---
 = デーモンのステータスを確認しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

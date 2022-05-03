@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, copy, operation
 summary: SnapDrive snap create コマンドを使用すると、 Snapshot コピーを作成できます。 
 ---
 = Snapshot コピー処理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configuraiton, install, file
 summary: SnapDrive for UNIX をインストールすると、 snapdrive.conf ファイルがインストールされます。このファイルには、現在のバージョンの製品の構成情報が格納されます。 
 ---
 = SnapDrive for UNIX によってインストールされる構成ファイル
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

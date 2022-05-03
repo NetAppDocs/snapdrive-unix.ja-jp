@@ -5,6 +5,7 @@ keywords: snap, snapdrive, thin, provisioning
 summary: SnapDrive for UNIX のシンプロビジョニング機能を使用すると、ストレージシステムで実際に使用できるよりも多くのストレージスペースをホストに割り当てることができます。 
 ---
 = SnapDrive for UNIX のシンプロビジョニング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

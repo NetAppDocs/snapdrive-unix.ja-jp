@@ -5,6 +5,7 @@ keywords: snap, snapdrive, stopp, daemon, nonforcibly, command
 summary: SnapDrive for UNIX 構成ファイルが変更された場合、構成ファイルの変更を有効にするにはデーモンを停止する必要があります。デーモンが停止されて再起動されると、構成ファイルの変更が有効になります。デーモンを強制的に停止しないと、キューに入っているすべてのコマンドの実行が完了します。停止要求を受信すると、新しいコマンドは実行されません。 
 ---
 = デーモンを強制的に停止しません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

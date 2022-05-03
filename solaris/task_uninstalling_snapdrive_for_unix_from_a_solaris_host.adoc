@@ -5,6 +5,7 @@ keywords: snap, snapdrive, solaris, host, uninstall
 summary: Solaris システムから SnapDrive for UNIX をアンインストールするには、 uninstall コマンドを使用する必要があります。 
 ---
 = Solaris ホストからの SnapDrive for UNIX のアンインストール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

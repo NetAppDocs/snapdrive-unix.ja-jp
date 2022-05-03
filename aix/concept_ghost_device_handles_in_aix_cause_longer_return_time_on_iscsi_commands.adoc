@@ -5,6 +5,7 @@ keywords: snap, snapdrive, ghost, device, aix, handle, iscsi, command, return
 summary: ゴーストデバイスハンドル \ （定義された状態または障害状態のデバイスハンドル \ ）がある iSCSI または FC を使用して AIX デバイスを照会すると、原因 SCSI コマンドが AIX のデフォルトタイムアウトを約 30 秒待機できます。 
 ---
 = AIX 原因でのゴーストデバイスハンドル iSCSI コマンドでのリターン時間が長くなる
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, verify, login, information, virtual, storage, console
 summary: SnapDrive for UNIX で仮想インターフェイスが設定されているかどうかは、 SnapDrive の config list コマンドを使用して確認できます。 
 ---
 = Virtual Storage Console のログイン情報を確認しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

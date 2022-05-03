@@ -5,6 +5,7 @@ keywords: snap, snapdrive, single, multiple, object, storage, filespec
 summary: 管理者が複数のストレージオブジェクトに対してストレージ操作の実行に必要な権限を持っていない場合、 SnapDrive for UNIX にエラーメッセージが表示されます。 
 ---
 = 複数のストレージ・オブジェクトに対して、単一のファイル仕様を使用する処理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

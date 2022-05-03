@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snaprestore, volume
 summary: ボリュームベース SnapRestore （ VBSR ）は、そのストレージオブジェクトをすべて含むボリュームをリストアします。ボリュームベースのリストアは、各ストレージオブジェクトを個別にリストアした場合よりも高速です。VBSR は FlexClone ボリュームおよび vFiler 構成とも連動します。VBSR for vFiler は Data ONTAP 7.3 以降で使用できます。 
 ---
 = ボリュームベース SnapRestore とは
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

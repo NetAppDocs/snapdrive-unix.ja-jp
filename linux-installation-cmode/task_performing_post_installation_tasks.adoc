@@ -5,6 +5,7 @@ keywords: snap, snapdrive, installation, task, perform, configure, install
 summary: インストールが完了したら、追加の機能を設定する必要があります。ストレージシステムおよびデーモンサービスとのセキュアな接続を使用するには、サーバ証明書をインストールし、 SnapDrive for UNIX を設定する必要があります。 
 ---
 = インストール後のタスクの実行
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

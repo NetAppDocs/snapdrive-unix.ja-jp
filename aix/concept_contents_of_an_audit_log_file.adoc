@@ -5,6 +5,7 @@ keywords: snap, snapdrive, contents, aufit, log, file
 summary: 監査ログには、 SnapDrive for UNIX で実行したコマンドに関する情報が表示されます。 
 ---
 = 監査ログファイルの内容
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

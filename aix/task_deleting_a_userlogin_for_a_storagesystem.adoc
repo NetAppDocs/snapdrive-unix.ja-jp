@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, user, login, storage
 summary: 1 つ以上のストレージシステムのユーザログインを削除するには、 SnapDrive config delete コマンドを実行します。 
 ---
 = ストレージシステムのユーザログインを削除する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

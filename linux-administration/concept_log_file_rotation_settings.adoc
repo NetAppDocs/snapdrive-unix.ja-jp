@@ -5,6 +5,7 @@ keywords: snap, snapdrive, log, file, rotation, settings, log
 summary: snapdrive.conf ファイルの変数に指定した値は、ログファイルのローテーションに影響します。 
 ---
 = ログファイルのローテーション設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

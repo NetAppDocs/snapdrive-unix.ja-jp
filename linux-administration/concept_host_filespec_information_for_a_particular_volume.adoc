@@ -5,6 +5,7 @@ keywords: snap, snapdrive, filespec, volume, host, lun
 summary: SnapDrive for UNIX as part of volume restore preview レポートには、 LUN マッピング情報が表示されます。この情報はチェックに関連して表示され、通常のファイルは復元されます。特定のボリューム上の LUN に基づくすべてのホストファイルを検出すると時間がかかり、ボリュームのリストアプロセスの速度が低下します。 
 ---
 = 特定のボリュームのホスト・ファイル仕様情報
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

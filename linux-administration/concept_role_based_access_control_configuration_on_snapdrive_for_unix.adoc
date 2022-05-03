@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configure, role, access, rbac, control, manager, comm
 summary: SnapDrive for UNIX で Role-Based Access Control \ （ RBAC ；ロールベースアクセス制御）を設定するには、さまざまなタスクを完了する必要があります。このタスクは、 Operations Manager コンソールまたはコマンドラインインターフェイスを使用して実行できます。 
 ---
 = SnapDrive for UNIX でのロールベースアクセス制御の設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

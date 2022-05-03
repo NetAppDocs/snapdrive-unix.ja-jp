@@ -5,6 +5,7 @@ keywords: snap, snapdrive, volume, manager
 summary: 'AIX では " ボリューム・マネージャは Native LVM および Veritas Volume Manager\ （ VxVM\ ）と呼ばれます' 
 ---
 = SnapDrive for UNIX のボリューム・マネージャ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

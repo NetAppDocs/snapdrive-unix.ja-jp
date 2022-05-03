@@ -5,6 +5,7 @@ keywords: snap, snapdrive, install, solaris, host, unix
 summary: Solaris ホストに SnapDrive for UNIX をインストールするには、 root ユーザとしてログインする必要があります。このファイルをリモートで実行していて、システム設定で root としてログインできない場合は、 su コマンドを使用して root にすることができます。インストールファイルは、標準の Solaris.pkg ファイルです。 
 ---
 = Solaris ホストへの SnapDrive for UNIX のインストール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

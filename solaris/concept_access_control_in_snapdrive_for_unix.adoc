@@ -5,6 +5,7 @@ keywords: snap, snapdrive, access, control
 summary: SnapDrive for UNIX では、ホストの接続先の各ストレージ・システムに対する各ホストのアクセス・レベルを制御できます。 
 ---
 = SnapDrive for UNIX でのアクセス制御
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

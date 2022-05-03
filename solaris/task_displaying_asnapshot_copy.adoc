@@ -5,6 +5,7 @@ keywords: snap, snapdrive, display, snapshot, copy
 summary: SnapDrive snap show コマンドまたは list コマンドを実行すると、 Snapshot コピーが作成されたストレージ・システムの名前、ホスト名、日時などが表示されます。 
 ---
 = Snapshot コピーを表示しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

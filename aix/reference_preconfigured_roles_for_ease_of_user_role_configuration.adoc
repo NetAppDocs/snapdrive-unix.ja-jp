@@ -5,6 +5,7 @@ keywords: snap, snapdrive, user, role, configuration
 summary: 事前設定されたロールにより、ユーザへのロールの割り当てが容易になります。 
 ---
 = ユーザロールを簡単に設定できるように事前設定されたロール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

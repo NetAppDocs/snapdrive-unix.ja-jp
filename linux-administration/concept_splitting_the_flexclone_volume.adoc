@@ -5,6 +5,7 @@ keywords: snap, snapdrive, flexclone, volume, splitting, command
 summary: SnapDrive for UNIX コマンドを使用して、既存の FlexClone ボリュームをスプリットできます。 
 ---
 = FlexClone ボリュームをスプリットします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

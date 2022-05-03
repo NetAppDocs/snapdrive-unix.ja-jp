@@ -5,6 +5,7 @@ keywords: snap, snapdrive, enable, multipathing
 summary: 'SnapDrive for UNIX でマルチパスを使用するには、 HBA のインストールと起動を含む手順を完了する必要があります。NetApp 以外のマルチパス解決策を使用している場合は "HBA ベンダーの Web サイトからソフトウェアとアプリケーションのパッケージをダウンロードする必要があります' 
 ---
 = マルチパスの有効化
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

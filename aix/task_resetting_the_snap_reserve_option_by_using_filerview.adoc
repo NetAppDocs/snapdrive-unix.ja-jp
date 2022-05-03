@@ -5,6 +5,7 @@ keywords: snap, snapdrive, reset, reserve, filerview
 summary: 'FC または iSCSI 環境で Data ONTAP を使用する場合は、 FilerView を使用してスナップリザーブオプションを 0% にリセットする必要があります。' 
 ---
 = FilerView を使用してスナップリザーブオプションをリセットします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
