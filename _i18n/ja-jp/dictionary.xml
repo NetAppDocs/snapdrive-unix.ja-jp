@@ -4598,7 +4598,6 @@
   <block id="587c070f4a6be8ece006e6df17b2059a" category="list-text">「管理された restart 」コマンドを使用して、 SnapDrive for UNIX デーモンを再起動します。</block>
   <block id="508ffc830920939bde635b80cbcffccd" category="paragraph">「 napdrive.conf 」ファイルの変更を有効にするには、デーモンを再起動する必要があります。</block>
   <block id="61e0e72bb0fbf4da3b5a5aed31611da7" category="summary">SnapDrive for UNIX の処理を成功させるには、 Storage Virtual Machine （ SVM 、旧 Vserver ）をセットアップする必要があります。</block>
-  <block id="d74dad33e2cb07d06b1b4554532c02ea" category="paragraph">SnapDrive for UNIX の処理を成功させるには、 Storage Virtual Machine （ SVM 、旧 Vserver ）をセットアップする必要があります。</block>
   <block id="9c3bfbb4258153b74c0020a62e4cd796" category="list-text">SnapDrive for UNIX の処理を実行するためには、ボリュームを含むアグリゲートを SVM アグリゲートリストに割り当てておく必要があります。</block>
   <block id="eb384912c3be9db5d6660d46264838ed" category="list-text">クラスタからデータを提供するために、 SVM を 1 つ以上作成しておく必要があります。</block>
   <block id="57aec4ff903084462b15d55ca74af37d" category="paragraph">SVM 管理論理インターフェイス（ LIF ）の IP アドレスは、ドメインネームサービス（ DNS ）または「 /etc/hosts 」ファイルに SVM 名とマッピングする必要があります。</block>
@@ -4606,7 +4605,6 @@
   <block id="3bcf8c1a64b0bb423c747574ad73fa3c" category="paragraph">'*SnapDrive config set -cserver_csadmin_name cserver_name_*</block>
   <block id="dfdb2046a90a16a55d367932ee482619" category="paragraph">ONTAP 8.2.3 以降を実行している場合は、この手順を省略します。</block>
   <block id="624dd461537c07029c019223bd1ea847" category="list-text">データ SVM にユーザを作成します。</block>
-  <block id="da65dcd12ae47b1bf7ffe137ca8e3c26" category="paragraph">'_vsadmin _ 名 Vserver_name Vserver_name _</block>
   <block id="6c36362c418d90842a961aeae5857ea5" category="list-text">SnapDrive for UNIX で SVM が設定されていることを確認します。</block>
   <block id="651306054b05d1f189f40b4e67b7b862" category="paragraph">コマンドは、クラスタ管理サーバとデータ SVM のユーザ名と IP アドレスを表示します。</block>
   <block id="df778a34ed8a84341d0f871565fc04eb" category="list-text">SVM のデータインターフェイスパスに対する管理インターフェイスのパスを変更します。</block>
@@ -6000,4 +5998,7 @@
   <block id="f8627092c31ff43a006814ef7cf773a5" category="sidebar">Linux の管理</block>
   <block id="42bd37a4c5629f76f268e0de7f45570f" category="sidebar">Solaris のインストールと管理</block>
   <block id="80dd8a6d27a4c1b305d26c223c52a9a7" category="sidebar">IBM AIX のインストールと管理</block>
+  <block id="45f4423b7c470ea0d04be6d812ad5996" category="paragraph">SnapDrive for UNIXの処理を成功させるには、Storage Virtual Machine（SVM、旧Vserver）をセットアップする必要があります。</block>
+  <block id="00930ba81ea27b6c62845d08e0500327" category="paragraph"><block ref="7affedb2caa000166a46aed3d9bd1a06" prefix="" category="inline-code"></block></block>
+  <block id="1483ad74a09b4a3124c82e285d93ae63" category="admonition"><block ref="992dacfc30bbe144d7e60d29d7bbd430" prefix="" category="inline-code"></block> はSVMの名前で、管理LIFのIPアドレスにマッピングする必要があります。</block>
 </blocks>

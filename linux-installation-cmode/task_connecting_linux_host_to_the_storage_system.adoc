@@ -11,7 +11,7 @@ summary: SnapDrive for UNIX の処理を成功させるには、 Storage Virtual
 
 
 [role="lead"]
-SnapDrive for UNIX の処理を成功させるには、 Storage Virtual Machine （ SVM 、旧 Vserver ）をセットアップする必要があります。
+SnapDrive for UNIXの処理を成功させるには、Storage Virtual Machine（SVM、旧Vserver）をセットアップする必要があります。
 
 * SnapDrive for UNIX の処理を実行するためには、ボリュームを含むアグリゲートを SVM アグリゲートリストに割り当てておく必要があります。
 * クラスタからデータを提供するために、 SVM を 1 つ以上作成しておく必要があります。
@@ -30,10 +30,11 @@ ONTAP 8.2.3 以降を実行している場合は、この手順を省略しま�
 
 . データ SVM にユーザを作成します。
 +
-「 * SnapDrive config set * 」と入力します
+`*snapdrive config set vsadmin_name _Vserver_name_*`
 
 +
-'_vsadmin _ 名 Vserver_name Vserver_name _
+
+NOTE: `_Vserver_name_` はSVMの名前で、管理LIFのIPアドレスにマッピングする必要があります。
 
 . SnapDrive for UNIX で SVM が設定されていることを確認します。
 +
