@@ -17,4 +17,4 @@ SnapDrive for UNIX では、フラクショナルリザーブの値を設定す�
 
 * 関連情報 *
 
-http://www.netapp.com/us/media/tr-3483.pdf["ネットアップテクニカルレポート 3483 ：『 NetApp の SAN または IP SAN 構成のエンタープライズ環境におけるシン・プロビジョニング』"]
+https://www.netapp.com/pdf.html?item=/media/19670-tr-3483.pdf["ネットアップテクニカルレポート 3483 ：『 NetApp の SAN または IP SAN 構成のエンタープライズ環境におけるシン・プロビジョニング』"^]

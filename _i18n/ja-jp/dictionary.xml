@@ -1735,7 +1735,6 @@
   <block id="627a2cec3863a60ee1eb9fe78d73c96f" category="doc">SnapDrive for UNIX のシンプロビジョニング</block>
   <block id="b5e25c86b8fc4729491227e86c44097c" category="paragraph">SnapDrive for UNIX では、フラクショナルリザーブの値を設定することはできず、自動削除やオートサイズなどの Data ONTAP 機能と統合されることもありません。これらの Data ONTAP 機能は、 SnapDrive for UNIX でも安全に使用できますが、自動削除やオートサイズのイベントが発生した場合に SnapDrive for UNIX で認識されることはありません。</block>
   <block id="0fbd8971220ee7d0340edcc5aa07a5c0" category="inline-link">ネットアップテクニカルレポート 3483 ：『 NetApp の SAN または IP SAN 構成のエンタープライズ環境におけるシン・プロビジョニング』</block>
-  <block id="d067ada9dffcf5d06f760689bd642d06" category="paragraph"><block ref="d067ada9dffcf5d06f760689bd642d06" category="inline-link-rx"></block></block>
   <block id="5c14df6684585f43d0dae983427f4e62" category="summary">仮想インターフェイスのユーザログインを削除するには、 SnapDrive config delete コマンドを実行します。</block>
   <block id="815e2d991bcf1ef9ea5cf0acf00f0d13" category="doc">Virtual Storage Console のユーザログインを削除する</block>
   <block id="28cb7e0163a7b694c3a4ecf8b3a9fcdd" category="paragraph">SnapDrive config delete コマンドを実行すると、仮想インターフェイスのユーザログインを削除できます。</block>
@@ -6001,4 +6000,5 @@
   <block id="45f4423b7c470ea0d04be6d812ad5996" category="paragraph">SnapDrive for UNIXの処理を成功させるには、Storage Virtual Machine（SVM、旧Vserver）をセットアップする必要があります。</block>
   <block id="00930ba81ea27b6c62845d08e0500327" category="paragraph"><block ref="7affedb2caa000166a46aed3d9bd1a06" prefix="" category="inline-code"></block></block>
   <block id="1483ad74a09b4a3124c82e285d93ae63" category="admonition"><block ref="992dacfc30bbe144d7e60d29d7bbd430" prefix="" category="inline-code"></block> はSVMの名前で、管理LIFのIPアドレスにマッピングする必要があります。</block>
+  <block id="2a7e0c5b8e814e03c21799cbb69f2d18" category="paragraph"><block ref="2a7e0c5b8e814e03c21799cbb69f2d18" category="inline-link-rx"></block></block>
 </blocks>
